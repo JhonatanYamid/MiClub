@@ -1,0 +1,319 @@
+<?php
+
+//Encapsulando datos globales
+SIMReg::setFromStructure( array(
+					"title" => $dbo->getFields( "Club" , "Nombre" , "IDClub = '".$_SESSION[IDClub]."'")." :: " ." Secciones Galeria",
+					"table" => "SeccionGaleria",
+					"key" => "IDSeccionGaleria",
+					"mod" => "SeccionGaleria"
+) );
+
+//Para validar los campos del formulario
+$array_valida = array(
+	"Nombre" => "Nombre"
+);
+
+
+//permisos
+SIMUtil::verify( 0 , SIMUser::get( "Nivel" ) );
+
+//extraemos las variables
+$table = SIMReg::get( "table" );
+$key = SIMReg::get( "key" );
+$mod = SIMReg::get( "mod" );
+$dbo =& SIMDB::get();
+
+//creando las notificaciones que llegan en el parametro m de la URL
+SIMNotify::capture( SIMResources::$mensajes[ SIMNet::req("m") ]["msg"] , SIMResources::$mensajes[ SIMNet::req("m") ]["type"] );	
+
+
+switch ( SIMNet::req( "action" ) ) 
+{
+	case "add" :
+		print_form( "" , "insert" , "Agregar Registro" );
+	break;
+	
+	case "insert" :
+		
+		/*
+		 * Verificamos si el formulario valida.
+		 * Si no valida devuelve un mensaje de error.
+		 * SIMResources::capture  captura ese mensaje y si el mensaje existe devulve true
+		*/
+		
+		$_POST["param"]["SeccionGaleria"]["IDPadre"] = SIMNet::post( "IDSeccionGaleria" );
+		
+		if( !SIMNotify::capture( SIMUtil::valida( $_POST["param"]["SeccionGaleria"] , $array_valida ) , "error" ) )
+		{
+			//los campos al final de las tablas
+			$frm = SIMUtil::varsLOG( $_POST["param"]["SeccionGaleria"] );
+			$frm["Ubicacion"] = implode(",",$frm["Ubicacion"]);
+			
+			$files =  SIMFile::upload( $_FILES["SeccionImagen"] , IMGSECCION_DIR , "IMAGE" );
+			if( empty( $files ) && !empty( $_FILES["SeccionImagen"]["name"] ) )
+				SIMNotify::capture( "Ha ocurrido un error durante la carga de la imagen. Verifique que la imagen no contenga errores y que el tipo de archivo sea permitido." , "error" );
+			
+			
+			$frm["SeccionFile"] = $files[0]["innername"];
+			
+			
+			//insertamos los datos del asistente
+			$id = $dbo->insert( $frm , $table , $key );
+			
+			SIMHTML::jsRedirect( "?mod=" . $mod . "&action=edit&id=" . $id . "&idlang=".$frm[IDLenguaje]."&m=insertarexito" );
+		}
+		else
+			print_form( $_POST["param"]["SeccionGaleria"] , "insert" , "Agregar Registro" );
+	break;
+	
+	case "edit":
+	
+		$frm = $dbo->fetchById( $table , $key , SIMNet::reqInt("id"), "array" );		
+		print_form( $frm , "update" , "Realizar Cambios" );
+		
+	break ;
+	
+	case "update" :
+	
+		$_POST["param"]["SeccionGaleria"]["IDPadre"] = SIMNet::post( "IDSeccionGaleria" );
+		$_POST["param"]["SeccionGaleria"]["SeccionFile"] = $_FILES["SeccionImagen"]["name"];
+		
+		if( !SIMNotify::capture( SIMUtil::valida( $_POST["param"]["SeccionGaleria"] , $array_valida ) , "error" ) )
+		{
+			//los campos al final de las tablas
+			$frm = SIMUtil::varsLOG( $_POST["param"]["SeccionGaleria"] );
+		
+			
+			$files =  SIMFile::upload( $_FILES["SeccionImagen"] , IMGSECCION_DIR , "IMAGE" );
+			if( empty( $files ) && !empty( $_FILES["SeccionImagen"]["name"] ) )
+				SIMNotify::capture( "Ha ocurrido un error durante la carga de la imagen. Verifique que la imagen no contenga errores y que el tipo de archivo sea permitido." , "error" );
+			
+			
+			$frm["SeccionFile"] = $files[0]["innername"];
+			
+			
+			$id = $dbo->update( $frm , $table , $key , SIMNet::reqInt("id"));
+			
+			
+			$frm = $dbo->fetchById( $table , $key , $id , "array" );
+			
+			SIMNotify::capture( "Los cambios han sido guardados satisfactoriamente" , "info" );
+			
+			print_form( $frm , "update" ,  "Realizar Cambios" );
+		}
+		else
+			print_form( $_POST["param"]["SeccionGaleria"] , "update" ,  "Realizar Cambios" );
+	break;
+	
+	case "del":
+		
+		$frm = $dbo->fetchById( $table , $key , SIMNet::reqInt("id")." AND IDLenguaje = ".$_GET['idlang'], "array" );
+		
+		print_form( $frm , "delete" , "Remover Registro" );
+	break ;
+			
+	case "delete" :
+		$dbo =& SIMDB::get();
+		$dbo->deleteById( $table , $key , SIMNet::reqInt("ID"));
+		
+		SIMHTML::jsAlert("Registro Eliminado Correctamente");
+		
+		SIMHTML::jsRedirect( "?mod=" . $mod . "&amp;m=eliminarrexito" );
+	break;
+	
+	case "DelImgSec":
+		$doceliminar = IMGSECCION_DIR.$dbo->getFields( "SeccionGaleria" , "SeccionFile" , "IDSeccionGaleria = '" . $_GET[id] );
+		unlink($doceliminar);
+		$dbo->query("UPDATE SeccionGaleria SET SeccionFile = '' WHERE IDSeccionGaleria = $_GET[id] LIMIT 1 ;");
+		SIMHTML::jsAlert("Imagen Eliminada Correctamente");
+		SIMHTML::jsRedirect( "?mod=" . $mod . "&action=edit&id=".$_GET[id] );
+		exit;
+	break;
+	
+	default : 
+		list_r();
+	break;
+		
+} // End switch
+
+
+
+/*******************************************************************************************
+		funtcion Print_form
+*******************************************************************************************/
+function print_form( $frm = "" , $newmode , $submit_caption )
+{
+	$dbo =& SIMDB::get();
+	$key = SIMReg::get( "key" );
+	$table = SIMReg::get( "table" );
+?>
+<table class="adminheading">
+	<tr>
+		<th><?php echo SIMReg::get( "title" )?></th>
+	</tr>
+</table>
+
+<?php include( "includes/menuclub.php" ); ?>
+
+<?php
+//imprime el HTML de errores
+SIMNotify::each();
+
+?>
+<div id="tabsform">
+	<div id="SeccionGaleria">
+		<form name="frm" id="frm" action="<?php echo SIMUtil::lastURI()?>" method="post" enctype="multipart/form-data" class="formvalida">
+		<table class="adminform">
+			<tr>
+				<th>&nbsp;Datos</th>
+			</tr>
+			<tr>
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0" width="100%">	
+						<tr>
+							<td class="columnafija"> Seccion Padre </td>
+							<td>
+							<input type="hidden" id="IDSeccionGaleria" name="IDSeccionGaleria" value="<?php echo $frm["IDPadre"];?>">
+							<input type="text" id="NombreSeccion" name="NombreSeccion" class="input" value="<?php echo $dbo->getFields( "SeccionGaleria" , "Nombre" , "IDSeccionGaleria = '" . $frm["IDPadre"] . "'" )?>" readonly>
+							<a href="PopupSeccionGaleria.php" target="_blank" onClick="window.open(this.href, this.target, 'width=300,height=1000'); return false;"><img alt="SeccionGaleria" src="images/magnifier.png" border="0"></a>							</td>
+						</tr>
+						<tr>
+							<td> Nombre </td>
+							<td><input id="param[SeccionGaleria][Nombre]" type="text" size="25" title="Nombre" name="param[SeccionGaleria][Nombre]" class="input mandatory" value="<?php echo $frm["Nombre"] ?>" /> </td>
+						</tr>
+						<tr>
+							<td> Descripcion </td>
+							<td>
+							<textarea rows="5" cols="60" id="param[SeccionGaleria][Descripcion]" title="Descripcion" name="param[SeccionGaleria][Descripcion]" class="input"><?php echo $frm["Descripcion"] ?></textarea>							</td>
+						</tr>
+						<tr>
+							<td> Publicar </td>
+							<td><?php echo SIMHTML::formRadioGroup( array_flip( SIMResources::$sino ) , $frm["Publicar"] , "param[SeccionGaleria][Publicar]" , "title=\"Publicar\"" )?> </td>
+						</tr>
+						<tr>
+							<td> Orden </td>
+							<td><input id="param[SeccionGaleria][Orden]" type="text" size="25" title="Orden" name="param[SeccionGaleria][Orden]" class="input mandatory" value="<?php echo $frm["Orden"] ?>" /> </td>
+						</tr>
+						<tr>
+							<td> Imagen Seccion </td>
+							<td>
+                            
+							<?php 
+							
+							if($frm["SeccionFile"])
+							{
+								?>
+								<img alt="<?php echo $frm["SeccionFile"] ?>" src="<?php echo IMGSECCION_ROOT.$frm["SeccionFile"]?>">
+								<a href="<? echo "?mod=" . SIMReg::get( "mod" ) . "&action=DelImgSec&id=" .$frm[ $key ]?>"><img src='images/trash.png' border='0'></a>
+							<?php 
+							}
+							else
+							{
+							?>
+							<input type="file" name="SeccionImagen" id="SeccionImagen" class="popup" title="Seccion Imagen">
+							<?php 
+							}
+							?>							</td>
+						</tr>
+						<tr>
+							<td> URL </td>
+							<td><input id="param[SeccionGaleria][URL]" type="text" size="25" title="URL" name="param[SeccionGaleria][URL]" class="input" value="<?php echo $frm["URL"] ?>" /> </td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" name="submit" value="<?php echo $submit_caption ?>" class="submit" />
+								<input type="button" onclick="location.href='?mod=<?php echo SIMReg::get( "mod" ); ?>'" class="submit" value="Regresar" name="submit3"></td>
+						</tr>
+					</table>
+			  </td>
+			</tr>
+		</table>
+		<input type="hidden" name="param[SeccionGaleria][ID]"  id="param[SeccionGaleria][ID]" value="<?php echo $frm[ $key ] ?>" />
+		<input type="hidden" name="action" id="action" value="<?php echo $newmode?>" />
+		<input type="hidden" name="param[SeccionGaleria][IDClub]" id="param[SeccionGaleria][IDClub]" value="<?php if(empty($frm["IDClub"])) echo $_SESSION[IDClub]; else echo $frm["IDClub"];  ?>" />
+		</form>
+	</div>
+</div>
+
+<?php
+
+}// End function print_form()
+
+/*******************************************************************************************
+		funcion Listar
+*******************************************************************************************/
+function list_r( $sql = "" )
+{	
+	
+	//Funcion Crea Arbol
+	function CreaArbolSecciones($ValorSecciones)
+	{
+		$dbo =& SIMDB::get();
+		$Padre=$ValorSecciones['IDSeccionGaleria'];
+		$RegistrosHijos=$dbo->all("SeccionGaleria","IDPadre = '".$Padre."'");
+			while($RHijos=$dbo->fetchArray( $RegistrosHijos ))
+					$ArrayHijos[$RHijos['IDSeccionGaleria']]=$RHijos;
+		?>
+		<li>
+			<span class="folder"><a href="?mod=SeccionGaleria&action=edit&id=<?php echo $ValorSecciones['IDSeccionGaleria']?>&idlang=1"><?php echo $ValorSecciones['Nombre'];?></a></span>
+		<?php
+		if( $ArrayHijos != Null )
+		{
+			?>
+			<ul>
+			<?php
+			foreach($ArrayHijos as $clave => $valor)
+				CreaArbolSecciones($valor);
+			?>
+			</ul>
+			<?php 
+		}
+		?>
+		</li>
+		<?php 	
+		return true;
+	}	
+	//fin funcion
+	
+$dbo =& SIMDB::get();
+$key = SIMReg::get( "key" );
+$table = SIMReg::get( "table" );
+
+if(!empty($_SESSION[IDClub])):
+	$condicion=" and IDClub = " . $_SESSION[IDClub];
+endif;
+
+//Secciones Padre
+$Secciones=$dbo->all("SeccionGaleria","IDPadre = '0' " .$condicion);
+while( $RSeccioones = $dbo->fetchArray( $Secciones ) )
+	$ArraySecciones[$RSeccioones[IDSeccionGaleria]]=$RSeccioones;	
+?>
+
+<table class=adminheading>
+		<tr>
+			<th> 
+			<?php echo SIMReg::get( "title" )?> </th>
+			
+			
+		</tr>
+</table>
+
+<?php include( "includes/menuclub.php" ); ?>
+
+<table class="adminheading">
+	<tbody><tr>
+		<th>Seleccione la secci&oacute;n deseada haciendo clic.<span class="title">
+		  <br><input type="button" onclick="location.href='?mod=SeccionGaleria&action=add'" class="submit" value="Crear Nueva <?php  echo strtoupper( SIMReg::get( "table" ) ); ?>" name="submit2" >
+		</span></th>
+	</tr>
+</tbody></table>
+<br>
+		<ul id="ArbolSecciones" class="filetree">
+			<?php
+				foreach($ArraySecciones as $ClaveSeccion => $ValorSecciones)							
+						CreaArbolSecciones($ValorSecciones)
+			?>
+		</ul>
+<?php
+}// Enf function list()				
+?>

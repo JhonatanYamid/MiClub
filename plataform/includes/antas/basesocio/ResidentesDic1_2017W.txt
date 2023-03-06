@@ -1,0 +1,1248 @@
+Portal	Recurso	Nombre	DocIde	Llave
+Acacia	Casa 01	Manuel E Canastero	19465324	36e736c82503da7f3c99258b2082561a
+Acacia	Casa 02	Christian Saenz Daste	686519	46ba0e9885f0eff89ead515b125e51c7
+Acacia	Casa 02	Fernando Linares Veira	80414919	d6ff64935f282505e96845e7b8631516
+Acacia	Casa 03	Maria Consuelo Giraldo	65733327	1afdaa15036e5d75b9c007d219bc33e2
+Acacia	Casa 04	Andres Rojas Rodriguez	79147541	5e9f16ab5d958b8c94e04b404b40db29
+Acacia	Casa 05	Diego Fernandez	472107	bb98c41dff864340c2c6815b67ce75a2
+Acacia	Casa 06	Jorge Ivan Ochoa Echeverry	79361580	058be84e45571152090d8a4ee0f29c2d
+Acacia	Casa 07	Diego Adolfo Montanez Vargas	79779030	44c87d40c0f52384fe24b1c670cc6a9b
+Acacia	Casa 08	Rafael Hernando Leano Forero	3227941	51d8db68aec9c2ab832c2d2f952424c5
+Acacia	Casa 09	Josue Pocaterra	1126908043	7801ecea600308edca95887da9ed1084
+Acacia	Casa 10	Oscar Javier Soler	79554642	bf7814f341fdb36580d78129e208e850
+Acacia	Casa 11	Maria Claudia Beltran Penagos	63358163	98c49bb846cda9ff8f3dee87006be80b
+Acacia	Casa 12	Cristina Ortiz	51670443	fb1a59bbb40eb94b184c1f7e2e144d8f
+Acacia	Casa 12	Luis Antonio Castro	79625992	b4c3960644eeb189a8c08019cec28548
+Acacia	Casa 13	Gloria Patricia Perdomo	55160803	75726eaa09115b043da0ba394c7df495
+Acacia	Casa 14	Juan Alfonso Torres Zafra	19255659	1ee687ee0f3704edece78e38ab841570
+Acacia	Casa 15	Jimmy Cardona	80504614	4403e113c17a7c633ea8c1c017e453f5
+Acacia	Casa 16	Juan Leonardo Laverde Pulido	219380029	2ac587c143e9046cde155a15f27b935b
+Acacia	Casa 17	Camilo Borda Santamaria	80505601	28cdd70651e56a8da8b62ca68c7d898c
+Acacia	Casa 18	Humberto Pulido	19218689	87a1a7b718cd0844673042d37a4df14a
+Acacia	Casa 19	Juan Pablo Aljure Leon	79159081	92076400a9a29af00a70878c5abb5a0e
+Acacia	Casa 20	Cesar Escobar	79276012	1d2748315eb55d9541972911f2454016
+Acacia	Casa 21	Juan Guillermo Baez	79981310	b9603e3384727207307a94e8642a3ee7
+Acacia	Casa 22	Jorge Camacho	19334157	bfa2789b384bef266a632e2b319f69d1
+Acacia	Casa 22	Magdanelcy Penaloza Calvo	51836419	aef7cfd641509ffa024666006b6a1625
+Acacia	Casa 23	Tatiana Evseeva	231591	b2abe8022bfd8771fbe0348559fba378
+Acacia	Casa 24	Robinson Abril Mantilla	80919956	299465afdca4fd8d9fa25ce0af674c67
+Acacia	Casa 25	Nestor Javier Florez	79832223	e60be0166441c9ead263a424a41d94da
+Acacia	Casa 27	Javier Fernando Escobar Ruiz	16779023	a1ff901bba06fd6e6afb9deb7b10499e
+Acacia	Casa 29	Luz Elena Machado De Gonzalez	32395561	4d8fbdf99a1476d4dbddb692847b5d64
+Acacia	Casa 30	Oscar Puentes Rueda	79645922	87133b6b60ab3bb9a7cb325b2e1dbcef
+Acacia	Casa 31	Silvio Augusto Ignacio Gaitan Villegas	80417145	0103839df94d6f45f1b464253a1ccad6
+Acacia	Casa 32	Achim Weigand	80414321	ea6b52e422a77b94f74e997f684a2fd7
+Acacia	Casa 33	Andres Munoz Tamayo	790158056	f12d14cc85000cb2c70d0d5da9b78f61
+Acacia	Casa 34	Martin Andres Romero	79232792	ddb019315584a6b3f06fb940cd67727c
+Acacia	Casa 35	Roberto Fonseca	19435836	401db9a82e0c9457b4cd2be599816b51
+Acacia	Casa 36	Jorge Roa	79403865	48890d3a5b288891a9d04d8c7551dc24
+Acacia	Casa 36	Renata Loureiro Fajardo	543588	d1790fa88c0a4e7d43d40b8fa60f742a
+Acacia	Casa 37	Carlos Alberto Restrepo	79435679	7774705dad5b9b520ecdbfa63819125e
+Acacia	Casa 38	Carlos Acero	79296014	77dc624de6bdf63a8ca68d6b1ced7318
+Acacia	Casa 38	Olga Lucia Lopez	98765	fec683027f3b7ade4c85cb01dfb57831
+Acacia	Casa 39	William Lopez Quiroga	79340085	c258d8ff1dc072c74798932a29d3b953
+Acacia	Casa 40	Andres Ponton	87654	6f044cb20536e56aa4693659e1d73f23
+Acacia	Casa 40	Paulo Paredes	642699	9fdc05a315ec52b27357081afa554204
+Acacia	Casa 41	Juan Carlos Olarte	79490429	f72d25a7b7766dc6bd3e45506038cd4a
+Acacia	Casa 42	Daniel Rojas	79780577	a0640249a8b897e061391c44bce96189
+Acacia	Casa 43	¡lvaro Ramirez Rubiano	7407109	c20195a20317561d0c83967e68b9a439
+Acacia	Casa 44	Nestro Fernando Triana Buitrago	80401314	494f1a406cd537df3af9b2db3aa7d30c
+Acacia	Casa 45	Jose Vicente Gomez	19410001	6ea906664ef2c92a11c9b06c5d73c853
+Acacia	Casa 46	Fabio Enrique Laverde Montano	19182060	e17229cfd4a4ee76e0b984c12d44f47e
+Acacia	Casa 47	Camilo Urdaneta	79599259	2e1abacade1ab5ef73ad0aa1640cb2e7
+Acacia	Casa 48	Maria Jose Royero Garcia	41320572	b97ed92f6b86b97b9208dc8fb1da5de5
+Acacia	Casa 49	Javier Fajardo Gomez	79597490	64b9e2dacdd6a4ebaf0b117fff12d15e
+Acacia	Casa 50	Joge Enrique Gomez Bernal	19440794	440e740245437e458e5a80963f168dc9
+Acacia	Casa 51	Carlos E Aguirre	860046838	96d74f06a244cf32bd9971b4aea6e270
+Acacia	Casa 52	Raul Dario Hernandez Chalarca	70565443	9a019c931812fcf12f657a5080ecad0e
+Acacia	Casa 53	Juan Guillermo Trujillo	73101532	ee6463c6046942c3ce1bb9c1c1d1334f
+Acacia	Casa 55	Jorge Castano Gutierrez	79691795	a219ea2c6080b72e92758c17a1d479e5
+Acacia	Casa 56	Gabriel Casasbuenas	79321583	4a2f0634e0e1f5e7388451a2bd41a7ca
+Acacia	Casa 57	Sandra Quintero	76543	5d1120de4d806beec6922c33164dc3ac
+Acacia	Casa 58	Ricardo Forero	17090607	4d74df6aff37a2b268487a2f74bbf20f
+Acacia	Casa 59	¡lvaro Puerta	8210011	d8927372c89fc1e262208472c2aedabd
+Acacia	Casa 59	Juan Pablo Zerda	79791359	06b43932a8815dbbd3960304386c1c32
+Acacia	Casa 60	Eduardo Castro	79314803	d103c53640b6ae5a9936b93509fb4877
+Acacia	Casa 61	Juan Felipe Ruiz	80421926	d7c9895e5a9f45d8be8ba7d6e21d4d84
+Acacia	Casa 62	Clara Ines De Pulido	41461782	e40e3f3d88460c82ad2f102cade9111e
+Acacia	Casa 63	Jorge Mario Zapata	80426903	deb69ba0050a998ae45bcd34f260bd65
+Acacia	Casa 64	Alejandro Pedraza	79570696	1d1118908fa416a4bfd361a854c51706
+Acacia	Casa 66	Georges Franchomme Boris Jean Louis	511895	2814f5180fd75394c486a557c35a544d
+Acacia	Casa 66	Guido Ramazzoti	694801	ed9ca48446816cff4fd04e76f75b1469
+Acacia	Casa 67	German Morante Garcia	92519695	d88f96480d585f2376fbbeb973626114
+Acacia	Casa 68	Alberto Erandi Jumior	661172	0713d882f6c0926f1b4df80ffa00d9c5
+Acacia	Casa 68	Sandra Marcel Uribe	51991969	e42fb0f86f62fdce9850acee0a94e087
+Acacia	Casa 69	Rafael Mateus Salcedo	79131134	1f5d975d09d22677ec5833d5c05e10ce
+Acacia	Casa 71	Jaime Humberto Pedraza	19131702	05d001ca8964fa28662b2ca70c27f9f4
+Acacia	Casa 72	Bertha Isabel Rodriguez Rodriguez	52803538	1a7fc8551444fe0666dd2cb853ed0013
+Acacia	Casa 73	Marcela Guevara Cuervo	51710269	a90d6fc9e6b6f27c01f9a936dbc9b34c
+Acacia	Casa 74	Viviana Blanco Perez	63546516	73683506107990c530ed363e7617fc55
+Acacia	Casa 75	Rudecindo Acosta		
+Acacia	Casa 76	William Perez Yunez	19391315	83106c98479292f6e595fa964986555a
+Acacia	Casa 77	Ana Maria Olaya	52587606	9556556c2289ebb9347a0bae8f757544
+Acacia	Casa 78	Eduardo Castro	79710732	11cf0f0b73820231af3c856d91420b45
+Acacia	Casa 79	Jaime Agudelo	17026643	437eaa58069eb5662163c3d1495f7803
+Acacia	Casa 80	Carlos Diego Neira	80421652	d25a00699a8c26add199271e72b288fb
+Acacia	Casa 81	Franco Roberto Mercurio Rivadossi	536330	cf24224c806130f786b92963f8b3d8d5
+Alamo	Casa 01	Herbert Dulce Ospina	80423218	7d6204a487ef458ecb9ff4d00787938d
+Alamo	Casa 02	Silvia Urbina Restrepo	66827245	bf57f2d889efa6452966a74a7b005466
+Alamo	Casa 03	Fernando Castillo Romero	79430595	177f148cf7cb488e5cb328004c0089d2
+Alamo	Casa 04	Maximiliano Xavier Carrillo Paz	347312	a66cc4cec0a8806bbaf4b5ed12ad7050
+Alamo	Casa 05	Milton Cesar Combariza Pacheco	74373605	2deb66714ffeec80b2c53e8ab7af90b0
+Alamo	Casa 06	Pedro Marquez	17140949	5852291270f1bffd6e9660076ae3d41a
+Alamo	Casa 07	Olga Eugenia Del Vecchio De Lena	41452176	76755f4928dd519a57cb4309011c021f
+Alamo	Casa 07	Samuel M. Gabay M.	615287	d926c52924a693518f319dffceeb537f
+Alamo	Casa 08	Andres Vanegas Fernandez	80028931	a3d14fdfde374e8396ace84848ddb1c1
+Alamo	Casa 09	Jesus Antonio Paz Higuera	79690293	0a1878854d5b616ac2dbf7cb2b44baf7
+Alamo	Casa 10	Emma Higuera De Paz	21164649	7d802dc41cdd3785ac5f1c2384bfe87f
+Alamo	Casa 11	Nestor Contreras	79485068	d3b5f11d4cf2e62ef3d761db1a478a3c
+Alamo	Casa 12	Juan Antonio Vanegas	79948107	afafdf1608ecba16fad2d3c88b80d8cb
+Alamo	Casa 13	Carlos Andres Molina Ortis	79959131	36daa8957ba83254f77689fc6d2782f4
+Alamo	Casa 14	Cesar Garcia	80527883	942391a88a9560301a42d2ba7dc1d351
+Alamo	Casa 15	Luis Bernardo Pombo	80134931	5321f209b26453f6bcf295f360ce41fc
+Alamo	Casa 15	Mauricio Vernaza	94526232	11ff37b6ffd33020147e7ca6fac294cf
+Alamo	Casa 16	Jaime Orlando Vargas Martinez	79421720	468d15af96172d449d6ed51032222ad1
+Alamo	Casa 17	Rosemery Carrillo Santis	1070123457	d4be7fad6dcad3b33bd1a80d820cb228
+Alamo	Casa 18	Javier Enciso Rincon	79628295	a9037a9a993b1fb57184f4aef904de09
+Alamo	Casa 19	Ricardo Amaris Herrera	80539610	020b4b221e64f2f853c78b0dab1d48fc
+Alamo	Casa 19	Rogerio Chaves P Marques	436065	50353ff490dec2f4fd3e811674c55c67
+Alamo	Casa 20	Oscar Eduardo Sastre Garzon	79313374	f0d07df1ec7bb9ea11c463fc483281fb
+Alamo	Casa 21	Lina Yaneth Sarmiento Neira	52249815	84e0b0cfb393f8e636e1438a6e415679
+Alamo	Casa 22	Mauricio Villamarin Arevalo	19461009	fc009904a142733c3a53c65b69a1cc8c
+Alamo	Casa 23	Carlos Andres Cartagena Hurtado	94324625	4fff1f475a1022734e210a913144c834
+Alamo	Casa 23	John Fredy Ramirez	79858471	7a1fb9465c941e8054c85d2fec60b5f1
+Alamo	Casa 24	Diego Luis Olarte Mantilla	79710822	c6625a4cdb3bcfcc879c6c18097798c8
+Alamo	Casa 25	Mario Garcia Garcia	19255836	9fc65d3a90800d60d02e1b4a49b4514c
+Alamo	Casa 26	Andres Felipe Garcia	79601022	45d9edcfc5a8f7827b2a958696b2fe63
+Alamo	Casa 27	Omar Gonzalez Casallas Ruiz	80399586	85bdab1c75e17bbe2c88fd7b103b2d9c
+Alamo	Casa 28	Yesid Orlando Murcia		
+Alamo	Casa 29	Fernando Cifuentes Pardo	79411106	6c515d8a476010f731a51839f77958d9
+Alamo	Casa 30	Gloria Nelly Guzman Diaz	41440900	3b67ae44782d5389a0d349267fc3d5e8
+Alamo	Casa 30	Gloria Nelly Guzman Diaz	41440900	3b67ae44782d5389a0d349267fc3d5e8
+Alamo	Casa 31	Hector Serna Bedoya	17148609	cf8a6540bf96b942f53204b711286a07
+Alamo	Casa 32	Roberto Enrique Duncan Gomez	73183608	e1c558f05caa5ec4eebf131221f562b3
+Alamo	Casa 33	Ian Sergio Bueno Aguirre	79413203	4945908374c0b67617785049bd9eb59c
+Alamo	Casa 35	Gustavo Adolfo Plata Duran	91474042	1841612aed1e43c1767ab399f7dde088
+Alamo	Casa 36	Diego Alexander Benavides	79189432	edb09cd17df471e6ea48589a3f2ad720
+Alamo	Casa 37	Margarita Garzon	41786432	e5b4b25f6423818b763645ee19aaac13
+Alamo	Casa 38	Judith Castaoeda Garcia		
+Alamo	Casa 39	Levis Jose Garcia	17191991	4c7633116aad93891b2336bb1d4a453f
+Alamo	Casa 40	Jose Arcelio Gomez Prada	2850979	a4e2e0fb121683a27fade6c6c558f9ca
+Alamo	Casa 41	Patrick Borbely	343701	fc151a7936f07aaef688b4340b33f7ca
+Alamo	Casa 42	Jaime Gabriel Barreto R.	17154450	774be88bd7bee5acba26774c0f892eb7
+Alamo	Casa 43	Alejandro Cozar Cisneros	481519	86c4b5bffcd2e951b9ec0e8d9eac1b54
+Alamo	Casa 43	Fabian Andres Baena	79784730	b7a031b24f3e41e93a13ca412c04d332
+Alamo	Casa 44	Javier Mauricio Cubides	79753650	402694d84d11f6ebd235bb6302e892f8
+Alamo	Casa 45	Luis Hernando Forero Ramirez	19191895	fbfe6a06ed75762100f4d42784360e2a
+Alamo	Casa 46	Xabier Liceaga	476532	598c1a5e62d0716439b2d302351c1ece
+Alamo	Casa 47	Carolina Salazar Mora	35504420	81327d3a6f6204cf6c95fbb923d91687
+Alamo	Casa 48	Camilo Atuesta	80137011	0a3aa7323f20e1d2629257a87b5c537b
+Alamo	Casa 48	Diana Sarmiento	52867559	cc0d898f359247d98f4ffc0f1a27ed59
+Alamo	Casa 49	Carlos Ivan Baron Gomez	1070123449	9495360ee3bb83d06caf1e9e415c357e
+Alamo	Casa 49	Henry Torres	79940460	c9bc480b65a320a19163d6429a7ad5ce
+Alamo	Casa 50	Jaime Eduardo Botero Jarrin	71639582	270c0d947c0917bb1f9a272a3208a998
+Alamo	Casa 51	Alejandro Cadelo Cabrera	80418401	9f9fd5b1f2dbcdbf2c1010d1b9295de3
+Alamo	Casa 52	Ramiro Garcia Acosta	93365899	16eb14145f0ca975c6e71ba8038fffed
+Alamo	Casa 53	Juan Diego Umaoa	79947896	645c3d0be846f87944bc3d321bafcd23
+Alamo	Casa 54	Milton Armando Moreno Espinosa	79864767	6923ac4b59e44652e3385994a5eeb81e
+Alamo	Casa 55	Juan Pablo Acevedo	79240018	acae21ea6f14367766df9454d1da835c
+Alamo	Casa 56	Blanca Lucia Ariza Peooo	1070123456	6fb422b2cd2433f3ba250f06e7e47409
+Alamo	Casa 56	Hugo Duque Botero	2848487	3efbdded08ee1e70a454411e8b0cd824
+Alamo	Casa 57	Juan Manuel Rodriguez	80235045	1566475c0435fd7fba31e766d1df4b9e
+Alamo	Casa 58	Juan Manuel Mendez Navas	79783148	d8f166da0baeb533dcc027d9cb588101
+Alamo	Casa 59	Rodrigo Moreno	10281511	d4ec303fec0b3b4006141656ab3ebef2
+Alamo	Casa 60	Edgar Rene Rubio Vega	19389802	a4049e121688ea8cafa06ff2070f0638
+Alamo	Casa 60	Edgar Rivera	1070123460	be2f6948a835af3d049fec96fe42825d
+Alamo	Casa 61	Francisco Ternera Barrios	7686137	b98ccac370ae2c8925c09cb76c4feca8
+Alamo	Casa 62	Carlos E Mora Beltran	19325478	16ca2be92cd8dfe46a991e1daec6c839
+Alamo	Casa 63	Alfonso Morales Cepeda	91274775	b14f411dc3a88bde275af9a16a737872
+Alamo	Casa 64	Alfredo Insignares	8682245	62c6b0709866e4922de5ba2b4257dd38
+Alamo	Casa 65	William Rojas	4239896	9c414b289250ad996f8448d77c3de602
+Alamo	Casa 66	Juan Carlos Becerra Restrepo	79791523	c94ed4e5ac6dd307e3fb0fd6b2169615
+Alamo	Casa 66	Richard Gamboa	79569757	9ba57a9d29f3495cb0831b88ba13cf6c
+Alamo	Casa 67	Ruben Dario Bohorquez Rincon	79436526	879c10c1d3f62c293657918a0da457e8
+Alamo	Casa 68	Manuel Gonzalez Diaz	19400461	ccc0d32c11a446baf2215eb01cc3e671
+Alcaparro	Casa 01	Juan Pablo Galarraga		
+Alcaparro	Casa 01	Marco Alfonso Nuouez Buitrago		
+Alcaparro	Casa 01	Prueba Residente Alcaparro	12345678	85604de58bb66d834ff135c5f286fc1e
+Alcaparro	Casa 02	William Arcila		
+Alcaparro	Casa 03	Milena Perez De Morales	2019690	36c1ef12be8f4465f23c0e9cbedde2ec
+Alcaparro	Casa 04	Jose Arenas	80503199	e9e099627c07ae1059178e3c574e5ff9
+Alcaparro	Casa 05	Monica Jaramillo		
+Alcaparro	Casa 06	Jose Francisco Villamil Buitrago		
+Alcaparro	Casa 07	Alvaro Galindo Vacha	79158208	a88ade825bcc597e5dacce1ef730429d
+Alcaparro	Casa 08	German Alonso Plazas Muooz		
+Alcaparro	Casa 09	Mauricio Calderon	79800034	1f46aab7bb8269ff98ef6eacf8f93c44
+Alcaparro	Casa 10	Baltazar Guerrero	79139400	9b2d04e1341e14eed99464299a17d910
+Alcaparro	Casa 11	Luis Carlos Gil Quenceno	2345678	c7bcf8c81da8d70c0e5135e2019832e8
+Alcaparro	Casa 11	Maria Cristina Peoa	12345	9850633b992a03a053893cf77512192f
+Alcaparro	Casa 12	Javier Arango Rosero		
+Alcaparro	Casa 13	Jose Camilo Fernandez Escobar		
+Alcaparro	Casa 13	Marcela Orjuela Acevedo	52619319	4c8b430f278f347853968b56cff8ce0c
+Alcaparro	Casa 14	Carlos Augusto Sierra	19232548	6805dd6980625ae136b6a3575df028bf
+Alcaparro	Casa 15	Samuel Andres Vergara Torres		
+Alcaparro	Casa 16	Julio Cesar Kalil Rey	79490794	bf8dc9d29cd071e80ce5ae288efd191b
+Alcaparro	Casa 17	Daniel Francisco Hernandez	79866671	f64352f9566a6097a9bcb0a54f38ac6f
+Alcaparro	Casa 18	Juan Camilo Garcia Vernaza	10308197	2bc898ac69e96e98b3ccedd592f8c6fc
+Alcaparro	Casa 19	Fabio Ramon Cabrera Perdomo		
+Alcaparro	Casa 20	Juan Manuel Diaz Rojas		
+Alcaparro	Casa 21	Jose Wilson Patioo Forero		
+Alcaparro	Casa 22	Marina Mesa De Cuestas		
+Alcaparro	Casa 23	Herman Castellanos Arango	79653623	a3d3b00f1664f4f9e507a659e6913b56
+Alcaparro	Casa 24	Luis Eduardo Parrado	19251140	f207b8e50d3d204f2ae96502a27c1e09
+Alcaparro	Casa 25	Fernando De La Torre		
+Alcaparro	Casa 26	Julio Cesar Cantillo Garcoa	73579237	a3acde29bed665ea0636d8e7098d7872
+Alcaparro	Casa 26	Wilson De Lima Santana	526750	c2427c8e0001af9578d31fc82c0e031b
+Alcaparro	Casa 27	Efrain Martinez Monroy		
+Alcaparro	Casa 28	Dario Laganis Zirovic		
+Alcaparro	Casa 29	Alvaro Bohorques Fonseca		
+Alcaparro	Casa 30	Wilson Robayo Quintero	79554502	b386c8fec0d408f6af0290c42108d382
+Alcaparro	Casa 31	Liliana Cardona		
+Alcaparro	Casa 32	Rafael Eduardo Diaz Bojaca		
+Alcaparro	Casa 33	Fanny Jimenez De Guman		
+Alcaparro	Casa 34	Rodrigo De La Ossa Izquierdo	39690235	075582aa04fa11b9b0edbab138f638eb
+Alcaparro	Casa 35	Mario Galindo Cubides		
+Alcaparro	Casa 36	Luis Martin Rojas		
+Alcaparro	Casa 37	Carlos Andres Vasquez		
+Alcaparro	Casa 38	Hernan Martinez Ruiz	19098532	7d1a3ee4a93a0a7ac09bd51a2b351fb3
+Alcaparro	Casa 39	Amadeo Rodriguez Larrota		
+Alcaparro	Casa 40	Rodolfo Medina Rueda		
+Alcaparro	Casa 41	Norberto Hernandez Martinez		
+Alcaparro	Casa 42	Ivan Lopez Ortegon	79393215	f251d4ed8e9a7c0ee166fd101fb1a825
+Alcaparro	Casa 43	Juan Carlos Cardenas Cruz		
+Alcaparro	Casa 44	German Rojas Castillo	79938394	0a1fb374f6425eb97bc5f42f9279a7fd
+Alcaparro	Casa 45	Pedro Miguel Fernandez Gomez	19060722	b0c1b9b4c8d205b08ae7082f50ec6f7e
+Alcaparro	Casa 46	Alan Zambrano	80082373	bd6d3ae9f3fd3703149611da677a3b7d
+Alcaparro	Casa 46	Walter Ignacio Gil Pabon		
+Alcaparro	Casa 47	Johanna Paola Roldan		
+Alcaparro	Casa 48	Maria Emma Hernandez		
+Alcaparro	Casa 49	Maria Giovanna Mejia Lo Giacco		
+Alcaparro	Casa 50	Edgar Santamaria Ariza		
+Alcaparro	Casa 51	Andros Naranjo	79730330	82aec8319e9173ae2ea6ea3609272054
+Alcaparro	Casa 51	Javier Hernan Londooo	10125150	b5091c646852712246b92b3d90d0a454
+Alcaparro	Casa 52	Jose Miguel Diaz Esparza		
+Alcaparro	Casa 53	Laura Marcela Prada Jurado	63358294	0ad29066847dcce37a9c632a527bade4
+Alcaparro	Casa 54	Alejandro Posada Maya	3438432	af9815e415667417617d5f873a8ea8a0
+Alcaparro	Casa 55	Alicia Romero Garzon		
+Alcaparro	Casa 56	Jose Gonzalo Pinzon Arevalo	11340992	477b28260044f494a5aee3a960725bb8
+Alcaparro	Casa 57	Francisco Romero	76327686	ecee601e372e3bfb6f725b20493afebd
+Alcaparro	Casa 57	Margarita Helena Puentes	CASA57	a38085d2d18aecbe2fd3da3888e738a3
+Alcaparro	Casa 58	Rafael Sierra Rios	4907641	5cdc5b8e43a3fc32cf89d63c22857dd9
+Alcaparro	Casa 59	Mario Fernando Del Hierro Nuoez		
+Alcaparro	Casa 60	Jaime Garcia	19137966	9af1e50c36274bf60c881a841b5c196f
+Alcaparro	Casa 61	Fernando Anpuero Zabaleta		
+Alcaparro	Casa 61	Ingrid Andrea Guzman	52438186	fc7049f9bf25ceefcc13070492b31dd3
+Alcaparro	Casa 62	Alejandro Diaz Vargas		
+Alcaparro	Casa 63	Gustavo Villagomez Verdugo		
+Alcaparro	Casa 64	Harold Arevalo Parada		
+Alcaparro	Casa 65	Maria Astrid Vargas		
+Alcaparro	Casa 66	Raul Ernesto Rubio Garzon	79596656	61830ff7a4cdf1a1570b438d9cfc7113
+Alcaparro	Casa 67	Claudia Patricia Ortiz Arevalo	51829825	e60a58de42f64eb0e521d7aeabf7af47
+Alcaparro	Casa 68	Margarita Del Carmen Vasco De Franco	20180912	6bfad4453bcd97a289f900631bc921be
+Alcaparro	Casa 69	Sara Murcia De Tejada	41368306	5d98c2fc7dbcaaf31deffc671963eb9c
+Alcaparro	Casa 70	Ricardo Alvarado	17111062	62abd99a7d0eb1597b15c50ae679f08d
+Alcaparro	Casa 71	Gabriel Barbosa Manzanares	79553641	8cb3133027c641d5704f30a0ed4aef36
+Alcaparro	Casa 72	Wilson Alberto Fajardo Poveda		
+Alcaparro	Casa 73	Wilson Hernando Peoa Campos	79293354	d9c491edffc2a77493d1297989f28e4d
+Alcaparro	Casa 74	Luis Guillermo Gonzalez Cristancho	79322495	c31a54d2b3f201065c285b1939e129b8
+Alcaparro	Casa 75	Jorge Humberto Mayorga Alvarez		
+Alcaparro	Casa 76	Andres Eduardo Izquierdo Zea		
+Alcaparro	Casa 77	Jaime Humberto Ramirez Castro		
+Alcaparro	Casa 78	Hugo Alberto Ramirez Osorio	10276015	03b124d38460fbe9a29ed2691f5cabe4
+Alcaparro	Casa 79	Arturo Navarrete Diaz	79152561	a0b89b8e2ea2a231b6afa2d1cf8eed80
+Alcaparro	Casa 80	Felipe Ignacio Barriga Contreras	210602	e5d48027b018e3df066461f91fbfa38b
+Alcaparro	Casa 81	Jaime Linares Alarcon		
+Alcaparro	Casa 82	Roberto Camacho Cortes		
+Alcaparro	Casa 83	Fabio Ortega Galvis	91259398	d136b301105d0c8fed529197b82e90fa
+Alcaparro	Casa 84	Victor Bolivar Martinez Pinto	12711608	c1c137a317330a2d40dd49bbbe445de0
+Alcaparro	Casa 85	German Antonio Valbuena Murcia		
+Alcaparro	Casa 86	Orlando Matiz Villamil	79593522	032bcaaa58cf79c17852d4145354b105
+Alcaparro	Casa 87	Juan Gustavo Mahecha Bautista	19079511	956ef14329e61a98e7d186f536e971a0
+Alcaparro	Casa 88	Fabian Prieto	79317983	02181423f09e3fb8e39f6a005a92d88f
+Alcaparro	Casa 88	Milena Prieto	30324733	79de1560e23bead4fdb806bdf974f8c2
+Alcaparro	Casa 89	Hugo Picon Cepeda		
+Alcaparro	Casa 90	Nelson Espinel Guatibonza		
+Alcaparro	Casa 91	Ana Beatriz Melendez De Urrego	20285057	6325e9c633fafd35efddd022c376e476
+Alcaparro	Casa 92	Monica Muooz Tamayo	1987534	cd3c5da5387fd68c78b78752998ad608
+Alcaparro	Casa 93	Andros Torres Campillo	80088227	84ebe1dde239055fbeccfb64fe5f5419
+Alcaparro	Casa 93	Carlos Andres Garcoa Isaac	CASA93	cd8747b609beb8635879dea0a0ef88d4
+Alcaparro	Casa 94	Jean Michel Parret	CE155232	61c3bff8d15f0f8c33e7b54795824496
+Alcaparro	Casa 95	Ines Marcela Ramirez	CASA65	b29078475fa27837e0aa52e6d1dfd729
+Alcaparro	Casa 95	Oscar Pompilio Patarroyo Sierra	5819349	faa06d491001fac673b331b33b24bafd
+Alcaparro	Casa 96	Jose Celnik Zuitman		
+Alcaparro	Casa 97	Jesus Alberto Delgado Rivera		
+Alcaparro	Casa 98	Carlos Arturo Hernandez Rodriguez	19354632	d6a3f74dd6c33975f5cad6962ad6d56c
+Aliso	Casa 01	Fermin Garzon Molina		
+Aliso	Casa 01	Ricardo Concha Robledo	2968796	84ff928dd1f3d495e62786ba2c2afe81
+Aliso	Casa 02	Hugo Fernando Corredor	79599669	14ee1d5ca25a4bc6898d7fde9fdc99d1
+Aliso	Casa 03	Alexandra Guarin	2333333	ff5df754abe8732a5aca0778fb380f1c
+Aliso	Casa 04	Cesar Julio Galeano	79369372	476778481a514e057f6d607780c6fbd9
+Aliso	Casa 04	William Urquijo	79692302	f49f39100d4b0cfa7e0d2f4876bafeb3
+Aliso	Casa 05	Luisa Fernanda Zuluaga	30399302	2da61ba89f3fe79b8de91cca9e692361
+Aliso	Casa 06	Jairo Jimenez	14243973	c09a13621010777e7af86ae12653e4d6
+Aliso	Casa 07	Juan Carlos Velazco Ortega	11345706	3aeeef4f6c451cb98d98aa4a131afae5
+Aliso	Casa 08	Gonzalo Wilches	94332273	8ea2a1712f47b809e2220deed681beff
+Aliso	Casa 09	Erik Espitia	79734811	598a5cdc43ab1c15dc9935f5124eefa4
+Aliso	Casa 10	Juan Pablo Saade	80409100	78e16791b70c61139344c3fc02aa18f2
+Aliso	Casa 100	Gustavo Gomez	19337274	f602ee70e73c7b4699b037eff6fca97a
+Aliso	Casa 101	Natalia Hernandez	40327822	09f900a863f8872690ecd18806dce13d
+Aliso	Casa 101	Pedro Castaneda	79635152	d47c1ec3bb736d1e81f9f485bc4eafaf
+Aliso	Casa 102	Gabriel Oscar Zapata	20843981	f3c0b77fe01f0f59a07cbd76fb75c5a2
+Aliso	Casa 102	Juanita Restrepo	41659941	eb6db0e5f894fd582dd5406f1565b5c6
+Aliso	Casa 103	Carlos Diago	80197400	48d39d721cf851a68f22d9898461eca9
+Aliso	Casa 104	Luis Hernando Medina	19423213	dcd3efdf7197645f91f25498b8bc69b3
+Aliso	Casa 11	Julio Cesar Castano	79450410	f650196b74fcdda321c63a73af70ab6d
+Aliso	Casa 12	German Arango	79304018	46c323658c567d75db6e4f862b24b8e8
+Aliso	Casa 13	Guillermo Beltran	79443375	bb05522a7c0fddc52eb7cdb108ee98ac
+Aliso	Casa 14	Fernando Chamorro	19450193	48c073084874f5a207fa5f4418e33df9
+Aliso	Casa 14	Rubiela Hernandez	3006407899	83f6e1923de97118c439428dfe456711
+Aliso	Casa 15	Daniel Acevedo	80505526	051652e6fa33314373e10dbd8bd79f35
+Aliso	Casa 16	Giancarlo Cotrino	79246735	1485179e848d75fd7cb8495bd3c75c56
+Aliso	Casa 17	Yoth Sabogal Briceno	71717752	0f1537f7e42e347797a610393a94271f
+Aliso	Casa 18	German Sanchez	2925859	30eb0496d5c63033d3e52c5267b6a26a
+Aliso	Casa 20	Mauricio Gomez	10134189	945d9b006f1f1b8a268ecc1cdbef0983
+Aliso	Casa 21	Esperanza Caceres	1104104104	6433e7956da246ff7e978bcca30bdaee
+Aliso	Casa 22	Hector Mauricio Vasquez	72142666	abe37c300f9baaf0a35eb808872ff457
+Aliso	Casa 23	Jorge Eduardo Villamizar	17174335	4cb79808b24d723988ed13051b5e1db2
+Aliso	Casa 24	Diego Giraldo	52153450	ae69bab9dc80abcb22aebb0d9015006c
+Aliso	Casa 25	Giovanni Alippio	12125628	ede9bbdb88146dff4c98d658f40c6f74
+Aliso	Casa 26	Billy Patrick Belzner	79249755	e84726c6df586577a7c72079f237d385
+Aliso	Casa 26	German Sicard	3007982555	c29ffceb45d13a95ba3b1cf0d90c5bef
+Aliso	Casa 27	Tony Sanchez Toro	19177922	cffb0bb23050e1cab240a20cd9c76e8c
+Aliso	Casa 28	Luis Carlos Gutieerez	91243849	0317797336d234b878428c7c2866d1de
+Aliso	Casa 29	Martha Ochoa	35462053	a24f92eaa1b357ea60284f51b074fcd1
+Aliso	Casa 29	Patrick Shauff	863011	b2fa9bcfae0219ea20f9d20d11bdf9b8
+Aliso	Casa 30	Leonardo Vargas	79431990	4c8b24ac6ae3bc8e569457c32e6d570c
+Aliso	Casa 31	Rolando Erazo	79237843	3650e76f163d1fecdc487c9d47fbf15b
+Aliso	Casa 32	Magdalena Pardo	20522860	d5586adc06bb5de14eec84a2f9bdaa88
+Aliso	Casa 33	Victor Duran	79778717	add9130525cffff9cc0530dad162797b
+Aliso	Casa 34	Mauricio Aponte	79943110	ba6c6cb82722720958a519e3ac1ec08f
+Aliso	Casa 35	Jimmy Arismendy Sanbria	7222561	3ee1bf7df17466bd1e498281e6f07c7e
+Aliso	Casa 36	Hector Rene Bastidas	19328509	f47ce6ffe05c76af1b2c514f62c5eb72
+Aliso	Casa 36	Miguel Paredes	19113657	7886a6f55d72046172597cac8df8ebd8
+Aliso	Casa 37	Jesus Hernan Montoya	18393213	f1925925023d260c52347f470f2cd23a
+Aliso	Casa 38	Emilio Castillo	79411102	68d6226460944e27bc11e51f1f3c4cc6
+Aliso	Casa 39	Diana Maria Osorio	39788471	46426105d4759933fa08b6148755fd65
+Aliso	Casa 40	Eulogio Berdugo Tellez	79411102	6572fea88d0c4e56f2efbcef33702da4
+Aliso	Casa 41	Miguel Agudelo	79744673	d44a7cd3937b991e6e81c28ed55fef36
+Aliso	Casa 42	Ligia Medina	41628081	f7d2c5d61c03c4ba604f1f05fe46c2f1
+Aliso	Casa 43	Fernando Osorio	17007543	b8a19b64b2fbf493bc5495a4aa102fe2
+Aliso	Casa 44	Ernesto Velasco	80420110	690c35af623ff3ab2324a37235a8cce6
+Aliso	Casa 45	Claudia Orestegui	222222	993259769f8764b19c939dc886f8782a
+Aliso	Casa 45	Jorge Eckardt Marquez	72252605	025b9ae61d40dcafb700d6abcf431148
+Aliso	Casa 46	Eleonora Angel	51624746	4e1ead25b6784d2261b7fb16f5027046
+Aliso	Casa 47	Julio Florez Gonzalez	19354531	6084fb5a964c29f18e006ca37e9babce
+Aliso	Casa 48	Hernan Dario Mesa	80421716	355d91f235e810d5d1bcb0e84040a257
+Aliso	Casa 49	Carlos Julio Contreras	194877493	ecf6825e864d781e72916d7424827015
+Aliso	Casa 50	Ana Maria Rendon Posada	42892152	de89db86b4ab5707fe8356cdae388861
+Aliso	Casa 51	Miguel Hunda	19432676	177c7029205081957fdb7f1015a62ca7
+Aliso	Casa 52	Juan Carlos Saad	80135591	eda432fa97f5b9ca2503e0bc42f1e072
+Aliso	Casa 53	Juan Carlos Castillo	1019070537	4eb019cbd0801e69c3396e37eff8774b
+Aliso	Casa 54	Mauricio Florez	79671793	b4064aa682f68a0c6d5a05b9a0b03f5b
+Aliso	Casa 55	Juan Ricardo Cuevas	79569084	49862ab43819e1fb7089e47425eb9d2b
+Aliso	Casa 56	Alfonso Borrero	35476959	0342226109365e9a46e0f8e1cdf0e7fb
+Aliso	Casa 56	David Dos Santos	615475	a8a6f5fc1f9d94708d0ab5ac9ce11d5f
+Aliso	Casa 57	Gabriel Jimenez Pulido	79794370	75f87aa8a3713b75102ea5ac7999fb4b
+Aliso	Casa 57	Gonzalo Camelo	14437451	e6c4fa7a7221c135a36887325c5e1613
+Aliso	Casa 58	Claudia Ramirez	38262635	12547bc9d8265110257bfb2812470dbb
+Aliso	Casa 58	Juan Pablo Clopatofsky	80032625	cc01d7c9cb3e3b1c0458a084a6ea118f
+Aliso	Casa 59	Guillermo Martinez	79735252	39605d49054ad0605d74dc33643a764d
+Aliso	Casa 59	Sara Arguello	3002848659	aa7a9867173f1d669f211142fbfe1340
+Aliso	Casa 60	Maria Elisa Rocha Cubillos	41651276	719756a6bc193aca9378759cadfda0c2
+Aliso	Casa 61	Oscar Roberto Mesa	19183017	5605a52d2d0ced3adeb0768c60105606
+Aliso	Casa 62	Miriam Mutis De Olivares	41344729	c0ad2b87d5f044853f1ccbdd4d594a69
+Aliso	Casa 63	Jesus H Rodriguez	72142666	a58a0936ad613187921d22524e536ba8
+Aliso	Casa 64	Jairo Alberto Parra	79310722	ab5c1956d377214fcfd93e565e26eaab
+Aliso	Casa 64	Yeber Armando Arangueren Rodriguez	6776273	20f42a1651b88eaaddd630a25c480b23
+Aliso	Casa 65	Gustavo Camelo Caceres	75263187	8c3293632bb5fd4dd317c5852415904b
+Aliso	Casa 66	Jaime Arturo Santana Castillo		
+Aliso	Casa 67	Carlos Echeverri	71937185	cb6d66fb139873e650a6c7bb6cf01260
+Aliso	Casa 68	Gilberto Sanchez	277777	5b8bfa5d54c62421f2da8923f9f5a68f
+Aliso	Casa 69	Carlos Camacho	9524853	31f10b0c393653f9f38ec37957c3e503
+Aliso	Casa 70	Luis Felipe Villa Nunez	79784701	b8934bec53174ab3f46414206c5ef103
+Aliso	Casa 71	Helena De Sarmiento	20019735	b6517adfa2cbfd23ba92670f4bcc2e7d
+Aliso	Casa 72	Cesar Garzon	80504072	33382f07676ac0efd942316c118f6502
+Aliso	Casa 73	Jairo Espejo	19355082	4487d570f6827215602fcb7e9c2c93c0
+Aliso	Casa 74	Ernesto Fonseca	79521334	987d4684e328d6b380249eacde7a50d5
+Aliso	Casa 75	Carlos Augusto Rincon	13842983	15eeaaf8a408549b45956951198cc5fe
+Aliso	Casa 76	Fernando Parra	19186190	fa54c82be6dd11dc51b5ec8d0f887387
+Aliso	Casa 77	Jorge Luis Giraldo Villa	19249648	46f4f300025c5a788261e2ddb32ea86a
+Aliso	Casa 78	Jairo Gustavo Linares	19206934	c70e8d6e2bff281fba2390c95f5cf944
+Aliso	Casa 79	Javier Gooding Arango	80193395	72b166c15f459759df3791c328cad473
+Aliso	Casa 79	Jose Roque Gonzalez	19087802	1af9b4c927fa3514f91823b54ff7c215
+Aliso	Casa 80	Gustavo Manrique	79449766	64bdb719339fc88e72d286127e3d5779
+Aliso	Casa 81	Mauricio Velasco	80408628	6e02efa7bca7dcbb9080ac4dc62f8059
+Aliso	Casa 82	Gina Sanchez	3497980	112e1343f8660d8aba2f04ca732e9e9c
+Aliso	Casa 82	Santiago Tarazona	79602273	704f6698a199e02455dc530ced6d9100
+Aliso	Casa 83	Jaime Roberto Nino	41507621	9ad3ca9c8f3735085d2faa238e53fc2a
+Aliso	Casa 84	Cesar Augusto Garcia	79371262	8e92eecedbf71b4cf92c3395a0eebc56
+Aliso	Casa 85	Alberto Rodrguez	88153665	3db1806f5648b9603d1f81c38f412c78
+Aliso	Casa 86	Javier Hugo Perez	264333	537319c5eadb4f3db55471d29ef33119
+Aliso	Casa 86	Margarita Malo	95158	5606a3af67e48825789a0f9cdd6c4baf
+Aliso	Casa 87	Felipe Aristizabal	98545512	edae913696d5bdd81d56ebbba01e3c4a
+Aliso	Casa 88	Alessandro Gaspareto	308101	0bbca88faef82b21d35cd2432e6b1d8c
+Aliso	Casa 88	Carlos Feipe Sanchez	80503080	c535a2e374165ef1992fce51baeef5e4
+Aliso	Casa 89	Guillermo Trivino	79148243	241a0ebee19d30343e63764d3d3bea7c
+Aliso	Casa 90	Hernando Castillo	17189852	86b84045edc0aad17e6ee95a921d517e
+Aliso	Casa 91	Ricardo Cuenca	79524354	9a5be414848db694c93f94232cf68499
+Aliso	Casa 92	Virginia Pinzon Quintero	51900275	95acdad92944b71bc8419aaa29dceaea
+Aliso	Casa 93	Camilo Rincon Mahecha	79892388	b4f9e66b64490c0e2f3c0a735df45e4e
+Aliso	Casa 94	Elsa Carrasquilla	41589515	49b36b9c8310c5c7e557da83ba2c3d19
+Aliso	Casa 95	Juan Manuel Rivadeneira	79779569	06264d5c19ae015d2342708fe1329bcf
+Aliso	Casa 96	Nicolas Restrepo Piedrahita	80426239	0a9a1ebde032217c5d7849ae856ea674
+Aliso	Casa 97	Maria Santos	27916020	3391cc2002cf4f47b7418eccc675f031
+Aliso	Casa 98	Tom Burton	3125110214	bf80185ccd4ae60ba410630d227caa19
+Aliso	Casa 99	Alexander Valderrama	79532905	843e654e216d6d619f9fd0f1494ae9e4
+Almendro	Casa 01	Erika Fontalvo Galofre	2222	770ac8ae1bf8fcdece6ae0370669edb7
+Almendro	Casa 01	Erika Fontalvo Galofre	2222	770ac8ae1bf8fcdece6ae0370669edb7
+Almendro	Casa 02	Raul Sergio Ramos O.	294540	3cf02444a369ef1aadf830573a5ef363
+Almendro	Casa 04	Fabian Rincon	80881408	0d044b76c164571764ab3f7909b68b8e
+Almendro	Casa 05	Fernando Lancheros	79368700	21d95ff7a4afef23daad735e8c9c3b30
+Almendro	Casa 06	Efrain Santana Santana	3222398	cdc062727cede41764614e7d82726c1b
+Almendro	Casa 07	Efrain Mauricio Lopez	79567208	37833910b4d2245bb85a70a548bfc589
+Almendro	Casa 08	Hector Eduardo Barrios Hernandez	19365895	8e5664b8a22343b40dcb11b4f89c0cb3
+Almendro	Casa 09	Alvaro Moreno Moreno	19483887	0904b50f5a74f337cdf3f52ea21cd4c7
+Almendro	Casa 10	Julio Martin Rueda Macias	79359798	7facc74a07478e86204ab1ee23e342e5
+Almendro	Casa 11	Mario Andrade P.	79271219	fdfac6132677a377b1677c0e06cfe3af
+Almendro	Casa 12	Javier Prada	79464769	80726eb2f51d10fa6531b54aac993a4b
+Almendro	Casa 13	Luis Alvaro Rincon	19315527	d394b5621f7e834aa0a50c3e5384db5a
+Almendro	Casa 14	Omar Ladino Gomez	91496221	2499976403052ea4c1d10008d3104177
+Almendro	Casa 15	Juan Manuel Vargas	79152841	60a8dd1388b03e5ac35c7b3cbe88a36a
+Almendro	Casa 16	Tomas Navarro	80418969	0574d7e32ac300499d7fa563d1352775
+Almendro	Casa 17	Juan Pablo Rojas Moreno	79517430	709d0c2dea8e57c80d352b6807cf1fb9
+Almendro	Casa 18	Luis Guillermo Aponte Gomez	79798658	de517f7ed3024e7e7f1161499ec093dd
+Almendro	Casa 19	William Navarro	79655247	974f29184df3f826a0b94902373c0675
+Almendro	Casa 20	Andres Fabian Gavenda	364799	c147a277abfafc6723b2a5401cfef639
+Almendro	Casa 21	Juan Camilo Deaza		
+Almendro	Casa 22	Andres Alvarez De La Roche	79159789	c311369d6bf58d736073b1b0db096b13
+Almendro	Casa 23	Carolina Hernandez	38550577	fbd29b6f5470cc7c8a2e296dcde28917
+Almendro	Casa 24	Andres F. Eslava	79779129	40e73e859e5846fce84dc45b565a209e
+Almendro	Casa 25	Maria Nelly Nunez De Stephanov	20053792	f10c81b0c83df3aafd60c191db354128
+Almendro	Casa 26	Juan Carlos Trujillo Garcia	73131978	37b7ca36656afb72e7656b5e0d380459
+Almendro	Casa 27	Marcelo Liberini	524336	ccdc9cf57beabcf0c29b60e62fbd95cb
+Almendro	Casa 28	Kenneth Hylton	417776	92aca82f9335b950145a96db067106fb
+Almendro	Casa 29	William James Aristizabal Fernandez	7548543	68863d68d9bc948270a965d5a16dd000
+Almendro	Casa 30	Ginna Paola Avila	52344139	c57add9c54b8700441cb1c4a5ec8d88b
+Almendro	Casa 31	Cesar Augusto Marquez Ramirez	18395813	c4a86a288f26b7ca795f0091ebe0a725
+Almendro	Casa 32	Jose Alejandro Aracena	419762	58bd33ede5f33c9fd2f925edaf30d664
+Almendro	Casa 33	Camilo Mora	71378184	14a614aaa2f5855fc7b0e1699aafa67c
+Almendro	Casa 33	J Pirachican	9876543210	5bf077eb2c50e20dd8c679f16df2cfa2
+Canelo	Casa 01	Walter Gonzolez Salazar	79877655	3bf6caad14500cd60b7cfa24b2c7fdf4
+Canelo	Casa 02	Humberto Marulanda Torres	17060317	c9a101bc9b34408e28799113e731af4e
+Canelo	Casa 03	Rodolfo Antonio Albarracon Duron	79306046	9b888619672999a0a810c1914cbede8e
+Canelo	Casa 04	Eduardo Sarmiento	80425748	028754fd28693e44cbd3e84637e96183
+Canelo	Casa 05	Epifanio Daza Gomez	19417443	78f31055faa521c6d59036505d09f8c2
+Canelo	Casa 06	olvaro Andros Martonez Millon	80056170	ba7854d294482638fe01c9f851c52a35
+Canelo	Casa 07	Gabriel Aranguren Neira	80243784	f24d8ed8442db955cfa74ba2f5260d35
+Canelo	Casa 08	Milton Henry Castillo Blanco	79345339	40de0a024b16a3650c8fb289509516a3
+Canelo	Casa 09	Juan Manuel Gonzalez Garavito	80427548	1bdd774f946a839f6694152a92a6546a
+Canelo	Casa 10	Adriana Maroa Ramorez Vega	52264141	fd7d449313cec47bbd0add04d413344f
+Canelo	Casa 11	Holger Berg	579540	5a9a84bdc29c20e24cc4e406d8a7a393
+Canelo	Casa 12	Martin Garcia	319124	9ce2f6c58a6c32886efa9678f399d188
+Canelo	Casa 13	Olga Lucia Luque	35199822	a64e84e0bb48e97abc8f8028a2e995e8
+Canelo	Casa 13	Sandra Marcela Acosta	52022425	3d7087de7953b9d0e2b9e1cfb3c3176d
+Canelo	Casa 14	Carlos Velasco Angelietti	424210	f16ae619cccd95626db99619c80bb453
+Canelo	Casa 14	Marcela Sandoval	51641347	51d0b3d1985b67d0e60b68bdf3ddc884
+Canelo	Casa 15	Luis Javier Gomez	80422500	4cb3fa6c4b53b6b552414d2e9c95a15a
+Canelo	Casa 16	Albeiro Herrera Castaoo	80412390	2109fe5e2fd86ce152ce19aea068d3ea
+Canelo	Casa 17	Roberto Mario Olarte	79781852	912d0c701890b025835fabd1655ba985
+Canelo	Casa 18	Juan Antonio De Zubiria Montoya	79156851	ca144ef86e0340420c5f116a89083bd1
+Canelo	Casa 19	Julian Alonso Valenzuela Ramirez	76314609	25d1f930534ca1274d61de5d30b07b6c
+Canelo	Casa 20	Edgar Avila	79365107	1258b36be27df1f88415faa3ccf0496d
+Canelo	Casa 21	Carlos H Romero	21058362	bc0603257fdcdc32a9ebc1e07cb7537f
+Canelo	Casa 22	Fernando Aguirre Angel	80408566	bb3ae69d9a6627db228cc02d0dd05cef
+Canelo	Casa 23	Gustavo Adolfo Guerrero Ruiz	79596882	d2d8e710e2d66717e7f8277fb5a60e40
+Canelo	Casa 24	Ana Maroa Pioeros R	51680672	33d0e084dd9047ad46bfe27339d6769b
+Canelo	Casa 25	Silvia Patricia Marti Samper	39780235 	dd14a177b541404548635016e8308f66
+Canelo	Casa 26	Carlos Andres Vasquez	79694307	bccd9f06d626bd93f393c2255e4a4771
+Canelo	Casa 27	Juan Felipe Correa Villegas	80422831	2118e6473952dd596d5cd128037e6b60
+Canelo	Casa 28	Julio Cosar Murillo	79843282	be59a8b716a9fd6dad1db72061cc8643
+Canelo	Casa 29	Johny Alexander Jimenez Ocampo	80051663	6afa09e03b5370f495da7b3a7a3a5782
+Canelo	Casa 30	Luis Guillermo Cabrera Bahamon	79946438	8b300b3849fd9fde8b973f6dcda5cc0f
+Canelo	Casa 31	Peter Maritz	80020	259253c4f2d63d29efb8fb2f75ec3d33
+Canelo	Casa 32	Alexandra Aguirre	16497	ca57acfeaaaeeef0591413759b6e5625
+Canelo	Casa 33	Patricia Pinilla Castellanos	80423317	b0b6772d1a52100165913f7b134bb9c1
+Canelo	Casa 34	Joso Francisco Gonzalez	19458129	56179d228b747be705975a23a7d528c4
+Canelo	Casa 35	Luisa Fernanda Gutierrez Guzmon	52690694	34d0855f9d888f005e1b047a75e945c8
+Canelo	Casa 36	Alfonso Garcia Cadena	19454079	f33ed405d72aa09ae83c38a4af22e071
+Canelo	Casa 37	Giovanni Garcia Lopez	8786197	1ccb5d6e507fa48e6f2c69f6380d5d59
+Canelo	Casa 38	Camilo Ureta Florez	79786098	7a609c4c29d3123b50a62c449e3fbe40
+Canelo	Casa 39	Rosa Virginia Quintero	20190522	83bf771a1b5318276a2960cf5fc7ae2a
+Canelo	Casa 40	Eduardo Vejarano Rivadeneira	80505270	007318c9ec3587f8599396230d056187
+Canelo	Casa 41	Dairo Aponte Angarita	79400830	2f4ff3deb3cbf8962be928a7c7c85e96
+Canelo	Casa 42	Luis Fernando Salgado Ortiz		
+Canelo	Casa 43	Jaime Rivera	19278932	87bc5608ff5c2e96abf204d994f86fb7
+Canelo	Casa 44	Alberto Javier Trivioo	80505197	fbc1f38e80b3d4f38105311f3731b073
+Castaño	Casa 01	Javier Zapata	86045269	a5f7b31873e83053d97014cd4e668f39
+Castaño	Casa 01	Margarita Pulido	35476884	683ed354cb81f4b0b7ae7328f9cd76b2
+Castaño	Casa 02	Gabriel Beltran	1023304910	9b35c9f847c3ebfce83cf70b22611ba4
+Castaño	Casa 03	Cesar Augusto Vargas Avenda	7161549	aa38ae5c19809507c11d573ad6698b9b
+Castaño	Casa 04	Xiomara Gomez	51809636	96d0c665fbfaec324546d6a23ab4d820
+Castaño	Casa 05	Carlos Fernando Torres Salinas	52802322	a78f013ab334716f5cd17a87c4405684
+Castaño	Casa 06	Alejandrina Sanchez Pachon	35506820	2475da12148fed55922c90d5060ea333
+Castaño	Casa 07	Jose Omairo Bustos Sanchez	19136016	88294b1a173b7dd54116b3784f92b00b
+Castaño	Casa 08	Luis Eduardo Garzon	79629828	34431ad87399c541cf313bedb613284e
+Castaño	Casa 09	Clara Rojas Gonzalez	51711197	d574646b7fcd308ebfc894c33ce52f33
+Castaño	Casa 10	Cesar Augusto Alvarez Casta	79625887	e55c38c4c70e3d4d135829d7ffbeb0b3
+Castaño	Casa 11	Andreina Rojas	19806638	4888f8ad9d0b2c585105adbbd71707d8
+Castaño	Casa 11	Diana Marcela Herrera Nu	52515789	fd581f37eeb5a1e11d2bbada6fdcbd43
+Castaño	Casa 12	Luis Guillermo Betancourt	79249894	67eb967a19f3c710680b231a4b6f1288
+Castaño	Casa 13	Josue Rojas	79708370	560b45b40f44c6e31b506aee72e7993e
+Castaño	Casa 14	Luz Amparo Buitrago Algarra	35412424	652045f3f3ae1f467e0a9cfb3a53c323
+Castaño	Casa 15	Mario Omar Galvis Chaves	79444684	36fc61e295bcdb3ea3a40c88f2f549cc
+Castaño	Casa 16	Alfonso Perdomo Garcia	7708725	316da6a6209642f4597f0c070aaa3e34
+Castaño	Casa 17	Nelson Jimenez Espinel	73131975	647d0936e9d19a10880d5a8d36367701
+Castaño	Casa 19	Nelson Rodriguez	79638705	0ee904ef7383d81a313d34606ea36b60
+Castaño	Casa 20	Jaime Alberto Sierra Giraldo	79388862	5dc2a5b25ce4cf9244402ef6aeeeff4d
+Castaño	Casa 21	Hector Jaime Uribe Ochoa	70096012	c8d4ec1c3d150ed72feb475a57d21d39
+Castaño	Casa 22	Luis Alfredo Sanchez	19075590	580916bc565785dbcf48418ab8b1c908
+Castaño	Casa 23	Maria Camila Montes Coca	1053805517	d6ce41985ebf25b7e3b03f338eedfa48
+Castaño	Casa 24	Javier Erazo	79455549	fe9b3d5dea4705c61b3298c144bc6c19
+Castaño	Casa 25	Dario Fernando Cure	79554562	4d02f42a75f9a0182cd19c4314bd1aa6
+Castaño	Casa 26	William Sarmiento	7226733	4551e1b38b8f8b49252c85f47cf66b0d
+Castaño	Casa 27	Miguel Dario Salamanca	79436605	1f8a9119d6401f9e57a349bb620d607d
+Castaño	Casa 28	Dario Muooz	192844735	6584838324265b410f466340d63b09db
+Castaño	Casa 30	Reinaldo Garcia	19466536	502619be836d42c8dafa62e00fc04c5d
+Castaño	Casa 31	Ernesto Zaldua	19454687	c871b67b9c95c2a28f2ecda6d30ad5b9
+Castaño	Casa 33	Monica Del Carmen Perez Polania	52349886	d0a065e4cc09429413988703796217fb
+Castaño	Casa 34	Carolina Arango Corrales	43628368	0b760ff306bb8407cdefe4e23bfa12ee
+Castaño	Casa 34	Marcos Nu	19106622	3a2422e3f0b40f6e9eb76a4c6afb9fbb
+Castaño	Casa 35	Daniel Andres Rodriguez Diaz	80085173	3b37e27b5066d17d00648f4732499932
+Castaño	Casa 36	Daniel Maldonado	80085593	6684397bc0af2a3cde6aafc031bf7306
+Castaño	Casa 36	Joaquin Mejia Puerto	79141006	e6e02bdc5b2014e6b5c461436a05958a
+Castaño	Casa 37	Carlos Bejarano Jaime	79398825	1afca1444da6f5de716d6156bf94a79d
+Castaño	Casa 38	Astrid Guzman Mendez	52307951	29ca979fe00c41e50da736838e20c0ce
+Castaño	Casa 39	Alejandro Maldonado	79693135	b36d89b63fd89cedd1d3f4b112dfc2e7
+Castaño	Casa 40	Walter Jimenez	80504018	cb1357203c545597c5f8e7689f8630e4
+Castaño	Casa 41	Daniel Andres Diaz	79647830	8b83149038db7182719f94d22e840fa8
+Castaño	Casa 42	Julian Armando Ciceri Perez	17659646	b064c1f29495702507c08e3590a86f59
+Castaño	Casa 43	Liz Adriana Gaitan	52381004	abc05fabfe725afea2095d94bf516ea3
+Castaño	Casa 44	Luis Alejandro Cubillos Cadena	79981729	94faf0e7adcdd0f207c94efac20acd75
+Castaño	Casa 45	Alejandro Velasquez	79942226	8a47a5f52fc9e46d0ba5a160bd4dbac6
+Castaño	Casa 46	Camilo Murcia Parada	79052171	08207fc17ab8ff1f788979fb4457db4e
+Castaño	Casa 47	Kleber Patricio	407289	bf26f264d36d3f0fa1e9543366a02ca0
+Castaño	Casa 47	Marcos Nu	19106622	3a2422e3f0b40f6e9eb76a4c6afb9fbb
+Castaño	Casa 49	Miguel Paredes Valdes	19113657	70aa0773b0ddd50dd7a8f392e725da58
+Castaño	Casa 50	John Henry Arango Alzate	79442823	46a2e9d33b85f251415b6f844c161f4a
+Castaño	Casa 51	Mary Santos	51596555	4ca48dda19a80d7ec42ac83ff563b4ec
+Castaño	Casa 52	Gustavo Adolfo Abondano Abusaid	79297087	9a77b5434054757c37a0b53f224d0f93
+Castaño	Casa 52	Juan Camilo Valencia Gonzalez	79778004	7fde3a2040721d77376f2b59d9cbaa28
+Castaño	Casa 53	Fernando Caldas Gacharna	19456677	887acf248aadf90e50eda325e1eaf66e
+Castaño	Casa 54	Henry A Calixto Laverde	80437728	470313bc391248c8aac8d0b8890fbc4c
+Castaño	Casa 55	Aleyda Ramirez Pinto	51875952	98bc994bee5fadf55532ab4653c01fb4
+Castaño	Casa 56	Oscar Fernando Gonzalez Jimenez	79641173	6d8c24c275668e54c2e75260093e8f93
+Cedro	Casa 01	Andres Mejia	72209254	1abd7ba9905cc40fe00e1e2930a633c6
+Cedro	Casa 02	Jose A. Soto Amezquita	19465428	fd67f666594f297e42668529f813389d
+Cedro	Casa 03	Juan Pablo Ramirez Perez	79361049	f620ef48eb6d1289a6586996993b1ff9
+Cedro	Casa 04	Luis Alfonso Villamil Rincon	13221552	1a695f89f8f6c21b0f9a08e99e37269a
+Cedro	Casa 05	Nelson Acero Castro	19188723	d3c890d46549433cb96ef1a263f1b450
+Cedro	Casa 06	German Rodriguez Nuoez	80409335	cf8251df0dbcfbfde143106650b6636a
+Cedro	Casa 06	Patricio Arturo Pereira Colina	80409335	85e4b4009ce6e61c80c6c6dbd4324857
+Cedro	Casa 07	Rafael Antonio Millan Parra	19160067	a94c0fe151df5159444c83ec47c4c24d
+Cedro	Casa 08	Juan Carlos Gonzalez C.	79981214	ee3bdf35d2e9ff28d05eab1d3f791e06
+Cedro	Casa 09	Alex Torres Pardo	79400518	d182f87893bd82bb67e8e7c00cead70b
+Cedro	Casa 10	Alex Vargas	79787332	07feaa9e2ecd7e846a02886310019eb2
+Cedro	Casa 11	Consuelo Sanchez	29433261	c836472f90d354b67ad4ab2398889fb8
+Cedro	Casa 12	Ernesto Julio Vaca Martin	80269604	53f3028f67482a791a39812b9b2df981
+Cedro	Casa 13	Ricardo Cordoba Rojas	19350529	14359849507a304b2d392676fe24cc36
+Cedro	Casa 14	Gabriel Guzman	79606509	a4fd5f2c67b0389fdf07f2e0f66b53a4
+Cedro	Casa 15	Haydee Hurtado	41779476	cbed410465572d8bc8b8b90007bfeca9
+Cedro	Casa 16	Nelson A. Martinez Rodriguez	93293943	b580b7f2994958b8b0b30191adc1b0d7
+Cedro	Casa 17	Jose Eduardo Lozano Velasquez	11344514	c19ef235ce55a54c38e8b33344b976cf
+Cedro	Casa 18	Freddy Patarrollo	5933553	e3296f97535f43af75621f452225d615
+Cedro	Casa 19	Cristian Diaz Jauregui	79413191	b120ebe5afccdd42ffd98a25386924b8
+Cedro	Casa 20	Valery Sanchez	22736240	7e0a4ec3ba58adf4d03b18de7e18b64c
+Cedro	Casa 21	Jorge Alejandro Gonzalez Gomez	80503799	0af06c2a5ccfd71703a5175caa9077d7
+Cedro	Casa 22	Juan Pablo Suza Florez	80060348	61ecd1fcda044822994c694e6746bce3
+Cedro	Casa 23	Marcelino Ortegon Cervera	79322599	694830690feff4b4754f6b748c959573
+Cedro	Casa 24	Juliana Salazar	52693604	553b8074437573b53f278cf3d1e2a500
+Cedro	Casa 25	Ernesto Franco Cadavid	79283579	b1356cf53e57dcaeabc0f00c32e2fe32
+Cedro	Casa 26	Eduardo Humberto Agoero Vargas	261187	6429696a4ef47b767f3f2c864de03986
+Cedro	Casa 26	Margarita Reyes Lopez	52190239	fc35fc1ceb5141f60c14fa6796590238
+Cedro	Casa 27	Mauricio Medina Aroque	17061100	d06efaeff0995064b330af60cd3cd045
+Cedro	Casa 28	Juan Carlos Basto Rubio	19441965	a65b8a5feab85c6bf2238576addf880b
+Cedro	Casa 29	Fabian Prieto	79317983	02181423f09e3fb8e39f6a005a92d88f
+Cedro	Casa 30	Jaime Alberto Rodriguez Matis	80414516	bb022bbc5c57d1620a47ad8e8c48c7be
+Cedro	Casa 31	Cesar Nelson Franky	17137639	0c6bca9f9e6f8d3ec905a3f56398fef7
+Cedro	Casa 32	Philippe Genty	123181	6b0a44d1a0878275bd01b8ce2505b1be
+Cedro	Casa 33	Conrado Gomez Velez	71629745	54f78724aeb683cf83dce785c5a2fb77
+Cedro	Casa 34	Wilson Garcia Lopez	19459786	06834e3615e81bcebe2ff4273ea8f043
+Cedro	Casa 35	Orlando Pardo Blanco	91260634	0299fe9ce903dcd14b6fbe15f9a6070e
+Cedro	Casa 36	Rafael Goncalves	81968347	a31d78d4f20328f29d430f5b106a8613
+Cedro	Casa 37	Luis Felipe Rojas Arbelaez	79691753	2a070099681797b33a1e63cd59511abc
+Cedro	Casa 38	Alejandro Caro Lopez	8473068	0bd56c8e881e93fec8de40656678d4c5
+Cedro	Casa 38	Paquita Navajas De Cedro	9005870383	2df367b762bd3292a0cef2e940899dbc
+Cedro	Casa 39	Jorge Navarro	80407504	71bbe7aa6cebb9d5d6226972fafa7489
+Cedro	Casa 40	Juan Mcallister Salamanca	79948993	48421bf648ca0dd9be49c8d981aa4f25
+Cedro	Casa 40	Octavio Cabrera Gala	406667	9b77e8a8d7660e18a25b10893511f20a
+Cedro	Casa 41	Henry Bahos Romero	79520572	04dc44ed47eea55c46714ead29e1869a
+Cedro	Casa 42	Carlos Antonio Vergara Gutierres	79390707	adc9e5d60e72cc36b2a4a74dff931d22
+Cedro	Casa 43	Gilberto Sanchez	16626041	96671fdd5bb5e0179832f2dbbbc0da01
+Cedro	Casa 43	Juan Dennis		
+Cedro	Casa 44	Joso Miguel Mendoza	80106866	9dc12070f8bec0e11f3b6d0200432a6f
+Cedro	Casa 45	Alexander Peoa Silva	79671161	a3997ed153a034c51417453cfce1075d
+Cedro	Casa 46	Carlos Chacon Tovar	19487316	1707b9bce5cfaa8ef08f1837c18b8f28
+Cedro	Casa 47	William Hernando Salamanca	79601680	1010856e758f5f29b626413102bf3b0b
+Cedro	Casa 48	Carlos Alfonso Crissien Aldana	2903092	481b49f87ea6b026d7676c908d369680
+Cedro	Casa 48	Juan Antonio Montoya	70031220	f6f8a5dfe054a1213665ef6967acb622
+Cedro	Casa 49	Jose Pons	351547	b720ccbc62ad087cc9306865856b9a35
+Cedro	Casa 49	Josue Rojas Rodriguez	79708370	ca0ab94d401c41e33665f2fdf3c186dd
+Cedro	Casa 50	Carlos Alberto Reyes Serpa	91212885	913274ee91565dba24c8f4c9728c6eb0
+Cedro	Casa 51	Oscar Felipe Bulla Varela	80196422	5b581fca06a75e8a1819d9c236ff0f09
+Cedro	Casa 52	Mauricio Viveros Naranjo	16233830	ccc67cc7e012eb166fe1435b239a6c23
+Cedro	Casa 53	Gloria Nancy Laiton Alfonso	52562057	320df81a01b060aa71d1f36865dedf95
+Cedro	Casa 54	Angolica Gomez Campos	2345	48b2c58dab1601202112476e9f927866
+Cedro	Casa 54	Sebastian Troncoso Solar	527104	eb67ab24e1746e91bdcdcdd7c3778db7
+Cedro	Casa 55	Aldo Andres Caliz Schafer	79520894	0b5bb45288247e6a0ed26d6b5d1d1976
+Cedro	Casa 56	Marco Aurelio Charry	46372726	f1aef71222f2844f3935220417424609
+Cedro	Casa 57	Roberto Uribe	19495123	b820472db894262bc5c5d0b9e07d3eba
+Cedro	Casa 58	Luisa Ana Barillas	391381	71f87dc316b95a5bcf34b5cb79b6abc6
+Cedro	Casa 58	Silvia Beltran	63150086	463586339a7b7d22e798e90dc1ee0a20
+Cedro	Casa 59	Gustavo Ocampo Candamil	75081944	ad59ba29300b1d81570a431fce15c75f
+Cedro	Casa 60	Alix Rocio Ruiz B	52106204	192add590c7c764fba82782e84a11cb5
+Cedro	Casa 61	Hernan Tellez Vera	19386063	5e2a795920c83a76c5f668f3658f20ea
+Cedro	Casa 62	Geovanny Alberto Silva Paez	79717428	362149926cc6c90cdecd372866a6687b
+Cedro	Casa 63	Maroa Fernanda Villamizar	52159437	5aeeb34794b201879ca15170dcce9a7c
+Cedro	Casa 64	Hector Alfonso Huertas Forero	11345195	40fce5a391b176a17ec12721e2821662
+Cedro	Casa 65	Jhon Alexander Pardo	79541296	c7114f4fb5c049937293598e3ba79d1d
+Cedro	Casa 66	Pedro Alfonso Castaoeda	79635152	457b6779a51852875da11612534b80ab
+Cedro	Casa 67	Juan Climaco Camacho Martinez	13887385	650ab22e8927020f3ca09c706f72db26
+Cedro	Casa 68	Alexandra Valencia Molina	52030996	4c3e0b55369f9e33d6637a9934569a99
+Cedro	Casa 69	Carlos Andros Olaya Gonzalez	80423447	b06a3702d107bd4888d1c0aacf9ff19c
+Cedro	Casa 70	Angolica Gomez Campos	2345	48b2c58dab1601202112476e9f927866
+Cedro	Casa 70	Marcelo Puiatti	20122329	8bc0867aad1f24cf6421290d09832d56
+Cedro	Casa 71	Luis Jaime Sierra Umaoa	79577963	dda92b99378ac210f2bd738e9d138c53
+Cedro	Casa 72	Alexandra Cataoo	66822933	1f25a98146ce73c16f7340228056bd32
+Cedro	Casa 73	Martha Eugenia Martinez	41621123	3ffe05c05da6c51117746c41bf717116
+Cedro	Casa 74	Cesar Julio Rodriguez Herran	79156671	f505a80d732de488260076264ecd32ed
+Cedro	Casa 75	Angela Maria Uribe Osio	35584490	dce9b90bb34e38627daa87cef7ba73d9
+Cedro	Casa 76	Jean Lemoine Villamizar	79905742	72478d4faa943abb40f61a0dbfec7b76
+Cedro	Casa 77	Carlos Eduardo Garzon	79784215	3f87e0d7a5fd02774dbb450f1427d57e
+Cedro	Casa 78	Pedro Muooz	19180990	d59c3e4763638ec174c36a8ff69cc20d
+Cedro	Casa 79	Luz Eugenia Tanaka	31986860	669703037f6af01bda89ae86cd43a748
+Cedro	Casa 80	Sergio Martinez	80422832	9185d2a2c3eec49c7852b0ad8cf1aee4
+Cerezo	Casa No 1	John Harold Hernandez	79418773	376ac4ec811cfedaaef94c4877a95171
+Cerezo	Casa No 10	Jairo Rodriguez Zambrano	79154018	810408d42cbaa8e71e10f8e28816b06d
+Cerezo	Casa No 11	Jaime Hernan Gomez Lopez	79348333	61c6c161f9ed8748749c33a2e74332cf
+Cerezo	Casa No 12	Oscar Enrique Baquero	79653640	9f4bf2b4eed96c468e1e4910c8ed9f09
+Cerezo	Casa No 13	Omar German Diaz	79472960	a5cbbc83d54d1c89b0c942e3b51a0d80
+Cerezo	Casa No 14	Humphrey Roa	1444	6bef8e9aa7546abd5b9a151a0810e5bf
+Cerezo	Casa No 15	Alejandro Arias	79142515	d56f6a2f8f50d5a8ae4c350136391277
+Cerezo	Casa No 16	Javier Eduardo Diaz De La Rosa	34567	4629ce6564e5e9b127ffd9c3b82cb19e
+Cerezo	Casa No 17	Jaime Henao	79784199	71ba1c09e8da8894f9f6449ffd7a34e2
+Cerezo	Casa No 17	Maria Eugenia Pardo	1777	324dc7db0adbec25720557ba8cc044dd
+Cerezo	Casa No 18	Juan Carlos Riveros	188	722ffa0513778fb6d9cf79732b1571d4
+Cerezo	Casa No 19	Pablo Andres Jimenez	79686864	ab1c73372ffdfbf0678adb63007731e3
+Cerezo	Casa No 2	Gerardo Jose Villalobos	541826	ee1ad896b07c9bd4ad95b088d5cef6c9
+Cerezo	Casa No 20	Angela Vargas	55161196	262b1a2da4c3acf16d2b93f084cb436b
+Cerezo	Casa No 21	Rafael Castro		
+Cerezo	Casa No 22	Jaime Sanz De Santamaria	19192193	ee7cfd0b48df37d1a79041191e99afdf
+Cerezo	Casa No 23	Julio Cesar Pena	79600188	bbf297f703406f0810b95feb3efe8201
+Cerezo	Casa No 24	Luis Alberto Cortes Leon	19452235	5f75cd22c6d30c80eecd1c1a20705533
+Cerezo	Casa No 25	Gerardo Montero	633673	eddecce8d61de92c03a71fed57cb397d
+Cerezo	Casa No 25	Juan David Gallo	80177109	f6517caf662bfab955f3831c9dbd18cc
+Cerezo	Casa No 26	Fabio Nunez		
+Cerezo	Casa No 27	Gonzalo Alberto Suarez		
+Cerezo	Casa No 28	Brandon Vallejo	79846761	5cf25c3ac1c9225425324fb54bf0a7f1
+Cerezo	Casa No 28	Jaime Andres Gomez	82390998	f94d06b6e71100199a78c9a68da7dd1f
+Cerezo	Casa No 29	Jorge Andres Gomez Pizano	79695241	77ed45f3b43f4997b85520f9a721dce2
+Cerezo	Casa No 3	Tomas Alberto Moreno	91261975	488ecae6b7b6af2486f1df7fc6153519
+Cerezo	Casa No 30	Otto Franciso Urrea	7969583	959dc40f7ed71b88733cc3dda612992e
+Cerezo	Casa No 31	Luis Antonio Alvarancho		
+Cerezo	Casa No 32	Juan Pablo Perdomo Rodriguez		
+Cerezo	Casa No 33	Rafael Enrique Obando Paez		
+Cerezo	Casa No 34	Wilmar Rene Ochoa Uribe	79499928	aad0997d1aa25567270b9a2f519dc7f3
+Cerezo	Casa No 35	Harold Mauricio Trivino Perez	79412996	7e75ba25520ffd4ea2e9326de403abb5
+Cerezo	Casa No 36	Manuel Lozano Chacon		
+Cerezo	Casa No 37	Alejandro Valencia Hernandez	8289799	29ae6aa09d5a2393f711f0ff31f9ecdf
+Cerezo	Casa No 38	Lilia Munoz De Daza		
+Cerezo	Casa No 39	German Antonio Maretico	8733243	bef2928cc218321d7d9c9dbbd1bff576
+Cerezo	Casa No 4	Javier Orlando Gonzalez Reyes	91247172	98bc729ac47abc6471464de9e4ac9934
+Cerezo	Casa No 40	Jhon A. Diaz	13492615	f6b8d87af4cddb8cf0e372dcec3aeea8
+Cerezo	Casa No 41	Guillermo Villalba	79979605	92d11474c2dc61631d35743fdb8f7232
+Cerezo	Casa No 42	Orlando Garibello	73122873	5db6ef540c4d2da39cdccbc0bab84082
+Cerezo	Casa No 43	Mario Hernan Garcia Olaya	79540386	b8a96ea2824203975a36715cd3bb5386
+Cerezo	Casa No 44	William Cadena Urrea	80419639	266fdf9f96ec8da589769a349cfc4396
+Cerezo	Casa No 45	John Garavito	80416267	b8758095874d2bbf4ab1947d109093eb
+Cerezo	Casa No 46	Juan Carlos Rodriguez Martinez	80417342	80d00d55850ae0a02135b76e1cb6a8a7
+Cerezo	Casa No 47	Camilo Salazar Gonzalez	19439018	56f85176353f23dc96376b7b6e12bc50
+Cerezo	Casa No 48	Edgar Antonio Hernandez	80192040	3b5f6a0b9ae4c35968cf028595dd8a3e
+Cerezo	Casa No 49	Edgar Alberto Martinez	79400804	54a30e9196024347ffb1efae30b33fe9
+Cerezo	Casa No 5	Maria Isabel Urrego	41354845	ea067796e377dd5b2e7562822df59053
+Cerezo	Casa No 50	Cesar Manuel Benavides	79624360	29cd3c80f96c82a40eb20aee3d22dddb
+Cerezo	Casa No 52	Gustavo Zambrano	396983	43850768f12679d1d187a9466c54ef8c
+Cerezo	Casa No 53	Carlos Patino Ocampo	79798327	9afa554a4a277b49ffa87384db0160af
+Cerezo	Casa No 54	Yolanda Ines Romero Roa	41566398	1431590aa5abae26c97178e339a21040
+Cerezo	Casa No 55	Rafael Laverde Franco	2331913	6737918fbc7f46b0c7f4f73b1a4d46a5
+Cerezo	Casa No 56	Heriberto Bonilla Medina	19274440	0daf4f53154cd7c90bd1b5db0f4de09f
+Cerezo	Casa No 57	Juan Jose Daza	12435764	2d5fe315ee3e8ada6b7dd49883ebaf1d
+Cerezo	Casa No 58	Miguel Angel Becerra	17334010	7944df6512cf438927ef1e44d2f2bc26
+Cerezo	Casa No 59	Ernesto Duran	79783620	790d4d28a2ca8f496eb2584fe4e95a65
+Cerezo	Casa No 6	Oscar Hernando Torres Mendoza	19390415	c4a04f1cbc0dfd3eaba04aa65485ba20
+Cerezo	Casa No 60	Juan Carlos Velasco Barriga	79152641	1ece7fc0378262d7499b02c02559d3a1
+Cerezo	Casa No 61	Jhon Harold Gomez Vargas	19499347	cf9e5cfaebe2d3da616631e67585e8b3
+Cerezo	Casa No 62	Carlos Eduardo Florez	79949260	9f46b41e9d98486eed75a216cfd10599
+Cerezo	Casa No 7	Ivan Fajardo	80470038	cf7ab398d21f8de7a844a7baeae2b3a5
+Cerezo	Casa No 8	Jaime Vargas	8	2bf7e0117d45b28160c173bd150c0a10
+Cerezo	Casa No 8	Milton Cesar Higuchi	354310	9b18ee8b1e92a408edef6e400a1102ee
+Cerezo	Casa No 9	Francisco Barbosa	80415128	67c962def1c91119ea2975aa669fcfcf
+Cipres	Casa 01	Freddy Patarrollo	5933553	e3296f97535f43af75621f452225d615
+Cipres	Casa 01	Saide Isaacs Rodriguez	52431173	3e1ad60ca1dfba49bb959622ee35ac40
+Cipres	Casa 02	Jose Maria Ortiz	79366556	7d9a55b026b4466a1d5d75728a37a624
+Cipres	Casa 03	Carlos Alberto Cuervo Robayo	80420596	7ee63c5ddf6a9e8a68038c16479b96a0
+Cipres	Casa 03	Jhon Dario Londono	2	fec3a9c232bf3b8800636846d6867c71
+Cipres	Casa 04	Daniel Quintero Perdomo	7700642	329ef02b5147c62387d806ff86674317
+Cipres	Casa 04	Hernan Dario Tellez Vera	19386063	a31707925a88eac5025a5ccec2960d8d
+Cipres	Casa 04	Hernan Tellez Vera	19386063	5e2a795920c83a76c5f668f3658f20ea
+Cipres	Casa 05	Henrry Diaz	9527047	e737e93b34a8ee0ec9756acbbeb4b993
+Cipres	Casa 06	Alvaro Francisco Najera Gil	80210898	d13cb0402d0887892230362eb9854ebb
+Cipres	Casa 07	Andres Fernando Samudio	80497903	b1087c2bfe07070942d00e6fe8ed69c2
+Cipres	Casa 07	Luis Hernando Cespedes	79246157	b661cbfad9561253333655079d640bbe
+Cipres	Casa 08	Luis Fernando Ramirez Navarrete		
+Cipres	Casa 09	Luis Fernando Garzon Lozano	79691238	0ccfad91413003378c31abccc83567aa
+Cipres	Casa 10	Daniel Dugarte	337297	9a6506a3b3c733d9babd0ec3b8805396
+Cipres	Casa 100	Cesar Augusto Ramirez Robayo	79672260	06a426bfc6916fdf955a0e9c4234a222
+Cipres	Casa 101	Andres Manuel Ballestas	94414615	60857d590df116be5bae92fad16369c3
+Cipres	Casa 102	Mario Augusto Gomez	79789999	edd370f9833ea4a1118c0561f58f5e25
+Cipres	Casa 102	Nicolas Mojica	16703369	7d3e3f9cef02ebbd3d01e151cfbf0a61
+Cipres	Casa 103	Arnulfo Gamarra Lizarazo	13889519	5cd4b6837e67423983d6d1e0f8470886
+Cipres	Casa 103	Herly Melgar	1	79676754edc7a47d451785a894d3fdf7
+Cipres	Casa 104	Miguel Manrique	91535367	6d8ca29dce8a0f0f777ed9bda2318e7f
+Cipres	Casa 105	Fabio Mendez	11345096	9895ec45a255b2e8aa22bb15f0e42814
+Cipres	Casa 106	Omar Alberto Barragan Uribe	91269950	f72d5fc46bda6683a18617a009ba72bb
+Cipres	Casa 107	Carolina Rubio	567	a21e3b76eb45b3f12ad1a477f5330f8b
+Cipres	Casa 107	Leonardo Jacobo	17318177	c6b2f963948ca2af1193fd715b9b1f44
+Cipres	Casa 108	Alejandro Bernal	79381426	f8d88477c01400a4781e1e90fbffd596
+Cipres	Casa 109	Luis Alfredo Sanchez	80013821	6728dfc28e2d6316500b0d8df1d09b1e
+Cipres	Casa 11	Fayber Sierra Sanchez	79882738	8b7494973f1a4a5125369b6c36040df3
+Cipres	Casa 11	Ilma Pachon	41319496	cdcc1b4002ded2d344cfedfd942d3af6
+Cipres	Casa 110	Maria Del Carmen Pecillo	41749164	b7d44ba2715eb18263a2652038612efd
+Cipres	Casa 12	Carlos Dairo Suarez Aguiar	19385546	a4f94227977f9b4139855e371fda930a
+Cipres	Casa 13	Mauricio Arciniegas Saria	79275114	2da0146702bc29f39d5ffb716a3d4144
+Cipres	Casa 14	Nicolas Bechara Simanca	8299289	bbb51f71df87038818246cc964b891f9
+Cipres	Casa 15	Angel Rodriguez	19167679	170db5b388530e404e948e20300b7450
+Cipres	Casa 16	Claudia Lahidalga Aragon	39643565	795b33de835f3467f99d213e2f6da793
+Cipres	Casa 17	Juan Antonio Duque	80085295	7d75960b5b074d5e5049934ad99f62af
+Cipres	Casa 18	Jorge Vargas Figueredo	19064464	0883172656e9f7a21949e25267ee6d4a
+Cipres	Casa 19	Boris Camilo Rojas P	79836763	ed270e0df4d4026576b953f7b36e35d9
+Cipres	Casa 20	Andres Martinez Ossa	10020985	f303fa4c2235f9a0a7058abfca8419c7
+Cipres	Casa 20	Luisa Fernanda Gutierrez	52690694	f022c3f299e60551f9b92eaa07a9c159
+Cipres	Casa 21	Martin Segura	11342427	94ecbc308ed75a8d06f1b8f043dfcad8
+Cipres	Casa 22	Alain Alonso	19383588	882ed4f0ab4419d150e1929104fd217a
+Cipres	Casa 23	Noe Vargas Clavijo	19270094	5005b35b3f19927ce204c696eadcf232
+Cipres	Casa 24	Carlos Mario Cortes Aguilar		
+Cipres	Casa 25	Pedro Gil Vargas	417809	041f34a9e972c56089e1c94f460ac70e
+Cipres	Casa 26	German Ricardo Hernandez	79533401	cfe9f292e29e0bf59e6e5074c28d2e60
+Cipres	Casa 27	Oscar Lopez Bedoya	51939359	81c4f3597b91e021791a988406d231d5
+Cipres	Casa 28	Eduardo Alberto Murcia Garcia	80399848	aca2c83bd972d71664098836539af73d
+Cipres	Casa 29	Cristian Gomez Pareja	38069000	5e8a8d387c85b0f08238427fa59e19f1
+Cipres	Casa 30	Raul Alejandro Plazas	74187537	677bb924bd332086484a6682abb41e18
+Cipres	Casa 31	Alonso Merchan	13800809	9c7dfd44e649fd0165ec36739d0df45e
+Cipres	Casa 31	Jose Antonio Yorlano	552317	0977d0a3a876a177c6054650f3abfc5e
+Cipres	Casa 32	Julio Duarte Granados	79381434	367d61b98a5da2696f690fc77e2cd38f
+Cipres	Casa 32	Julio Duarte Granados	79381434	367d61b98a5da2696f690fc77e2cd38f
+Cipres	Casa 32	Lina Maria Espinosa	52452311	149e886f5727e1ef902aaa5c49039b93
+Cipres	Casa 33	Julio Alfredo Cristancho	80504834	5f816adfc60e708a85280024b6ee753b
+Cipres	Casa 34	Juan Albarracin G	79231001	75d43cf1e8a791a71fdc73a8e50a80a5
+Cipres	Casa 35	Cesar Augusto Beltran Luque	79521203	f30aa06e227b74dd21a30b689b6aaf9d
+Cipres	Casa 36	Carlos Chaffie	13873482	be20c2176a0e2775d520d928b2be90ae
+Cipres	Casa 36	Matthieu Nussbaumer	338247	377da55432ee292296395e678fd4a862
+Cipres	Casa 37	Giovanna P. Vargas Bazone	52056800	d20690690f1402c3a7aaf5fee673e4b5
+Cipres	Casa 38	Carlos Andres Trujillo Valencia	79780091	d3c8930342e67c9df78ea3f45d775104
+Cipres	Casa 39	Gilberto Mendez	91067141	19ca0a85ffe526c7f9b166748bb63d85
+Cipres	Casa 40	Jose Luis Antolinez	13489907	6744a89e091f5385e4fdedd9ce0b6601
+Cipres	Casa 41	Leonardo Pena Sanchez	16636136	325d077b832812b84ea5b51820c7c639
+Cipres	Casa 42	German Nieto	17071085	d8f338636918430e6158775fccd93230
+Cipres	Casa 43	William Ricardo Blanco Rincon	4253101	4b99aad276674f8230ff6d25da77c5a9
+Cipres	Casa 44	Andres Giraldo P	79785661	7a52523cc61597281827a5a4f9bd841b
+Cipres	Casa 44	Andres Munoz Tamayo	790158056	f12d14cc85000cb2c70d0d5da9b78f61
+Cipres	Casa 45	Alex Octavio Vargas	17158688	1906c7b2efe31d531b19694defa6c004
+Cipres	Casa 46	Alexander Corredor Acosta	80179089	40ebefffd94122b1cf43389e96d30f08
+Cipres	Casa 47	Jose Vicente Hernandez Reyes	6746324	84446d1423d9b3c36ab9d90c3cf94f23
+Cipres	Casa 48	Mireya Cordon	123	d136832e4ede7d76fc55db7144381f3e
+Cipres	Casa 48	Pablo Elias Cadena Ortiz	91205914	740346d2b22805bb4d778e94fb956b2b
+Cipres	Casa 49	Barreto Stevens Ivan Alfonso	79752617	7658e178cf5b3f6b01150f3de0d20c81
+Cipres	Casa 50	Carlos Tache Puglieses	72009495	9262a1fbc46b3afcba678c4a9aa32134
+Cipres	Casa 50	Ginna Sanchez	234	e81a93a9d36d1fd4d515b076355c1e95
+Cipres	Casa 51	Nayive Del Pilar Ussa Lizarazo	51792928	08dc67ccb5c36988909baacbc9e668d5
+Cipres	Casa 52	Carlos Arturo Salinas Chacon	93375269	4a8cde074992901c9ba3c39da371156f
+Cipres	Casa 53	Carlos Francisco Diaz Bojaca	79435090	bfe06e574216533db75407cb82008d1b
+Cipres	Casa 54	Angelica Gomez Campos	2345	48b2c58dab1601202112476e9f927866
+Cipres	Casa 55	Virginia Maldonado	32457270	68e8cb7cc7edb3b2906a5d722396e627
+Cipres	Casa 56	Luis Ramiro Torres Luquerna	79279309	92b629bdf52b38a4793f29aea808b912
+Cipres	Casa 57	Jaime Alexander Mateus		
+Cipres	Casa 58	Ana Cecilia Morales Leon	41672261	55263baccc224699255f1aa65e76531c
+Cipres	Casa 59	Jose Laureano Gomez	19057330	52a5de0ef2b7316dfb3954111e5025b6
+Cipres	Casa 60	John Carlos Forero	80268095	2bf29d380825f530a5b0970bf49a9782
+Cipres	Casa 61	Hernando Florez Urrea	73072785	15309762234fba3607c9c7147e7bea0d
+Cipres	Casa 62	Enrique Gordillo	80425778	037c07ed895ad952b6a022abb8cea5f0
+Cipres	Casa 63	Franco Lospennato	327849	26ab295c6659c7906e8457e9e7c54b2c
+Cipres	Casa 64	Paola Arbelaez	123456	c1513e03b9fed99d457bba86634aa7f5
+Cipres	Casa 64	William Rolando Carrillo	1125798972	44413c2cec50e1c3bebf4687626e3758
+Cipres	Casa 65	Victor Alejandro Rincon Castillo	19374989	46c01434ed30a07bb25b7ebb7c58c6a1
+Cipres	Casa 66	Alexander Saenz Perdomo	7961337	54e1c11fbfdc16bbabe7a90e18501bfe
+Cipres	Casa 67	Juan Carlos Otalora	11347319	6d2da2fef2473c98359fe213838f90f0
+Cipres	Casa 68	Luis Fernando Romero	345	e2577184fde2caefe93c64ed3e7a3451
+Cipres	Casa 68	Maritza Rojas	52265233	d97c7c7bd9a7d71dfeaa72348b3b01a5
+Cipres	Casa 69	Carlos Sabogal	14232865	2ae48091f628c35e514232350e7c563e
+Cipres	Casa 70	Martha Liliana Fernandez	12	e3ae9f4757968d73f7a54477e4c4762e
+Cipres	Casa 70	Omar Albarracin Ll_ncor	553779	a3d1f2ef69cf4278ec5e941e88234bd6
+Cipres	Casa 71	Olmedo Jaime Gomez	11344608	822a991714a8bb56acfde53385d6df1b
+Cipres	Casa 72	Enrique Negret Cordoba	19231673	0a8a277b90649e1097002e0842b6048d
+Cipres	Casa 73	Alfonso Rodriguez Pinilla	79519614	203b5bab99c043e86c3786efea0dfdf5
+Cipres	Casa 74	Carlos Eduardo Arevalo	16730288	e3ca6c679390527224a889701ee0c84d
+Cipres	Casa 74	Diana Marcela Rojas	456	84a99a82f03792ea280ee0269959bb8d
+Cipres	Casa 75	Dario Rico Ramirez	79398146	c5b56aec5059a12a2ce61898caff7e2f
+Cipres	Casa 76	Everardo Ortiz Prada	91277135	df7a485f88d4283e2d5f1c816539a1d2
+Cipres	Casa 77	Joel Alexander Medina	433249	555633a0e9405592e7529b963ea3025d
+Cipres	Casa 77	Yadira Castro	5157339	ef65700f87f3fd45b27c361e425ef242
+Cipres	Casa 78	Eric Fernando Rodriguez Lopez		
+Cipres	Casa 79	Harold Botia	91244247	96f01b2d226f79dc9c9ef95aa8db90b8
+Cipres	Casa 80	Rogelio Toro Londono	70081703	ad2e0bb136cf71bf26f0fade86d1e163
+Cipres	Casa 81	Alvaro Jose Gonzalez Gonzalez	94410091	561f4f6a94ec00f01ca6f9ed09bf1495
+Cipres	Casa 82	Nelson Gomez	79950794	613c5a1e9f6969a3faa13da4183738a3
+Cipres	Casa 83	Wilson Francisco Roa Torres	80092141	f599b8ff5cc24dd10d1f41ccf1c19ae9
+Cipres	Casa 84	Jose Leonidas Olaya	79154454	c2251d1f6c0c3b47202b9d1e262b2a85
+Cipres	Casa 84	Rafael†avancini†b. Oliveira † † † † †	574568¬†¬†	910f5aad5b6f518df1fb9313e3e8fe2d
+Cipres	Casa 85	German E Merchan	19438396	74c44bcb27c97c7802df455ca2673a24
+Cipres	Casa 86	Jose Leonidas Olaya	79154454	c2251d1f6c0c3b47202b9d1e262b2a85
+Cipres	Casa 86	Mauricio Hoyos Ceballos	93381617	26c5bef488c74622c28c146ce10234d8
+Cipres	Casa 87	Pablo Andres Jimenez Sanchez	79686864	d49f2e0bc1639786d3e219c141c723a0
+Cipres	Casa 88	Nelson Dario Montoya Ortiz	79577307	4936e871e8ea23145056aa94c5e163d9
+Cipres	Casa 89	Norman Eduardo Cornejo Rozo	79506064	a0b4b25b43ee48f787f87a33cd39abfc
+Cipres	Casa 90	Juan Carlos Torres Salinas	16288173	ba2cf32f2eeb26dc8abe330e5e37b344
+Cipres	Casa 91	Yuli Andrea Romero	40328608	19227eed306e0af59270e4acb1f64246
+Cipres	Casa 92	Nelson Serrano Vega	13838669	6075f3b07ef03a229d1b31cb6fbc6ba9
+Cipres	Casa 93	Luis Carlos Salazar Blanco	91263694	6217f3635f6175da5585788e2978cd87
+Cipres	Casa 94	Monica Rodriguez Colorado		
+Cipres	Casa 95	Aurelio Gutierrez Castillo	19206114	a0705b4270003fef418942c0e1f2fd64
+Cipres	Casa 96	Alvaro Castillo Forero	80422521	5ad5ff1ca0b9f2ce56cdb06ffa79d948
+Cipres	Casa 96	Carlos Echeverry	2139720	76a80f54982ae7ffb32828632811a009
+Cipres	Casa 97	Javier Mojica	19264701	4dc4d3e88e578c7421af05615c4fcf24
+Cipres	Casa 98	Angela Maria Diaz	52865866	80a653b8697400ae212bc8a706b17266
+Cipres	Casa 99	Maria Claudia Diaz Vargas	52149284	59fb73cacf9f6e1272df2d655e84f258
+Cipres	Casa 99	Olga Victoria Aguirre	1234	bcce5f07467872b08a076b85ee692807
+Ficus	Casa 01	Pablo R Malpica	19451331	
+Ficus	Casa 02	Mary Isabel Pedrozo Lanziano	63509040	
+Ficus	Casa 03	Gustavo Diego Hernandez Arizabaleta	79547595	
+Ficus	Casa 05	Hector Yecich Lizarazo Merchan	9534527	
+Ficus	Casa 06	Jose Silvestre Cubillos Irreoo	19136013	
+Ficus	Casa 07	Marcos Alfonso Nuoez Buitrago	19106622	
+Ficus	Casa 08	Nelson Owaldo Lobelo Garcia	79524673	
+Ficus	Casa 09	Daniel Santiago Gomez Arango	16760265	
+Ficus	Casa 10	Elmer Anderson Salas Vera		
+Ficus	Casa 11	Blanca Amanda Duarte Dotor	51707995	
+Ficus	Casa 12	Cristian Gabriel Rodriguez Miranda	79592040	
+Ficus	Casa 13	Marco Javier Suarez Vera	79294978	
+Ficus	Casa 14	Jose Julian Diaz Moreno	80058620	
+Ficus	Casa 16	Luis Gabriel Garcia Rozo	91479324	
+Ficus	Casa 17	Martin Oviedo Lizarazo	19382194	
+Ficus	Casa 18	Carlos Fernando Acero Garcia	79296014	
+Ficus	Casa 25	Luis Felipe Diaz Andrade	80412339	
+Guayacán	Casa 01	Juan Carlos Gaitan Ruiz		
+Guayacán	Casa 02	Rodrigo Buitrago	79642720	3efaa4ea3fb46e5ab5a4f726854afc1a
+Guayacán	Casa 03	Alan Aitchison	267878	f2ae8b8e64b02cd317fcc037c44170d3
+Guayacán	Casa 04	Reiner Viertel	79982045	706cd9145f27ad6bfbe5c8ef52117e2a
+Guayacán	Casa 05	Ibraim Duarte	91242772	caf66d937f23961f7f1781748a4e4618
+Guayacán	Casa 06	Fabio Ospina Muooz	70548442	f53d3a367e263e1bd88bbf550d677fd6
+Guayacán	Casa 07	Raul Echeverry	80423792	bddd662219f9ef2f8167718ecea9fd5d
+Guayacán	Casa 08	Javier Ricardo Toro	80421881	e054da3655ae8453d51769bb959a3bb3
+Guayacán	Casa 09	Germon Pava	19165850	b25a474bc3a0411510afab248e1cc3f8
+Guayacán	Casa 10	Santiago Moreno Cely	79469858	58608c79b8efd7cec9ba7a1ad8e008c1
+Guayacán	Casa 11	Sebastian Calderon Hernondez	10293368	81d2c31c15b7e0797ac1b2e34205bb2e
+Guayacán	Casa 12	Cesar Julian Lopez	79671270	5b0e5d09337a46253308c067d919f66c
+Guayacán	Casa 13	Jaime Camargo	587932	0d583f23ba3fa727317e5ae4815fd0db
+Guayacán	Casa 14	Luis Raol Tenorio Valenzuela	4,56465E+11	33f1b5358df56ba252ad6c89c6f78b00
+Guayacán	Casa 14	Marcos Alfonso Nuoez	19106622	5275a1b0c21b2bdc9631862962d053e3
+Guayacán	Casa 15	Germon Hurtado	70086178	093bf9f4a0c579a74697541580c32ac0
+Guayacán	Casa 16	Ricardo Coral	79301975	42d8860b3ac2253a52a257584be6b6a8
+Guayacán	Casa 17	Fermin Garzon		
+Guayacán	Casa 18	Carlos Velandia	79393130	a328179e18abcb040f09b2a7e23be2db
+Guayacán	Casa 20	Miguel Angel Saavedra	91230607	5dab2a31ba195f6686de38ce9401730d
+Guayacán	Casa 21	Thaer Gheneim	414164	8648408efe4cb4bc8e282533df9374f3
+Guayacán	Casa 22	Mildred Leoneth	397127	f74707a9d3c327792fd5488fa8eddfad
+Guayacán	Casa 23	Alvaro Daniel Medina	6767309	fa255fc1904e1bced79d69310084b5b1
+Guayacán	Casa 24	Cesar Octavio Porez	420561	81bd298142dc4ee92d7475f173fc133a
+Guayacán	Casa 25	Voctor Cortes	79435302	76b105d0f303e126fa82a7143dc8a1b4
+Guayacán	Casa 26	Andros Jaramillo	79575600	745cd9bfc84f09f0f568c24c39dd8ba6
+Guayacán	Casa 27	Carlos Galeano	11341889	761e1be15c4fbfab433e692cf27ee910
+Guayacán	Casa 28	Dario Pinilla	79268897	b7355b60a030f1fd9ae338f3dfc7645b
+Guayacán	Casa 29	Guillermo Bain Rodroguez	79480850	9a9ee930bcdd03efae026f9f4a96ae33
+Guayacán	Casa 30	Jesos Hernon olvarez	221014	71f65fa3bc367fd39a56d6337c2ca890
+Guayacán	Casa 31	Ricardo Castaoeda	79388218	80f49251eab30f186130253c21aff3bf
+Guayacán	Casa 32	Gerardo Leon	10532074	1dddbe29b65ecc3e9169e5c6cb81e477
+Guayacán	Casa 33	Juan Carlos Trujillo	71578581	482cff5c6e4df1e83fe551b6e952fad0
+Guayacán	Casa 34	Andrea Solorzano	1136881076	36b94d7475310feb8e893730e03b8a8a
+Guayacán	Casa 35	Alejandro Acosta	79802242	1f759da9ae60442b036a295b805fcc23
+Guayacán	Casa 36	Andros Hoyos	79779903	d80590ac56f768f6026d14b8e98bf93f
+Guayacán	Casa 37	Hoctor Ordooez	79122939	019c57a1a52dc46d4f156354376d4064
+Guayacán	Casa 38	Javier Castro	79442350	4b0fe346499aec8b2a0006c4dd3564b3
+Guayacán	Casa 39	Jairo Rosero	14248575	5d1a17fdcc1722075e2ac8df9dd3f673
+Guayacán	Casa 40	Liliana Rodroguez	20423125	b164915a55486c6c17d6c7c88d943f49
+Guayacán	Casa 41	Sergio Ruiz Medina	497984	4318d02f60678cdf42ec9b237fbdeaf6
+Guayacán	Casa 42	Luis Guillermo Orrego	98546186	4113f2225c0c233def697138a735e81a
+Guayacán	Casa 43	Ricardo Imbacuan	79451362	d7f0720033c22392dfa60b544e2acfd7
+Guayacán	Casa 44	Ivan Alberto Cortes	79141747	87320a493b2055381d70680ed75453a0
+Guayacán	Casa 45	Tomas Ortiz Sonchez	91441443	b1def85b3153cd056a6b4c8b5ecb9e50
+Guayacán	Casa 46	Vladimir Correal	79795044	dcb40282755641e246ecaf4594654e2d
+Guayacán	Casa 47	German Morales	17095629	58a68c380fd1885ed3629e242e7f5468
+Guayacán	Casa 48	Carlos Alejandro Olivares	79420261	8f2ea6b6988780841944c29a98b0b3c7
+Guayacán	Casa 49	Andros Amado	79567736	2f549b239ff61765e47180fde46a5571
+Nogal	Casa 01	Maria Del Pilar Castiblanco	51823448	2cd6c14cfedf1b43c9caf9e4765f8beb
+Nogal	Casa 01	Usuario Prueba Nogal	20211344	979d80d0df9c69e74ec2b260e4c546f7
+Nogal	Casa 02	Carlos Gustavo Zea	79242083	5c1790a0e6c5154714e6585c931e494e
+Nogal	Casa 03	¡lvaro Mauricio Sanchez	79396126	1584fd0a97e9b1a73a5a72d7ba616514
+Nogal	Casa 03	¡lvaro Mauricio Sanchez	79396126	1584fd0a97e9b1a73a5a72d7ba616514
+Nogal	Casa 04	Rafael ¡ngel Gavidia	378646	1ebb4bb460a3c4c133afb4f5d0f148f8
+Nogal	Casa 05	Carlos Gaitan	80420295	3ca4a5c386d3d6283f343fbc6c1696de
+Nogal	Casa 06	Santiago Villamizar	80449592	3c12e2ebeed247f50c6ba7a9a4cea095
+Nogal	Casa 06	Sebastian Villamizar	1007558189	d0da2ea0d956ba5c4b07c43131753ad3
+Nogal	Casa 07	Ernesto Estefan	80001001	474a432cbf7a2495d2f0ba72f177fcfa
+Nogal	Casa 08	Javier Ricardo Toro	80412881	135d5171581878eba931e29a03c465d0
+Nogal	Casa 09	Carmen Rosario Suarez	30001001	ab728ed982875518340ad0c1078e32f8
+Nogal	Casa 09	Markus Koch	460670	b875906390f58d5d0e14101832e99712
+Nogal	Casa 09	Markus Koch	460670	b875906390f58d5d0e14101832e99712
+Nogal	Casa 10	Daniel Mendieta	80419438	8bf1347a9fdf3af687e57cbe6df99627
+Nogal	Casa 100	Hernando Pinilla	40123456	00bb0bbff989f89ccc90d70c0188ea7e
+Nogal	Casa 101	Edisson Charry	93287316	1e473eb43ede3c8e9dccc9b82d1d089e
+Nogal	Casa 102	Jose Vicente Romero	19240484	58d06472e569ab05baec4cf05462f66b
+Nogal	Casa 103	William Briceno	79158300	5f213364cd0fcaac76cc7b75da7aae92
+Nogal	Casa 104	Jaime Rodriguez	19153715	1c266bd133a9b73131eb228f0462693a
+Nogal	Casa 105	Ricardo Acosta	79392384	e326e83f306abd98bd495bdd3106a95b
+Nogal	Casa 106	Giovanni Laiton	79856975	d740f935e79341c496fab57655084e53
+Nogal	Casa 107	¡lvaro Jaramillo Ossa	80410249	405f64caa7c0d26602bd235af1264aa2
+Nogal	Casa 108	Andres Trujillo	79867029	6db1fa5e7f98621589620e5e7ba81ea2
+Nogal	Casa 109	Gustavo Sanchez Jimenez	413418	a64a2070d3837d6fde77798d51510fdb
+Nogal	Casa 11	Alberto Velez Londono	17023219	af7b76e45832f6f90fea2275a30b5159
+Nogal	Casa 110	Miguel Pena	520822	2a38a8b000b0670e8ac9c45fbea07642
+Nogal	Casa 111	Belisario Castillo	19153924	f8dafbbf7d1a28d9ff31bdf1dffc924a
+Nogal	Casa 112	Juan Vargas	79107900	0eaf67b56c3a79d259842d9cb838308f
+Nogal	Casa 113	Fernando Perez	79234567	9b6b7b0d0f820790a2b1bded05d83c27
+Nogal	Casa 114	Jorge Acevedo	19167642	0e2b335baa72a757864d5981f4478dd0
+Nogal	Casa 115	Jose Antonio Ocampo	3048288	1abdb0f9f79dd5cf6dca89caee4886f1
+Nogal	Casa 116	Ernesto Augusto Moscoso	19300865	7792fa50bf2555a7952ef05c8351ce1b
+Nogal	Casa 117	Mauricio Ceren	20149001	fd86b5b1204e6acbe5e28037d8c1bbed
+Nogal	Casa 118	Miguel Angel Ochoa	79264476	6f1dd81c666051d84b3212e125d0a20c
+Nogal	Casa 119	Moises Tortoretto	591462	7b01122629968066254b6835e5f44e4b
+Nogal	Casa 12	Hernan David Perez	92512122	0402d8bd73daeb10a8c79d9e31c8697d
+Nogal	Casa 120	Jimmy Vanegas	79395477	1ce47bf067db84e1cf9ba2f9a0641bc0
+Nogal	Casa 121	Fernando Fajardo Luque	19176031	47f4d30237266d189dbc80863be6744b
+Nogal	Casa 122	Betzabe Gomez Perez	375626	3bd0c1c1d84235968d25365495a098d9
+Nogal	Casa 123	Victor Jimenez	19228158	e38b163a40c76721534537bc3d1b51c8
+Nogal	Casa 124	Rafael Arango	79156675	66131d5ccd1c55b0bb22384900b60ae5
+Nogal	Casa 125	Diego Frare	595391	a38c5714aa305ad35285342628a1ff39
+Nogal	Casa 126	Julian Diaz	16270492	d1b19cd12107bebcbe0d5f74412960b0
+Nogal	Casa 127	Alberto Bello Amaya	79424265	696ac0cf1c48ef3ef5ed5abc0afc55fa
+Nogal	Casa 128	Pablo Cerminato	599686	9528f7a957b4a3a396158bd89f23f22e
+Nogal	Casa 129	Ernesto Huertas	11432935	ddb6450430ede30e2566957d11a26e7b
+Nogal	Casa 13	Hernando Beltran	79274608	a8ca0d500ee22151ea636ac3f90b12a3
+Nogal	Casa 130	Carlos Pinzon	19272183	5111b41d3924899107958d46e6a10c1c
+Nogal	Casa 131	Rafael ¡ngel Mendez	399108	11d7ba120a1936570d6245408f565e6b
+Nogal	Casa 131	Rafael ¡ngel Mendez	399108	11d7ba120a1936570d6245408f565e6b
+Nogal	Casa 132	Ignacio Martinez	79326984	cb4405fd15d6212649c68ed486a0132f
+Nogal	Casa 133	Gregorio De Freitas	362490	6c964fc2a380a97f2ea08df67bacb7fe
+Nogal	Casa 134	Hernan Villaneda	19114802	6fb3501f02531955d79360e5bb8bc379
+Nogal	Casa 135	Cesare Schiavi	282455	3a30ad23801725cd251535d2cc458135
+Nogal	Casa 136	Maria Del Rosario Rincon	20334328	57c526830c9e0c5d6808e27cd5e6853d
+Nogal	Casa 137	Antonio Rangel	17133991	1a60085e448fb5d086f332a6de716687
+Nogal	Casa 138	Elsa Teresa Vasquez	41314130	f338f1add1396d1b027011d0fc2bee4b
+Nogal	Casa 139	Alaly Garcia	51883586	519fd7ca61118bd738c5d457c6c9f1aa
+Nogal	Casa 14	Juan Carlos Sarmiento	79362523	a61b2d2bb229fc36e1c477ef32e1f868
+Nogal	Casa 140	Jorge Eliecer Castillo	13818077	72431a47c844086b2fd881c9157bc4d2
+Nogal	Casa 141	Andres Restrepo	80505351	90c2d215d445e48db7a16c570455800e
+Nogal	Casa 142	Edgar Eduardo Forero	3198751	472c0fc60d05ff58aa25f1bf480ba96b
+Nogal	Casa 143	Guillermo Mantilla Plata	79597351	528b9bcdd513a32c0464d8b66a1f1819
+Nogal	Casa 144	Ricardo Julian Forero	79044734	62fe5211d89270058eac4a779cfed0de
+Nogal	Casa 145	Jose Luis Mendez	79299804	3572fd80d917cda5345f580c77c95b0c
+Nogal	Casa 15	Alejandro Llano	19874563	effa7946ac19590d4476afaafbc2381b
+Nogal	Casa 15	Rafael Jimenez		
+Nogal	Casa 15	Rafael Jimenez	79626217	5217eef34bde1a251924f88b1ce11f28
+Nogal	Casa 16	Diego Cuesta	79413338	8c6e24d11b59fb821e7e8c9a491aabfe
+Nogal	Casa 17	Jose Henao	19389167	afd08b5ef07d39d226f7461adc8816af
+Nogal	Casa 18	Rogelio Villamizar Osorio	79272305	e053883cf7874eb13a24f1de4c650e62
+Nogal	Casa 19	Andres Muller	80421846	0c6b48ff7247510e8882226920501e29
+Nogal	Casa 19	Andres Muller	80421846	0c6b48ff7247510e8882226920501e29
+Nogal	Casa 20	Herbert Garcia	80421778	3d01b862344f90b52d13ab8af9e53da8
+Nogal	Casa 20	Herbert Garcia	80421778	3d01b862344f90b52d13ab8af9e53da8
+Nogal	Casa 21	Luis Guillermo Chica	79695791	f9ba5eae6b22c11024e1a112f73f6fc7
+Nogal	Casa 22	Ra_l Mejia	19092700	02780e9fa85f9f3a0895aebadbd38bf3
+Nogal	Casa 23	Antonio Piedrahita	396666	3b730a6959fb9ff3b24de1a285d04ff6
+Nogal	Casa 24	Marcelo Gamboa	80503940	5ea09e0785aeeca153b1d2891d2ec936
+Nogal	Casa 25	Andres Camilo Gomez	11202431	903d03fdeadd13b2ed504ea1b40bd79a
+Nogal	Casa 25	Andres Camilo Gomez	35001002	389d4c67d8d2fa9e972f261203c22b23
+Nogal	Casa 25	Mario Gaitan	20455725	ded7ba3e7ab70b936d0994e0e56a3a5c
+Nogal	Casa 26	Patricia Parra	41783739	865443efded2ca239d1d7b809f777206
+Nogal	Casa 27	Fernando Martinez	80423407	ed53b77173bb094488a7fe76adb1cd48
+Nogal	Casa 27	Lucila Dussan	20117405	a40cdea41d2ae10f3825746b592e3e46
+Nogal	Casa 28	Andres Uribe	79569780	ac7c73365ea7650b1738905ce4fdd727
+Nogal	Casa 29	Oliverio Guzman	17049876	5bfd846d3fe179f8f596e11c3f26afb8
+Nogal	Casa 30	Roberto Serna	19494485	4fc9cdb6b78887d9eb9533e5d0b92bcb
+Nogal	Casa 31	Rafael Monroy	19397996	42ad4e0b78e768481daea132812265d1
+Nogal	Casa 32	Oscar Enrique Prieto	80407735	ca7c296214cec58525319d404c177515
+Nogal	Casa 33	Francisco Lloveras	218885	4ce5b052ab2cda16d16b316c5b50f039
+Nogal	Casa 34	Carlos Villanueva	474647	7b3eaf5d53c05d0f2b40fe309f18ca17
+Nogal	Casa 35	Luis Fernando Pastor	8314521	885fecfdf638230e5ac605aff1ebdcef
+Nogal	Casa 36	Felipe Gonzalez	19498800	52f9cd6db226fdec25482e2b3795d305
+Nogal	Casa 38	Luis Fernando Serrano	19342234	975aa47127d4e06a5da2b545d37317be
+Nogal	Casa 39	Juan David Mejia	79779605	036c01ea351c97338c69bf01dd8b10b0
+Nogal	Casa 40	Carlos Rodriguez	79555919	0e3f6d371060312f1606f933a610ad35
+Nogal	Casa 41	Jose Enrique Gareglio Mendez	414652	db9694ba4372ea543e6b67917fca0f3b
+Nogal	Casa 42	Edgar Mosquera Hoyos	19278939	e748d31f8d3848176a56cb8e5794e7a1
+Nogal	Casa 43	Fabio Henrique	441442	2b23f9d58d84004570a0e55efe190fb7
+Nogal	Casa 43	Jose Fernando Velez	16778093	73d0a709cd34434b162f90252bd652f0
+Nogal	Casa 43	Luis Eduardo Gutierrez Robayo	11347993	1d2a3415098ca9d16180d897387f278c
+Nogal	Casa 44	Roberto Angel Silva	19051165	101ee2c39ed1470ece3547a55220a8d1
+Nogal	Casa 45	Carlos Patino	79363644	eec170672a52bd98e76cd94673bd6b19
+Nogal	Casa 46	Fernando Aranguren	80409492	017403d7eb5b4b559fd9d4d650913338
+Nogal	Casa 47	Oscar Caicedo	79592420	5853a3efe14f12b0f8253674a9435592
+Nogal	Casa 48	Ricardo Arias Garzon	80409943	ba94d2dfe85470461339d688c51f686a
+Nogal	Casa 49	Juan Carlos Gomez	19434062	e386066100c17077e1c2f5f11de8b143
+Nogal	Casa 50	Watson Lawrence Vargas	79469823	18700f0c55ced67e992a0bc7bc91da03
+Nogal	Casa 51	Ebalo Yezid Real	79503193	d950c138630b60295a6fd8239a7b2c07
+Nogal	Casa 52	Seyhan Karabulut	523810	9a7bb416922025ff2a30ee0bdb33abc5
+Nogal	Casa 53	William Horta	79483596	2ca1e93bc86d9dbf4107242cc70c1589
+Nogal	Casa 54	Juan Alejandro Virguez Piraquive	73581896	32a10221d49355b0d742d07ab520ff74
+Nogal	Casa 55	Luis Felipe Camacho	79245292	9e50c4c13a92dc3c4778b87b84ae6ac1
+Nogal	Casa 55	Luis Felipe Camacho	79245292	9e50c4c13a92dc3c4778b87b84ae6ac1
+Nogal	Casa 56	Federico Wieczorek	79520705	3c05f3e593eb80104790e32078363ff1
+Nogal	Casa 57	Rafael Colmenares	17148338	63c1faebe3d638c3c19c1208a26bb849
+Nogal	Casa 58	Nelson Gutierrez	79372126	ec498d470387a55b9d6feacf37d61817
+Nogal	Casa 59	Andres Contreras		
+Nogal	Casa 60	Luis Felipe Cardona	10018080	28cf256cee1aa63617e88f1ad2f57f59
+Nogal	Casa 61	Nibaldo Toledo	255953	0c678ceb61f7a8c2f8aba122eef47163
+Nogal	Casa 62	Mauricio Thorin Braver	79241471	820270b1573b398e235108596b6f2007
+Nogal	Casa 63	Carlos Ernesto Arango	93372237	7cd5a95de14c54bc0a69030f565bcbaf
+Nogal	Casa 64	Henry Merino	79517195	0ba4669b51224edaab2a63f49f1bc18b
+Nogal	Casa 65	Carlos Alfonso Kerglen	78697730	68121a48d5275dfa5fbee870764de29b
+Nogal	Casa 66	Cristian Grasso	6211868	bc8e28106f086ea2b55645405ff10b7c
+Nogal	Casa 66	Daniela Mejia	35111111	582c9b6d5842a3758567dc59a37970f3
+Nogal	Casa 67	Carlos Bernardo Garcia Herreros	91275487	a7e6a7f2dbadfebb748839fb144e6073
+Nogal	Casa 68	Andres Aguirre Escobar	79778981	be7169b7ae2e2b5dce2f033bd75a3dc8
+Nogal	Casa 69	Myriam Duran	41743777	cf37759b252de60d36c3d099bd2461e4
+Nogal	Casa 70	Olga Sofia Gonzalez	39697799	a92b2306527ef9ee76a2a2fe081bfeac
+Nogal	Casa 71	Alvaro Villa	79939614	624e6b187922426b91859d3ab124b498
+Nogal	Casa 72	Harold Gracia	93449014	1e1d70ecbf210e65c7db6de1cf03ae07
+Nogal	Casa 73	Giovanny Gil	51563549	ff9b3269172ddb5db7cce87d81337cbb
+Nogal	Casa 74	Ricardo Nates Escallon	79684566	6a04e2dfa18996e94422a4595ee65143
+Nogal	Casa 75	Luis Francisco Jaimes	19193975	652349282784f0d84444602a43ea6b77
+Nogal	Casa 76	Jose De Jes_s Montanez	2915446	68535c0d410eb2da0966df095c6a2335
+Nogal	Casa 77	Jorge Castaneda	3181375	60e0cdc2db029adfa88c8200b67c5e8b
+Nogal	Casa 78	Maria Isabel Guerrero	52260908	62895f14f5cd205fa1b60344358cf36e
+Nogal	Casa 79	Juan Carlos Vasquez	79463137	ed015389a59bbf6e407b4f4f7801ce93
+Nogal	Casa 80	Luis Marquez	19393125	dac27255e8480c221d3a5443c325b10c
+Nogal	Casa 81	Hugo Galindo	79001001	d9285a787106d28e0a62c0719d749ab0
+Nogal	Casa 81	Mariano Del Castillo	524623	c2e99ac79978df03662554677f230f87
+Nogal	Casa 82	Alvaro Romero	19489335	e44823fdc83c965ab3771dff0ac5f11e
+Nogal	Casa 83	Jairo Sanchez	73071641	bb5086425b25b0489b4c9810a2f5d80a
+Nogal	Casa 84	Dora De Garcia-herreros	37794214	c2f837a8e93587d5cad7b12e386623e1
+Nogal	Casa 85	Ana Maria Arias	85858585858	d723e4a6dd9bd6b84a46f17e9e06f8a0
+Nogal	Casa 86	Alonso Bravo	8263366	6d33e6cad930784c41e3975faeaa8809
+Nogal	Casa 87	Astrid Gonzalez	42879342	c96cc26d719308022f3994b02db1e03a
+Nogal	Casa 88	Jaime Humberto Acero	79306903	52a3e4992697b515d422400f3dc0f07e
+Nogal	Casa 89	Hernan Funckner	514805	15b112e2e53169ad734fde207e702b99
+Nogal	Casa 89	Hernan Funckner	514805	15b112e2e53169ad734fde207e702b99
+Nogal	Casa 90	Jaime Franco	14244109	e7d8448ddc9d201fdf27a3dad4d40723
+Nogal	Casa 91	Victor Manuel Guio	19120442	749271ff5175315019f6e59055628d03
+Nogal	Casa 92	Miguel Lutz	79554757	2014906bc84a15ac56913414f93d63d5
+Nogal	Casa 93	Angel Pastor Arguello	19318218	fe8afc2d3036e54dc7f26801ad0300f7
+Nogal	Casa 94	Andres Narino Tellez	17345237	c601a5f68b0516e17da05f425be052a1
+Nogal	Casa 95	Daniel Carrasco	479337	2e9aa0eee909147fbd111fe05061bb75
+Nogal	Casa 95	Martha Pineda	5711079	3e11cf20990fcea751eb43ff2a4af7a7
+Nogal	Casa 96	Andres Mesa	79780229	b790381b69c019e2e10592e8070d63ee
+Nogal	Casa 97	Juan Carlos Azula	79241971	ece259a6f4a18da5f5fcc7a8b1beaf7f
+Nogal	Casa 98	Rosmira Albor	22420861	a661fb06a62ad22a254d8ab4b914a3c4
+Nogal	Casa 99	Juan Carlos Vega	7690472	794fefcd73fd8864261e0f6d68489719
+Roble	Casa 01	Esmeralda Lucoa Nieto Almanza	28845572	4226886862f15e699d0b2bcb76333aea
+Roble	Casa 02	Alberto Cediel	94446264	2ab602b229a563018f8f5c53d8e06129
+Roble	Casa 03	Jenny Vargas	1111111	bef6fca73634625e9e00178827ca4836
+Roble	Casa 03	Juan Pablo Mora	80800113	ac1e8ae59d596d0fbfd59039cfd85622
+Roble	Casa 04	Francisco Naya	702058	eb774576f6de4fa294326ed6b2f5877a
+Roble	Casa 04	Jorge Umaoa	80231288	51ea2de9d7cb4c8e8031e659efa4a135
+Roble	Casa 05	Hector Eduardo Garcoa	147258	3458392d0dac542ad5b24fc3982ecca1
+Roble	Casa 06	Natalia Celis	11111111	33a92293dbb8b7406b1853a77af612b1
+Roble	Casa 07	Luz Elena Arbelaez	65731480	193dcbe6c57e6ee11bdd9f8c07e57f2b
+Roble	Casa 07	Luz Elena Arbelaez	65731480	193dcbe6c57e6ee11bdd9f8c07e57f2b
+Roble	Casa 09	Santiago Franco	80426464	7b4aa105cd674f8aab0c1fa52d33b397
+Roble	Casa 10	Mohamad Hossein Mohseni	303080	05ef6ce470ca77f12cf8813f7c918f0e
+Roble	Casa 11	Jose Antonio Currea	79289340	06f807f5f80afdeb1b0ebecc17e34d01
+Roble	Casa 12	Enrique Cobos	87711529	21215962f0ec7b36042290b4662b8465
+Roble	Casa 13	Camilo Fernondez		
+Roble	Casa 14	Omar Gonzalo Sabogal	79398810	500fddb859ab93f8580eeeab899483dc
+Roble	Casa 15	Hernan Felipe Cucalon	10542050	dd0441ea4f7217b9c23075ae62eee256
+Roble	Casa 16	Luis Oscar Hoyos	8235805	bbac5757379152e36f9fa27d25a1c2c2
+Roble	Casa 17	Jorge Alberto Roos	98544587	792a4758091cc954dc65fc3810e244be
+Roble	Casa 18	Luis Alfredo Coy Rivero	13846742	29a3f348c34001a004180873ea253cbb
+Roble	Casa 20	Camilo Gutiorrez	79152333	a879cb4d1ada064a21fe6f3568849cab
+Roble	Casa 21	Jae Deok Shim	269416	60dd41e932eec61a94b1605020be387d
+Roble	Casa 23	Eduardo Solano Castaoo	19255342	518036c060eddf7a47dd6401c7d91a86
+Roble	Casa 24	Mathias Wiffl	357399	f072d7a20bcb9ff2d28bb98defec8881
+Roble	Casa 25	Angolica Rubio Cordenas	38140176	121278657bf8c6c2e73c6d6bc5a83c9a
+Roble	Casa 26	Mario Bolovar Grimaldos	13730018	4b8b7c55c66cf2324c7f27337139d455
+Roble	Casa 28	German Borrero	79781255	cf68e6ee6f627a2082469e2fd0e8b877
+Roble	Casa 29	Fernando Trebilcock Barvo	79141928	8b126b539211ec333141822049279eef
+Roble	Casa 30	Eduardo Lombana	79153622	07ce58140b6647d399b854a87a592467
+Roble	Casa 31	Jesos Hernando Acosta Martonez	79297596	917cc9654bcd6f6cb7bd369d2552f5ab
+Roble	Casa 32	Raul Fandioo	19101565	23c41b80b6ddabf7196512af5e0404d6
+Roble	Casa 33	Luis Francisco Sarmiento	5563490	30d9f6b0fc04ad7892300bdba54a88a3
+Roble	Casa 33	Martha Liliana Mendoza Ladino	52789864	3d0f16538e29523a5e727c218c70cc59
+Roble	Casa 34	Eduardo Denyer	79400854	e2bf3a846ab1b34bdef4b09032fd8d64
+Roble	Casa 35	Miguel Urrea Celis	80421874	0685c71df014213d0b7e2226106614af
+Saman	Casa 01	Jose Ignacio Pulido	19397495	8e6709d6d88def76e70f885a018013eb
+Saman	Casa 02	Williams Antonio Camacho Villamizar	91238964	481b5623374a938067e668a040aeb963
+Saman	Casa 03	Marcos Alfonso Nunez	19106622	5275a1b0c21b2bdc9631862962d053e3
+Saman	Casa 03	Paquita Navajas De Saman	9007751173	9c99e4a15e68ab22725de71dc55a0f54
+Saman	Casa 04	Sandra Maria Correa	51790644	13edef22159f9c88967e97b19f266a84
+Saman	Casa 05	Carlos Pacheco	79943182	f92f24c28c6d8faf6502db326e5309ab
+Saman	Casa 06	Jose Armando Rojas Sierra	3529122	2b4f132ff473eceb799499c425f78ff6
+Saman	Casa 07	Javier Navarrete Maza	19294400	d72e928c7a77f825ccdbd6ce33f1b3dd
+Saman	Casa 08	Diana Carolina Duque Caro	3434343434	9decd671407bd55337025416441631e0
+Saman	Casa 09	Johana Botero Zarate	52150325	af62d9e98be28635695bdde30a2a40af
+Saman	Casa 10	Miguel Angel Soler	10101000000	f594cf69bcd90f113093275887e08fcc
+Saman	Casa 11	Luis Carlos Jimenez	17088509	a0fa31e803be415ad34f3c715120061e
+Saman	Casa 12	Danilo Arevalo Galindo	79325765	c3acfa9ddc5d685656b6f6846488169c
+Saman	Casa 13	Jacqueline Fajardo Perez	52701967	955597b27dad9ef1f165a08a47c46f06
+Saman	Casa 14	Diego Esteban Ortiz	98400244	5eb1a967b984dce86cd00c8d0077fb67
+Saman	Casa 15	Carlos Arturo Diaz Collazos	79940842	da2b572a5422e3a458eff713bd853a4e
+Saman	Casa 16	Carolina Diaz	52695006	308adb6c892a6fb1d033406d24e0a5a8
+Saman	Casa 17	Jose Reinaldo Villalba Pena	171717171	2f911e7624f2233f563deb80566ee2d2
+Saman	Casa 18	Danilo Ernesto Cotrino	19159595	c8614cfbdd7a8248d44a7d0fd5290a79
+Saman	Casa 19	Felipe Campos	11203621	963527ce6c841424f3647bed22f18591
+Saman	Casa 19	Wilson Hernando Gomez Velasquez	7562797	271e29ac75cf2b96a30fe8d0c95ab426
+Saman	Casa 20	Mauricio Restrepo	10024782	d48a3838f9011d1ca7a660e18d0ecdde
+Saman	Casa 21	Martha Rocio Moreno Puerto	39704157	705b57b2e1bdc2d8acb02b94d42e30cc
+Saman	Casa 22	Alberto Narino Robayo	19313437	927b0d168a48498ff68ca55cb94ca7c7
+Saman	Casa 23	Carlos Alberto Olaya	232323232	b7cbd8c26231015b0726b0fa67c28f23
+Saman	Casa 24	Juan Camilo Rueda Sanchez	16841945	f674590a94e736fb400112c971e1f480
+Saman	Casa 25	Luis Hernando Davila	999999990	bc1b965cf1ea824b3bc028b227e4cb10
+Saman	Casa 26	Gabriel Mauricio Puyo	2999894	8075099b1f81cfcca6ae7ea2674a2bd2
+Saman	Casa 27	Roberto Arturo Martin Montenegro	79493270	312d7b15e72e73b7084fa2e2ca03c40e
+Saman	Casa 28	Ruben Dario Arana Quijano	79782332	a0db41eb5e568e9f7f303ae07c83c6e7
+Saman	Casa 29	Nancy Alfonso	39711223	c7b1f371d8d65ffdee05a4dd54300a76
+Saman	Casa 30	Luis Felipe Colmenter	383664	4f76f6159f40404f2bf9f260b60e6b9d
+Saman	Casa 31	Luis Felipe Gonzalez Botero	79985462	19ca129f5dd47d126b03ff327f5473e0
+Saman	Casa 32	Jose Rafael Forero Segura	3232323333	79484c00ac622ec612b9739572d6146d
+Saman	Casa 33	Gloria Cecilia Feo Sanchez	21067224	cf5d1a29544191024997db89a24b24a1
+Saman	Casa 34	Juan Manuel Davila	79690583	a55f86293df65e7ac6357703a098e92e
+Saman	Casa 35	Hugo Garca	5818919	017447caecc2d6c3201dcfe17ed7f3c5
+Saman	Casa 36	Carolina Herrera	52007460	49f287bc3e58a252b215f31e4c0b8fed
+Saman	Casa 36	Hernan Florez	16703457	cc0c90ec74ea3a506e1fc2f9e342224f
+Saman	Casa 37	Armando Sandoval Castro	79487495	75c2116cddd7e7fd5743d4ff4e2dd42d
+Saman	Casa 38	Felipe Florez	79838982	b4d358a556aa5f92f7943049960f51e3
+Saman	Casa 39	Jose Lopez Oliva	12989600	26a9e01cfe3fa294df9f771987221071
+Saman	Casa 40	Milton Alfredo Carvajalino	4040000000	4b74454a18cd0b9b732670823167b748
+Saman	Casa 41	Myriam Guerrero	41346112	23df934774e4c1f6ee11e4b0ca007e65
+Saman	Casa 42	Mauricio Blanco Suarez	79982274	b0e2d6b4fdba9aba6bf2cccdf74bb033
+Saman	Casa 43	Sven Shewe	511244	5846787a7d2dfb79bfad6da5a6e9879c
+Saman	Casa 44	Carlos Gandara Fuentes	4,44444E+13	e3c7076eef89520814719e976bafd1a5
+Saman	Casa 45	Eduardo Alcazar	80421421	a4fa09ca5d55013eda367f33996027a7
+Saman	Casa 46	Jaime Torres Guerrero	3229269	c1ead53b25b51b4b0fced9c713deccf3
+Saman	Casa 47	Alonso Merchan	13800809	9c7dfd44e649fd0165ec36739d0df45e
+Saman	Casa 47	Juan Pablo Gnecco	80411088	fd9bedf2d76303b7ce4e1b328e179116
+Saman	Casa 48	Alvaro Cala	2223242526	1ffc581a4d4ec57885ce2cf6d7a58c54
+Saman	Casa 48	Jennifer D Klein	488983903	c2f88ef424c468618b1ac6b4cca15a4b
+Saman	Casa 49	Paulo Sanchez Dimate	5E+12	348fd83008a2cd62596a990b5ced158e
+Saman	Casa 50	Jose Narciso	742411611	93e3a2b96be6656b2adfa68941df97be
+Saman	Casa 51	Fabian Mauricio Rodriguez Castaneda	79952511	40c0a196ce03ca1afbf503315bba9e6b
+Saman	Casa 51	William Sarmiento	7226733	4551e1b38b8f8b49252c85f47cf66b0d
+Saman	Casa 52	Jorge Amaya	5591752	365752c90310364d64cf214a6d51a3d4
+Saman	Casa 53	Guiovanni Vargas Borda	80503998	fabc6c06826df91b54bc87cf0a7c7108
+Saman	Casa 54	Maritza Lisbeth Bonilla Alvarez	52383476	ff95f48be4f85fd494759c5cd39918b1
+Saman	Casa 55	Jorge Enrique Arana Salamanca	17145583	837df5618a881e970c6ae0b8078df34c
+Saman	Casa 56	Ernesto Alonso Erazo Rebolledo	79791952	a0857a91a784af835f62660da73ef7b3
+Saman	Casa 56	Maria Antonia Bedoya	29915365	9fccbbc2b8c22968473b74e150b22297
+Saman	Casa 56	Sergio Cardona	79244570	2bced8d3f7960d0f5ea4a6f242efaf41
+Saman	Casa 57	Dayan Alberto Blanco Leguizano	9399171	cea6c155a6f9d93c5e04b93b66525785
+Saman	Casa 58	Alexander Vargas Martinez	79803286	997990142fac42851752915d8fb06d05
+Saman	Casa 58	Juan Carlos Munoz Avendano	79906155	c599e777ea486c74c1bc0a09d7d3c42e
+Saman	Casa 59	Juan Manuel Sarmiento Pulido	3229255	f7a64c59d7812aabde42751ccd17d37d
+Saman	Casa 60	Carlos Julio Salamanca	17655138	4c862eb7c4c49058fb82606126aed228
+Saman	Casa 61	Amparo Pintor Penagos	51813139	6b6f82132bfab33bd5e70fc7501426db
+Saman	Casa 62	Oscar Hernan Ayala Gonzalez	79689692	f99dfa97a31ff3fbc8abe9c7a31a5dbf
+Saman	Casa 63	Enrique Segura Echaniz	6,36367E+13	2a5e4a43dc3b85c8fce1405c7a856ecf
+Saman	Casa 64	Ana Graterol De Benjam	394335	d97a0acb6a9ff83c3f31af9754818378
+Saman	Casa 64	Luis Benejam	394340	02fcb1dcd5cbe4a0cabb1628131a4dad
+Saman	Casa 65	Angelica Maria Martinez	52106792	b999939463b6b18a373b497ea82e4e90
+Saman	Casa 66	Luis Eduardo Acosta	79626040	7f52aa897aa26c0d79a69b2f17b80d6c
+Saman	Casa 67	Jorge Alvarez	79299536	67a378299a4fbe067cb84860e7a76611
+Saman	Casa 68	Patricia Sarmiento	41626657	1da497a6997b9b89af14626e12155193
+Saman	Casa 69	Elidia Gutierrez Alfonso	41763240	595564f77a8b7403e1b3e1be4897de53
+Saman	Casa 70	Adriana Calderon Godoy	51745739	6406e9c892e1ed3f38154731553a9118
+Saman	Casa 71	Maria Isabel Gomez	21067508	acf9fde2803e75db989c7e6515559d66
+Saman	Casa 72	Carlos Orjuela	79173948	4709b08d4f8753b814b6b95af5679f46
+Saman	Casa 73	Fernando David Rodriguez	7,37378E+11	0164ba2a9fd0c2152b18519594655737
+Saman	Casa 74	Rodrigo Gutierrez	17040686	5bc7b6362c8cc35c86a902419a4cde59
+Saman	Casa 75	Luz Maria Sierra	43521852	5d4c20f14a5668ae799300f049b1cbdc
+Saman	Casa 76	Gianmaria Bellorini	NOSUMINISTRAINFORMACI_iN	f5acdeb9865b4110dedf3441e4d541fd
+Saman	Casa 76	Nancy Carillo	0	207447ba9c21554bd600acb5a9149a5b
+Saman	Casa 77	Martha Lucia Gutierrez Castillo	37833444	f483d31c9a1a45b29ccc8da1b141346e
+Saman	Casa 78	Billy Crissien Castillo	79557489	7216f080aca0af0c0ad298843cea9946
+Saman	Casa 78	Jorge Ernesto Orozco	79687417	58ad43720db7974494c8fdc33c0ebd33
+Saman	Casa 79	Juan Carlos Gutierrez Alonso	79591982	95a2903a2846e6d0f5423f64be1b3ffa
+Saman	Casa 80	Mercedes Faria De Barrera	61820263	8b2afe4633b04a4c76b977ca93a41c41
+Saman	Casa 81	Gerardo Humberto Alba Sanchez	79340787	3ca265d54c2bbfa3a6f4ad762130edd1
+Saman	Casa 82	Francisco Javier Sanchez Angarita	19354407	fc678dff3c3793f3fefa043b5e764565
+Saman	Casa 83	Enrique Castro Henao	79158521	9e42d1035ff503f384b1bf59d3ff9c7d
+Saman	Casa 84	Carolina Alarcon Campos	8484444444	e6555295f8cd4f5d95169299ce05f2c2
+Saman	Casa 85	Andres Felipe Munoz	94319890	e9fa4c4a88de88e72b1ebda912180905
+Saman	Casa 86	Ana Beatriz Angel	8888556791	f217fadd79d29034e63ba10f6b470fd4
+Saman	Casa 86	Angela Maria Fadul	7697452	ad4605429a570d32ecbe6d0b61f00990
+Saman	Casa 87	Francisco Diaz	79786691	acd9a4686cd36cee13741395421aecde
+Saman	Casa 88	Juan Guillermo Burgos Ramirez	8611570	ac2378e655626af4e6bc23af278454cb
+Sauce	Casa 01	Fernando Rodriguez Martinez		
+Sauce	Casa 02	Gabriel Eduardo Pardo Jaramillo		
+Sauce	Casa 03	Camilo Gomez	52619258	428f978348398aa4f68a697409f6b82f
+Sauce	Casa 04	Claudia Ospina	22222	aa7a77df650480cf28c3b49bc98f1fe4
+Sauce	Casa 05	Marcela Cuellar Fernandez	51759188	9aa8f7d2cc50ee512c93d04b7921703b
+Sauce	Casa 06	Edgar Enrique Garcia Hurtado	79233090	85d4bfc878623966a9550e4c8e26f2e2
+Sauce	Casa 07	Ingo Federico Bach Hoschler	98546430	0cd33e0ed32a1c9627357f58027f6d47
+Sauce	Casa 08	Alejandro Moreno Gomez	79046827	ab12936bc8037a0d6b1b5471817ef9b9
+Sauce	Casa 09	Hector Fernando Romero Castillo		
+Sauce	Casa 10	Eleonora Gutierrez	4688806	1902c6ec39956ba91530489063a82ba6
+Sauce	Casa 11	Jose Roberto Tamara		
+Sauce	Casa 12	Carlos Gomez		
+Sauce	Casa 13	Juan Carlos Forero Ramirez		
+Sauce	Casa 14	John Barbosa	79439718	ceb88c5e4ac3f17ed23173a40948d585
+Sauce	Casa 15	Luis Oscar Diaz Melo		
+Sauce	Casa 16	Sergio Alberto Rodriguez	80414824	3592e03e9e066f1ca3195e1f0ad4b8b3
+Sauce	Casa 17	Omar Benavides Astua	252757	b118314310f8345b6f399ee03b05eef5
+Sauce	Casa 18	Julio Andres Sampedro A.	79232457	37089747431dd3d597c6a176fabbd4c9
+Sauce	Casa 19	Maria Teresa Cacua	19	477f53dea5821b666ed935bc153879a2
+Sauce	Casa 19	Natalia Zuleta Triana	52340477	e37f5d36dd0012fd31f062cc2ce15941
+Sauce	Casa 20	Jorge Duque Linares	11111	0026d4d60c03507a687a2043d8ed2673
+Sauce	Casa 21	Maroa Fernanda Porras	21	88746fd5ba8ce616d20d290998fe19c9
+Sauce	Casa 21	Pedro Porto De Menezes	578920	525a3b4815889cb7613d03e07f0a63a6
+Sauce	Casa 22	Farid Saab Chalela	267516	d6883f8466fc9a07b2b1207551b6dd76
+Sauce	Casa 23	Jaime Alberto Muooz Marino	79522721	4cd7ba879d7cc478dda75dbcfd647f39
+Sauce	Casa 24	Marcelo Vargas	24	f04ec2218d05a92817d8a1eba3ec6e08
+Sauce	Casa 25	Martin Eduardo Camargo Diaz		
+Sauce	Casa 26	Ignacio Escobar Uribe	3333330000	2c15e0c3dc27e73ea9629a1ddd2f16ae
+Sauce	Casa 27	Liliana Barbosa Triana	9999999999	68cb1fec390b93a3e9ed44c2bc7b3e44
+Sauce	Casa 28	Fernando Gonzalez Romero		
+Sauce	Casa 29	Andres Castro Manrique	79556046	5e85689c7464cb22d016db05dbdb735c
+Sauce	Casa 30	Orlando Solano		
+Sauce	Casa 31	Jennifer Rojas		
+Sauce	Casa 32	Andres Pinilla	79946610	aabc684f4ed7f57ddcdd13b63ffc2f2b
+Sauce	Casa 33	Delio Castro Ramirez	17637352	45e6365192dc0ad6199f6a0f7aaab38d
+Sauce	Casa 34	Marco Fidel Castillo	17108062	d05080cfb28f17fc3ad3a0553ee145eb
+Sauce	Casa 35	Jose Antonio Di Terlizzi Trujillo	52419486	cb9b955f2aada5ac9103e3b0f9d1b901
+Sauce	Casa 36	Javier Arbelaez Cano		
+Sauce	Casa 37	Melba Lucia Montejo Riaoo	23551366	c6a392bee8834446a7891235d961b0b6
+Sauce	Casa 38	Eduardo Villamil Aldana	79356390	d735b3d9362914b72581c1a1ab8742fe
+Sauce	Casa 39	Andres Aviles		
+Sauce	Casa 40	Juan Carlos Navia		
+Sauce	Casa 41	Leonardo Guzman		
+Sauce	Casa 42	Carlos Andres Beltran Sabogal		
+Sauce	Casa 43	Andres Posada Fernandez	80407283	8afc39683a64c9565c9feba660b86459
+Sauce	Casa 44	Hernan Pinzon	80409456	1ba6182746927296edb2f45b2281db0a
+Sauce	Casa 44	Miguel Sesana	134635	3062e149d27706a1cc8437f04058af64
+Sauce	Casa 45	German Camacho Alvarez	19345683	6d08166e6adb8ba9ae3f0d1149169c98
+Sauce	Casa 46	Jose Alejandro Velandia Mesa	79266468	279316157794e76fd13970907a16a00f
+Sauce	Casa 47	Diego Besedichek Gonzalez		
+Sauce	Casa 48	Alejandro Ayala Roa		
+Sauce	Casa 49	Maritza Muooz	8888885555	b5cb54a94af254f1276844289f4dbaac
+Sauce	Casa 50	Diego Leyva Tovar		
+Sauce	Casa 51	Samuel Muooz Rosas	17046374	9520068c84886e61e742bbeabfa4321a
+Sauce	Casa 52	Rafael Renzo Moncayo Gonzalez	79113779	c4cb652d517904def7d8c9ae11ad7413
+Sauce	Casa 53	Eloy Alberto Parra Ospina	79456724	8ed9a2bd4c29cc2d567925f24c81dd72
+Sauce	Casa 54	Mauricio Leyva Tovar	79421764	6ab4bbceff76547474861954cbec457b
+Sauce	Casa 54	Sonia Joya	54	2a0274a1e7563063b57957b4ea765f55

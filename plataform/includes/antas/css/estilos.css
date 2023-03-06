@@ -1,0 +1,310 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {margin: 0;color : #333;font-size: 12px;}
+body.mainhome {margin: 0;padding: 0;height: 100%;background-color:#f16260;}
+body.mainhomeinvit {margin: 0;padding: 0;height: 100%;margin-bottom: 1px;border-top:20px solid #254E70;background:	transparent url( ../images/texture-felt-grey.jpg) repeat scroll left top;}
+body.mainbody {margin: 20px 0 0 0;padding: 0 25px;height: 100%;margin-bottom: 1px;background:transparent url( ../images/texture-felt-grey.jpg) repeat scroll left top;}
+body.mainhome table tr td{ background-image:none;}
+table.tableadmin tr td p {text-align: left !important; }
+table.tableadmin tr td p > a,
+.activar_servicio { background-color: #3b7829; border-radius:5px; color: #fff;text-decoration: none; padding: 3px 8px;margin-bottom: 5px; display: inline-block;font-size: 12px;}
+a{ color:#3b7829;}
+a:hover {color : #004517;text-decoration : underline;}
+a:active {color : #333333;text-decoration : underline;}
+.mensaje{font-size : 12px;border: solid 1px #CCCCCC;padding: 10px;min-height: 22px;margin: 5px 0;}
+.error {background: #F0F0F0 url(../images/error.jpg) 98% center no-repeat;color: #EA661E;}
+.info, 
+.menubackgrlow {background: #E6E8C8;color: #f16260 !important; font-size:14px; border-radius:5px;-moz-border-radius: 5px; -webkit-border-radius: 5px ; border-color:#f16260; padding: 8px 8px 8px 0; }
+
+.contentheading, .componentheading, .moduleheading {font-size: 14px;font-weight: bold;}
+table.menubar {width: 100%;}
+
+td {font-size: 14px;}
+
+/* header block */
+table.adminheading {margin: 0px;padding: 0px;border: 0px;width: 100%;border-collapse: collapse;font-size : 16px;text-align: left;}
+table.adminheading th {text-align: left;font-size: 24px; color:#f16260; padding:40px 0 0 0;}
+table.adminheading th a{/*background: url( ../images/generic.png ) no-repeat left;*/color: #E8501D;}
+table.adminheading td {color : #000;background: #fff;}
+/* standard list style table */
+table.adminlist {  margin: 0 0 30px 0;padding: 0;border-spacing: 0px;width: 100%;border-collapse: collapse;border-bottom: 1px dotted #004517; }
+table.adminlist th {margin: 0px;padding: 6px 4px 2px 4px;height: 25px;box-shadow: 0 0 2px rgba(0,0,0,0.6);-moz-box-shadow: 0 0 2px rgba(0,0,0,0.6); -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.6); -moz-background-clip: padding-box;-webkit-background-clip: padding-box; background:#254E70;font-size: 14px;color: #fff;}
+table.adminlist th.title {text-align: left;color: #f16260;font-size: 16px;border-radius: 7px 7px 0 0; border-color:transparent;padding: 8px 6px 8px 14px;    background: rgba(0, 0, 0, 0); box-shadow: none;-moz-box-shadow:none; -webkit-box-shadow: none;}
+table.adminlist th.texto {border-radius: 7px 7px 0 0;}
+table.adminlist th a:link, 
+table.adminlist th a:visited {color: #c64934;text-decoration: none;}
+table.adminlist th a:hover {text-decoration: underline;}
+table.adminlist tr.row0 {background-color: #F9F9F9;}
+table.adminlist tr.row1, 
+table.adminlist tr.row1 td {background-color: #FFF; background-image:none;}
+
+p.row0 {background-color: #F9F9F9;padding-left:20px;}
+p.row1 {background-color: #FFF;padding-left:20px;}
+p.row0:hover {background-color: #f1f1f1;}
+p.row1:hover {background-color: #f1f1f1;}
+
+.titleDiv{margin: 0px;padding: 6px 5px 2px 10px;height: 25px;background: url( ../images/background.jpg );background-repeat: repeat;font-size: 11px;color: #C64934;font-weight:bold;}
+#listagenciascliente, #listagencias{background-color: #FFFFFF;margin: 0;padding: 0;border: 1px solid #ddd;border-spacing: 0px;width: 100%;border-collapse: collapse;}
+
+table.adminlist td {border: none;padding: 6px;background: #fff;}
+table.adminlist td table tbody tr td{ border:none;text-align: right;}
+table.adminlist tr.row0:hover {background-color: #f1f1f1;}
+table.adminlist tr.row1:hover {background-color: #f1f1f1;}
+table.adminlist td.options {background-color: #ffffff;font-size: 8px;}
+
+
+table.adminlist td.title {
+	text-align: left;
+	border-left:1px solid #FFF;
+	border-right:1px solid #FFF;
+	border-top:1px solid #FFF;
+}
+
+select.options, input.options {
+	font-size: 8px;
+	font-weight: normal;
+	border: 1px solid #999999;
+}
+
+
+/*LOGIN TABLE*/
+table.login {width: 460px;border-collapse: collapse;margin-top:35px;}
+table.loginfrm {width: 460px;padding: 25px;border-radius:10px;}
+table.loginfrm input.submit{ background-color:rgb(37, 78, 112); width:100%; margin:0;}
+table.loginfrmintv {background-color: #254E70;border: solid 1px #254E70;border-radius:10px;width: 460px;padding: 25px;}
+table.loginfrm tr.row0,
+table.loginfrmintv tr.row0 {background-color: #FFFFFF;}
+table.loginfrm tr.row1,
+table.loginfrmintv tr.row1 {background-color: #eeeeee;}
+table.loginfrm th,
+table.loginfrmintv th {font-size: 11px;padding-top: 6px 4px 2px 4px; text-align: left;height: 25px;background: url(images/background.jpg);color: #000;background-repeat: repeat;}
+table.loginfrm td{padding: 8px 8px 8px 0;font-size: 16px; color: #254E70;text-align: left}
+table.loginfrmintv td {padding: 8px 8px 8px 0;font-size: 16px; color:#fff;text-align: left}
+table.loginfrmintv td.menubackgrlow {background: #6A9ECA;padding: 8px;}
+
+/* standard form style table */
+table.adminform {
+	background-color: #FdFdFd;
+	border: solid 1px #d5d5d5;
+	width: 100%;
+	padding: 10px;
+	border-collapse: collapse;
+}
+table.adminform tr.row0 {background-color: #f9f9f9;}
+table.adminform tr.row1 {background-color: #eeeeee;}
+table.adminform th {
+	    border-radius: 10px 10px 0 0;
+    border-color: rgba(0, 0, 0, 0);
+	padding-top: 6px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-align: left;
+	height: 25px; background:#254E70;font-size: 14px;color: #fff;}
+table.adminform td {padding: 6px;text-align: left;}
+.adminheader {color : #c30;font-size : 24px;}
+/* Text passed with mosmsg url parameter */
+.message {
+	font-family : "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size : 14px;
+	color : #c30;
+	text-align: center;
+}
+
+input.submit {  text-align: center; background-color:#3b7829;font-size: 14px; color: #fff; cursor: pointer; padding: 8px 14px;overflow: visible !important;display: inline-block;border-radius:5px;-moz-border-radius: 5px; -webkit-border-radius: 5px ; border:0;     margin-left: 10px; font-weight:600;}
+.radiogroup>.input{ width:15px; margin-left:10px;}
+.input {    border : 1px solid #cccccc;z-index: -3;font-size: 12px;padding: 5px 10px; width: 95%;border-radius: 3px;}
+table.loginfrm > .input,
+table.loginfrm > input { background-color:#1f272d;    border : 1px solid #1f272d;z-index: -3;font-size: 12px;padding: 6px 10px; width: 95%;border-radius: 3px;}
+table.loginfrm > input:-webkit-autofill{ background-color:#1f272d;}
+
+.popup { border : 1px solid #cccccc; z-index: -3; font-size: 11px }
+.menubackgr {height: 85px;width: 300px;color: #000000;background-repeat:no-repeat;margin-top:100px;}
+.menubackgrinterior {background-image: url( "../images/logo.png" );height: 85px;width: 190px;background-repeat:no-repeat; display:inline-block;}
+.superior {color: #000000;font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;font-size: 12px;text-align:right;padding-top:10px;}
+
+fieldset {width:720px; display:block; padding:5px; line-height:1.5em; border:1px solid #ddd;}
+.content{min-height:500px;vertical-align:top;}
+.hidemenu{float:left;}
+.shortcuts{width:170px;min-height:500px;font-size:12px;color:#666666;vertical-align: top;}
+.shortcuts hr{width:170px;font-size:13px;color:#395BA1;background-color:#395BA1;height:3px;}
+.shortcuts ul{width:170px;font-size:11px;padding: 0;margin-left: 10px;list-style-type: none;color:#000000;margin-right:10px;background-color:#B8B9CE;}
+.shortcuts ul li{width:142px;box-shadow: 0 1px 2px rgba(0,0,0,0.1); -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);background: rgb(243, 243, 243); border-bottom: medium none; color: rgb(0, 0, 0);font-weight: normal;height: 40px; vertical-align: middle; line-height:40px; border-bottom:1px solid #ccc; font-size:14px; padding:0 10px;}
+
+.shortcuts ul li:hover{background-color:#ECF1F4;	}
+.shortcuts ul li a{color:#666666;	}
+.shortcuts ul li a:hover{text-decoration:none;	}
+#shortcuts{min-height:500px;border-right:1px solid #DDD;overflow: hidden;}
+.contenido{padding-left:10px;vertical-align:top;}
+.lastview{padding-left:5px;color:#004517;}
+.title{color:#E8501D;}
+
+/* FORMS DIVS */
+.formdivs {  /* set width in form, not fieldset (still takes up more room w/ fieldset width */
+  margin: 0;
+  padding: 0;
+  font-size:11px;
+}
+
+.formdivs fieldset {
+  /* clear: both; note that this clear causes inputs to break to left in ie5.x mac, commented out */
+  padding: 10px;        /* padding in fieldset support spotty in IE */
+  margin: 2px;
+  width:170px;
+}
+
+.formdivs label { 
+	display: block;  /* block float the labels to left column, set a width */
+	float: left; 
+	width: 100px; 
+	padding: 0; 
+	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
+	text-align: left; 
+}
+
+.formdivs input#reset {
+	margin-left:0px; /* set margin-left back to zero on reset button (set above) */
+}
+
+.formdivs textarea { overflow: auto; }
+
+.formdivs small {
+	display: block;
+	margin: 0 0 5px 160px; /* instructions/comments left margin set to align w/ right column inputs */
+	padding: 1px 3px;
+	font-size: 88%;
+}
+
+.formdivs .required{font-weight:bold;} /* uses class instead of div, more efficient */
+
+.formdivs br {
+	clear:left; /* setting clear on inputs didn't work consistently, so brs added for degrade */
+}
+
+.columnafija{
+	width: 230px;
+}
+
+.tabs{
+	list-style: none;
+	margin: 15px 0 0 0;
+	padding: 0;
+}
+
+.tabs li{
+	display: inline-block;
+}
+
+.tabs li a{
+	background: #FCE5DA;
+	border: solid #CCCCCC 1px;
+	display: block;
+	line-height: 25px;
+	padding: 0 10px;
+}
+
+.tabs li a:hover,
+.tabs li a.active{
+	background: #F9CFBB;
+	text-decoration: none;
+}
+
+.alignleft th{
+	text-align: left;
+}
+
+.modulo{
+	width: 33%;
+	margin-bottom: 10px;
+	margin-right: 0.3%;
+	float: left;
+}
+
+.modulo ul{
+	margin: 0;
+	padding: 0 0 0 20px;
+	list-style: square;
+	height: 80px;
+}
+
+.modulo p{
+	text-align: right;
+	margin: 3px 0 3px 0;
+}
+
+.modulo p a{
+	margin: 0 10px;
+}
+
+table.tableadmin {
+	background-color:#FFFFFF;
+	border:0 none;
+	color:#E8501D;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	text-align:left;
+	width:100%;
+}
+
+table.tableadmin td {box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    background: rgb(243, 243, 243);
+	border-bottom:medium none;
+	color:#000000;
+	font-weight:normal;
+	height:40px;
+	vertical-align:middle;
+	width:300px;
+}
+
+table.tableadmin td img {float:left;margin-left:5px;margin-right:10px;margin-top:35px;width:30px;}
+
+span.navvar{
+	color: #000000;
+}
+
+label.checkgroup{
+	display: inline-block;
+	float: left;
+	width: 100px;	
+}
+
+.oculto{
+	display: none;
+}
+
+
+.listadohoriz div.listhoriz_item{
+	float: left;
+	margin: 0 0 15px 0;
+	width: 25%;
+}
+
+
+.listadohoriz div.listhoriz_item p.toolbar{
+	
+}
+
+div.extend{
+	position: absolute;
+	top: 470px;
+	left: 210px;
+	width: 100%;
+}
+
+.idiom_selected {
+	font-weight: bold;
+	font-size: 13px;
+	color: #FF;
+}
+.checkGrande label{
+	width:300px;
+}
+.ui-widget-header{ background:none; background-color:transparent;}

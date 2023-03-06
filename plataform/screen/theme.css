@@ -1,0 +1,40 @@
+body {padding-bottom: 30px; font-family: 'Raleway', sans-serif; background-color:#e9f0f4;}
+h3{font-size:28px;padding:10px 0; font-weight:700;}
+h3.fecha{ font-weight: 200;}
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+.container{ background-color:#fff;}
+thead{ background-color:#ee1b35; font-size:28px; font-weight:700;}
+tbody{ font-size:24px; font-weight:300;}
+.table>tbody>tr>td{ padding-top:15px; padding-bottom:15px;}
+.table>tbody>tr.active>td{color:#ee1b35; font-weight:400;}
+.page-header{ background-color:#2e3641; margin:0 auto; color:#fff; padding:5px 0; border:0; width:1170px;}
+.boxlogo{ margin-top:15px;}
+.circle {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 160px;
+  height: 160px;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #2e3641;
+  bottom: -65px;
+    position: relative;
+}

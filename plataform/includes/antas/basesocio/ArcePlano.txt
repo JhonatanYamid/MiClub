@@ -1,0 +1,87 @@
+Portal	Recurso	Nombre	DocIde	Llave
+Arce	Casa 01	Reinaldo Castellanos Pedraza	80424582	cd61275d990140b228d61ef35be6db94
+Arce	Casa 02	Claudia Uricochea Pinto	52619231	6e0c5190b68460a17564fe7ca6c539cf
+Arce	Casa 03	Leonardo Humberto Soto Torres	79729958	e0dcbc5dfb08c4eb5ded49e4965d84d6
+Arce	Casa 04	Diana Carolina Moreno Orduña	52927880	9cf0b46332c298b35f48ae29723fb80d
+Arce	Casa 05	Armando Gonzalez Gonzalez	19461267	769dfd6d17fceab07a88ec3ec5483e48
+Arce	Casa 06	Maria Consuelo Camacho	35466533	c425ca7cf9f301b733625aaf6e475109
+Arce	Casa 07	William Prieto	73166232	f6789e8edda66e8e165559b99f516004
+Arce	Casa 08	Cesar Augusto Bautista Silva	19499179	cd043506028f09d608db19b6979be33d
+Arce	Casa 09	Juan Antonio Barrios Zarante	80419090	66b7e946685b8f68180f03df3fa04eff
+Arce	Casa 10	Luis Fernando Castañeda	79113578	7fc07bd760ee3162faf1e4e34d2d7174
+Arce	Casa 11	Maria Catalina Vargas Bazorto	52929807	31662f06367da6000a937d8a2b60f087
+Arce	Casa 12	Luis Espinel	676970	47eb685f577d627770a2f22090571842
+Arce	Casa 13	Maria Constanza Dimoflache	52254737	e9ad902e6291382b4d5f2e74c5275413
+Arce	Casa 14	Edgar Alberto Castro Isaza	19089850	1c32311fa2ef389ebd2c99a315634b56
+Arce	Casa 15	Pedro Jesus Gomez Castellanos	13824520	62533b7121a0f5f11a7afb77525ff2a8
+Arce	Casa 16	Jaime Alexander Hernandez Garcia	80191686	a02b6df99c4d9083e21ba3008f8e1e3b
+Arce	Casa 17	Federico Botero Conde	1000000000	249457bedda344b706d3eb6ddd2c8477
+Arce	Casa 18	Elvira Concepcion Vanegas Torres	51657596	79156a7f40a3fc03c7a1a72f89c31bd3
+Arce	Casa 19	Sonia Rocio Sanabria Morales	63349443	561eddb890b86f16b06a17289d16d61d
+Arce	Casa 20	German Diaz Pardo	3228246	ea125737a53525f10bc4086b6bcd3b06
+Arce	Casa 21	Victor Julio Villamil Jimenez	19323769	195d9fa97ee5bd334c63eed37f185072
+Arce	Casa 22	Sandra Ibeth Castilla Anaya	64475744	b542c3a986bd1df6cfd31ad4c8bccaf2
+Arce	Casa 23	Cesar Raul Barrios Cortes	79615645	e1f7dd16e58d9516f91a6ed2c5cb5997
+Arce	Casa 24	Holman Campos	79906851	c665383c5c8c288a73021a411fd4ce94
+Arce	Casa 25	Oscar Humberto Duran Macias	79651943	811e2e14d34d9366b1bc407696543a35
+Arce	Casa 26	Adriana Serna	52418327	ce238d1751e7af2b10f3e5401eeee9b2
+Arce	Casa 27	Jhon Sanchez	79155560	26d22f53c9752615787b0a7a217409a4
+Arce	Casa 28	Diego Reinoso	80496087	86015118f794869910fa3267eb9f8fed
+Arce	Casa 29	Maria Carolina Velasquez G.	52082730	c3b2c7cd997c9ddfa7b6b9f5d120d1f3
+Arce	Casa 30	Hernan David Garcia Pariño	79639199	b288ab6574a0f2bb94ff03afb1e3d485
+Arce	Casa 31	Munir Rodriguez	80082460	276bb01221184ceff3c3464090c1bac5
+Arce	Casa 32	Ruben Dario Machuca Padilla	79786843	5dc3fc7ca16a7aa5d163d7be98ef1a81
+Arce	Casa 33	Javier Guevara Garcia	79322989	bc1920a671ec9451acab1ca0438cec7d
+Arce	Casa 34	Virginia Acosta Parra	35461274	879704145ae7229dad68eec80330ce62
+Arce	Casa 35	Jaime Alberto Arango Villegas	75072256	3b58c50a7db468cebc4230fc39e47e0b
+Arce	Casa 36	Javier Alejandro Jimenez Nava	19705651	b44c6ebe1d4447675e096d237267e5fc
+Arce	Casa 37	Clemencia Gutierrez De Borda	21005833	9c1e2292288690f64d75ef981df448be
+Arce	Casa 38	Alfonso Silva	79318829	d0d8d9fc3ddafa2dd7017dd4b7148462
+Arce	Casa 39	Juan Felipe Diaz	79651024	9e5977b73fa7af726b7401b76305485b
+Arce	Casa 40	Edmundo Perez Garces	14936025	47205e954a49ecef1256fde4e382e67c
+Arce	Casa 41	Nancy Patricia Guáqueta Rios	51858565	cb09f7c361a559cf0645305dd384b854
+Arce	Casa 42	Maria Isabel Hernandez Birrera	43045859	db769095a35f088e75a7b272311ba51e
+Arce	Casa 43	Leonardo Cadavid	13823197	d3b31a39892dd6cdd052a11533ac2b41
+Arce	Casa 44	Francisco Carranza	79791746	ff3c7da08d42bbc289ec372576f72d7a
+Arce	Casa 45	Elkin Aranguren Gonzalez	9395989	b15dda0035ff9f653f41c094bc1be4de
+Arce	Casa 46	Lisbeth Cepeda	612133	a2bc91c9bf934b8756455172d5ea649a
+Arce	Casa 47	Roberto Herrera Muños	19142639	e6201e1b9759b32a22a85b99c3a81333
+Arce	Casa 48	Oscar Javier Cantor	14895592	ef60c9d79ac70a80ec7a4bf5318e0329
+Arce	Casa 49	Sandra Milena Gonzalez	52355356	7fb2e37eb4b142eee6b9957c0a9db6a9
+Arce	Casa 50	Andres Mejia	80419075	0027bd14e931b54bf15840c26bef0bdd
+Arce	Casa 51	Juan Camilo Iannini	80040941	b452a73f47675c29531a674182a0d9b0
+Arce	Casa 52	Pablo Fernando Camargo	79570820	4e74bd4a9706230c859311447e7e7163
+Arce	Casa 53	Juliana González Barreto	20739948	717e2a1c0fcf9dfac4d903da58a2731a
+Arce	Casa 54	Manuel Roberto Perez	403248	e8eaadfa2d1a11526840be2880942071
+Arce	Casa 55	Danilo De La Pava	98538991	6bee9f96cb791c29a657364276d4528b
+Arce	Casa 56	Mario Arellano	79651562	75fc6ad331bb05f4462495b45baafd6e
+Arce	Casa 57	Maria Jose Díaz	52389769	a60aad49dc86745e9a31382cc8984e5d
+Arce	Casa 58	Juan Carlos Salamanca	79557061	883003dcb384a79b77bb80b446dda25e
+Arce	Casa 59	Antonio Jose Irisarri	79156609	31edaf2cce4719e1ab3e9488e6ba48ef
+Arce	Casa 60	Ernesto Mancipe Ortiz	79345137	6ac9625ba143f9e066d04deacf6e2368
+Arce	Casa 61	Santiago Piquero Echeverri	79782799	6ede0a83cc2ddb45c38aef6ceb6f9a97
+Arce	Casa 62	Miguel Angel Rojas Martinez	13720822	fe19d60fcc734cf39e88e2cb232ec6b7
+Arce	Casa 63	Jaime Andres Quintero	19447078	1eb313502cbfcd34337077d15a14ad92
+Arce	Casa 64	Leonardo Isaza Gonzalez	80424627	cd8dc8d182b7b246a325963aebd3abeb
+Arce	Casa 65	Jose Guillermo Mayorga Ojeda	80434194	5b2a28486f4ae9ab8f897201a1c8b383
+Arce	Casa 66	Cesar Mauricio Pineda Rangel	91232988	d73b78e524226edccc2d832d04e03a7a
+Arce	Casa 67	Luis Javier Rios Hoyos	70563972	f18a7239534a1e26a385e33607a7d899
+Arce	Casa 68	Esteban Rafael Cristancho Gonzalez	79187607	70b56d3c8108d8d2fb3c6c46a8b5e411
+Arce	Casa 69	Alvaro Lahidalga Aragon	79273137	db3922a535d1b51fba9eebf51b2700de
+Arce	Casa 70	Jeyson Manuel Campo Daza	10492518	966ac70b1fd60167518a5ee7b43200ad
+Arce	Casa 71	Juan Carlos Sanguino Arenas	80505251	fdb07d1cd80273a714fd4d17d2898f76
+Arce	Casa 72	Andrea Paola Martinez	52860100	dfbf89deab41db97f14a960f73e63d4f
+Arce	Casa 73	Augusto Bejarano	19299860	1bef909272eb6cee78497a2be7adb437
+Arce	Casa 74	Rafael Fernando Vanegas	79592782	1de9aa3573cfed7290b08ac34c87dd9d
+Arce	Casa 75	Dora Ribon	52515312	53ccec90e0769255cdfa25aec0396403
+Arce	Casa 76	Jaime Andrès Villamizar R	1010	a5b9fa9d5d1244fc4923af6db4b82ef8
+Arce	Casa 77	Rene Alejandro Gonzalez Bautista	79468517	0f95e1e06fef80522526cab69f9bda3f
+Arce	Casa 78	Jaime Alberto Franco Dìaz	5796017	ba0234f4cbc591771f0733fd11cdb5d5
+Arce	Casa 79	Sandra Forero Simijaca	52431559	d380047ec0ba013e13d0a7a1184f2b2e
+Arce	Casa 80	Gabriel Gutierrez Rubio	19499666	97a35e8d6da4fd2a9cb5190857ba5141
+Arce	Casa 81	Jenny Astrid Toro	43152553	dd915ed5897e9a2f90e0f6b8de33be0f
+Arce	Casa 82	Rodolfo Scarpella	79658928	465b5ea2124119dbfb14a63ebb104344
+Arce	Casa 83	Angel Ricardo Aguirre	79145537	833fc12ae668311a87f0dc1817da47a2
+Arce	Casa 84	Diego Barreto Arcieniegas	80031212	ecef4a85b7ce99278420b16fe927e99a
+Arce	Casa 85	Lidia Patricia Rojas Caballero	63349291	791188dd5b90a8c73e5a2d354e95ae33
+Arce	Casa 86	Andrew Soper	512785456	31f6c64b376080d94bfbe6f7218ebe80

@@ -1,0 +1,366 @@
+<!-- PAGE CONTENT BEGINS -->
+
+
+<form class="form-horizontal formvalida" role="form" method="post" id="frm<?php echo $script; ?>" action="<?php echo SIMUtil::lastURI() ?>" enctype="multipart/form-data">
+
+
+
+	<div class="form-group first">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Diagnostico para: </label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$dirigidoa), $frm["DirigidoA"], "DirigidoA", "title=\"DirigidoA\"") ?>
+
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Nombre</label>
+
+			<div class="col-sm-8">
+				<input id="Nombre" type="text" size="25" title="Nombre" name="Nombre" class="input mandatory" value="<?php echo $frm["Nombre"] ?>" />
+			</div>
+		</div>
+	</div>
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Descripcion</label>
+
+			<div class="col-sm-8">
+				<textarea rows="5" cols="50" id="Descripcion" name="Descripcion" class="input"><?php echo $frm["Descripcion"] ?></textarea>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Orden</label>
+
+			<div class="col-sm-8">
+				<input id="Orden" type="text" size="25" title="Orden" name="Orden" class="input mandatory" value="<?php echo $frm["Orden"] ?>" />
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<div class="form-group first ">
+
+
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Fecha Inicio Publicacion</label>
+
+			<div class="col-sm-8">
+				<input type="text" id="FechaInicio" name="FechaInicio" placeholder="Fecha Inicio" class="col-xs-12 calendar" title="Fecha Inicio" value="<?php echo $frm["FechaInicio"] ?>">
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Fecha Fin Publicacion</label>
+
+			<div class="col-sm-8">
+				<input type="text" id="FechaFin" name="FechaFin" placeholder="Fecha Fin" class="col-xs-12 calendar" title="Fecha Fin" value="<?php echo $frm["FechaFin"] ?>">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Solicitar al abrir app?</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["SolicitarAbrirApp"], "SolicitarAbrirApp", "title=\"Solicitar Abrir App\"") ?>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Solo permitir llenar la diagnostico 1 vez por socio?</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["UnaporSocio"], "UnaporSocio", "title=\"UnaporSocio\"") ?>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Imagen Destacada </label>
+
+			<div class="col-sm-8">
+				<? if (!empty($frm[Imagen])) {
+					echo "<img src='" . BANNERAPP_ROOT . "$frm[Imagen]' width=55 >";
+				?>
+					<a href="<? echo $script . ".php?action=delfoto&foto=$frm[Imagen]&campo=Imagen&id=" . $frm[$key]; ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
+				<?
+				} // END if
+				?>
+
+				<input name="Imagen" id=file class="" title="Imagen" type="file" size="25" style="font-size: 10px">
+
+
+
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Peso maximo permitido (se enviara notificacion cuando supere el peso)</label>
+
+			<div class="col-sm-8">
+				<input id="PesoMaximo" type="text" size="25" title="PesoMaximo" name="PesoMaximo" class="input" value="<?php echo $frm["PesoMaximo"] ?>" />
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permite diligenciar a Beneficiarios?</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["PermiteBeneficiarios"], "PermiteBeneficiarios", "title=\"PermiteBeneficiarios\"") ?>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Mostrar en una sola pantalla todas las preguntas?</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["MostrarTodas"], "MostrarTodas", "title=\"MostrarTodas\"") ?>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Email de notificacion cuando se supere el peso</label>
+
+			<div class="col-sm-8">
+				<input id="EmailAlerta" type="text" size="25" title="EmailAlerta" name="EmailAlerta" class="input" value="<?php echo $frm["EmailAlerta"] ?>" />
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Publicar</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["Publicar"], "Publicar", "title=\"Publicar\"") ?>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Obligatorio llenar diagnostico para continuar en app ?</label>
+
+			<div class="col-sm-8">
+				<?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["DiagnosticoObligatorio"], "DiagnosticoObligatorio", "title=\"DiagnosticoObligatorio\"") ?>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Mensaje para cuando la encuesta de como resultado en el peso permitido</label>
+
+			<div class="col-sm-8">
+				<textarea rows="5" cols="50" id="MensajeBien" name="MensajeBien" class="input" required><?php echo $frm["MensajeBien"] ?></textarea>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Mensaje para cuando la encuesta de como resultado mas del peso permitido</label>
+
+			<div class="col-sm-8">
+				<textarea rows="5" cols="50" id="MensajeMal" name="MensajeMal" class="input" required><?php echo $frm["MensajeMal"] ?></textarea>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="form-group first ">
+
+		<div class="col-xs-12 col-sm-12">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Mostrar a : </label>
+
+			<div class="col-sm-8">
+				<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="S" title="DirigidoA" <?php if ($frm["DirigidoAGeneral"] == "S") echo "checked"; ?> />Todos los Socios
+				<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="SE" title="DirigidoA" <?php if ($frm["DirigidoAGeneral"] == "SE") echo "checked"; ?> />Socios Especificos
+				<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="GS" title="DirigidoA" <?php if ($frm["DirigidoAGeneral"] == "GS") echo "checked"; ?> />Grupo de Socios
+				<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="GE" title="DirigidoA" <?php if ($frm["DirigidoAGeneral"] == "GE") echo "checked"; ?> />Grupo de Usuarios
+
+				<!--<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="E" title="DirigidoA"/>Todos los Empleado-->
+				<!--<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="EE" title="DirigidoA"/>Empleados Especificos-->
+				<!--<input type="radio" name="DirigidoAGeneral" id="DirigidoAGeneral" value="GE" title="DirigidoA"/>Grupo de Empleados-->
+
+
+			</div>
+		</div>
+
+	</div>
+	<div id="EmpleadoGrupo" class="form-group first " style="<?php if ($frm["DirigidoAGeneral"] == "GE") echo "";
+																else echo "display:none"; ?> ">
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Seleccione el Grupo: </label>
+
+			<div class="col-sm-8">
+				<select name="IDGrupoUsuario" id="IDGrupoUsuario" class="form-control">
+					<option value="">Seleccion Grupo</option>
+					<?php
+					$sql_grupos = "Select * From GrupoUsuario Where IDClub = '" . SIMUser::get("club") . "'";
+					$result_grupos = $dbo->query($sql_grupos);
+					while ($row_grupos = $dbo->fetchArray($result_grupos)) : ?>
+						<option value="<?php echo $row_grupos["IDGrupoUsuario"]; ?>" <?php if ($frm["IDGrupoUsuario"] == $row_grupos["IDGrupoUsuario"]) echo "selected";  ?>><?php echo $row_grupos["Nombre"]; ?></option>
+					<?php endwhile; ?>
+				</select>
+				<a href="grupoempleado.php?action=add">Crear Grupo</a>
+
+				<br>
+				<a id="agregar_invitadoGrupoEmpleado" href="#">Agregar</a> | <a id="borrar_invitadoGrupoEmpleado" href="#">Borrar</a>
+				<br>
+				<select name="SocioInvitado[]" id="EmpleadoInvitadoGrupo" class="col-xs-8" multiple>
+					<?php
+					$item = 1;
+					$array_invitados = explode("|||", $frm["SeleccionGrupoEmpleado"]);
+					foreach ($array_invitados as $id_invitado => $datos_invitado) :
+						if (!empty($datos_invitado)) {
+							$array_datos_invitados = explode("-", $datos_invitado);
+							$item--;
+							$IDSocioInvitacion = $array_datos_invitados[1];
+							if ($IDSocioInvitacion > 0) :
+								$nombre_socio = utf8_encode($dbo->getFields("GrupoUsuario", "Nombre", "IDGrupoUsuario = '" . $IDSocioInvitacion . "'"));
+					?>
+								<option value="<?php echo "grupo-" . $IDSocioInvitacion; ?>"><?php echo $nombre_socio; ?></option>
+					<?php
+							endif;
+						}
+					endforeach; ?>
+				</select>
+				<input type="hidden" name="SeleccionGrupoEmpleado" id="SeleccionGrupoEmpleado" value="">
+			</div>
+		</div>
+	</div>
+
+	<div id="SocioGrupo" class="form-group first " style="<?php if ($frm["DirigidoAGeneral"] == "GS") echo "";
+															else echo "display:none"; ?> ">
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Seleccione el Grupo: </label>
+
+			<div class="col-sm-8">
+				<select name="IDGrupoSocio" id="IDGrupoSocio" class="form-control">
+					<option value="">Seleccion Grupo</option>
+					<?php
+					$sql_grupos = "Select * From GrupoSocio Where IDClub = '" . SIMUser::get("club") . "'";
+					$result_grupos = $dbo->query($sql_grupos);
+					while ($row_grupos = $dbo->fetchArray($result_grupos)) : ?>
+						<option value="<?php echo $row_grupos["IDGrupoSocio"]; ?>" <?php if ($frm["IDGrupoSocio"] == $row_grupos["IDGrupoSocio"]) echo "selected";  ?>><?php echo $row_grupos["Nombre"]; ?></option>
+					<?php endwhile; ?>
+				</select>
+				<a href="gruposocio.php?action=add">Crear Grupo</a>
+
+				<br>
+				<a id="agregar_invitadoGrupo" href="#">Agregar</a> | <a id="borrar_invitadoGrupo" href="#">Borrar</a>
+				<br>
+				<select name="SocioInvitado[]" id="SocioInvitadoGrupo" class="col-xs-8" multiple>
+					<?php
+					$item = 1;
+					$array_invitados = explode("|||", $frm["SeleccionGrupo"]);
+					foreach ($array_invitados as $id_invitado => $datos_invitado) :
+						if (!empty($datos_invitado)) {
+							$array_datos_invitados = explode("-", $datos_invitado);
+							$item--;
+							$IDSocioInvitacion = $array_datos_invitados[1];
+							if ($IDSocioInvitacion > 0) :
+								$nombre_socio = utf8_encode($dbo->getFields("GrupoSocio", "Nombre", "IDGrupoSocio = '" . $IDSocioInvitacion . "'"));
+					?>
+								<option value="<?php echo "grupo-" . $IDSocioInvitacion; ?>"><?php echo $nombre_socio; ?></option>
+					<?php
+							endif;
+						}
+					endforeach; ?>
+				</select>
+				<input type="hidden" name="SeleccionGrupo" id="SeleccionGrupo" value="">
+			</div>
+		</div>
+	</div>
+
+	<div id="SocioEspecifico" class="form-group first " style="<?php if ($frm["DirigidoAGeneral"] == "SE") echo "";
+																else echo "display:none"; ?> ">
+
+		<div class="col-xs-12 col-sm-6">
+
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Socios: </label>
+
+			<div class="col-sm-8">
+				<input type="text" id="AccionInvitado" name="AccionInvitado" placeholder="Número de Derecho" class="col-xs-12 autocomplete-ajax-socios" title="número de derecho">
+				<br><a id="agregar_invitado" href="#">Agregar</a> | <a id="borrar_invitado" href="#">Borrar</a>
+				<br>
+				<select name="SocioInvitado[]" id="SocioInvitado" class="col-xs-8" multiple>
+					<?php
+					$item = 1;
+					$array_invitados = explode("|||", $frm["InvitadoSeleccion"]);
+					foreach ($array_invitados as $id_invitado => $datos_invitado) :
+						if (!empty($datos_invitado)) {
+							$array_datos_invitados = explode("-", $datos_invitado);
+							$item--;
+							$IDSocioInvitacion = $array_datos_invitados[1];
+							if ($IDSocioInvitacion > 0) :
+								$nombre_socio = utf8_encode($dbo->getFields("Socio", "Nombre", "IDSocio = '" . $IDSocioInvitacion . "'") . "  " . $dbo->getFields("Socio", "Apellido", "IDSocio = '" . $IDSocioInvitacion . "'"));
+					?>
+								<option value="<?php echo "socio-" . $IDSocioInvitacion; ?>"><?php echo $nombre_socio; ?></option>
+					<?php
+							endif;
+						}
+					endforeach;
+					?>
+				</select>
+
+				<input type="hidden" name="InvitadoSeleccion" id="InvitadoSeleccion" value="">
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="clearfix form-actions">
+		<div class="col-xs-12 text-center">
+			<input type="hidden" name="ID" id="ID" value="<?php echo $frm[$key] ?>" />
+			<input type="hidden" name="action" id="action" value="<?php echo $newmode ?>" />
+			<input type="hidden" name="ModuloActual" id="ModuloActual" value="<?php echo SIMReg::get("title"); ?>" />
+			<input type="hidden" name="IDClub" id="IDClub" value="<?php if (empty($frm["IDClub"])) echo SIMUser::get("club");
+																	else echo $frm["IDClub"];  ?>" />
+			<button class="btn btn-info btnEnviar" type="button" rel="frm<?php echo $script; ?>">
+				<i class="ace-icon fa fa-check bigger-110"></i>
+				<?php echo $titulo_accion; ?> <?php echo SIMReg::get("title") ?>
+			</button>
+
+
+		</div>
+	</div>
+
+</form>

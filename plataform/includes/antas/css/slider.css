@@ -1,0 +1,19 @@
+.contenedor-slider {
+	height: 120px;
+	overflow: hidden;
+	position: relative;
+	padding-left: 10px; 
+	margin: 0;
+}
+.bloque-slider {
+	position: relative;
+	top: 0;
+
+}
+.modulo-slider {
+	position: relative;
+	padding: 0 10px 10px 0;
+}
+.modulo-slider h4 {
+	margin-top: 0;
+}

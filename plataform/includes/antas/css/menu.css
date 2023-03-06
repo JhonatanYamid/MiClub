@@ -1,0 +1,44 @@
+.secondmenucss{font-family: 'Open Sans', sans-serif;font-size: 14px;margin: 15px 0 40px 0;color: #fff;}
+.menucss{font-family: 'Open Sans', sans-serif;font-size: 14px;margin-: 15px;line-height: 30px;color: #004517;}	
+.menucss ul, 
+.secondmenucss ul{margin: 0;padding: 0;list-style-type: none; display:inline-block;}
+.menucss ul{ border:5px solid #fff;}
+.secondmenucss ul{ line-height:30px;}
+.menucss a:focus{background-color:#999999;}
+.secondmenucss a:focus{background-color:#004517;}
+.menucss ul li,
+.secondmenucss ul li{position: relative;display: inline;float: left;}
+.menucss ul li a{text-transform:uppercase; font-size:16px; font-weight: 600; box-shadow: 0 0 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.6);
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    background: url(../images/texture-noise-grey.jpg) repeat rgb(255, 255, 255);
+    color: rgb(255, 255, 255); border-radius: 5px;
+} 
+.menucss ul li, .secondmenucss ul li{border-right: 5px solid #fff;}
+.menucss ul li:last-child{border-right: none;}
+.secondmenucss ul li a{ color:#fff; border-radius:5px;-moz-border-radius: 5px; -webkit-border-radius: 5px ; background: #254E70; font-weight:600;}
+.menucss ul li a,
+.secondmenucss ul li a{display: block;padding: 5px 15px;margin-right: 0px; /*espacio en cada bloque*/  border-bottom-width: 0;text-decoration: none;}
+
+.menucss ul li a:hover{ }
+	
+/*1st sub level menu*/
+.menucss ul li ul,
+.secondmenucss ul li ul{position: absolute;left: 0;display: block;visibility: hidden;}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.menucss ul li ul li,
+.secondmenucss ul li ul li{display: list-item;float: none;}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.menucss ul li ul li ul,
+.secondmenucss ul li ul li ul{top: 0;}
+
+/* estilo del sub nivel */
+.menucss ul li ul li a{font-size: 12px;width: 160px;font-weight:600; /*width of sub menus*/ color: #fff;padding: 4px 5px;margin: 0;border-top-width: 0;border-bottom: 1px solid #DDD;background-color:#C3C3C3;}
+.secondmenucss ul li ul li a{font-size: 12px;width: 160px;  color: #fff;padding: 4px 5px;margin: 0;border-top-width: 0;border-bottom: 1px solid #DDD;background-color:#254E70; font-weight:600; }
+
+/*sub menus hover style*/
+.menucss ul li ul li a:hover{ background:#999999;color: #FFF;background-color:#D7D6D6;}

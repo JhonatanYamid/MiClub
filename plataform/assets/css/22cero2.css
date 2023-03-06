@@ -1,0 +1,142 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-horizontal .first {
+    margin-top: 10px;
+}
+
+#grid-pager {
+    min-height: 45px;
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #FFF;
+    cursor: default;
+    overflow: auto;
+    -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+    -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+    box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+}
+
+.login-layout,
+.navbar {
+    background-color: #004518;
+}
+
+.ace-nav>li.light-blue>a,
+.no-skin .nav-list>li>a,
+.btn-success, .btn-success:focus {
+    background-color: #3fb0ac;
+    color: #fff;
+}
+
+.ace-nav>li.light-transparent>a {
+    background-color: transparent;
+    color: #fff;
+}
+
+.breadcrumbs,
+.no-skin .sidebar,
+.no-skin .sidebar-shortcuts,
+.ui-jqgrid-view>.ui-jqgrid-titlebar {
+    background-color: rgb(245, 245, 245);
+    color: #004518;
+    border-color: rgb(229, 229, 229);
+}
+
+.breadcrumb>li,
+.breadcrumb>li.active,
+.breadcrumb>li+li:before {
+    color: #004518;
+}
+
+.breadcrumb>li>a {
+    color: #004518;
+}
+
+.login-layout .widget-box .widget-main {
+    background-color: transparent;
+}
+
+.login-layout .login-box .widget-main {
+    text-align: center;
+}
+
+h4.bigger {
+    color: #fff;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.btnEnviar {
+    width: 100%;
+}
+
+.btn-sm>span {
+    font-size: 20px;
+}
+
+.footer .footer-inner .footer-content {
+    border-top: 0;
+}
+
+
+.succes-pay {
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #04AA6D;
+    color: #fff;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: auto;
+    padding-left: 2%;
+    position: relative;
+}
+
+.succes-pay::after {
+    content: 'X';
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 1%;
+}
+
+.nav-lang-photo,
+.opt-lang-photo {
+    width: 30px;
+    max-width: 20px;
+}
+
+.Active {
+    background: #fee188;
+    color: #444;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    position: relative;
+    background: #00000030;
+}
+
+.img-loader {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}

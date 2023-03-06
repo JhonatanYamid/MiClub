@@ -1,0 +1,30 @@
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select * From ObservacionInvitado Where IDInvitado = '211921' and FechaInicioBloqueo <= CURDATE() AND FechaFinBloqueo >= CURDATE() Order by IDObservacionInvitado Desc
+UPDATE Invitado Set Nombre='JUAN CAMILO CASTRO',Apellido='', Email = 'juankamiloc93@gmail.com'  , Email = 'juankamiloc93@gmail.com' Where IDInvitado = '211921'
+INSERT INTO SocioInvitadoEspecial (IDClub, IDSocio, IDInvitado, IDPadre, IDPadreInvitacion, IDVehiculo, CodigoAutorizacion, CabezaInvitacion,  TipoInvitacion, FechaInicio, FechaFin, UsuarioTrCr, FechaTrCr)
+																							Values ('8','374302', '211921', '','', '', 'IY7884','',
+																								'', '2021-06-15 7:00', '2021-06-15 16:00', 'Socio',NOW())
+SELECT * FROM InvitadosOtrosDatos WHERE IDInvitacion = '309468'
+Insert Into VehiculoInvitacion (IDSocioInvitadoEspecial, IDVehiculo, Placa)
+																							Values('309468','','sin placa')
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25
+Select IDSocio From Socio Where AccionPadre = 'CL-001' and IDClub = '8'
+Select * From SocioInvitado Where (IDSocio = '374302') and YEAR(FechaIngreso) = '2021' and MONTH(FechaIngreso) = '06' and DAY(FechaIngreso) = '15' and IDClub = '8'
+Select * From Regla Where IDClub = '8' and (IDCategoria like '%|0|%' or IDCategoria = '0') 
+Select * From SocioInvitado Where NumeroDocumento = '24296391' and MONTH(FechaIngreso) = '06' and IDClub = '8' and Estado = 'I'
+Select * From SocioInvitado Where IDSocio = '374302' and YEAR(FechaIngreso) = '2021' and MONTH(FechaIngreso) = '06' and IDClub = '8' and Estado = 'I'
+Select * From SocioInvitado Where (IDSocio = '374302' ) and YEAR(FechaIngreso) = '2021' and MONTH(FechaIngreso) = '06' and DAY(FechaIngreso) = '15' and IDClub = '8'
+Select * From SocioInvitado Where NumeroDocumento = '24296391' and FechaIngreso = '2021-06-15 7:00' and IDClub = '8'
+SELECT IDSocioInvitado FROM SocioInvitado WHERE NumeroDocumento = '24296391' Order by IDSocioInvitado DESC LIMIT 1
+INSERT INTO SocioInvitado (IDClub, IDInvitado,IDSocio, NumeroDocumento, Nombre, FechaIngreso, UsuarioTrCr, FechaTrCr) Values ('8','211922','374302', '24296391', 'Maria Leonilde Salgado', '2021-06-15 7:00', 'Socio',NOW())
+SELECT * FROM InvitadosOtrosDatos WHERE IDInvitacion = '269193'
+Select IDClubModulo FROM ClubModulo WHERE IDClub=8 AND IDModulo=25

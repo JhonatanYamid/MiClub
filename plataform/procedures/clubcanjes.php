@@ -1,0 +1,144 @@
+ <?
+
+	SIMReg::setFromStructure(array(
+		"title" => "ClubesConvenio",
+		"table" => "ClubCanje",
+		"key" => "IDClubCanje",
+		"mod" => "CanjeSolicitud"
+	));
+
+
+	$script = "clubcanjes";
+
+	//extraemos las variables
+	$table = SIMReg::get("table");
+	$key = SIMReg::get("key");
+	$mod = SIMReg::get("mod");
+
+	//Verificar permisos
+	SIMUtil::verificar_permiso($mod, SIMUser::get("IDPerfil"));
+
+	//creando las notificaciones que llegan en el parametro m de la URL
+	SIMNotify::capture(SIMResources::$mensajes[SIMNet::req("m")]["msg"], SIMResources::$mensajes[SIMNet::req("m")]["type"]);
+
+
+
+
+	switch (SIMNet::req("action")) {
+
+		case "add":
+			$view = "views/" . $script . "/form.php";
+			$newmode = "insert";
+			$titulo_accion = "Crear";
+			break;
+
+		case "insert":
+
+			if (!SIMNotify::capture(SIMUtil::valida($_POST, $array_valida), "error")) {
+				//los campos al final de las tablas
+				$frm = SIMUtil::varsLOG($_POST);
+
+				//insertamos los datos
+				$id = $dbo->insert($frm, $table, $key);
+
+				//Actualizo Clubes
+				foreach ($_POST["ClubCanje"] as $id_club) :
+					//$sql_inserta_clubcanje = $dbo->query("Insert into DetalleClubCanje (IDClubCanje,IDClub, IDListaClubes ) Values ('" . $id . "','" . $frm["IDClub"] . "','" . $id_club . "')");
+					$sql_inserta_clubcanje = "Insert into DetalleClubCanje (IDClubCanje,IDClub, IDListaClubes,CorreoNotificacion,MensajeAlCrearCanje,MaximoDias,Descripcion) Values ('" . SIMNet::reqInt("id") . "','" . $frm["IDClub"] . "','" . $id_club . "','" . $frm["CorreoNotificacionDestino"][$id_club] . "','" . $frm["MensajeAlCrearCanje"][$id_club] . "','" . $frm["MaximoDias"][$id_club] . "','" . $frm["Descripcion"][$id_club] . "')";
+				endforeach;
+				//	FIN Actualizo Clubes
+
+
+				SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'RegistroGuardadoCorrectamente', LANGSESSION));
+				SIMHTML::jsRedirect($script . ".php");
+			} else
+				exit;
+
+			break;
+
+
+		case "edit":
+			$frm = $dbo->fetchById($table, $key, SIMNet::reqInt("id"), "array");
+			$view = "views/" . $script . "/form.php";
+			$newmode = "update";
+			$titulo_accion = "Actualizar";
+
+
+
+			break;
+
+		case "update":
+
+			if (!SIMNotify::capture(SIMUtil::valida($_POST, $array_valida), "error")) {
+				//los campos al final de las tablas
+				$frm = SIMUtil::varsLOG($_POST);
+				//print_r($_POST);
+				//exit;
+
+				$id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
+
+
+
+
+				//Actualizo Clubes
+
+				$borrar_clubcanje = $dbo->query("Delete From DetalleClubCanje Where IDClubCanje = '" . $_GET["id"] . "'");
+				foreach ($_POST["ClubCanje"] as $key_canje => $id_club) :
+
+					$sql_inserta_clubcanje = "Insert into DetalleClubCanje (IDClubCanje,IDClub, IDListaClubes,CorreoNotificacion,MensajeAlCrearCanje,MaximoDias,Descripcion) Values ('" . SIMNet::reqInt("id") . "','" . $frm["IDClub"] . "','" . $id_club . "','" . $frm["CorreoNotificacionDestino"][$id_club] . "','" . $frm["MensajeAlCrearCanje"][$id_club] . "','" . $frm["MaximoDias"][$id_club] . "','" . $frm["Descripcion"][$id_club] . "')";
+
+					$dbo->query($sql_inserta_clubcanje);
+				endforeach;
+				//	FIN Actualizo Clubes
+
+
+
+				$frm = $dbo->fetchById($table, $key, $id, "array");
+
+				SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'RegistroGuardadoCorrectamente', LANGSESSION));
+				SIMHTML::jsRedirect($script . ".php?action=edit&id=" . SIMNet::reqInt("id"));
+			} else
+				exit;
+
+			break;
+
+		case "search":
+			$view = "views/" . $script . "/list.php";
+			break;
+
+		case "delfoto":
+			$foto = $_GET['foto'];
+			$campo = $_GET['campo'];
+			$id = $_GET['id'];
+			$filedelete = SERVICIO_DIR . $foto;
+			unlink($filedelete);
+			$dbo->query("UPDATE $table SET $campo = '' WHERE $key = $id   LIMIT 1 ;");
+			SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'ImagenEliminadaCorrectamente', LANGSESSION));
+			SIMHTML::jsRedirect($script . ".php?action=edit&id=" . SIMNet::reqInt("id"));
+			break;
+
+
+		case "delfoto":
+			$foto = $_GET['foto'];
+			$campo = $_GET['campo'];
+			$id = $_GET['id'];
+			$filedelete = BANNERAPP_DIR . $foto;
+			unlink($filedelete);
+			$dbo->query("UPDATE $table SET $campo = '' WHERE $key = $id   LIMIT 1 ;");
+			SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'ImagenEliminadaCorrectamente', LANGSESSION));
+			SIMHTML::jsRedirect("?mod=" . $mod . "&action=edit&id=" . $id . "");
+			break;
+
+
+
+		default:
+			$view = "views/" . $script . "/list.php";
+	} // End switch
+
+
+
+	if (empty($view))
+		$view = "views/" . $script . "/form.php";
+
+
+	?>

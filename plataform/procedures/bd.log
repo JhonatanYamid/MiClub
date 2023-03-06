@@ -1,0 +1,1379 @@
+Select *
+					From ReservaHotel
+					Where IDClub = '70'    and FechaInicio >= '2021-07-18'  and FechaFin <= '2021-07-22' Order By IDReserva DESC
+SELECT IDUsuario,TipoUsuario,PD.IDPreguntaDiagnostico,DR.FechaTrCr
+									FROM PreguntaDiagnostico PD,DiagnosticoRespuesta DR
+									Where PD.IDPreguntaDiagnostico=DR.IDPreguntaDiagnostico and PD.IDDiagnostico = '55' and TipoUsuario = 'Funcionario'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59'
+									Group by IDUsuario,DATE_FORMAT(DR.FechaTrCr, '%y-%m-%d')
+SELECT IDPreguntaDiagnostico, EtiquetaCampo FROM PreguntaDiagnostico WHERE IDDiagnostico = '55' AND Publicar = 'S' ORDER BY IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11674' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11570' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11382' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11647' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11587' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11652' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11565' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11560' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11527' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11526' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12279' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11561' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11668' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11524' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11538' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11554' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11610' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12281' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11386' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12693' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12034' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11577' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11604' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11637' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11539' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11681' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11665' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11624' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11813' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11585' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12280' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11591' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11584' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12276' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11590' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11540' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12154' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11626' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11641' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12218' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11556' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11670' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13219' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11648' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11606' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11583' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12348' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11636' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11677' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11640' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12284' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11644' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11655' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12273' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11650' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11586' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12347' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11600' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13402' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11518' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11679' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11598' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11582' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11574' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13389' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11589' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11672' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11646' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11573' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11614' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11555' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11579' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12152' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11517' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11597' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11615' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11551' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11649' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11595' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11543' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12275' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11723' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11385' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11549' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13436' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11607' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11605' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11657' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11601' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11653' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11613' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11576' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11750' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11594' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11659' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11619' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11685' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11673' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12755' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11575' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11645' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11633' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11536' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11623' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11635' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11678' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11596' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12254' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11383' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11525' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11542' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11654' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12351' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11632' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11680' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11643' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11567' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11683' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11616' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11661' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11651' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11520' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11662' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11664' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11667' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11676' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13499' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12278' and
+											FechaTrCr >= '2021-07-03 00:00:00' and
+											FechaTrCr <= '2021-07-03 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDSocio,IDUsuario,TipoUsuario,PD.IDPreguntaDiagnostico,NumeroDocumento,TipoUsuario,Nombre,DR.FechaTrCr
+									FROM PreguntaDiagnostico PD,DiagnosticoRespuesta DR
+									Where PD.IDPreguntaDiagnostico=DR.IDPreguntaDiagnostico and PD.IDDiagnostico = '55' and TipoUsuario = 'Socio'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59'
+									Group by IDSocio,NumeroDocumento,DR.FechaTrCr
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375708' and FechaTrCr = '2021-07-03 00:12:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376451' and FechaTrCr = '2021-07-03 00:18:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375567' and FechaTrCr = '2021-07-03 04:18:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375690' and FechaTrCr = '2021-07-03 04:33:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375687' and FechaTrCr = '2021-07-03 04:51:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375588' and FechaTrCr = '2021-07-03 04:59:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375594' and FechaTrCr = '2021-07-03 05:08:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375596' and FechaTrCr = '2021-07-03 05:21:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375716' and FechaTrCr = '2021-07-03 05:23:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375888' and FechaTrCr = '2021-07-03 05:25:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375579' and FechaTrCr = '2021-07-03 05:30:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375580' and FechaTrCr = '2021-07-03 05:31:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375565' and FechaTrCr = '2021-07-03 05:33:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378351' and FechaTrCr = '2021-07-03 05:35:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375592' and FechaTrCr = '2021-07-03 05:36:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375913' and FechaTrCr = '2021-07-03 05:38:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375586' and FechaTrCr = '2021-07-03 05:38:58'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375699' and FechaTrCr = '2021-07-03 05:39:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375739' and FechaTrCr = '2021-07-03 05:45:35'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375598' and FechaTrCr = '2021-07-03 05:49:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376081' and FechaTrCr = '2021-07-03 05:50:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375774' and FechaTrCr = '2021-07-03 05:53:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375562' and FechaTrCr = '2021-07-03 05:55:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375698' and FechaTrCr = '2021-07-03 06:05:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375937' and FechaTrCr = '2021-07-03 06:11:06'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376337' and FechaTrCr = '2021-07-03 06:11:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377807' and FechaTrCr = '2021-07-03 06:14:52'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376002' and FechaTrCr = '2021-07-03 06:19:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376114' and FechaTrCr = '2021-07-03 06:20:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376366' and FechaTrCr = '2021-07-03 06:20:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376020' and FechaTrCr = '2021-07-03 06:27:36'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378107' and FechaTrCr = '2021-07-03 06:42:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376076' and FechaTrCr = '2021-07-03 06:42:27'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376008' and FechaTrCr = '2021-07-03 06:52:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376115' and FechaTrCr = '2021-07-03 06:53:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375842' and FechaTrCr = '2021-07-03 07:12:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518073' and FechaTrCr = '2021-07-03 07:13:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518071' and FechaTrCr = '2021-07-03 07:14:35'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376129' and FechaTrCr = '2021-07-03 07:17:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376404' and FechaTrCr = '2021-07-03 07:23:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518072' and FechaTrCr = '2021-07-03 07:25:05'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375783' and FechaTrCr = '2021-07-03 07:29:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375632' and FechaTrCr = '2021-07-03 07:34:05'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375618' and FechaTrCr = '2021-07-03 07:34:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375696' and FechaTrCr = '2021-07-03 07:34:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378053' and FechaTrCr = '2021-07-03 07:40:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376101' and FechaTrCr = '2021-07-03 07:41:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376907' and FechaTrCr = '2021-07-03 07:44:19'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375793' and FechaTrCr = '2021-07-03 07:47:38'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375678' and FechaTrCr = '2021-07-03 07:48:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '503471' and FechaTrCr = '2021-07-03 07:49:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518116' and FechaTrCr = '2021-07-03 07:50:02'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376017' and FechaTrCr = '2021-07-03 07:58:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375612' and FechaTrCr = '2021-07-03 08:01:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378524' and FechaTrCr = '2021-07-03 08:06:44'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376196' and FechaTrCr = '2021-07-03 08:16:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375729' and FechaTrCr = '2021-07-03 08:20:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393224' and FechaTrCr = '2021-07-03 08:30:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393225' and FechaTrCr = '2021-07-03 08:30:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375730' and FechaTrCr = '2021-07-03 08:35:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376441' and FechaTrCr = '2021-07-03 08:45:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375787' and FechaTrCr = '2021-07-03 08:45:34'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375647' and FechaTrCr = '2021-07-03 08:47:32'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376141' and FechaTrCr = '2021-07-03 08:50:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '498477' and FechaTrCr = '2021-07-03 08:52:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376283' and FechaTrCr = '2021-07-03 08:53:38'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376284' and FechaTrCr = '2021-07-03 08:54:20'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375871' and FechaTrCr = '2021-07-03 08:57:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393232' and FechaTrCr = '2021-07-03 08:57:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375801' and FechaTrCr = '2021-07-03 09:00:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376442' and FechaTrCr = '2021-07-03 09:01:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376385' and FechaTrCr = '2021-07-03 09:01:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376191' and FechaTrCr = '2021-07-03 09:02:49'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376236' and FechaTrCr = '2021-07-03 09:08:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375683' and FechaTrCr = '2021-07-03 09:15:48'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376097' and FechaTrCr = '2021-07-03 09:18:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376578' and FechaTrCr = '2021-07-03 09:20:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393131' and FechaTrCr = '2021-07-03 09:21:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376287' and FechaTrCr = '2021-07-03 09:24:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375590' and FechaTrCr = '2021-07-03 09:28:36'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375602' and FechaTrCr = '2021-07-03 09:28:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378198' and FechaTrCr = '2021-07-03 09:31:00'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375825' and FechaTrCr = '2021-07-03 09:31:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375846' and FechaTrCr = '2021-07-03 09:31:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376062' and FechaTrCr = '2021-07-03 09:34:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376253' and FechaTrCr = '2021-07-03 09:35:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375927' and FechaTrCr = '2021-07-03 09:39:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393272' and FechaTrCr = '2021-07-03 09:41:33'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '497504' and FechaTrCr = '2021-07-03 09:43:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375816' and FechaTrCr = '2021-07-03 09:43:13'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375815' and FechaTrCr = '2021-07-03 09:44:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376328' and FechaTrCr = '2021-07-03 09:49:21'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376034' and FechaTrCr = '2021-07-03 09:49:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375872' and FechaTrCr = '2021-07-03 09:56:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376024' and FechaTrCr = '2021-07-03 09:58:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376288' and FechaTrCr = '2021-07-03 09:59:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376273' and FechaTrCr = '2021-07-03 09:59:44'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376077' and FechaTrCr = '2021-07-03 10:00:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375703' and FechaTrCr = '2021-07-03 10:07:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375648' and FechaTrCr = '2021-07-03 10:10:21'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376214' and FechaTrCr = '2021-07-03 10:12:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375758' and FechaTrCr = '2021-07-03 10:15:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376433' and FechaTrCr = '2021-07-03 10:15:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376360' and FechaTrCr = '2021-07-03 10:17:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376360' and FechaTrCr = '2021-07-03 10:17:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377496' and FechaTrCr = '2021-07-03 10:20:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376398' and FechaTrCr = '2021-07-03 10:21:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376027' and FechaTrCr = '2021-07-03 10:22:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376016' and FechaTrCr = '2021-07-03 10:22:37'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376153' and FechaTrCr = '2021-07-03 10:23:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375561' and FechaTrCr = '2021-07-03 10:23:20'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375589' and FechaTrCr = '2021-07-03 10:26:48'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376419' and FechaTrCr = '2021-07-03 10:28:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376148' and FechaTrCr = '2021-07-03 10:29:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376381' and FechaTrCr = '2021-07-03 10:29:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375929' and FechaTrCr = '2021-07-03 10:40:42'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375792' and FechaTrCr = '2021-07-03 10:45:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376254' and FechaTrCr = '2021-07-03 10:50:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375755' and FechaTrCr = '2021-07-03 10:50:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376358' and FechaTrCr = '2021-07-03 10:50:55'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376272' and FechaTrCr = '2021-07-03 10:58:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375754' and FechaTrCr = '2021-07-03 11:02:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518494' and FechaTrCr = '2021-07-03 11:03:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376197' and FechaTrCr = '2021-07-03 11:05:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375870' and FechaTrCr = '2021-07-03 11:08:01'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375663' and FechaTrCr = '2021-07-03 11:12:01'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375837' and FechaTrCr = '2021-07-03 11:13:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376158' and FechaTrCr = '2021-07-03 11:15:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375885' and FechaTrCr = '2021-07-03 11:16:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376336' and FechaTrCr = '2021-07-03 11:16:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376335' and FechaTrCr = '2021-07-03 11:16:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376357' and FechaTrCr = '2021-07-03 11:17:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '497505' and FechaTrCr = '2021-07-03 11:26:34'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518070' and FechaTrCr = '2021-07-03 11:28:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376152' and FechaTrCr = '2021-07-03 11:28:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375878' and FechaTrCr = '2021-07-03 11:35:33'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375879' and FechaTrCr = '2021-07-03 11:38:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375664' and FechaTrCr = '2021-07-03 11:39:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375995' and FechaTrCr = '2021-07-03 11:43:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376388' and FechaTrCr = '2021-07-03 11:43:27'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375894' and FechaTrCr = '2021-07-03 11:44:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375994' and FechaTrCr = '2021-07-03 11:48:57'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376615' and FechaTrCr = '2021-07-03 11:51:49'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377771' and FechaTrCr = '2021-07-03 11:52:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375886' and FechaTrCr = '2021-07-03 11:54:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376006' and FechaTrCr = '2021-07-03 12:16:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518094' and FechaTrCr = '2021-07-03 12:21:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375566' and FechaTrCr = '2021-07-03 12:28:58'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375840' and FechaTrCr = '2021-07-03 12:30:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375839' and FechaTrCr = '2021-07-03 12:38:13'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376005' and FechaTrCr = '2021-07-03 12:43:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376374' and FechaTrCr = '2021-07-03 12:57:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393655' and FechaTrCr = '2021-07-03 13:05:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375723' and FechaTrCr = '2021-07-03 13:26:00'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375695' and FechaTrCr = '2021-07-03 13:48:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518064' and FechaTrCr = '2021-07-03 14:04:10'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518063' and FechaTrCr = '2021-07-03 14:04:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375939' and FechaTrCr = '2021-07-03 14:08:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375862' and FechaTrCr = '2021-07-03 15:47:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '538999' and FechaTrCr = '2021-07-03 16:38:06'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+SELECT IDTipoInvitado,Nombre FROM TipoInvitado WHERE 1 
+SELECT IDClasificacionInvitado,Nombre FROM ClasificacionInvitado WHERE 1 
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15') AND Tipo='Contratista'
+SELECT SA.IDSocioAutorizacion,
+    I.IDInvitado, I.Nombre, I.Apellido, I.NumeroDocumento, I.IDTipoInvitado, I.IDClasificacionInvitado
+	FROM SocioAutorizacion SA
+    LEFT JOIN Invitado I ON SA.IDInvitado=I.IDInvitado
+    WHERE SA.IDClub = '108' AND SA.IDSocioAutorizacion IN()
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15') AND WHERE Tipo='SocioInvitado'
+SELECT IDSocioInvitado FROM SocioInvitado IN ()
+SELECT IDInvitado,Nombre,Apellido,NumeroDocumento,IDTipoInvitado,IDClasificacionInvitado
+	FROM Invitado WHERE IDInvitado IN()
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='InvitadoAcceso'
+SELECT IDSocioInvitadoEspecial,IDInvitado FROM SocioInvitadoEspecial WHERE 1 ORDER BY IDSocioInvitadoEspecial DESC LIMIT 1000
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='Socio'
+SELECT IDSocio,NumeroDocumento,Accion,Predio,Nombre,Apellido,TipoSocio FROM Socio WHERE IDClub = '108'
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='Usuario'
+SELECT IDUsuario,Nombre,NumeroDocumento,CodigoUsuario FROM Usuario WHERE 1 
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  Tipo = 'Usuario'  and  ( FechaTrCr >= '2021-08-01 00:00:00' and FechaTrCr <= '2021-08-15 23:59:59') 
+SELECT IDSocio,IDUsuario,TipoUsuario,PD.IDPreguntaDiagnostico,NumeroDocumento,TipoUsuario,Nombre,DR.FechaTrCr
+									FROM PreguntaDiagnostico PD,DiagnosticoRespuesta DR
+									Where PD.IDPreguntaDiagnostico=DR.IDPreguntaDiagnostico and PD.IDDiagnostico = '55' and TipoUsuario = 'Socio'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59'
+									Group by IDSocio,NumeroDocumento,DR.FechaTrCr
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375708' and FechaTrCr = '2021-07-03 00:12:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376451' and FechaTrCr = '2021-07-03 00:18:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375567' and FechaTrCr = '2021-07-03 04:18:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375690' and FechaTrCr = '2021-07-03 04:33:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375687' and FechaTrCr = '2021-07-03 04:51:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375588' and FechaTrCr = '2021-07-03 04:59:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375594' and FechaTrCr = '2021-07-03 05:08:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375596' and FechaTrCr = '2021-07-03 05:21:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375716' and FechaTrCr = '2021-07-03 05:23:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375888' and FechaTrCr = '2021-07-03 05:25:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375579' and FechaTrCr = '2021-07-03 05:30:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375580' and FechaTrCr = '2021-07-03 05:31:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375565' and FechaTrCr = '2021-07-03 05:33:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378351' and FechaTrCr = '2021-07-03 05:35:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375592' and FechaTrCr = '2021-07-03 05:36:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375913' and FechaTrCr = '2021-07-03 05:38:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375586' and FechaTrCr = '2021-07-03 05:38:58'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375699' and FechaTrCr = '2021-07-03 05:39:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375739' and FechaTrCr = '2021-07-03 05:45:35'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375598' and FechaTrCr = '2021-07-03 05:49:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376081' and FechaTrCr = '2021-07-03 05:50:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375774' and FechaTrCr = '2021-07-03 05:53:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375562' and FechaTrCr = '2021-07-03 05:55:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375698' and FechaTrCr = '2021-07-03 06:05:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375937' and FechaTrCr = '2021-07-03 06:11:06'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376337' and FechaTrCr = '2021-07-03 06:11:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377807' and FechaTrCr = '2021-07-03 06:14:52'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376002' and FechaTrCr = '2021-07-03 06:19:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376114' and FechaTrCr = '2021-07-03 06:20:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376366' and FechaTrCr = '2021-07-03 06:20:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376020' and FechaTrCr = '2021-07-03 06:27:36'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378107' and FechaTrCr = '2021-07-03 06:42:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376076' and FechaTrCr = '2021-07-03 06:42:27'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376008' and FechaTrCr = '2021-07-03 06:52:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376115' and FechaTrCr = '2021-07-03 06:53:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375842' and FechaTrCr = '2021-07-03 07:12:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518073' and FechaTrCr = '2021-07-03 07:13:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518071' and FechaTrCr = '2021-07-03 07:14:35'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376129' and FechaTrCr = '2021-07-03 07:17:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376404' and FechaTrCr = '2021-07-03 07:23:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518072' and FechaTrCr = '2021-07-03 07:25:05'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375783' and FechaTrCr = '2021-07-03 07:29:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375632' and FechaTrCr = '2021-07-03 07:34:05'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375618' and FechaTrCr = '2021-07-03 07:34:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375696' and FechaTrCr = '2021-07-03 07:34:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378053' and FechaTrCr = '2021-07-03 07:40:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376101' and FechaTrCr = '2021-07-03 07:41:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376907' and FechaTrCr = '2021-07-03 07:44:19'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375793' and FechaTrCr = '2021-07-03 07:47:38'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375678' and FechaTrCr = '2021-07-03 07:48:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '503471' and FechaTrCr = '2021-07-03 07:49:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518116' and FechaTrCr = '2021-07-03 07:50:02'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376017' and FechaTrCr = '2021-07-03 07:58:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375612' and FechaTrCr = '2021-07-03 08:01:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378524' and FechaTrCr = '2021-07-03 08:06:44'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376196' and FechaTrCr = '2021-07-03 08:16:04'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375729' and FechaTrCr = '2021-07-03 08:20:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393224' and FechaTrCr = '2021-07-03 08:30:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393225' and FechaTrCr = '2021-07-03 08:30:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375730' and FechaTrCr = '2021-07-03 08:35:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376441' and FechaTrCr = '2021-07-03 08:45:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375787' and FechaTrCr = '2021-07-03 08:45:34'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375647' and FechaTrCr = '2021-07-03 08:47:32'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376141' and FechaTrCr = '2021-07-03 08:50:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '498477' and FechaTrCr = '2021-07-03 08:52:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376283' and FechaTrCr = '2021-07-03 08:53:38'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376284' and FechaTrCr = '2021-07-03 08:54:20'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375871' and FechaTrCr = '2021-07-03 08:57:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393232' and FechaTrCr = '2021-07-03 08:57:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375801' and FechaTrCr = '2021-07-03 09:00:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376442' and FechaTrCr = '2021-07-03 09:01:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376385' and FechaTrCr = '2021-07-03 09:01:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376191' and FechaTrCr = '2021-07-03 09:02:49'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376236' and FechaTrCr = '2021-07-03 09:08:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375683' and FechaTrCr = '2021-07-03 09:15:48'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376097' and FechaTrCr = '2021-07-03 09:18:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376578' and FechaTrCr = '2021-07-03 09:20:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393131' and FechaTrCr = '2021-07-03 09:21:23'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376287' and FechaTrCr = '2021-07-03 09:24:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375590' and FechaTrCr = '2021-07-03 09:28:36'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375602' and FechaTrCr = '2021-07-03 09:28:56'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '378198' and FechaTrCr = '2021-07-03 09:31:00'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375825' and FechaTrCr = '2021-07-03 09:31:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375846' and FechaTrCr = '2021-07-03 09:31:59'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376062' and FechaTrCr = '2021-07-03 09:34:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376253' and FechaTrCr = '2021-07-03 09:35:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375927' and FechaTrCr = '2021-07-03 09:39:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393272' and FechaTrCr = '2021-07-03 09:41:33'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '497504' and FechaTrCr = '2021-07-03 09:43:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375816' and FechaTrCr = '2021-07-03 09:43:13'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375815' and FechaTrCr = '2021-07-03 09:44:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376328' and FechaTrCr = '2021-07-03 09:49:21'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376034' and FechaTrCr = '2021-07-03 09:49:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375872' and FechaTrCr = '2021-07-03 09:56:18'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376024' and FechaTrCr = '2021-07-03 09:58:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376288' and FechaTrCr = '2021-07-03 09:59:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376273' and FechaTrCr = '2021-07-03 09:59:44'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376077' and FechaTrCr = '2021-07-03 10:00:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375703' and FechaTrCr = '2021-07-03 10:07:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375648' and FechaTrCr = '2021-07-03 10:10:21'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376214' and FechaTrCr = '2021-07-03 10:12:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375758' and FechaTrCr = '2021-07-03 10:15:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376433' and FechaTrCr = '2021-07-03 10:15:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376360' and FechaTrCr = '2021-07-03 10:17:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376360' and FechaTrCr = '2021-07-03 10:17:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377496' and FechaTrCr = '2021-07-03 10:20:45'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376398' and FechaTrCr = '2021-07-03 10:21:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376027' and FechaTrCr = '2021-07-03 10:22:03'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376016' and FechaTrCr = '2021-07-03 10:22:37'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376153' and FechaTrCr = '2021-07-03 10:23:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375561' and FechaTrCr = '2021-07-03 10:23:20'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375589' and FechaTrCr = '2021-07-03 10:26:48'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376419' and FechaTrCr = '2021-07-03 10:28:25'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376148' and FechaTrCr = '2021-07-03 10:29:26'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376381' and FechaTrCr = '2021-07-03 10:29:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375929' and FechaTrCr = '2021-07-03 10:40:42'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375792' and FechaTrCr = '2021-07-03 10:45:17'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376254' and FechaTrCr = '2021-07-03 10:50:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375755' and FechaTrCr = '2021-07-03 10:50:54'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376358' and FechaTrCr = '2021-07-03 10:50:55'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376272' and FechaTrCr = '2021-07-03 10:58:47'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375754' and FechaTrCr = '2021-07-03 11:02:30'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518494' and FechaTrCr = '2021-07-03 11:03:50'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376197' and FechaTrCr = '2021-07-03 11:05:11'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375870' and FechaTrCr = '2021-07-03 11:08:01'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375663' and FechaTrCr = '2021-07-03 11:12:01'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375837' and FechaTrCr = '2021-07-03 11:13:53'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376158' and FechaTrCr = '2021-07-03 11:15:09'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375885' and FechaTrCr = '2021-07-03 11:16:29'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376336' and FechaTrCr = '2021-07-03 11:16:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376335' and FechaTrCr = '2021-07-03 11:16:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376357' and FechaTrCr = '2021-07-03 11:17:31'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '497505' and FechaTrCr = '2021-07-03 11:26:34'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518070' and FechaTrCr = '2021-07-03 11:28:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376152' and FechaTrCr = '2021-07-03 11:28:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375878' and FechaTrCr = '2021-07-03 11:35:33'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375879' and FechaTrCr = '2021-07-03 11:38:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375664' and FechaTrCr = '2021-07-03 11:39:07'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375995' and FechaTrCr = '2021-07-03 11:43:15'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376388' and FechaTrCr = '2021-07-03 11:43:27'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375894' and FechaTrCr = '2021-07-03 11:44:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375994' and FechaTrCr = '2021-07-03 11:48:57'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376615' and FechaTrCr = '2021-07-03 11:51:49'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '377771' and FechaTrCr = '2021-07-03 11:52:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375886' and FechaTrCr = '2021-07-03 11:54:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376006' and FechaTrCr = '2021-07-03 12:16:08'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518094' and FechaTrCr = '2021-07-03 12:21:12'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375566' and FechaTrCr = '2021-07-03 12:28:58'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375840' and FechaTrCr = '2021-07-03 12:30:16'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375839' and FechaTrCr = '2021-07-03 12:38:13'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376005' and FechaTrCr = '2021-07-03 12:43:51'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '376374' and FechaTrCr = '2021-07-03 12:57:46'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '393655' and FechaTrCr = '2021-07-03 13:05:22'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375723' and FechaTrCr = '2021-07-03 13:26:00'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375695' and FechaTrCr = '2021-07-03 13:48:39'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518064' and FechaTrCr = '2021-07-03 14:04:10'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '518063' and FechaTrCr = '2021-07-03 14:04:41'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375939' and FechaTrCr = '2021-07-03 14:08:40'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '375862' and FechaTrCr = '2021-07-03 15:47:14'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+Select * From DiagnosticoRespuesta DR Where IDSocio = '538999' and FechaTrCr = '2021-07-03 16:38:06'  and DR.FechaTrCr >= '2021-07-03 00:00:00'  and DR.FechaTrCr <= '2021-07-03 23:59:59' Group by IDPreguntaDiagnostico
+SELECT IDUsuario,TipoUsuario,PD.IDPreguntaDiagnostico,DR.FechaTrCr
+									FROM PreguntaDiagnostico PD,DiagnosticoRespuesta DR
+									Where PD.IDPreguntaDiagnostico=DR.IDPreguntaDiagnostico and PD.IDDiagnostico = '6' and TipoUsuario = 'Funcionario'  and DR.FechaTrCr >= '2021-08-11 00:00:00'  and DR.FechaTrCr <= '2021-08-11 23:59:59'
+									Group by IDUsuario,DATE_FORMAT(DR.FechaTrCr, '%y-%m-%d')
+SELECT IDPreguntaDiagnostico, EtiquetaCampo FROM PreguntaDiagnostico WHERE IDDiagnostico = '6' AND Publicar = 'S' ORDER BY IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10781' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9941' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10782' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10720' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10788' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11791' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10722' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9940' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10710' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10729' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10735' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9960' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12118' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9950' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10767' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10712' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10773' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10665' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10706' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11686' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10728' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10725' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11468' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10715' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10747' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10685' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10680' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10677' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10763' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '13262' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10787' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10770' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10975' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10684' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10744' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '14240' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10751' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11450' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10748' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9939' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12730' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '1925' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10714' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12764' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11981' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10719' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10687' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10697' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10700' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '14208' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10692' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10678' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10704' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10716' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11473' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10723' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11469' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '4784' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10703' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10740' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10753' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '12033' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10676' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9953' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9945' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9952' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10690' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '10705' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '9944' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDPreguntaDiagnostico, Valor, FechaTrCr From DiagnosticoRespuesta DR
+											Where IDUsuario = '11467' and
+											FechaTrCr >= '2021-08-11 00:00:00' and
+											FechaTrCr <= '2021-08-11 23:59:59'
+											Group by IDPreguntaDiagnostico
+SELECT IDTipoInvitado,Nombre FROM TipoInvitado WHERE 1 
+SELECT IDClasificacionInvitado,Nombre FROM ClasificacionInvitado WHERE 1 
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15') AND Tipo='Contratista'
+SELECT SA.IDSocioAutorizacion,
+    I.IDInvitado, I.Nombre, I.Apellido, I.NumeroDocumento, I.IDTipoInvitado, I.IDClasificacionInvitado
+	FROM SocioAutorizacion SA
+    LEFT JOIN Invitado I ON SA.IDInvitado=I.IDInvitado
+    WHERE SA.IDClub = '108' AND SA.IDSocioAutorizacion IN()
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15') AND WHERE Tipo='SocioInvitado'
+SELECT IDSocioInvitado FROM SocioInvitado IN ()
+SELECT IDInvitado,Nombre,Apellido,NumeroDocumento,IDTipoInvitado,IDClasificacionInvitado
+	FROM Invitado WHERE IDInvitado IN()
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='InvitadoAcceso'
+SELECT IDSocioInvitadoEspecial,IDInvitado FROM SocioInvitadoEspecial WHERE 1 ORDER BY IDSocioInvitadoEspecial DESC LIMIT 1000
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='Socio'
+SELECT IDSocio,NumeroDocumento,Accion,Predio,Nombre,Apellido,TipoSocio FROM Socio WHERE IDClub = '108'
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario
+	FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  ( FechaIngreso >= '2021-08-01' and FechaSalida <= '2021-08-15')  AND WHERE Tipo='Usuario'
+SELECT IDUsuario,Nombre,NumeroDocumento,CodigoUsuario FROM Usuario WHERE 1 
+SELECT Tipo, IDInvitacion, IDLogAcceso, Salida, Entrada, FechaSalida, FechaIngreso, Mecanismo, IDUsuario FROM LogAcceso  WHERE LogAcceso.IDClub = '108'    and  Tipo = 'Usuario'  and  ( FechaTrCr >= '2021-08-01 00:00:00' and FechaTrCr <= '2021-08-15 23:59:59') 
