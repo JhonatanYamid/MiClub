@@ -31,45 +31,59 @@ class SIMWebServiceQR
 				date_default_timezone_set('America/Bogota');
 
 				$tipoComida = "Otro";
-				if (date('H:i:s') < $datosconfig["HoraInicioAlmuerzo"] && date('H:i:s') > $datosconfig["HoraInicioDesayuno"]) {
+				if (date('H:i:s') <= $datosconfig["HoraFinDesayuno"] && date('H:i:s') >= $datosconfig["HoraInicioDesayuno"]) {
 					$tipoComida = 'Desayuno';
-				} elseif (date('H:i:s') >= $datosconfig["HoraInicioAlmuerzo"] && date('H:i:s') < $datosconfig["HoraInicioCena"]) {
+				} elseif (date('H:i:s') >= $datosconfig["HoraInicioAlmuerzo"] && date('H:i:s') <= $datosconfig["HoraFinAlmuerzo"]) {
 					$tipoComida = 'Almuerzo';
-				} else {
+				} elseif (date('H:i:s') >= $datosconfig["HoraInicioCena"] && date('H:i:s') < $datosconfig["HoraFinCena"]) {
 					$tipoComida = 'Cena';
+				} else {
+					$tipoComida = 'No permitido';
 				}
 
+				if ($tipoComida <> 'No permitido') {
+
+					$Cedula = $Codigo;
+					$sql = "SELECT * FROM TiqueteraFuncionarios WHERE NumeroDocumento = '$Cedula' ";
+					$query = $dbo->query($sql);
+					$datos = $dbo->fetchArray($query);
+
+					if ($datos) {
+						if ((int)$datos['CantidadEntradas'] <> 0) {
+							if ($datos[$tipoComida] == "1") {
 
 
-				$Cedula = $Codigo;
-				$sql = "SELECT * FROM TiqueteraFuncionarios WHERE NumeroDocumento = '$Cedula' ";
-				$query = $dbo->query($sql);
-				$datos = $dbo->fetchArray($query);
+								$datos['TipoConsumo'] = $tipoComida;
+								$datos['FechaConsumo'] = date('Y-m-d');
+								$datos['HoraConsumo'] = date('h:i:s');
+								$id = $dbo->insert($datos, 'LogTiqueteraFuncionarios', $key);
 
-				if ($datos) {
-					if ((int)$datos['CantidadEntradas'] <> 0) {
-
-
-						$datos['TipoConsumo'] = $tipoComida;
-						$datos['FechaConsumo'] = date('Y-m-d');
-						$datos['HoraConsumo'] = date('h:i:s');
-						$id = $dbo->insert($datos, 'LogTiqueteraFuncionarios', $key);
-
-						$Nombre = $datos["Nombre"];
-						$CantidadEntradas = $datos["CantidadEntradas"];
-						$dbo->query("UPDATE TiqueteraFuncionarios SET CantidadEntradas = " . (intval($CantidadEntradas) - 1) . " WHERE NumeroDocumento = " . $Cedula . " LIMIT 1 ;");
+								$Nombre = $datos["Nombre"];
+								$CantidadEntradas = $datos["CantidadEntradas"];
+								$dbo->query("UPDATE TiqueteraFuncionarios SET CantidadEntradas = " . (intval($CantidadEntradas) - 1) . " WHERE NumeroDocumento = " . $Cedula . " LIMIT 1 ;");
 
 
-						$respuesta["message"] = "Se ha registrado correctamente, quedan " . $datos[CantidadEntradas] . " entradas disponibles";
-						$respuesta["success"] = true;
-						$respuesta["response"] = NULL;
+								$respuesta["message"] = "Registro valido para " . $tipoComida . ", quedan " . $datos['CantidadEntradas'] . " tickets disponibles";
+								$respuesta["success"] = true;
+								$respuesta["response"] = NULL;
+							} else {
+								$label = "LabelError" . $tipoComida;
+								$respuesta["message"] = $datosconfig[$label];
+								$respuesta["success"] = false;
+								$respuesta["response"] = NULL;
+							}
+						} else {
+							$respuesta["message"] = "No hay entradas suficientes";
+							$respuesta["success"] = false;
+							$respuesta["response"] = NULL;
+						}
 					} else {
-						$respuesta["message"] = "No hay entradas suficientes";
+						$respuesta["message"] = "No se ha encontrado el documento";
 						$respuesta["success"] = false;
 						$respuesta["response"] = NULL;
 					}
 				} else {
-					$respuesta["message"] = "No se ha encontrado el documento";
+					$respuesta["message"] = "En este momento no se pueden realizar consumos";
 					$respuesta["success"] = false;
 					$respuesta["response"] = NULL;
 				}

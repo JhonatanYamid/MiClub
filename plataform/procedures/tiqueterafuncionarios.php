@@ -53,10 +53,19 @@ function get_data($nombrearchivo, $file, $IGNORE_FIRTS_ROW, $FIELD_TEMINATED = '
     for ($row = 2; $row <= $highestRow; $row++) {
         
         $NumeroDocumento =  $sheet->getCell("A" . $row)->getValue();
-        $IDTaloneraFunc =  $sheet->getCell("B" . $row)->getValue();
-        $FechaInicio = $sheet->getCell("C" . $row)->getValue();
-        $FechaFin =  utf8_decode($sheet->getCell("D" . $row)->getValue());
-        $CantidadEntradas =  utf8_decode($sheet->getCell("E" . $row)->getValue());
+        $IDTaloneraFunc = 2;
+        $FechaInicio = '2023-03-03';
+        $FechaFin = '2023-05-03';
+        $Desayuno =  ($sheet->getCell("B" . $row)->getValue() == 'Si') ? 1 : 0;
+        $Almuerzo = ($sheet->getCell("C" . $row)->getValue() == 'Si') ? 1 : 0;
+        $Cena =  ($sheet->getCell("D" . $row)->getValue() == 'Si') ? 1 : 0;
+        $CantidadEntradas =  $sheet->getCell("E" . $row)->getValue();
+        $sql_usuario = "SELECT IDUsuario, Nombre From Usuario Where IDClub = '" . $IDClub . "' and NumeroDocumento = '" .  $NumeroDocumento . "' Limit 1";
+        $result_usuario = $dbo->query($sql_usuario);
+        $result_usuario = $dbo->fetch($result_usuario);
+        $IDUsuarioTalonera =  $result_usuario['IDUsuario'];
+        $Nombre =  $result_usuario['Nombre'];
+        
 
 
         //if(is_numeric($NumeroDocumento) && !empty($NumeroDocumento)){
@@ -71,7 +80,7 @@ function get_data($nombrearchivo, $file, $IGNORE_FIRTS_ROW, $FIELD_TEMINATED = '
             if ($dbo->rows($result_socio) > 0) :
                 //Editar datos Socio
 
-                $sql_edit_socio = "UPDATE TiqueteraFuncionarios Set IDTaloneraFunc = '" . $IDTaloneraFunc . "', FechaInicio = '" . $FechaInicio . "', 	FechaTrEd = '" . date('Y-m-d') . "', FechaFin = '" . $FechaFin . "', CantidadEntradas = '". $CantidadEntradas .   "' Where NumeroDocumento = '" . $NumeroDocumento . "' and IDClub = '" . $IDClub . "'";
+                $sql_edit_socio = "UPDATE TiqueteraFuncionarios Set IDTaloneraFunc = '" . $IDTaloneraFunc . "', FechaInicio = '" . $FechaInicio . "', 	FechaTrEd = '" . date('Y-m-d') . "', FechaFin = '" . $FechaFin . "', Desayuno = '".$Desayuno."', Almuerzo = '".$Almuerzo."', Cena = '".$Cena."', IDUsuarioTalonera = '".$IDUsuarioTalonera."', CantidadEntradas = '". $CantidadEntradas .   "', Nombre = '".$Nombre."' Where NumeroDocumento = '" . $NumeroDocumento . "' and IDClub = '" . $IDClub . "'";
 
 
                 //echo "<br>Editar";
@@ -84,7 +93,7 @@ function get_data($nombrearchivo, $file, $IGNORE_FIRTS_ROW, $FIELD_TEMINATED = '
 
                 if (!empty($NumeroDocumento)) {
                     //Crear Socio
-                    $sql_inserta_socio = "INSERT INTO TiqueteraFuncionarios(IDClub,NumeroDocumento,FechaInicio,FechaFin,CantidadEntradas, IDTaloneraFunc, FechaTrEd) Values ('" . $IDClub . "','" . $NumeroDocumento . "','" . $FechaInicio . "','" . $FechaFin . "','" . $CantidadEntradas . "','"  . $IDTaloneraFunc . "','" . $FechaTrEd . "')";
+                    $sql_inserta_socio = "INSERT INTO TiqueteraFuncionarios(IDClub,NumeroDocumento, Nombre, Desayuno, Almuerzo, Cena, IDUsuarioTalonera, FechaInicio,FechaFin,CantidadEntradas, IDTaloneraFunc, FechaTrEd) Values ('" . $IDClub . "','" . $NumeroDocumento . "', '".$Nombre."','".$Desayuno."', '".$Almuerzo."', '".$Cena."', '".$IDUsuarioTalonera."','" . $FechaInicio . "','" . $FechaFin . "','" . $CantidadEntradas . "','"  . $IDTaloneraFunc . "','" . $FechaTrEd . "')";
                     //echo "<br>Crear ";
                     // echo "<br>" . $sql_inserta_socio;
 

@@ -69,20 +69,23 @@ include("cmp/seo.php");
 
                             <tr>
                               <td>1</td>
-                              <td><?= SIMUtil::get_traduccion('', '', 'Cedula', LANGSESSION); ?></td>
+                              <td>NumeroDocumento</td>
                             </tr>
                             <tr>
                               <td>2</td>
-                              <td><?= SIMUtil::get_traduccion('', '', 'nombre', LANGSESSION); ?></td>
-                            </tr>
-
-                            <tr>
-                              <td>6</td>
-                              <td><?= SIMUtil::get_traduccion('', '', 'FechaInicio', LANGSESSION); ?>(2021-11-02)</td>
+                              <td>Desayuno (Si/No)</td>
                             </tr>
                             <tr>
-                              <td>7</td>
-                              <td><?= SIMUtil::get_traduccion('', '', 'FechaFin', LANGSESSION); ?>(2021-11-30)</td>
+                              <td>3</td>
+                              <td>Almuerzo (Si/No)</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Cena (Si/No)</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>CantidadEntradas</td>
                             </tr>
 
                           </table>
