@@ -1080,9 +1080,9 @@
                                 </div>
                             </div>
                             <div class="form-group first ">
-                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> URL Respuesta LukaPay </label>
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> URL Mi Club Pasarela LukaPay </label>
                                     <div class="col-sm-8">
-                                        <input type="text" id="UrlRetornoLukaPay" name="UrlRetornoLukaPay" placeholder="UrlRetorno LukaPay" class="col-xs-12" title="UrlRetorno LukaPay" value="<?php echo $frm["UrlRetornoLukaPay"]; ?>">
+                                        <input type="text" id="UrlLocalLukaPay" name="UrlLocalLukaPay" placeholder="UrlRetorno LukaPay" class="col-xs-12" title="UrlRetorno LukaPay" value="<?php echo $frm["UrlLocalLukaPay"]; ?>">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
@@ -1095,6 +1095,62 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="widget-header widget-header-large">
+                                <h3 class="widget-title grey lighter">
+                                    <i class="ace-icon"></i> Mercado Pago
+                                </h3>
+                            </div>
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> URL MercadoPago </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" id="URLMercadoPago" name="URLMercadoPago" placeholder="URL MercadoPago" class="col-xs-12" title="URL MercadoPago" value="<?php echo $frm["URLMercadoPago"]; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> AccessToken MercadoPago</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" id="AccessTokenMercadoPago" name="AccessTokenMercadoPago" placeholder="AccessToken MercadoPago" class="col-xs-12" title="AccessToken MercadoPago" value="<?php echo $frm["AccessTokenMercadoPago"]; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> PublicKey MercadoPago </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" id="PublicKeyMercadoPago" name="PublicKeyMercadoPago" placeholder="PublicKey MercadoPago" class="col-xs-12" title="PublicKey MercadoPago" value="<?php echo $frm["PublicKeyMercadoPago"]; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Modo </label>
+                                    <div class="col-sm-8">
+                                        <select name="IsTestMercadoPago" id="IsTestMercadoPago" class="form-control">
+                                            <option value="1" <?php if ($frm["IsTestMercadoPago"] == 1) echo "selected"; ?>>Pruebas</option>
+                                            <option value="0" <?php if ($frm["IsTestMercadoPago"] == 0) echo "selected"; ?>>Producción</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Configuracion Notificaciones -->
+
+                            <div class="widget-header widget-header-large">
+                                <h3 class="widget-title grey lighter">
+                                    <i class="ace-icon"></i> Notificaciones
+                                </h3>
+                            </div>
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Solicitar abrir las notificaciones</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["SolicitaAbrirNotificaciones"], "SolicitaAbrirNotificaciones", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Label al abrir notificaciones</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" id="LabelAbrirNotificaciones" name="LabelAbrirNotificaciones" placeholder="Label al abrir notificaciones" class="col-xs-12" title="LabelAbrirNotificaciones" value="<?php echo $frm["LabelAbrirNotificaciones"]; ?>">
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <!-- Configuracion Invitados End -->
                             <div class="form-group first ">

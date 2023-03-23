@@ -2,6 +2,7 @@
 $numerodocumento = $_POST['NumeroDocumento'];
 $query = "SELECT CONCAT(RC.nombre,' ',RC.apellido) as nombre FROM RegistroCorredor as RC join  Carrera as C ON C.IDCarrera = RC.IDCarrera WHERE RC.numerodocumento = $numerodocumento AND C.Exoneracion = 'S'";
 $nombre = '';
+$numerodocumento = $_POST['NumeroDocumento'];
 try {
 	if ($_POST['NumeroDocumento']) {
 		$result = $dbo->query($query);

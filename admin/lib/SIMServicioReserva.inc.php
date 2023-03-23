@@ -661,7 +661,7 @@ class SIMServicioReserva
 
 
 
-        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaInicio, $FechaFin, $datosInvitados, "");
+        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaInicio, $FechaFin, $datosInvitados, "", "", "", "", $IDServicio);
 
         return $respuesta;
     }

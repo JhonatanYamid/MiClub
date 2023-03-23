@@ -5,7 +5,7 @@ SIMReg::setFromStructure(array(
 	"title" => "Reporte Talonera Funcionario",
 	"table" => "LogTiqueteraFuncionarios",
 	"key" => "IDLogTiqueteraFuncionarios",
-	"mod" => "Pqr"
+	"mod" => "Socio"
 ));
 
 

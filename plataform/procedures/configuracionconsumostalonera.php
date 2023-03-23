@@ -3,8 +3,8 @@
 SIMReg::setFromStructure(array(
     "title" => "configuracionconsumostalonera",
     "table" => "ConfiguracionConsumosTalonera",
-    "key" => "IDConfiguracionConsumosTalonera"
-   
+    "key" => "IDConfiguracionConsumosTalonera",
+    "mod" => "Socio"
 ));
 
 
@@ -14,6 +14,7 @@ $script = "configuracionconsumostalonera";
 $table = SIMReg::get("table");
 $key = SIMReg::get("key");
 $title = SIMReg::get("title");
+$mod = SIMReg::get("mod");
  
 
 

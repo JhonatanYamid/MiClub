@@ -36,7 +36,7 @@
                 <? echo SIMHTML::formradiogroup(SIMResources::$sinoNum, $frm["TipoSorteo"], 'TipoSorteo', "class='input'") ?>
             </div>
         </div>
-        
+
     </div>
     <div class="form-group first ">
         <div class="col-xs-12 col-sm-6">
@@ -141,7 +141,14 @@
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Cuando el servicio pida numero de personas contar al socio como parte de la reserva para el control de cupos ?<br>Si es "si" y selecciona 1 persona solo descuenta 1 de los cupos si en "no" descuenta 2 cupos</label>
             <div class="col-sm-8">
-                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["MultipleAuxiliar"], 'MultipleAuxiliar', "class='input'") ?>
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["ContarSocio"], 'ContarSocio', "class='input'") ?>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Cuando el servicio es por cupos si se agregan invitados sumarlo al total de cupos? (ej: Si el max de cupos es 10 y se reserva con dos invitados se descuenta 3 cupos, si es no solo se descuenta 1 cupo)</label>
+            <div class="col-sm-8">
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["ContarInvitadosCupo"], 'ContarInvitadosCupo', "class='input'") ?>
             </div>
         </div>
     </div>
@@ -177,7 +184,7 @@
                 <input id=Cupo type=text size=25 name=CupoMaximoBloque class="input" title="Cupo Maximo por Bloque" value="<?= $frm["CupoMaximoBloque"] ?>">
             </div>
         </div>
-        
+
     </div>
     <div class="form-group first">
         <div class="col-xs-12 col-sm-6">
@@ -295,16 +302,16 @@
         </div>
 
         <div class="col-xs-12 col-sm-6">
-            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Link redireccion externo (Redirigir a un sitio externo de reservas cuando  el "Comportamiento inicial de la reserva" sea link externo) </label>
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Link redireccion externo (Redirigir a un sitio externo de reservas cuando el "Comportamiento inicial de la reserva" sea link externo) </label>
             <div class="col-sm-8">
                 <input id=LinkExterno type=text size=25 name=LinkExterno class="input" title="Link Externo" value="<?= $frm["LinkExterno"] ?>">
             </div>
         </div>
-        
+
     </div>
 
     <div class="form-group first">
-        
+
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir reservar mas de x turnos asi los turnos no sean seguidos (ej: Turno de las 8am- lapso - Turno: 8-30 dejar separar los dos turnos asi no sean seguidos)?</label>
             <div class="col-sm-8">
@@ -409,12 +416,12 @@
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permisos por tipo reserva</label>
             <div class="col-sm-8"> <?php echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermisoReservaTipo"], 'PermisoReservaTipo', "class='input'")  ?> </div>
         </div>
-        
-         <div class="col-xs-12 col-sm-6">
+
+        <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir que los usuarios agregados al listado puedan reservar </label>
             <div class="col-sm-8"> <?php echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermiteReservar"], 'PermiteReservar', "class='input'")  ?> </div>
         </div>
-        
+
     </div>
     <div class="form-group first">
         <div class="col-xs-12 col-sm-6">
@@ -552,7 +559,7 @@
 
     <div class="form-group first">
         <div class="col-xs-12 col-sm-6">
-            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Cuando se elimina un turno solo permitir tomarlo a los de la lista de espera (inscritos menos de 1 hora antes)  ?</label>
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Cuando se elimina un turno solo permitir tomarlo a los de la lista de espera (inscritos menos de 1 hora antes) ?</label>
             <div class="col-sm-8">
                 <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["SoloReservaListaEspera"], 'SoloReservaListaEspera', "class='input'") ?>
             </div>
@@ -561,7 +568,7 @@
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Si se valida solo permitir tomar turno a lista de espera en que dias aplicarlo?</label>
             <div class="col-sm-8">
-            <?php
+                <?php
                 if (!empty($frm["DiasListaEsperaReserva"])) :
                     $array_dias = explode("|", $frm["DiasListaEsperaReserva"]);
                 endif;
@@ -571,7 +578,7 @@
                 <?php endforeach; ?>
             </div>
         </div>
-       
+
     </div>
 
 
@@ -744,11 +751,11 @@
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Por cada invitado socio o externo sumar el valor de la reserva ej: valor reserva $10.000 y se agregan dos invitados valor final=$30.000</label>
             <div class="col-sm-8"> <?php echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["CobrarPorInvitado"], 'CobrarPorInvitado', "class='input'")  ?> </div>
         </div>
-       
+
     </div>
 
 
-         <?php if (SIMUser::get("IDPerfil") == 1 || SIMUser::get("IDPerfil") == 0) : ?> <div class="form-group first">
+    <?php if (SIMUser::get("IDPerfil") == 1 || SIMUser::get("IDPerfil") == 0) : ?> <div class="form-group first">
             <div class="col-xs-12 col-sm-6">
                 <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir pagos con pasarela personallizada para servicio</label>
                 <div class="col-sm-8"> <?php echo SIMHTML::formradiogroup(SIMResources::$sinoNum, $frm["PermitePasarelaPersonalizada"], 'PermitePasarelaPersonalizada', "class='input'")  ?> </div>
@@ -891,7 +898,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="form-group first">
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir nueva interfaz de auxiliares como invitados </label>
@@ -1060,12 +1067,12 @@
                 <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["CrearInvitacionExterno"], 'CrearInvitacionExterno', "class='input'") ?>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6">
+        <!-- <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Crear Invitacion en modulo de invitados </label>
             <div class="col-sm-8">
                 <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["CrearInvitacionExterno"], 'CrearInvitacionExterno', "class='input'") ?>
             </div>
-        </div>
+        </div> -->
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir formulario de preguntas dinamicas invitados externos </label>
             <div class="col-sm-8">
@@ -1103,6 +1110,27 @@
             </div>
         </div>
 
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir código de cortesia para invitado externo </label>
+            <div class="col-sm-8">
+            <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermiteCodigoCortesiaInvitadoExterno"], 'PermiteCodigoCortesiaInvitadoExterno', "class='input'") ?>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group first">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Texto para el botón de código de cortesia invitado externo </label>
+            <div class="col-sm-8">
+                <input id="LabelBotonCodigoCortesiaInvitadoExterno" type="text" size="25" name="LabelBotonCodigoCortesiaInvitadoExterno" class="input" title="Texto para el botón de código de cortesia invitado externo" value="<?= $frm["LabelBotonCodigoCortesiaInvitadoExterno"] ?>">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Label Invitado Externo Pago </label>
+            <div class="col-sm-8">
+                <input id=LabelAuxiliar type=text size=25 name=LabelInvitadoExternoPago class="input" title="Label Invitado ExternoPago" value="<?= $frm[LabelInvitadoExternoPago] ?>">
+            </div>
+        </div>
     </div>
 
 
@@ -1649,8 +1677,8 @@
                                                                                                                                                                                                                         $seleccionar = "";
                                                                                                                                                                                                                     endif;
                                                                                                                                                                                                             ?> <option value="<?php echo $servicio["IDServicio"] ?>" <?php echo $seleccionar; ?>> <?php echo $NombreServicio;  ?> </option> <?php }
-                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                            ?> </select>
+                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                            ?> </select>
                         </td>
                     </tr>
                 </tbody>

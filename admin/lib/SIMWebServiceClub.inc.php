@@ -992,6 +992,8 @@ $IDClub="8"; */
                     $datos_club["TipoHeaderApp"] = $r["TipoHeaderApp"];
                     $datos_club["TiempoPublicidadHeader"] = $r["TiempoPublicidadHeader"];
                 endif;
+                $datos_club["LabelAbrirNotificaciones"] =  $otra_config_club["LabelAbrirNotificaciones"];
+                $datos_club["SolicitaAbrirNotificaciones"] =  $otra_config_club["SolicitaAbrirNotificaciones"];
                 array_push($response, $datos_club);
             } //ednw hile
 
@@ -1026,8 +1028,7 @@ $IDClub="8"; */
             $message = $dbo->rows($qry1) . " Encontrados";
 
             while ($r = $dbo->fetchArray($qry1)) {
-
-                if (!empty($IDUsuario)) {
+                if (!empty($IDUsuario)) {                    
                     $mostrar_popup = SIMWebServiceApp::verifica_ver_popup_empl($r, $IDUsuario);
                 }
 
@@ -1339,6 +1340,9 @@ $IDClub="8"; */
 
                 //Fin otros datos usuario
 
+
+                
+
                 //Encuestas al abrir app
                 $encuesta_activa = 0;
                 $response_encuesta = array();
@@ -1424,7 +1428,8 @@ $IDClub="8"; */
                 //FIN Encuestas al abrir app
                 $datos_club["Diagnostico"] = $response_diagnostico;
                 $datos_club["LabelDiagnostico"] = $r["LabelDiagnostico"];
-
+                $datos_club["LabelAbrirNotificaciones"] =  $otra_config_club["LabelAbrirNotificaciones"];
+                $datos_club["SolicitaAbrirNotificaciones"] =  $otra_config_club["SolicitaAbrirNotificaciones"];
                 array_push($response, $datos_club);
             } //ednw hile
 
@@ -1773,6 +1778,7 @@ $IDClub="8"; */
                 $modulo["IDModulo"] = $IDModulo;
                 $modulo["IDSubModulo"] = $r["IDSubModulo"];
                 $modulo["MostrarMisReservas"] = $r["MostrarMisReservas"];
+                $modulo["TextoBotonMisReservas"] = $r["TextoBotonMisReservas"];
 
                 //Eventos
                 $response_eve = array();

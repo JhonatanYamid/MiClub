@@ -51,7 +51,7 @@ switch ($action) {
             if ($simsession_socio->crear_cliente($cliente_data->IDSocio, $usuariosave)) {        //si el usuario es club crea la sesion del club
                 $_SESSION["club"] = $cliente_data->IDClub;
                 // if ($_POST["IDClub"] == 8 || $_GET["IDClub"] == 8 || $_GET["IDClub"] == 28 ||  $_POST["IDClub"] == 28) {
-                if ($_GET["IDClub"] == 28 ||  $_POST["IDClub"] == 249) {
+                    if ($_GET["IDClub"] == 28 || $_GET["IDClub"] == 249 ||  $_POST["IDClub"] == 28 ||  $_POST["IDClub"] == 249) {
                     header("location: cursoinscripcion.php");
                 } elseif ($_POST["IDClub"] == 15) {
                     header("location: seccionpereira.php");

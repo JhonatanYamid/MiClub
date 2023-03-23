@@ -18,6 +18,7 @@
                     <th>Seccion Galerias</th>
                     <th>Tipo Archivos</th>
                     <th>Modulos</th>
+                    <th>Texto del botón mis reservas</th>
                     <th>Ver boton Mis Reservas?</th>
                 </tr>
                 <tbody id="listacontactosanunciante"> <?php
@@ -288,6 +289,9 @@
                                                                                    ?> <option value="<?php echo $r_valor->IDModulo ?>" <?php echo $seleccionar; ?>> <?php  echo $r_valor->Nombre; ?> </option>
                                 <? endforeach;?>
                             </select>
+                        </td>
+                        <td width="200px">
+                            <input type="text" id="TextoBotonMisReservas<?php echo $r->IDModulo; ?>" name="TextoBotonMisReservas<?php echo $r->IDModulo; ?>" placeholder="" class="col-xs-12" title="TextoBotonMisReservas<?php echo $r->IDModulo; ?>" value="<?php echo $datos_submodulo["TextoBotonMisReservas"]; ?>">
                         </td>
                         <td width="200px">
                             <? echo SIMHTML::formradiogroup( array_flip( SIMResources::$sino ) , $datos_submodulo["MostrarMisReservas"] , 'MostrarMisReservas'.$r->IDModulo , "class='input mandatory'" ) ?>

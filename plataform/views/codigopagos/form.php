@@ -73,6 +73,10 @@
 								<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> <?= SIMUtil::get_traduccion('', '', 'Disponible', LANGSESSION); ?> </label>
 								<? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["Disponible"], 'Disponible', "class='input mandatory'") ?>
 							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Tipo Código </label><br>
+								<? echo SIMHTML::formradiogroup(array_flip(array('Reserva' => 'Reserva', 'Invitado' => 'Invitado')), $frm["TipoCodigo"], 'TipoCodigo', "class='input mandatory'") ?>
+							</div>
 						</div>
 
 						<?php

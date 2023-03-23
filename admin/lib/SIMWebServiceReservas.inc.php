@@ -338,6 +338,44 @@ class SIMWebServiceReservas
         return $response;
     }
 
+    public function verificarcodigocortesiareservas($IDClub, $IDSocio, $IDUsuario, $IDServicio, $IDElemento, $Fecha, $Hora, $IDClubAsociado, $Codigo)
+    {
+        $dbo = SIMDB::get();
+        $response = array();
+
+        if (!empty($IDClub)) {
+
+            // SACAMOS EL IDCLUBPADRE DEL CLUB 
+            $SQL = "SELECT * FROM ClubCodigoPago WHERE IDClub = $IDClub && IDSocio = $IDSocio && Codigo = '$Codigo' && Disponible = 'S' && TipoCodigo = 'Invitado'";
+            $QRY = $dbo->query($SQL);
+            if ($dbo->rows($QRY)) {
+                $QRYFechas = $dbo->query($SQL);
+                $QRYFechas = $dbo->fetch($QRYFechas);
+                if ($Fecha >= $QRYFechas['FechaDesde'] && $Fecha <= $QRYFechas['FechaHasta']) {
+                    $respuesta["message"] = "Código verificado, sirve";
+                    $respuesta["success"] = true;
+                    $respuesta["response"] = null;
+                } else {
+                    $respuesta["message"] = "Código vencido";
+                    $respuesta["success"] = false;
+                    $respuesta["response"] = null;
+                }
+            } else {
+
+                $respuesta["message"] = "Código Invalido";
+                $respuesta["success"] = false;
+                $respuesta["response"] = null;
+
+                return $respuesta;
+            };
+        } else {
+            $respuesta["message"] = "Faltan parametros";
+            $respuesta["success"] = false;
+            $respuesta["response"] = null;
+        };
+
+        return $respuesta;
+    }
 
 
     public function get_servicios($IDClub, $TipoApp = "", $IDUsuario = "", $IDSocio = "", $IDCategoriasServicios = "", $IDClubAsociado = "")
@@ -345,6 +383,7 @@ class SIMWebServiceReservas
         $dbo = &SIMDB::get();
         require_once LIBDIR . "SIMWebServicePublicidad.inc.php";
         require_once LIBDIR . "SIMWebServiceSorteos.inc.php";
+
         $response = array();
 
         if (!empty($IDClubAsociado)) :
@@ -451,7 +490,8 @@ class SIMWebServiceReservas
         endif;
 
         $sql = "SELECT * FROM Servicio WHERE IDClub = '$IDClub' and IDServicioMaestro in ($id_servicios) $condicion_servicio  $CondicionCategorias $condicionserviciosespeciales ORDER BY Nombre ";
-        
+
+
         $qry = $dbo->query($sql);
         if ($dbo->rows($qry) > 0) {
             $message = $dbo->rows($qry) . " " . SIMUtil::get_traduccion('', '', 'Encontrados', LANG);
@@ -749,7 +789,7 @@ class SIMWebServiceReservas
                     $servicio[LabelElementoExterno] = $Servicio[response][0][LabelAgregarInvitadoExterno];
 
                 endif;
-                
+
                 //Campos Reservas
                 $response_campos = array();
                 $sql_campos = "SELECT * FROM ServicioCampo WHERE Publicar = 'S' and IDServicio= '" . $r["IDServicio"] . "' ORDER BY Orden";
@@ -807,13 +847,8 @@ class SIMWebServiceReservas
                     } //end while
                 }
 
- 
-               $servicio["TipoReserva"] = $response_tiporeservas;
-               if($IDClub==192){
-                    require_once(LIBDIR.'SIMWebServiceClinicaObyrne.inc.php');
-                    $respuesta = SIMWebServiceClinicaObyrne::tipo_reserva($IDClub,$r["IDServicio"]);     
-                    $servicio["TipoReserva"] = $respuesta;               
-                }
+                $servicio["TipoReserva"] = $response_tiporeservas;
+
                 if ($IDClub == 227 && $r["IDServicio"] == 46131) {
                     require_once LIBDIR . "SIMWebServiceCountryMedellin.inc.php";
                     $respuesta = SIMWebServiceCountryMedellin::get_tipo_reserva($IDSocio, $r["IDServicio"], $Fecha);
@@ -882,10 +917,14 @@ class SIMWebServiceReservas
                 }
 
                 $servicio["MensajePagoReserva"] = $r["MensajePagoReserva"];
-                
+
                 $resp_publicidad = SIMWebServicePublicidad::get_publicidad($IDClub, "", "", "Socio", $r["IDServicio"]);
                 $servicio["PublicidadInfo"] = $resp_publicidad["response"][0];
+
                 $flag_mostrar = 0;
+                $servicio["PermiteCodigoCortesiaInvitadoExterno"] = $r["PermiteCodigoCortesiaInvitadoExterno"];
+                $servicio["LabelBotonCodigoCortesiaInvitadoExterno"] =  $r["LabelBotonCodigoCortesiaInvitadoExterno"];
+
 
                 // Verificar si es un modulo que se debe revisar permiso
                 if (array_key_exists($r["IDServicioMaestro"], $array_id_mod_esp)) {
@@ -901,11 +940,7 @@ class SIMWebServiceReservas
                 if ($flag_mostrar == 0) {
                     array_push($response, $servicio);
                 }
-                
             } //ednw hile
-
-            
-        
             $respuesta["message"] = $message;
             $respuesta["success"] = true;
             $respuesta["response"] = $response;
@@ -1815,14 +1850,9 @@ class SIMWebServiceReservas
                 } //end while
             }
 
-            if ($IDClub == 227 && $IDServicio == 46131) {
+            if ($IDClub = 227 && $IDServicio == 46131) {
                 require_once LIBDIR . "SIMWebServiceCountryMedellin.inc.php";
                 $response = SIMWebServiceCountryMedellin::get_tipo_reserva($IDSocio, $IDServicio, $Fecha,);
-            }
-
-            if($IDClub==192){
-                require_once(LIBDIR.'SIMWebServiceClinicaObyrne.inc.php');
-                $response = SIMWebServiceClinicaObyrne::tipo_reserva($IDClub,$IDServicio);                     
             }
 
 
@@ -1892,6 +1922,47 @@ class SIMWebServiceReservas
             $respuesta["response"] = null;
         } //end else
 
+        return $respuesta;
+    }
+
+
+    public function set_imagen_mapa_servicio_reserva($IDClub, $IDServicio, $File)
+    {
+        $dbo = &SIMDB::get();
+        // $condicion_elemento = "";
+        // if (!empty($IDUsuario)) :
+        //     $sql_elemento_usuario = "Select * From UsuarioServicioElemento Where IDUsuario = '" . $IDUsuario . "'";
+        //     $result_elemento_usuario = $dbo->query($sql_elemento_usuario);
+        //     while ($row_elemento_usuario = $dbo->fetchArray($result_elemento_usuario)) :
+        //         $array_id_elemento[] = $row_elemento_usuario["IDServicioElemento"];
+        //     endwhile;
+        //     if (count($array_id_elemento) > 0) :
+        //         $condicion_elemento = " and IDServicioElemento in (" . implode(",", $array_id_elemento) . ") ";
+        //     endif;
+        // endif;
+
+        $url = dirname(__FILE__) . "/" . "../../file/Mapas/";
+        $files =  SIMFile::upload($File, $url, "ALL");
+        if (empty($files) && !empty($File["name"])) {
+            $respuesta["message"] = 'No se cargó la imagen';
+            $respuesta["success"] = false;
+            $respuesta["response"] = null;
+        }else{
+            $NameImagen = $files[0]["innername"];
+            $sql_inserta_imagen = "Update Servicio Set ImagenMapa = '$NameImagen' Where IDServicio = '$IDServicio' AND IDClub = '$IDClub'";
+            $dbo->query($sql_inserta_imagen);
+            // $response = array();
+            $elemento["path"] = $url . $NameImagen;
+            $elemento["url"] = "https://appdev.miclubapp.com/file/Mapas/" . $NameImagen;
+            // array_push($response, $elemento); ImagenMapa
+            
+            $respuesta["message"] = 'Prueba de carga de archivo';
+            $respuesta["success"] = true;
+            $respuesta["response"] = $elemento;
+        }
+       
+        // $sql = "SELECT SE.* FROM ServicioElemento SE, Servicio S WHERE SE.IDServicio = S.IDServicio and SE.Publicar = 'S' and S.IDClub = '" . $IDClub . "' and SE.IDServicio = '" . $IDServicio . "' " . $condicion_elemento . " ORDER BY SE.Orden ";
+        // $qry = $dbo->query($sql);
         return $respuesta;
     }
 
@@ -1997,13 +2068,6 @@ class SIMWebServiceReservas
     {
 
         $dbo = &SIMDB::get();
-        
-          if ($IDClub == 192) :
-            require_once LIBDIR . "SIMWebServiceClinicaObyrne.inc.php";
-            $datos_socio = $dbo->fetchAll("Socio", " IDSocio = '" . $IDSocio . "' ", "array");
-            $respuesta = SIMWebServiceClinicaObyrne::Consultar_cita($IDClub, $datos_socio);
-            return $respuesta;
-        endif;
 
         if ($IDClub == 227) :
             require_once LIBDIR . "SIMWebServiceCountryMedellin.inc.php";
@@ -4713,30 +4777,6 @@ class SIMWebServiceReservas
                     if (!empty($TipoReserva)) {
                         $TipoReserva = $TipoReserva;
                     }
-                    
-                     $TipoReserva = $dbo->getFields("ServicioTipoReserva", "Nombre", "IDServicioTipoReserva = '" . $Datos["IDServicioTipoReserva"] . "'");
-                    if ($IDClub==8) {
-                    
-                    require_once(LIBDIR.'SIMWebServiceClinicaObyrne.inc.php');
-                    $respuesta = SIMWebServiceClinicaObyrne::tipo_reserva($IDClub,$Datos["IDServicio"]);     
- 
-                      $json1 = json_decode($respuesta); 
-   
-        foreach($json1 as $json){
-   foreach($json as $datos_reserva):
-   if($datos_reserva->IDServicioTipoReserva == $Datos["IDServicioTipoReserva"]):
-      $TipoReserva = $datos_reserva->Nombre;
-   endif;
-            
-            endforeach;
-            }
- 
-                    }
-                    
-                    
- 
-                    
-                    
                     $Html .= "<tr><td>" . $NombreServicio . "</td><td>" . $Datos["Fecha"] . "</td><td>" . $Datos["Hora"] . "</td><td>" . $TipoReserva . "</td>";
                 endwhile;
 

@@ -255,12 +255,12 @@
                 $id2 = $dbo->insert($frm2, "ConfiguracionClub", "IDConfiguracionClub");
 
                 //Actualizo Servicios
-                foreach ($frm[ServicioClub] as $id_servicio) :
+                /*   foreach ($frm[ServicioClub] as $id_servicio) :
                     $sql_interta_servicio = $dbo->query("Insert into ServicioClub (IDClub, IDServicio) Values ('" . $id . "', '" . $id_servicio . "')");
-                endforeach;
+                endforeach; */
 
                 //Actualizo Servicios
-                $query_servicios = $dbo->query("Select * from ServicioMaestro Where Publicar = 'S' Order by Nombre");
+                /*    $query_servicios = $dbo->query("Select * from ServicioMaestro Where Publicar = 'S' Order by Nombre");
                 while ($r = $dbo->object($query_servicios)) {
                     if (in_array($r->IDServicioMaestro, $frm[ServicioClub])) :
                         $activo = "S";
@@ -275,7 +275,7 @@
                     else :
                         $sql_actualiza_servicio = "Update ServicioClub Set Activo = '" . $activo . "' Where  IDClub = '" . SIMNet::reqInt("id") . "'	and IDServicioMaestro = '" . $r->IDServicioMaestro . "'";
                         $dbo->query($sql_actualiza_servicio);
-                    endif;
+                    endif; 
 
                     //Crear la configuracion inicial
                     $id_servicio_conf = $dbo->getFields("Servicio", "IDServicioMaestro", "IDServicioMaestro = '" . $r->IDServicioMaestro . "' and IDClub = '" . SIMNet::reqInt("id") . "'");
@@ -283,12 +283,12 @@
                         $sql_inserta_servicio_conf = "Insert Into  Servicio (IDClub, IDServicioMaestro, Publicar) Values ('" . SIMNet::reqInt("id") . "','" . $r->IDServicioMaestro . "','" . $activo . "')";
                         $dbo->query($sql_inserta_servicio_conf);
                     endif;
-                }
+                }*/
 
-                $query_modulos = $dbo->query("Select * from Modulo Where Publicar = 'S' Order by Nombre");
+                /*   $query_modulos = $dbo->query("Select * from Modulo Where Publicar = 'S' Order by Nombre");
                 while ($r = $dbo->object($query_modulos)) {
                     $sql_interta_modulo = $dbo->query("Insert into ClubModulo (IDClub, IDModulo) Values ('" . $id . "', '" . $r->IDModulo . "')");
-                }
+                } */
 
                 $resp = duplicar_club($id_nuevo_club);
 
@@ -428,7 +428,7 @@
                 endif;
 
                 //Actualizo Servicios
-                $query_servicios = $dbo->query("Select * from ServicioMaestro Where Publicar = 'S' Order by Nombre");
+                /*   $query_servicios = $dbo->query("Select * from ServicioMaestro Where Publicar = 'S' Order by Nombre");
                 while ($r = $dbo->object($query_servicios)) {
                     $nombre_campo_id_servicio = "IDServicioMaestro" . $r->IDServicioMaestro;
                     $nombre_campo_orden_servicio = "OrdenServicio" . $r->IDServicioMaestro;
@@ -455,9 +455,9 @@
                         $dbo->query($sql_inserta_servicio_conf);
                     endif;
                 }
-
+ */
                 //Actualizo Modulos
-                $query_modulos = $dbo->query("Select * from Modulo Where Publicar = 'S' Order by Nombre");
+                /*  $query_modulos = $dbo->query("Select * from Modulo Where Publicar = 'S' Order by Nombre");
                 while ($r = $dbo->object($query_modulos)) {
                     $nombre_campo_id = "IDModulo" . $r->IDModulo;
                     $nombre_campo_titulo = "Titulo" . $r->IDModulo;
@@ -510,7 +510,7 @@
                         $sql_actualiza_modulo = "Update ClubModulo Set Activo = '" . $activo . "', Titulo = '" . $frm[$nombre_campo_titulo] . "', TituloLateral = '" . $frm[$nombre_campo_titulo_lat] . "',  Orden = '" . $frm[$nombre_campo_orden] . "', Icono = '" . $frm[$nombre_campo_icono] . "', IconoLateral = '" . $frm[$nombre_campo_icono_lateral] . "', Ubicacion = '" . $ubicacion_modulo . "' Where  IDClub = '" . SIMNet::reqInt("id") . "'	and IDModulo = '" . $r->IDModulo . "'";
                         $dbo->query($sql_actualiza_modulo);
                     endif;
-                }
+                } */
 
                 //Actualizo Iconos de tipo de archivos
                 $query_tipoarchivos = $dbo->query("Select * from TipoArchivo Where Publicar = 'S' Order by Nombre");
@@ -1042,7 +1042,8 @@
 
             $id = $dbo->insert($frm, "PermisoSocioModulo", "IDPermisoSocioModulo");
             SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'RegistroExitoso', LANGSESSION));
-            SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
+            // SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
+            SIMHTML::jsRedirect($script . ".php?action=edit&vista=otros&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
             exit;
             break;
 
@@ -1065,14 +1066,16 @@
 
             $dbo->update($frm, "PermisoSocioModulo", "IDPermisoSocioModulo", $frm["IDPermisoSocioModulo"]);
             SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'ModificacionExitoso', LANGSESSION));
-            SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
+            //SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
+            SIMHTML::jsRedirect($script . ".php?action=edit&vista=otros&tabclub=permisosociomodulo&id=" . $frm[IDClub]);
             exit;
             break;
 
         case "EliminaPermisoSocioModulo":
             $id = $dbo->query("DELETE FROM PermisoSocioModulo WHERE IDPermisoSocioModulo   = '" . $_GET[IDPermisoSocioModulo] . "' LIMIT 1");
             SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'EliminacionExitosa', LANGSESSION));
-            SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $_GET["id"]);
+            // SIMHTML::jsRedirect($script . ".php?action=edit&tabclub=permisosociomodulo&id=" . $_GET["id"]);
+            SIMHTML::jsRedirect($script . ".php?action=edit&vista=otros&tabclub=permisosociomodulo&id=" . $_GET["id"]);
             exit;
             break;
             //Fin permisos
@@ -1212,6 +1215,7 @@
                 $nombre_campo_valores_Gal = "SeccionGaleria" . $r->IDModulo;
                 $nombre_campo_valores_Arch = "TipoArchivo" . $r->IDModulo;
                 $nombre_campo_valores_Mod = "ModuloHijo" . $r->IDModulo;
+                $nombre_campo_TextoBoton = "TextoBotonMisReservas" . $r->IDModulo;
                 $nombre_campo_verreservas = "MostrarMisReservas" . $r->IDModulo;
 
                 unset($valores_servicio);
@@ -1270,8 +1274,8 @@
                 endif;
 
                 if ($modulo_configurado == "S") :
-                    $sql_submodulo = "Insert Into SubModulo (IDClub, IDModulo, IDServicio, IDSeccionNoticia,IDSeccionNoticia2,IDSeccionNoticia3,IDSeccionNoticiaInfi, IDSeccionEvento, IDSeccionGaleria, IDTipoArchivo, IDModuloHijo,MostrarMisReservas)
-											 Values ('" . SIMNet::reqInt("id") . "','" . $r->IDModulo . "','" . $valores_servicio . "','$valores_secc_noticia','$valores_secc_noticia2','$valores_secc_noticia3','$valores_secc_noticiaI','" . $valores_secc_evento . "','" . $valores_secc_galeria . "','" . $valores_tipo_archivo . "','" . $valores_modulo_hijo . "','" . $frm[$nombre_campo_verreservas] . "')";
+                    $sql_submodulo = "Insert Into SubModulo (IDClub, IDModulo, IDServicio, IDSeccionNoticia,IDSeccionNoticia2,IDSeccionNoticia3,IDSeccionNoticiaInfi, IDSeccionEvento, IDSeccionGaleria, IDTipoArchivo, IDModuloHijo,MostrarMisReservas, TextoBotonMisReservas)
+											 Values ('" . SIMNet::reqInt("id") . "','" . $r->IDModulo . "','" . $valores_servicio . "','$valores_secc_noticia','$valores_secc_noticia2','$valores_secc_noticia3','$valores_secc_noticiaI','" . $valores_secc_evento . "','" . $valores_secc_galeria . "','" . $valores_tipo_archivo . "','" . $valores_modulo_hijo . "','" . $frm[$nombre_campo_verreservas] . "', '".$frm[$nombre_campo_TextoBoton]."')";
                     $dbo->query($sql_submodulo);
                 endif;
             }

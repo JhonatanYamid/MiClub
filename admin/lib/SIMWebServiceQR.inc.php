@@ -19,7 +19,7 @@ class SIMWebServiceQR
 				$respuesta["success"] = true;
 				$respuesta["response"] = "ok";
 			}
-		} elseif ($IDClub == 8) {
+		} elseif ($IDClub == 8 || $IDClub == 108) {
 
 
 			if (isset($Codigo) && $Codigo) {

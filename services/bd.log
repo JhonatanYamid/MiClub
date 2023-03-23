@@ -1,0 +1,191 @@
+SELECT AreaDeportiva, MaxInvitadoAno, MaxInvitadoMes
+			FROM Servicio
+			WHERE IDServicio=106
+SELECT IDPermisoServicio,PermiteReservar From Socio Where IDSocio = '373115' limit 1
+Select * From Sancion Where IDClub = '106' and IDServicioMaestro = '14' and Publicar = 'S'
+Select * From ServicioTipoReserva Where IDServicio = '18686' and Activo = 'S' Order by Orden Desc
+Select IDDisponibilidad From ServicioDisponibilidad Where IDServicio = '18686' and   IDDia like '%3|%' and IDServicioElemento like '%9266|%' and Activo <>'N'  and ('12:00:00' >= HoraDesde and '12:00:00'<=HoraHasta)  Limit 1
+SELECT * FROM Servicio WHERE IDClub = '106' and IDServicio = '18686'
+Select * From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%3|%' and Activo <>'N'  Order By HoraDesde ASC, HoraHasta DESC Limit 1
+Select HoraHasta From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%3|%' and Activo <>'N'  Order By HoraHasta DESC Limit 1
+Select * From ServicioElemento Where IDServicio = '18686'
+SELECT * FROM ServicioCierre Where IDServicio = '18686' and FechaInicio <= '2021-08-11' and FechaFin >= '2021-08-11' and HoraInicio='00:00:00' and HoraFin = '23:00:00'
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=2
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2021-08-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2021-08-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=2 
+                AND FechaReserva='2021-08-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  2 , 373115 , 60f9b0218e060 , SOC , 2021-08-11 ,  ,  ,  , 2021-07-22 12:51:29  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '2','373115','60f9b0218e060','SOC','2021-08-11','','','','2021-07-22 12:51:29' ) 
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=4
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2021-08-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2021-08-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=4 
+                AND FechaReserva='2021-08-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  4 , 373115 , 60f9b0218e060 , SOC , 2021-08-11 ,  ,  ,  , 2021-07-22 12:51:29  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '4','373115','60f9b0218e060','SOC','2021-08-11','','','','2021-07-22 12:51:29' ) 
+Insert Into LogServicioDiario (IDSocio,IDServicio,IDServicioElemento, Servicio, Parametros, Respuesta) Values ('373115','18686','9266','set_reserva_generalV2','{"IDClub":"106","action":"setreservageneral","IDSocio":"373115","IDServicio":"18686","IDElemento":"9266","Fecha":"2021-08-11","Hora":"12:00:00","IDBeneficiario":"","Campos":"","Invitados":"[{\"IDSocio\":\"\", \"Nombre\":\"prueba ex\",\"Adicionales\":[],\"SeleccionadoGrupo\":\"N\"}]","AppVersion":"33","Dispositivo":"Android","TipoApp":"Socio","TokenID":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJhdWQiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJpYXQiOjE2MjY5NjUxNTgsIm5iZiI6MTYyNjk2NTE1OCwiZXhwIjoxNjI3MDI1MTU4LCJkYXRhIjp7IklEVXN1YXJpb1dTIjoiOSIsIk5vbWJyZSI6IldlYiBNaSBFbXByZXNhIiwiRW1wcmVzYSI6Ik1pIGVtcHJlc2EifX0.aTb97P5Fry6RCrh1s3sH9szLIvBNO1bQotFb8rtVXEQ","Tee":"Tee1","NumeroTurnos":"1","AdicionalesSocio":"[{ \"IDCaracteristica\":\"1\",\"Valores\":\"Carro Electronico\",\"ValoresID\":\"2\",\"Total\":\"100000.0\"},{ \"IDCaracteristica\":\"2\",\"Valores\":\"Caddie de Primera\",\"ValoresID\":\"4\",\"Total\":\"120000.0\"}]","IDTipoReserva":"2175"}','{"message":"Lo sentimos, fecha no disponible","success":false,"response":null}')
+SELECT AreaDeportiva, MaxInvitadoAno, MaxInvitadoMes
+			FROM Servicio
+			WHERE IDServicio=106
+SELECT IDPermisoServicio,PermiteReservar From Socio Where IDSocio = '373115' limit 1
+Select * From Sancion Where IDClub = '106' and IDServicioMaestro = '14' and Publicar = 'S'
+Select * From ServicioTipoReserva Where IDServicio = '18686' and Activo = 'S' Order by Orden Desc
+Select IDDisponibilidad From ServicioDisponibilidad Where IDServicio = '18686' and   IDDia like '%4|%' and IDServicioElemento like '%9266|%' and Activo <>'N'  and ('12:00:00' >= HoraDesde and '12:00:00'<=HoraHasta)  Limit 1
+SELECT * FROM Servicio WHERE IDClub = '106' and IDServicio = '18686'
+Select * From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%4|%' and Activo <>'N'  Order By HoraDesde ASC, HoraHasta DESC Limit 1
+Select HoraHasta From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%4|%' and Activo <>'N'  Order By HoraHasta DESC Limit 1
+Select * From ServicioElemento Where IDServicio = '18686'
+SELECT * FROM ServicioCierre Where IDServicio = '18686' and FechaInicio <= '2022-08-11' and FechaFin >= '2022-08-11' and HoraInicio='00:00:00' and HoraFin = '23:00:00'
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=2
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2022-08-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2022-08-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=2 
+                AND FechaReserva='2022-08-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  2 , 373115 , 60f9b031a0ef0 , SOC , 2022-08-11 ,  ,  ,  , 2021-07-22 12:51:45  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '2','373115','60f9b031a0ef0','SOC','2022-08-11','','','','2021-07-22 12:51:45' ) 
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=4
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2022-08-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2022-08-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=4 
+                AND FechaReserva='2022-08-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  4 , 373115 , 60f9b031a0ef0 , SOC , 2022-08-11 ,  ,  ,  , 2021-07-22 12:51:45  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '4','373115','60f9b031a0ef0','SOC','2022-08-11','','','','2021-07-22 12:51:45' ) 
+Insert Into LogServicioDiario (IDSocio,IDServicio,IDServicioElemento, Servicio, Parametros, Respuesta) Values ('373115','18686','9266','set_reserva_generalV2','{"IDClub":"106","action":"setreservageneral","IDSocio":"373115","IDServicio":"18686","IDElemento":"9266","Fecha":"2022-08-11","Hora":"12:00:00","IDBeneficiario":"","Campos":"","Invitados":"[{\"IDSocio\":\"\", \"Nombre\":\"prueba ex\",\"Adicionales\":[],\"SeleccionadoGrupo\":\"N\"}]","AppVersion":"33","Dispositivo":"Android","TipoApp":"Socio","TokenID":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJhdWQiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJpYXQiOjE2MjY5NjUxNTgsIm5iZiI6MTYyNjk2NTE1OCwiZXhwIjoxNjI3MDI1MTU4LCJkYXRhIjp7IklEVXN1YXJpb1dTIjoiOSIsIk5vbWJyZSI6IldlYiBNaSBFbXByZXNhIiwiRW1wcmVzYSI6Ik1pIGVtcHJlc2EifX0.aTb97P5Fry6RCrh1s3sH9szLIvBNO1bQotFb8rtVXEQ","Tee":"Tee1","NumeroTurnos":"1","AdicionalesSocio":"[{ \"IDCaracteristica\":\"1\",\"Valores\":\"Carro Electronico\",\"ValoresID\":\"2\",\"Total\":\"100000.0\"},{ \"IDCaracteristica\":\"2\",\"Valores\":\"Caddie de Primera\",\"ValoresID\":\"4\",\"Total\":\"120000.0\"}]","IDTipoReserva":"2175"}','{"message":"Lo sentimos, fecha no disponible","success":false,"response":null}')
+SELECT AreaDeportiva, MaxInvitadoAno, MaxInvitadoMes
+			FROM Servicio
+			WHERE IDServicio=106
+SELECT IDPermisoServicio,PermiteReservar From Socio Where IDSocio = '373115' limit 1
+Select * From Sancion Where IDClub = '106' and IDServicioMaestro = '14' and Publicar = 'S'
+Select * From ServicioTipoReserva Where IDServicio = '18686' and Activo = 'S' Order by Orden Desc
+Select IDDisponibilidad From ServicioDisponibilidad Where IDServicio = '18686' and   IDDia like '%6|%' and IDServicioElemento like '%9266|%' and Activo <>'N'  and ('12:00:00' >= HoraDesde and '12:00:00'<=HoraHasta)  Limit 1
+SELECT * FROM Servicio WHERE IDClub = '106' and IDServicio = '18686'
+Select * From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%6|%' and Activo <>'N'  Order By HoraDesde ASC, HoraHasta DESC Limit 1
+Select HoraHasta From ServicioDisponibilidad Where IDDisponibilidad > 0 and IDServicio = '18686' and   IDDia like '%6|%' and Activo <>'N'  Order By HoraHasta DESC Limit 1
+Select * From ServicioElemento Where IDServicio = '18686'
+SELECT * FROM ServicioCierre Where IDServicio = '18686' and FechaInicio <= '2020-01-11' and FechaFin >= '2020-01-11' and HoraInicio='00:00:00' and HoraFin = '23:00:00'
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=2
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2020-01-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=2
+		AND RG.Fecha='2020-01-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=2 
+                AND FechaReserva='2020-01-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  2 , 373115 , 60f9b03f525fa , SOC , 2020-01-11 ,  ,  ,  , 2021-07-22 12:51:59  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '2','373115','60f9b03f525fa','SOC','2020-01-11','','','','2021-07-22 12:51:59' ) 
+SELECT Nombre, Stock FROM ServicioAdicional Where idServicioAdicional=4
+SELECT COUNT(RGA.IDReservaGeneralAdicional) AS countSevicioAdcionalSocios
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicional RGA ON SA.IDServicioAdicional=RGA.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGA.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2020-01-11'
+		AND (RGA.Retornado <> 'S' OR RGA.Retornado IS NULL)
+SELECT COUNT(RGAI.IDReservaGeneralAdicionalInvitado) AS countSevicioAdcionalInvitados
+		FROM ServicioAdicional SA
+		INNER JOIN ReservaGeneralAdicionalInvitado RGAI ON SA.IDServicioAdicional=RGAI.IDServicioAdicional
+		INNER JOIN ReservaGeneral RG ON RGAI.IDReservaGeneral=RG.IDReservaGeneral
+		AND SA.IDServicioAdicional=4
+		AND RG.Fecha='2020-01-11'
+		AND (RGAI.Retornado <> 'S' OR RGAI.Retornado IS NULL)
+SELECT COUNT(IDServicioAdicionalEnReserva) AS countServicioAdicionalEnReserva 
+                FROM ServicioAdicionalEnReserva
+                WHERE IDServicioAdicional=4 
+                AND FechaReserva='2020-01-11'
+INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+						VALUES( '' , NOW() , 'ServicioAdicionalEnReserva','insert','INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES (  4 , 373115 , 60f9b03f525fa , SOC , 2020-01-11 ,  ,  ,  , 2021-07-22 12:51:59  ) ','192.241.141.48',NOW())
+INSERT INTO ServicioAdicionalEnReserva ( IDServicioAdicional,IDSocio,Consecutivo,Tipo,FechaReserva,UsuarioTrCr,FechaTrCr,UsuarioTrEd,FechaTrEd )  VALUES ( '4','373115','60f9b03f525fa','SOC','2020-01-11','','','','2021-07-22 12:51:59' ) 
+Select * From ReservaGeneral Where ( (IDSocio in (373115) and IDSocioBeneficiario = '') or IDSocioBeneficiario='373115' ) and (Fecha='2020-01-11' ) and IDServicio = '18686' and IDEstadoReserva = '1' 
+SELECT RGI.* FROM ReservaGeneralInvitado RGI, ReservaGeneral RG WHERE RG.IDReservaGeneral = RGI.IDReservaGeneral and (RGI.IDSocio = '373115') and RG.IDClub = '106' and RG.Fecha = '2020-01-11' and RG.Hora >='01:00:00' and RG.IDServicio = '18686' ORDER BY IDReservaGeneralInvitado Desc 
+INSERT INTO ReservaGeneral (IDClub, IDSocio, IDSocioReserva, IDUsuarioReserva, IDServicio, IDServicioElemento, IDEstadoReserva, IDDisponibilidad, IDReservaGrupos, IDInvitadoBeneficiario, IDSocioBeneficiario, IDServicioTipoReserva,
+										                              Fecha, Hora, Observaciones, Tee, IDAuxiliar, IDTipoModalidadEsqui, CantidadInvitadoSalon, NumeroInscripcion, Altitud, Longitud, NombreSocio,AccionSocio,NombreBeneficiario,AccionBeneficiario, IP, IdentificadorServicio,ConsecutivoServicio,UsuarioTrCr, FechaTrCr)
+										                          Values ('106','373115','373115', '', '18686','9266', '1','6455','','','',
+										                          '2175','2020-01-11', '12:00:00','','Tee1','','','','0','' , '','Jorge Chirivi',
+										                          '1-8160','','','192.241.141.48','','','Socio','2021-07-22 12:51:59')
+INSERT Into ReservaGeneralInvitado (IDReservaGeneral, IDSocio, Nombre, Cedula, Correo)
+																			                              Values ('6563354','', 'prueba ex', '','' )
+INSERT INTO ReservaGeneralAdicional (IDReservaGeneral, IDServicioPropiedad, IDServicioAdicional, Valor, Valores, Total) Values ('6563354','1','2','2','Carro Electronico','100000.0')
+INSERT INTO ReservaGeneralAdicional (IDReservaGeneral, IDServicioPropiedad, IDServicioAdicional, Valor, Valores, Total) Values ('6563354','2','4','4','Caddie de Primera','120000.0')
+DELETE FROM ServicioAdicionalEnReserva WHERE Consecutivo='60f9b03f525fa' AND Tipo='SOC'
+Delete From ReservaGeneral Where IDClub = '106' and IDSocio = '373115' and Fecha = '2020-01-11' and Hora = '12:00:00' and IDEstadoReserva  = 3
+Delete From ReservaGeneralAutomatica Where IDClub = '106' and IDSocio = '373115' and IDServicioElemento	 = '9266' and Fecha = '2020-01-11' and Hora = '12:00:00' and IDEstadoReserva  = 3
+SELECT IDServicioCampo, Nombre FROM ServicioCampo WHERE IDServicio = '18686' 
+Select * From UsuarioServicioElemento Where IDServicioElemento = '9266'  
+Insert Into LogNotificacion (IDNotificacionesGenerales	, IDUsuario, IDClub, Token, Dispositivo, Fecha,App,Titulo,Mensaje) Values ('', '11846','106','USUARIO: 0152671c10e818a8717091e73f95b52766e7d34f90bf5a1c4318200fcb6a60ef','iOS',NOW(),'Empleado','Nueva Reserva','Ha sido reservado para el día 2020-01-11 12:00:00 por: Jorge Chirivi ')
+UPDATE ReservaGeneral SET ValorPagado = '20000' WHERE IDReservaGeneral ='6563354'
+Insert Into LogServicioDiario (IDSocio,IDServicio,IDServicioElemento, Servicio, Parametros, Respuesta) Values ('373115','18686','9266','set_reserva_generalV2','{"IDClub":"106","action":"setreservageneral","IDSocio":"373115","IDServicio":"18686","IDElemento":"9266","Fecha":"2020-01-11","Hora":"12:00:00","IDBeneficiario":"","Campos":"","Invitados":"[{\"IDSocio\":\"\", \"Nombre\":\"prueba ex\",\"Adicionales\":[],\"SeleccionadoGrupo\":\"N\"}]","AppVersion":"33","Dispositivo":"Android","TipoApp":"Socio","TokenID":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJhdWQiOiJodHRwczpcL1wvd3d3Lm1pY2x1YmFwcC5jb20iLCJpYXQiOjE2MjY5NjUxNTgsIm5iZiI6MTYyNjk2NTE1OCwiZXhwIjoxNjI3MDI1MTU4LCJkYXRhIjp7IklEVXN1YXJpb1dTIjoiOSIsIk5vbWJyZSI6IldlYiBNaSBFbXByZXNhIiwiRW1wcmVzYSI6Ik1pIGVtcHJlc2EifX0.aTb97P5Fry6RCrh1s3sH9szLIvBNO1bQotFb8rtVXEQ","Tee":"Tee1","NumeroTurnos":"1","AdicionalesSocio":"[{ \"IDCaracteristica\":\"1\",\"Valores\":\"Carro Electronico\",\"ValoresID\":\"2\",\"Total\":\"100000.0\"},{ \"IDCaracteristica\":\"2\",\"Valores\":\"Caddie de Primera\",\"ValoresID\":\"4\",\"Total\":\"120000.0\"}]","IDTipoReserva":"2175"}','{"message":"Guardado","success":true,"response":{"PermiteRecordatorio":"","FechaRecordatorio":false,"MensajeRecordatorio":"","IDReserva":6563354,"ValorReserva":20000,"Action":"","ParametrosPost":[{"llave":"moneda","valor":"COP"},{"llave":"ref","valor":1626976323},{"llave":"llave","valor":""},{"llave":"userid","valor":""},{"llave":"usuarioId","valor":""},{"llave":"accountId","valor":""},{"llave":"descripcion","valor":"Pago Reserva Mi Club"},{"llave":"extra1","valor":"6563354"},{"llave":"extra2","valor":"106"},{"llave":"refVenta","valor":1626976323},{"llave":"valor","valor":20000},{"llave":"iva","valor":"0"},{"llave":"baseDevolucionIva","valor":"0"},{"llave":"firma","valor":"252caac602558bac435fecec25ea37d1"},{"llave":"emailComprador","valor":"jorgechirivi@gmail.com"},{"llave":"prueba","valor":"0"},{"llave":"url_respuesta","valor":"https:\/\/appdev.miclubapp.com\/respuesta_transaccion.php"},{"llave":"url_confirmacion","valor":"https:\/\/appdev.miclubapp.com\/confirmacion_pagos.php"},{"llave":"Modulo","valor":"Reservas"},{"llave":"IDSocio","valor":"373115"}],"ParametrosPaGo":{"iva":0,"purchaseCode":1626976323,"totalAmount":2000000,"ipAddress":"192.241.141.48"}}}')
+SELECT * FROM UsuarioWS WHERE Usuario = 'miempresa' and  Clave = '216e096457dc44ef83142128588cb0365d00d328' and Activo = 'S' Limit 1
+SELECT * FROM Producto2 WHERE Publicar = 'S' and Existencias > 0  and IDClub = '8' ORDER BY Nombre 
