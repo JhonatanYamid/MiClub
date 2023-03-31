@@ -1,5 +1,5 @@
- <?
-
+<?
+var_dump(1);
 	SIMReg::setFromStructure(array(
 		"title" => "Servicio",
 		"table" => "Servicio",
@@ -28,140 +28,120 @@
 	SIMNotify::capture(SIMResources::$mensajes[SIMNet::req("m")]["msg"], SIMResources::$mensajes[SIMNet::req("m")]["type"]);
 
 
+
 	switch (SIMNet::req("action")) {
 
 		case "add":
-
-			if ($_REQUEST['action'] == "delfoto") {
-				$foto = $_REQUEST['foto'];
-				$campo = $_REQUEST['campo'];
-				$id = $_REQUEST['id'];
-				$filedelete = SERVICIO_DIR . $foto;
-				unlink($filedelete);
-				$borrar = "UPDATE $table SET $campo = '' WHERE $key = $id   LIMIT 1 ";
-				$dbo->query($borrar);
-
-				SIMHTML::jsAlert("Imagen Eliminada Correctamente");
-				SIMHTML::jsRedirect($script . ".php?action=edit&tab=configuracion&ids=" . $_REQUEST["id"]);
-			} else {
-				$view = "views/" . $script . "/form.php";
-				$newmode = "insert";
-				$titulo_accion = "Crear";
-			}
+			$view = "views/" . $script . "/form.php";
+			$newmode = "insert";
+			$titulo_accion = "Crear";
 			break;
-
-
-		case "cargaindividual":
+			 
+			 
+			case "cargaindividual": 
 			$frm = SIMUtil::varsLOG($_POST);
-			$IDClub = $frm["IDClub"];
-			$IDTipoReserva = $frm["IDTipoReserva"];
-			$Handicap = $frm["Handicap"];
-			$NumeroDocumento = $frm["NumeroDoc"];
-			$ID = $frm["IDSocio"];
-
+			$IDClub= $frm["IDClub"];
+			$IDTipoReserva= $frm["IDTipoReserva"];
+			$Handicap= $frm["Handicap"];
+			$NumeroDocumento= $frm["NumeroDoc"];
+			$ID= $frm["IDSocio"];
+			
 			//VALIDO EL PERMISO DE RESERVAR PARA IDENTIFICAR LOS SOCIOS Y SU PERMISO
-			$permite = $dbo->getFields("Servicio", "PermiteReservar", "IDServicio = '" . $_GET["ids"] . "'");
-
-			if ($permite == 'S') :
-				$permiso = "S";
-			elseif ($permite == 'N') :
-				$permiso = "N";
-			else :
-				$permiso = "";
-			endif;
-
-			//FIN VALIDACION
-			$sql_total = $dbo->query("SELECT COUNT(*) as total FROM SocioPermisoReserva  WHERE IDSocio='$ID' AND PermiteReservar='$permiso' AND IDServicio='" . $_GET["ids"] . "' AND IDTipoReserva='$IDTipoReserva' AND IDClub='$IDClub'");
-			$row = $dbo->fetchArray($sql_total);
-			$count = $row['total'];
-			if ($count > 0) :
-				SIMHTML::jsAlert("El socio ya esta agregado!");
-				SIMHTML::jsRedirect($script . ".php?action=edit&ids=" . $_GET["ids"]);
-
-			else :
-				$query = $dbo->query("SELECT * FROM Socio WHERE NumeroDocumento='" . $NumeroDocumento . "' AND IDClub= '" . SIMUser::get("club") . "' LIMIT 1");
-				$info = $dbo->fetchArray($query);
-				$Nombre = $info["Nombre"] . " " . $info["Apellido"];
-
-				$sql_insertar = $dbo->query("Insert Into SocioPermisoReserva (IDClub, IDServicio, IDSocio,Nombre, IDTipoReserva, NumeroDocumento,PermiteReservar ,Handicap) Values ('$IDClub','" . $_GET["ids"] . "','$ID','$Nombre','$IDTipoReserva','$NumeroDocumento','$permiso','$Handicap' )");
-
-				SIMHTML::jsAlert("Registro Exitoso");
-				SIMHTML::jsRedirect($script . ".php?action=edit&ids=" . $_GET["ids"]);
-			endif;
+                                $permite = $dbo->getFields("Servicio", "PermiteReservar", "IDServicio = '" . $_GET["ids"] . "'");
+       
+                                if($permite=='S'):
+                                $permiso="S";
+                                elseif($permite=='N'):
+                                $permiso="N";
+                                else:
+                                $permiso="";
+                                endif;
+                                
+                                //FIN VALIDACION
+                                $sql_total = $dbo->query("SELECT COUNT(*) as total FROM SocioPermisoReserva  WHERE IDSocio='$ID' AND PermiteReservar='$permiso' AND IDServicio='".$_GET["ids"]."' AND IDTipoReserva='$IDTipoReserva' AND IDClub='$IDClub'");
+                                $row = $dbo->fetchArray($sql_total);
+                                $count = $row['total'];
+                                if($count>0): 
+			 SIMHTML::jsAlert("El socio ya esta agregado!");
+			 SIMHTML::jsRedirect($script . ".php?action=edit&ids=".$_GET["ids"]);
+			 
+			       else:
+			       
+		$sql_insertar = $dbo->query("Insert Into SocioPermisoReserva (IDClub, IDServicio, IDSocio, IDTipoReserva, NumeroDocumento,PermiteReservar ,Handicap) Values ('$IDClub','".$_GET["ids"]."','$ID','$IDTipoReserva','$NumeroDocumento','$permiso','$Handicap' )");
+			
+			 SIMHTML::jsAlert("Registro Exitoso");
+			 SIMHTML::jsRedirect($script . ".php?action=edit&ids=".$_GET["ids"]);
+			 endif;
 			break;
-
-
-
-		case "cargarplano":
+		                 
+				 
+			 
+			case "cargarplano": 
 			$frm = SIMUtil::varsLOG($_POST);
-			$file = $_FILES['file']['tmp_name'];
-			$IDClub = SIMUser::get("club");
+			$file= $_FILES['file']['tmp_name'];
+			$IDClub= SIMUser::get("club");
+  
+			
+		 
+				
+	    $file = $_FILES['file']['tmp_name']; 
+            require_once LIBDIR . "excel/PHPExcel-1.8/Classes/PHPExcel.php";
+            $archivo = $file; 
+            $inputFileType = PHPExcel_IOFactory::identify($archivo);
+            $objReader = PHPExcel_IOFactory::createReader($inputFileType);
+            $objPHPExcel = $objReader->load($archivo);
+            $sheet = $objPHPExcel->getSheet(0);
+            $highestRow = $sheet->getHighestRow();
+            $highestColumn = $sheet->getHighestColumn();
 
+ 
+            for ($row = 2; $row <= $highestRow; $row++) {
+                $NumeroDocumento = $sheet->getCell("A" . $row)->getValue();
+                      
+                    	       $query = $dbo->query("SELECT IDSocio FROM Socio WHERE NumeroDocumento='$NumeroDocumento' AND IDClub='$IDClub'");
+                    	       
+                    	        while ($row_socios = mysqli_fetch_array($query)) {
+                                    $ID= $row_socios["IDSocio"];
+                                }
+                                
+      
 
-
-
-			$file = $_FILES['file']['tmp_name'];
-			require_once LIBDIR . "excel/PHPExcel-1.8/Classes/PHPExcel.php";
-			$archivo = $file;
-			$inputFileType = PHPExcel_IOFactory::identify($archivo);
-			$objReader = PHPExcel_IOFactory::createReader($inputFileType);
-			$objPHPExcel = $objReader->load($archivo);
-			$sheet = $objPHPExcel->getSheet(0);
-			$highestRow = $sheet->getHighestRow();
-			$highestColumn = $sheet->getHighestColumn();
-
-
-			for ($row = 2; $row <= $highestRow; $row++) {
-				$NumeroDocumento = $sheet->getCell("A" . $row)->getValue();
-
-				$query = $dbo->query("SELECT IDSocio FROM Socio WHERE NumeroDocumento='$NumeroDocumento' AND IDClub='$IDClub'");
-
-				while ($row_socios = mysqli_fetch_array($query)) {
-					$ID = $row_socios["IDSocio"];
-				}
-
-
-
-				if (!empty($ID)) {
-
-					//VALIDO EL PERMISO DE RESERVAR PARA IDENTIFICAR LOS SOCIOS Y SU PERMISO
-					$permite = $dbo->getFields("Servicio", "PermiteReservar", "IDServicio = '" . $_GET["ids"] . "'");
-
-					if ($permite == 'S') :
-						$permiso = "S";
-					elseif ($permite == 'N') :
-						$permiso = "N";
-					else :
-						$permiso = "";
-					endif;
-
-					//FIN VALIDACION
-
-					/*                
+                if (!empty($ID)) {
+                
+			//VALIDO EL PERMISO DE RESERVAR PARA IDENTIFICAR LOS SOCIOS Y SU PERMISO
+                                $permite = $dbo->getFields("Servicio", "PermiteReservar", "IDServicio = '" . $_GET["ids"] . "'");
+       
+                                if($permite=='S'):
+                                $permiso="S";
+                                elseif($permite=='N'):
+                                $permiso="N";
+                                else:
+                                $permiso="";
+                                endif;
+                                
+                                //FIN VALIDACION
+                                
+                /*                
                    $sql_total = $dbo->query("SELECT COUNT(*) as total FROM SocioPermisoReserva  WHERE IDSocio='$ID' AND PermiteReservar='$permiso'  AND IDServicio='".$_GET["ids"]."'");
                                 $row = $dbo->fetchArray($sql_total);
                                 $count = $row['total'];
                                 if($count==0):  */
-					$query = $dbo->query("SELECT * FROM Socio WHERE NumeroDocumento='" . $NumeroDocumento . "' AND IDClub= '" . SIMUser::get("club") . "' LIMIT 1");
-					$info = $dbo->fetchArray($query);
-					$Nombre = $info["Nombre"] . " " . $info["Apellido"];
+                            
+                 $sql_insertar = $dbo->query("Insert Into SocioPermisoReserva (IDClub,IDServicio,IDSocio,NumeroDocumento,PermiteReservar) Values ('$IDClub','".$_GET["ids"]."',' $ID','$NumeroDocumento','$permiso' )");
+                  $ID=0;
+                 //  endif;
+                  
+                } else {
+                    echo "<br>" . "El numero de documento esta equivocado: " . $Accion;
+                }
 
-
-					$sql_insertar = $dbo->query("Insert Into SocioPermisoReserva (IDClub,IDServicio,IDSocio,Nombre,NumeroDocumento,PermiteReservar) Values ('$IDClub','" . $_GET["ids"] . "',' $ID','$Nombre','$NumeroDocumento','$permiso' )");
-					$ID = 0;
-					//  endif;
-
-				} else {
-					echo "<br>" . "El numero de documento esta equivocado: " . $Accion;
-				}
-
-				$cont++;
-			} // END for
-
-			SIMHTML::jsAlert("Registro Exitoso");
-			SIMHTML::jsRedirect($script . ".php?action=edit&ids=" . $_GET["ids"]);
+                $cont++;
+            } // END for
+   
+			        SIMHTML::jsAlert("Registro Exitoso");
+				SIMHTML::jsRedirect($script . ".php?action=edit&ids=".$_GET["ids"]);
 			break;
-
+		               
 
 		case "insert":
 
@@ -174,9 +154,9 @@
 				foreach ($CategoriasServicio as $id => $IDCategoriaServicio) :
 
 					if (!empty($IDCategoriaServicio)) :
-
-
-
+					
+					
+				 
 						$Insert = "INSERT INTO CategoriasServiciosServicios (IDCategoriasServicios,IDServicio) VALUES ($IDCategoriaServicio,$frm[ID])";
 						$dbo->query($Insert);
 					endif;
@@ -217,18 +197,10 @@
 
 
 			break;
-		case "mapas":
-			$frm = $dbo->fetchById($table, $key, SIMNet::reqInt("ids"), "array");
-			$view = "views/" . $script . "/mapa.php";
-			$newmode = "update";
-			$titulo_accion = "Actualizar";
-
-
-			break;
-
-		case "editarprecio":
-			$table = "PreciosReservas";
-			$key = "IDPreciosReservas";
+			
+	       case "editarprecio":
+	       $table="PreciosReservas";
+	       $key="IDPreciosReservas";
 			$frm = $dbo->fetchById($table, $key, SIMNet::reqInt("id"), "array");
 			$view = "views/" . $script . "/form.php";
 			$newmode = "actualizarprecio";
@@ -236,54 +208,55 @@
 
 
 			break;
-
-		case "actualizarprecio":
-			$table = "PreciosReservas";
-			$key = "IDPreciosReservas";
-			$frm = SIMUtil::varsLOG($_POST);
-
-			$actualizar = "UPDATE $table SET Nombre ='$frm[Nombre]' , Valor='$frm[Valor]' WHERE $key = $frm[ID] ";
+			
+	       case "actualizarprecio":
+	       $table="PreciosReservas";
+	       $key="IDPreciosReservas";
+	       $frm = SIMUtil::varsLOG($_POST);
+	       				
+		        $actualizar = "UPDATE $table SET Nombre ='$frm[Nombre]' , Valor='$frm[Valor]' WHERE $key = $frm[ID] ";
 			$dbo->query($actualizar);
-			SIMHTML::jsAlert("Actualizado Correctamente");
-			SIMHTML::jsRedirect($script . ".php?ids=" . $frm["IDServicio"] . "&action=editarprecio&tab=precios");
+			SIMHTML::jsAlert("Actualizado Correctamente"); 
+			SIMHTML::jsRedirect($script . ".php?ids=" . $frm["IDServicio"] ."&action=editarprecio&tab=precios");
 
 			break;
-
-		case "insertarprecio":
-			$table = "PreciosReservas";
-			$key = "IDPreciosReservas";
-			$frm = SIMUtil::varsLOG($_POST);
-			$club = SIMUser::get("club");
-			$nombre = $frm["Nombre"];
-			$valor = $frm["Valor"];
-			$servicio = $_GET["ids"];
-
-			$actualizar = "INSERT INTO PreciosReservas ( IDClub, IDServicio, Nombre, Valor) VALUES ('" . $club . "','" . $servicio . "','" . $nombre . "','" . $valor . "')";
-
+			
+	       case "insertarprecio":
+	       $table="PreciosReservas";
+	       $key="IDPreciosReservas";
+	      $frm = SIMUtil::varsLOG($_POST);
+             $club=SIMUser::get("club");
+             $nombre=$frm["Nombre"];
+             $valor=$frm["Valor"];
+             $servicio=$_GET["ids"];
+ 
+		   $actualizar = "INSERT INTO PreciosReservas ( IDClub, IDServicio, Nombre, Valor) VALUES ('".$club."','".$servicio."','".$nombre."','".$valor."')";
+ 
 			$dbo->query($actualizar);
-			SIMHTML::jsAlert("Guardaro Correctamente");
-			SIMHTML::jsRedirect($script . ".php?ids=" . $servicio . "&action=editarprecio&tab=precios");
+			SIMHTML::jsAlert("Guardaro Correctamente"); 
+			SIMHTML::jsRedirect($script . ".php?ids=" . $servicio ."&action=editarprecio&tab=precios");
 
 			break;
-
-
-		case "eliminarprecio":
-			$servicio = $_GET["ids"];
-
-			$sql_precio = "DELETE   FROM PreciosReservas Where IDPreciosReservas = '" . $_GET[id] . "' ";
-			$r_precio = $dbo->query($sql_precio);
-			if ($r_precio) {
+			
+			
+	     case "eliminarprecio":
+	                  $servicio=$_GET["ids"];
+ 
+			$sql_precio="DELETE   FROM PreciosReservas Where IDPreciosReservas = '".$_GET[id]."' ";
+			$r_precio = $dbo->query($sql_precio);			
+			if($r_precio){
 				SIMHTML::jsAlert("Eliminado correctamente!");
-				SIMHTML::jsRedirect($script . ".php?ids=" . $servicio . "&action=editarprecio&tab=precios");
-			} else {
-				SIMHTML::jsAlert("Lo sentimos, no se puedo eliminar!");
-				SIMHTML::jsRedirect($script . ".php?ids=" . $servicio . "&action=editarprecio&tab=precios");
+			SIMHTML::jsRedirect($script . ".php?ids=" . $servicio ."&action=editarprecio&tab=precios");
+				
+			}else{
+			        SIMHTML::jsAlert("Lo sentimos, no se puedo eliminar!");
+			SIMHTML::jsRedirect($script . ".php?ids=" . $servicio ."&action=editarprecio&tab=precios");
 			}
-
+			 
 			exit;
 			break;
-
-
+			
+			 
 
 		case "update":
 
@@ -294,10 +267,10 @@
 				$frm = SIMUtil::varsLOG($_POST);
 
 
-
+				
 				$CategoriasServicio = explode("|||", $frm[CategoriasServicios]);
-				$delete = "DELETE FROM `CategoriasServiciosServicios` WHERE IDServicio='" . $frm[ID] . "'";
-				$dbo->query($delete);
+                                 $delete = "DELETE FROM `CategoriasServiciosServicios` WHERE IDServicio='".$frm[ID]."'";
+						$dbo->query($delete);
 				foreach ($CategoriasServicio as $id => $IDCategoriaServicio) :
 
 					if (!empty($IDCategoriaServicio)) :
@@ -324,7 +297,7 @@
 					$id_dia = implode("|", $array_dia) . "|";
 				endif;
 				$frm["DiasListaEsperaReserva"] = $id_dia;
-
+				
 
 				if (empty($_FILES["Icono"]["name"])) {
 
@@ -369,45 +342,6 @@
 					$ids = $frm["ID"];
 				}
 
-
-
-
-				if (!empty($_FILES["ImagenElementoMapaDisponible"]["name"])) {
-					$files =  SIMFile::upload($_FILES["ImagenElementoMapaDisponible"], SERVICIO_DIR, "IMAGE");
-					if (empty($files)) {
-						SIMNotify::capture("Ha ocurrido un error durante la carga. Verifique que el archivo no contenga errores y que el tipo de archivo sea permitido.", "error");
-						//print_form( $frm , "insert" , "Agregar Registro" );
-						exit;
-					}
-
-					$frm["ImagenElementoMapaDisponible"] = $files[0]["innername"];
-					$frm["ImagenElementoMapaDisponible"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-
-					$id = $dbo->update($frm, $table, $key, $frm["ID"]);
-					$ids = $frm["ID"];
-				}
-				if (!empty($_FILES["ImagenElementoMapaNoDisponible"]["name"])) {
-					$files =  SIMFile::upload($_FILES["ImagenElementoMapaNoDisponible"], SERVICIO_DIR, "IMAGE");
-					if (empty($files)) {
-						SIMNotify::capture("Ha ocurrido un error durante la carga. Verifique que el archivo no contenga errores y que el tipo de archivo sea permitido.", "error");
-						//print_form( $frm , "insert" , "Agregar Registro" );
-						exit;
-					}
-
-					$frm["ImagenElementoMapaNoDisponible"] = $files[0]["innername"];
-					$frm["ImagenElementoMapaNoDisponible"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-					$id = $dbo->update($frm, $table, $key, $frm["ID"]);
-					$ids = $frm["ID"];
-				}
-
-
-
 				$delete_tipo_pago = $dbo->query("Delete From ServicioTipoPago Where IDServicio = '" . $ids . "'");
 				foreach ($frm["IDTipoPago"] as $Pago_seleccionado) :
 					$sql_servicio_forma_pago = $dbo->query("Insert into ServicioTipoPago (IDServicio, IDTipoPago) Values ('" . $ids . "', '" . $Pago_seleccionado . "')");
@@ -441,11 +375,13 @@
 			unlink($filedelete);
 			$borrar = "UPDATE $table SET $campo = '' WHERE $key = $id   LIMIT 1 ";
 			$dbo->query($borrar);
-
 			SIMHTML::jsAlert("Imagen Eliminada Correctamente");
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=configuracion&ids=" . $_GET["ids"]);
 
 			break;
+
+
+
 
 		case "InsertarServicioDisponibilidad":
 			$frm = SIMUtil::varsLOG($_POST);
@@ -539,9 +475,9 @@
 		case "EliminaServicioDisponibilidad":
 			$frm = SIMUtil::varsLOG($_POST);
 			$frm["UsuarioTrCr"] = SIMUser::get("Nombre");
-			$sql_l = "INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
+			$sql_l="INSERT INTO Log ( IDUsuario , Fecha , Modulo , Transaccion , Operacion , DireccionIP,FechaTrCr )
 			VALUES( '" . $frm["UsuarioTrCr"] . "' , NOW() , 'Disponibilidad','Delete','" . "DELETE FROM Disponibilidad WHERE IDDisponibilidad   = " . $_GET[IDDisponibilidad] . " LIMIT 1" . "','" . $IP . "',NOW())";
-			$dbo->query($sql_l);
+			$dbo->query( $sql_l );
 			$id = $dbo->query("DELETE FROM Disponibilidad WHERE IDDisponibilidad   = '" . $_GET[IDDisponibilidad] . "' LIMIT 1");
 			$id = $dbo->query("DELETE FROM ServicioDisponibilidad WHERE IDDisponibilidad   = '" . $_GET[IDDisponibilidad] . "'");
 			SIMHTML::jsAlert("Eliminacion Exitosa");
@@ -709,7 +645,7 @@
 
 			//Elementos
 			foreach ($frm["IDServicioElemento"] as $IDServicioElemnto) :
-				$array_servicio_elemento[] = $IDServicioElemnto;
+				$array_servicio_elemento[] = $IDServicioElemnto;					
 			endforeach;
 			if (count($array_servicio_elemento) > 0) :
 				$ID_Servicio_Elemento = "|" . implode("|", $array_servicio_elemento) . "|";
@@ -732,9 +668,9 @@
 				SIMHTML::jsRedirect($script . ".php?action=edit&tab=fechas&ids=" . $frm[IDServicio]);
 			} else {
 				$id = $dbo->insert($frm, "ServicioCierre", "IDServicioCierre");
-				foreach ($array_servicio_elemento as $IDServicioElemnto) :
-					$inserta_cierre = "INSERT INTO ServicioCierreElemento (IDServicioCierre, IDServicioElemento) VALUES ('" . $id . "', '" . $IDServicioElemnto . "') ";
-					$dbo->query($inserta_cierre);
+				foreach ($array_servicio_elemento as $IDServicioElemnto) :					
+					$inserta_cierre="INSERT INTO ServicioCierreElemento (IDServicioCierre, IDServicioElemento) VALUES ('".$id."', '".$IDServicioElemnto."') ";
+					$dbo->query($inserta_cierre);		
 				endforeach;
 				SIMHTML::jsAlert("Registro Exitoso");
 				SIMHTML::jsRedirect($script . ".php?action=edit&tab=fechas&ids=" . $frm[IDServicio]);
@@ -745,7 +681,7 @@
 		case "ModificaServicioCierre":
 			$frm = SIMUtil::varsLOG($_POST);
 
-
+			
 			//quito los dos punto del texto ya que lo utilizo para traer la razon de cierre(:)
 			$frm["Descripcion"] = str_replace(":", " ", $frm["Descripcion"]);
 
@@ -762,12 +698,12 @@
 			$frm["Dias"] = $id_dia;
 
 			//Elementos
-			$borra_cierre = "DELETE FROM ServicioCierreElemento WHERE IDServicioCierre = '" . $frm[IDServicioCierre] . "' ";
+			$borra_cierre="DELETE FROM ServicioCierreElemento WHERE IDServicioCierre = '".$frm[IDServicioCierre]."' ";
 			$dbo->query($borra_cierre);
 			foreach ($frm["IDServicioElemento"] as $IDServicioElemnto) :
 				$array_servicio_elemento[] = $IDServicioElemnto;
-				$inserta_cierre = "INSERT INTO ServicioCierreElemento (IDServicioCierre, IDServicioElemento) VALUES ('" . $frm[IDServicioCierre] . "', '" . $IDServicioElemnto . "') ";
-				$dbo->query($inserta_cierre);
+				$inserta_cierre="INSERT INTO ServicioCierreElemento (IDServicioCierre, IDServicioElemento) VALUES ('".$frm[IDServicioCierre]."', '".$IDServicioElemnto."') ";
+				$dbo->query($inserta_cierre);			
 			endforeach;
 			if (count($array_servicio_elemento) > 0) :
 				$ID_Servicio_Elemento = "|" . implode("|", $array_servicio_elemento) . "|";
@@ -998,7 +934,7 @@
 					$dbo->query($sql_insert_asociado);
 				endforeach;
 			endif;
-
+			
 
 			SIMHTML::jsAlert("Modificacion Exitoso");
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=elementos&ids=" . $frm[IDServicio]);
@@ -1007,19 +943,21 @@
 
 		case "EliminaServicioElemento":
 			///Si tiene reservas no se deja eliminar
-			$sql_reserva = "SELECT IDReservaGeneral FROM ReservaGeneral Where IDServicioElemento = '" . $_GET[IDServicioElemento] . "' ";
-			$r_reserva = $dbo->query($sql_reserva);
-			if ($dbo->rows($r_reserva) > 0) {
+			$sql_reserva="SELECT IDReservaGeneral FROM ReservaGeneral Where IDServicioElemento = '".$_GET[IDServicioElemento]."' ";
+			$r_reserva = $dbo->query($sql_reserva);			
+			if($dbo->rows($r_reserva)>0){
 				SIMHTML::jsAlert("No se puede eliminar este elemento ya tiene reservas asociadas");
 				SIMHTML::jsRedirect($script . ".php?action=edit&tab=elementos&ids=" . $_GET["ids"]);
-			} else {
-				$sql_eli = "DELETE FROM ServicioElemento WHERE IDServicioElemento   = '" . $_GET[IDServicioElemento] . "' LIMIT 1";
+				
+			}
+			else{
+				$sql_eli="DELETE FROM ServicioElemento WHERE IDServicioElemento   = '" . $_GET[IDServicioElemento] . "' LIMIT 1";
 				$id = $dbo->query($sql_eli);
 				SIMLog::insert(SIMUser::get("Nombre"), "ServicioElemento", "ServicioElemento", "delete",  $sql_eli);
 				SIMHTML::jsAlert("Eliminacion Exitosa");
 				SIMHTML::jsRedirect($script . ".php?action=edit&tab=elementos&ids=" . $_GET["ids"]);
 			}
-
+			
 			exit;
 			break;
 
@@ -1103,7 +1041,7 @@
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=categoriacaddie2&ids=" . $frm["IDServicio"]);
 			exit;
 			break;
-
+		
 		case "ModificaCategoriaCaddie2":
 			$frm = SIMUtil::varsLOG($_POST);
 			$dbo->update($frm, "CategoriaCaddie2", "IDCategoriaCaddie", $frm["IDCategoriaCaddie"]);
@@ -1111,7 +1049,7 @@
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=categoriacaddie2&ids=" . $frm["IDServicio"]);
 			exit;
 			break;
-
+			
 		case "EliminaCategoriaCaddie2":
 			$id = $dbo->query("DELETE FROM CategoriaCaddie2 WHERE IDCategoriaCaddie   = '" . $_GET["IDCategoriaCaddie"] . "' LIMIT 1");
 			SIMHTML::jsAlert("Eliminacion Exitoso");
@@ -1218,8 +1156,8 @@
 							FROM ReservaGeneralAdicional as rga
 								LEFT JOIN ReservaGeneral as rg ON rg.IDReservaGeneral = rga.IDReservaGeneral
 							WHERE 
-								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioPropiedad = " . $_GET["IDServicioPropiedad"];
-
+								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioPropiedad = ".$_GET["IDServicioPropiedad"];
+			
 			$qryAdicional = $dbo->query($sqlAdicional);
 			$rAdicional = $dbo->fetchArray($qryAdicional);
 
@@ -1227,20 +1165,21 @@
 							FROM ReservaGeneralAdicionalInvitado as rga
 								LEFT JOIN ReservaGeneral as rg ON rg.IDReservaGeneral = rga.IDReservaGeneral
 							WHERE 
-								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioPropiedad = " . $_GET["IDServicioPropiedad"];
-
+								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioPropiedad = ".$_GET["IDServicioPropiedad"];
+			
 			$qryAdicionalInvitado = $dbo->query($sqlAdicionalInvitado);
 			$rAdicionalInvitado = $dbo->fetchArray($qryAdicionalInvitado);
 
-			if ($rAdicional['num'] > 0 || $rAdicionalInvitado['num'] > 0) {
+			if($rAdicional['num'] > 0 || $rAdicionalInvitado['num'] > 0){
 				SIMHTML::jsAlert("El elemento no se puede eliminar, tiene reservas asociadas");
-			} else {
-				$dbo->query("UPDATE ServicioPropiedad SET Publicar = 'N' WHERE IDServicioPropiedad = " . $_GET["IDServicioPropiedad"]);
+			}
+			else{
+				$dbo->query("UPDATE ServicioPropiedad SET Publicar = 'N' WHERE IDServicioPropiedad = ".$_GET["IDServicioPropiedad"]);
 				SIMHTML::jsAlert("Eliminacion Exitoso");
 			}
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=categoriaserv&ids=" . $_GET["ids"]);
 			exit;
-			break;
+		break;
 			//Fin preguntas
 
 			//Caracteristica
@@ -1265,8 +1204,8 @@
 						FROM ReservaGeneralAdicional as rga
 							LEFT JOIN ReservaGeneral as rg ON rg.IDReservaGeneral = rga.IDReservaGeneral
 						WHERE 
-							rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioAdicional = " . $_GET["IDServicioAdicional"];
-
+							rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioAdicional = ".$_GET["IDServicioAdicional"];
+		
 			$qryAdicional = $dbo->query($sqlAdicional);
 			$rAdicional = $dbo->fetchArray($qryAdicional);
 
@@ -1274,20 +1213,21 @@
 							FROM ReservaGeneralAdicionalInvitado as rga
 								LEFT JOIN ReservaGeneral as rg ON rg.IDReservaGeneral = rga.IDReservaGeneral
 							WHERE 
-								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioAdicional = " . $_GET["IDServicioAdicional"];
-
+								rg.Fecha >= CURDATE() AND rg.IDEstadoReserva = 1 AND rga.IDServicioAdicional = ".$_GET["IDServicioAdicional"];
+			
 			$qryAdicionalInvitado = $dbo->query($sqlAdicionalInvitado);
 			$rAdicionalInvitado = $dbo->fetchArray($qryAdicionalInvitado);
 
-			if ($rAdicional['num'] > 0 || $rAdicionalInvitado['num'] > 0) {
+			if($rAdicional['num'] > 0 || $rAdicionalInvitado['num'] > 0){
 				SIMHTML::jsAlert("El elemento no se puede eliminar, tiene reservas asociadas");
-			} else {
-				$dbo->query("UPDATE ServicioAdicional SET Publicar = 'N' WHERE IDServicioAdicional = " . $_GET["IDServicioAdicional"]);
+			}
+			else{
+				$dbo->query("UPDATE ServicioAdicional SET Publicar = 'N' WHERE IDServicioAdicional = ".$_GET["IDServicioAdicional"]);
 				SIMHTML::jsAlert("Eliminacion Exitoso");
 			}
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=adicionales&ids=" . $_GET["ids"]);
 			exit;
-			break;
+		break;
 			//Fin caracteristica
 
 			// VALORES POR ELEMENTO
@@ -1363,13 +1303,13 @@
 
 		case "credibanconuevaversion":
 
-			$frm = SIMUtil::varsLOG($_POST);
+			$frm = SIMUtil::varsLOG($_POST);				
 			$dbo->query("DELETE FROM CredibancoNuevaVersionServicio WHERE IDServicio   = '$frm[IDServicio]'");
 			$id = $dbo->insert($frm, "CredibancoNuevaVersionServicio", "IDCredibancoNuevaVersionServicio");
 			SIMHTML::jsAlert("Registro Exitoso");
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=credibandonuevaversion&ids=$frm[IDServicio]");
 			exit;
-			break;
+		break;
 
 		case "InsertarPreguntaInvitadosExternos":
 			/* print_r($_POST);
@@ -1380,8 +1320,8 @@
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=preguntasinvitados&ids=" . $frm[IDServicio]);
 			exit;
 			break;
-
-
+		
+		
 		case "ModificaPreguntaInvitadosExternos":
 			$frm = SIMUtil::varsLOG($_POST);
 			$dbo->update($frm, "CampoInvitadoExterno", "IDCampoInvitadoExterno", $frm["IDCampoInvitadoExterno"]);
@@ -1389,7 +1329,7 @@
 			SIMHTML::jsRedirect($script . ".php?action=edit&tab=preguntasinvitados&ids=" . $frm["IDServicio"]);
 			exit;
 			break;
-
+		
 		case "EliminaPreguntaInvitadosExternos":
 			$id = $dbo->query("DELETE FROM CampoInvitadoExterno WHERE IDCampoInvitadoExterno   = '" . $_GET["IDCampoInvitadoExterno"] . "' LIMIT 1");
 			SIMHTML::jsAlert("Eliminacion Exitoso");
@@ -1400,15 +1340,15 @@
 		case "configuracionrepetirreserva":
 
 			$frm = SIMUtil::varsLOG($_POST);
-			$numSemanas = $dbo->getFields("ConfiguracionReservaHorario", "NumeroSemanas", "IDClub = " . SIMUser::get("club"));
+			$numSemanas = $dbo->getFields("ConfiguracionReservaHorario", "NumeroSemanas", "IDClub = ".SIMUser::get("club"));
 
-			if ($frm['SemanasSeguidasARepetir'] <= $numSemanas) :
+			if($frm['SemanasSeguidasARepetir'] <= $numSemanas):
 
-				if (!empty($frm["IDConfiguracionRepetirReserva"]) && $frm["IDConfiguracionRepetirReserva"] != "")
+				if(!empty($frm["IDConfiguracionRepetirReserva"]) && $frm["IDConfiguracionRepetirReserva"] != "")
 					$dbo->update($frm, "ConfiguracionRepetirReserva", "IDConfiguracionRepetirReserva", $frm["IDConfiguracionRepetirReserva"]);
 				else
 					$idConf = $dbo->insert($frm, "ConfiguracionRepetirReserva", "IDConfiguracionRepetirReserva");
-			else :
+			else:
 				SIMHTML::jsAlert("El numero de semanas a repetir no puede ser mayor al numero de semanas que se muestran, por favor verifiquelo");
 				SIMHTML::jsRedirect($script . ".php?action=edit&tab=configuracionrepetirreserva&ids=" . $frm["IDServicio"]);
 			endif;
@@ -1418,7 +1358,7 @@
 
 			exit;
 			break;
-
+		
 
 		case "search":
 			$view = "views/" . $script . "/list.php";

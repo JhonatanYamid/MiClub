@@ -1113,7 +1113,7 @@
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permitir código de cortesia para invitado externo </label>
             <div class="col-sm-8">
-            <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermiteCodigoCortesiaInvitadoExterno"], 'PermiteCodigoCortesiaInvitadoExterno', "class='input'") ?>
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermiteCodigoCortesiaInvitadoExterno"], 'PermiteCodigoCortesiaInvitadoExterno', "class='input'") ?>
             </div>
         </div>
 
@@ -1424,6 +1424,68 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <div class="widget-header widget-header-large">
+        <h3 class="widget-title grey lighter">
+            <i class="ace-icon fa fa-info-circle green"></i> Mapas
+        </h3>
+    </div>
+    <div class="form-group first">
+        <div class="col-xs-12 col-sm-12">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Permite Seleccionar Elementos en el Mapa</label>
+            <div class="col-sm-8">
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["PermiteSeleccionarElementoMapa"], 'PermiteSeleccionarElementoMapa', "class='input '") ?>
+            </div>
+        </div>
+
+
+
+
+
+        <br />
+        <div class="col-xs-12 col-sm-12">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Imagen para Elemento Mapa Disponible</label>
+            <div class="col-sm-8">
+                <? if (!empty($frm["ImagenElementoMapaDisponible"])) {
+                    echo "<img src='$frm[ImagenElementoMapaDisponible]' width=55 height=100 >";
+                ?>
+                    <a href="<? echo $script . ".php?action=delfoto&foto=$frm[ImagenElementoMapaDisponible]&campo=ImagenElementoMapaDisponible&id=" . $frm[$key]; ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
+                <?
+                } // END if
+                ?>
+                <input name="ImagenElementoMapaDisponible" id=file class="" title="ImagenElementoMapaDisponible" type="file" size="25" style="font-size: 10px">
+            </div>
+        </div>
+        <br />
+        <div class="col-xs-12 col-sm-12">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Imagen para Elemento Mapa No Disponible</label>
+            <div class="col-sm-8">
+                <? if (!empty($frm["ImagenElementoMapaNoDisponible"])) {
+                    echo "<img src='$frm[ImagenElementoMapaNoDisponible]' width=55 height=100 >";
+                ?>
+                    <a href="<? echo $script . ".php?action=delfoto&foto=$frm[ImagenElementoMapaNoDisponible]&campo=ImagenElementoMapaNoDisponible&id=" . $frm[$key]; ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
+                <?
+                } // END if
+                ?>
+                <input name="ImagenElementoMapaNoDisponible" id=file class="" title="ImagenElementoMapaNoDisponible" type="file" size="25" style="font-size: 10px">
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Texto de Introducción en la Seleccion de Elementos en el Mapa </label>
+            <div class="col-sm-8">
+                <input id='TextoIntroduccionSeleccionElementoMapa' type=text size=25 name='TextoIntroduccionSeleccionElementoMapa' class="input" title="TextoIntroduccionSeleccionElementoMapa" value="<?= $frm['TextoIntroduccionSeleccionElementoMapa'] ?>">
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="widget-header widget-header-large">
         <h3 class="widget-title grey lighter">
             <i class="ace-icon fa fa-info-circle green"></i> Labels Personalizados

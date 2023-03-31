@@ -670,6 +670,11 @@ class SIMWebService
             $servicio_hora["IDClub"] = $IDClub;
             $servicio_hora["IDServicio"] = $IDServicio;
             $servicio_hora["Fecha"] = $Fecha;
+            $servicio_hora["InfoMapa"] = array(
+                "ImagenMapa" => $datos_servicio_actual['ImagenMapa'],
+                "ImagenAlto" => $datos_servicio_actual['ImagenAlto'],
+                "ImagenAncho" => $datos_servicio_actual['ImagenAncho']
+            );
             //$response_disponibilidad = SIMWebService::consultar_disponibilidad($qry,"",$IDServicio,$Fecha);
 
             //Horas Disponibles Elemento
@@ -1784,6 +1789,16 @@ class SIMWebService
                                             $hora["LabelBotonInscritos"] = "";
                                             $hora["Inscritos"] = array();
                                         }
+                                        $IDElementoP = $hora['IDElemento'];
+                                        $elemento_actual = array_values(array_filter(json_decode($datos_servicio_actual['Elementos']), function ($p)  use ($IDElementoP) {
+                                            return $p->IDElemento == $IDElementoP;
+                                        }));
+                                        $hora["RegionActivaEnMapa"] = array(
+                                            "PosicionX" => strval($elemento_actual[0]->PosicionX),
+                                            "PosicionY" => strval($elemento_actual[0]->PosicionY),
+                                            "Ancho" => strval($elemento_actual[0]->Ancho),
+                                            "Alto" => strval($elemento_actual[0]->Alto)
+                                        );
 
                                         array_push($response_disponibilidad, $hora);
 
@@ -5019,8 +5034,8 @@ class SIMWebService
                         }
                         //Fin Crear invitaciones en
 
-                         //Habilito codigos cortesia nuevamente
-                         $sql_habilita_codigos =  $dbo->query("Update ClubCodigoPago Set Disponible= 'S', IDReservaGeneral = ''  Where IDReservaGeneral  = '$IDReserva'");
+                        //Habilito codigos cortesia nuevamente
+                        $sql_habilita_codigos =  $dbo->query("Update ClubCodigoPago Set Disponible= 'S', IDReservaGeneral = ''  Where IDReservaGeneral  = '$IDReserva'");
                         //borro invitados a esa reserva
                         $sql_borra_reserva_invitados = $dbo->query("Delete From ReservaGeneralInvitado Where IDReservaGeneral  = '" . $IDReserva . "'");
 
@@ -6827,10 +6842,17 @@ class SIMWebService
         //Valido si el socio puede reservar
         $permiso_reserva = SIMWebService::validar_permiso_reserva($IDSocio, $IDServicio);
         if ($permiso_reserva == "N" || $datos_socio["IDEstadoSocio"] == 2 || $datos_socio["IDEstadoSocio"] == 3 || $datos_socio["IDEstadoSocio"] == 4) :
-            $respuesta["message"] = "Lo sentimos no tiene permiso para realizar reservas";
-            $respuesta["success"] = false;
-            $respuesta["response"] = null;
-            return $respuesta;
+            if ($IDClub == 239) :
+                $respuesta["message"] = "Lo sentimos no puede crear una Reserva porque,  su acción presenta un retraso a la fecha";
+                $respuesta["success"] = false;
+                $respuesta["response"] = null;
+                return $respuesta;
+            else :
+                $respuesta["message"] = "Lo sentimos no tiene permiso para realizar reservas";
+                $respuesta["success"] = false;
+                $respuesta["response"] = null;
+                return $respuesta;
+            endif;
         endif;
 
         // VALIDAR PARA IZCARAGUA SI PUEDE RESERVAR
@@ -9646,6 +9668,23 @@ class SIMWebService
             else :
                 //NUEVA PARTE PARA VERIFICAR SI LOS INVITADOS TIENEN HANDICAP Y CUMPLEN CON LOS REQUERIMIENTOS
 
+
+                //BENEFICIARIO
+                if (!empty($IDBeneficiario)) {
+                    $datos_beneficiario = $dbo->fetchAll("Socio", " IDSocio = '" . $IDBeneficiario . "' ", "array");
+                    $id_socio_permiso = $dbo->getFields("SocioPermisoReserva", "IDSocioPermisoReserva", "NumeroDocumento = '" .       $datos_beneficiario["NumeroDocumento"] . "' and IDClub = '" . $IDClub . "'");
+
+
+                    if (empty($id_socio_permiso)) :
+                        $respuesta["message"] = "Lo sentimos no tiene permisos para reservar los fines de semana ";
+                        $respuesta["success"] = false;
+                        $respuesta["response"] = null;
+                        return $respuesta;
+                    endif;
+                }
+
+
+
                 $datos["total"] = 0;
                 $total_invitados = 0;
                 $ids = "";
@@ -9888,7 +9927,7 @@ class SIMWebService
 
 
         //Especial Rancho Colombia para golf fines de semana solo permite reservas de socios con handicap
-        if (($IDClub == 12 && $IDServicio == 144 && (date("w", strtotime($Fecha)) == 0 || date("w", strtotime($Fecha)) == 6) && $Hora < "11:00:00") || $IDServicio == 145) :
+        if (($IDClub == 12 && $IDServicio == 144 && (date("w", strtotime($Fecha)) == 0 || date("w", strtotime($Fecha)) == 6) && $Hora >= "07:00:00" && $Hora < ":00:00") || $IDServicio == 145) :
 
             $sumaHandicap = 0;
             $id_socio_permiso = $dbo->getFields("SocioPermisoReserva", "IDSocioPermisoReserva", "NumeroDocumento = '" . $datos_socio["NumeroDocumento"] . "' and IDClub = '" . $IDClub . "'");
@@ -9945,6 +9984,46 @@ class SIMWebService
                     endif;
                 endif;
             endif;
+        endif;
+        //Fin validación especial
+
+
+        //Especial Cartagena en un solo dia en unos horarios permite reservar con suma de handicap
+        if (($IDClub == 218 && $IDServicio == 43999 && (date("w", strtotime($Fecha)) == 0 || date("w", strtotime($Fecha)) == 6))) :
+
+            $sumaHandicap = 0;
+            $sumaHandicap += $datos_socio["Handicap"];
+
+            // verifico que los invitados tambien tengan handicap
+            $nuevacadena_hand = str_replace('Optional("', "", $Invitados);
+            $nuevacadena_hand = str_replace('")', "", $nuevacadena_hand);
+            $Invitados_hand = $nuevacadena_hand;
+            $datos_invitado_hand = json_decode($Invitados_hand, true);
+
+            if (count($datos_invitado_hand) >= 4 && $Tee = "Tee1" && $Hora < "08:30:00") :
+                $respuesta["message"] = "lo sentimos los fivesome solo podran iniciar a jugar por el hoyo 1 a partir de las 08:30 a.m. ";
+                $respuesta["success"] = false;
+                $respuesta["response"] = NULL;
+                return $respuesta;
+            endif;
+
+            if (count($datos_invitado_hand) > 0) :
+                foreach ($datos_invitado_hand as $detalle_datos) :
+                    $IDSocioInvitadoHand = $detalle_datos["IDSocio"];
+                    if (!empty($IDSocioInvitadoHand)) :
+                        $datos_socio_valida_per_hand = $dbo->fetchAll("Socio", " IDSocio = '" . $IDSocioInvitadoHand . "' ", "array");
+                        $sumaHandicap += $datos_socio_valida_per_hand["Handicap"];
+                    endif;
+                endforeach;
+            endif;
+
+            if ($sumaHandicap > 90 && $Tee = "Tee1" && $Hora >= "07:00:00" && $Hora <= "09:30:00") :
+                $respuesta["message"] = "Lo sentimos tu handicap y el de tus invitados es superior al maximo permitido!";
+                $respuesta["success"] = false;
+                $respuesta["response"] = NULL;
+                return $respuesta;
+            endif;
+
         endif;
         //Fin validación especial
 
@@ -11114,8 +11193,7 @@ class SIMWebService
                                             $sql_socio_grupo = "SELECT RGI.* FROM ReservaGeneralInvitado RGI, ReservaGeneral RG WHERE RG.IDReservaGeneral = RGI.IDReservaGeneral and (RGI.IDSocio = '" . $IDSociovalidar . "') and RG.IDClub = '" . $IDClub . "' and RG.Fecha = '" . $Fecha . "' and RG.Hora >='" . $hora_actual_sistema_valida . "' and RG.IDServicio = '" . $IDServicio . "' ORDER BY IDReservaGeneralInvitado Desc ";
                                             $qry_socio_grupo = $dbo->query($sql_socio_grupo);
 
-
-                                            if ($dbo->rows($qry_socio_grupo) > 0 && ($MaximoReservaSocioServicio <= 1 || $dbo->rows($qry_socio_grupo) >= $MaximoReservaSocioServicio) && empty($Admin)) :
+                                            if ($dbo->rows($qry_socio_grupo) > 0 && ($MaximoReservaSocioServicio <= 1 || $dbo->rows($qry_socio_grupo) >= $MaximoReservaSocioServicio) && empty($Admin) && $datos_disponibilidad_reserva["PermiteReservaComoInvitado"] != "S") :
                                                 $nombre_socio_invitado = utf8_encode($dbo->getFields("Socio", "Nombre", "IDSocio = '" . $IDSociovalidar . "'") . " " . $dbo->getFields("Socio", "Apellido", "IDSocio = '" . $IDSociovalidar . "'"));
                                                 $respuesta["message"] = $nombre_socio_invitado . ", ya esta agregado(a) en esta fecha como invitado en un grupo, no es posible realizar la reserva, por favor verifique.";
                                                 $respuesta["success"] = false;
@@ -11123,6 +11201,7 @@ class SIMWebService
                                                 return $respuesta;
                                                 exit;
                                             endif;
+
 
 
 
@@ -11166,23 +11245,23 @@ class SIMWebService
                                             endif;
 
                                             /*
-                                //Si Invitados son X y el servicio es de mas 2 turnos se valida que el siguiente turno este disponible
-                                //Si el servicio maestro tiene definido permitir turnos seguidos cuando los invitados sean mas de X personas
-                                $numero_para_reservar_turnos = $dbo->getFields( "ServicioMaestro" , "InvitadoTurnos" , "IDServicioMaestro = '" . $id_servicio_maestro . "'" );
-                                if( ( (int)$numero_para_reservar_turnos>0 ) && count($datos_invitado)>=$numero_para_reservar_turnos):
-                                //if($id_servicio_maestro==14): //Tennis
-                                $cantidad_turnos = 1; // Para validar los siguientes X turnos esten disponibles
-                                $array_hora_siguiente_turno_diponible = SIMWebService::valida_siguiente_turno_disponible($Fecha, $Hora, $IDSocio, $IDServicio, $IDClub, $IDElemento, $cantidad_turnos );
-                                if(count($array_hora_siguiente_turno_diponible)!=$cantidad_turnos):
-                                $respuesta["message"] = "Se necesitan ".$cantidad_turnos." turnos mas seguidos y el siguiente turno no esta disponible, por favor seleccione otro opcion.";
-                                $respuesta["success"] = false;
-                                $respuesta["response"] = NULL;
-                                return $respuesta;
-                                else:
-                                $flag_separa_siguiente_turno=1;
-                                endif;
-                                endif;
-                                 */
+                                            //Si Invitados son X y el servicio es de mas 2 turnos se valida que el siguiente turno este disponible
+                                            //Si el servicio maestro tiene definido permitir turnos seguidos cuando los invitados sean mas de X personas
+                                            $numero_para_reservar_turnos = $dbo->getFields( "ServicioMaestro" , "InvitadoTurnos" , "IDServicioMaestro = '" . $id_servicio_maestro . "'" );
+                                            if( ( (int)$numero_para_reservar_turnos>0 ) && count($datos_invitado)>=$numero_para_reservar_turnos):
+                                            //if($id_servicio_maestro==14): //Tennis
+                                            $cantidad_turnos = 1; // Para validar los siguientes X turnos esten disponibles
+                                            $array_hora_siguiente_turno_diponible = SIMWebService::valida_siguiente_turno_disponible($Fecha, $Hora, $IDSocio, $IDServicio, $IDClub, $IDElemento, $cantidad_turnos );
+                                            if(count($array_hora_siguiente_turno_diponible)!=$cantidad_turnos):
+                                            $respuesta["message"] = "Se necesitan ".$cantidad_turnos." turnos mas seguidos y el siguiente turno no esta disponible, por favor seleccione otro opcion.";
+                                            $respuesta["success"] = false;
+                                            $respuesta["response"] = NULL;
+                                            return $respuesta;
+                                            else:
+                                            $flag_separa_siguiente_turno=1;
+                                            endif;
+                                            endif;
+                                            */
 
 
 
@@ -11550,13 +11629,13 @@ class SIMWebService
                                                 endwhile;
 
                                                 /*$id_reserva_aux = $dbo->getFields( "ReservaGeneral" , "IDReservaGeneral" , "IDAuxiliar = '" . $IDAuxiliar . "' and Fecha = '".$Fecha."' and Hora = '".$Hora."' and (IDSocio <> '".$IDSocio."' and IDSocioBeneficiario <> '".$IDSocioBeneficiario."') and (IDEstadoReserva  = 1 or IDEstadoReserva  = 3)" );
-                                     */
+                                                */
                                                 /*
-                                    $respuesta["message"] = $sql_aux;
-                                    $respuesta["success"] = false;
-                                    $respuesta["response"] = NULL;
-                                    return $respuesta;
-                                     */
+                                                $respuesta["message"] = $sql_aux;
+                                                $respuesta["success"] = false;
+                                                $respuesta["response"] = NULL;
+                                                return $respuesta;
+                                                */
 
                                                 $mensaje_auxiliar_no_dispo = "Lo sentimos el auxiliar/boleador/ seleccionado no esta disponible en esta fecha/hora";
                                                 if (!empty($id_reserva_aux)) :
@@ -11677,11 +11756,54 @@ class SIMWebService
                                                 if ($IDClub == 77) {
                                                     $condicion_tipo = " and IDServicioTipoReserva = '" . $IDTipoReserva . "' ";
                                                 }
-                                                //Consulto cuantas reservas hay en esta hora en este servicio
-                                                $sql_reserva_servicio = "SELECT IDReservaGeneral FROM ReservaGeneral  WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' AND Fecha = '" . $Fecha . "' and (IDEstadoReserva = 1 or IDEstadoReserva=3) and Hora = '" . $Hora . "' and IDSocio <> '" . $IDSocio . "' " . $condicion_tipo;
-                                                $result_reserva_servicio = $dbo->query($sql_reserva_servicio);
-                                                $total_reservas_hora = (int) $dbo->rows($result_reserva_servicio) + $num_otras_reservas;
 
+
+
+                                                //Nuevo
+                                                //Especial cusezar si es sala vip se bloquea sala 1 y 2, si esta reservada 1 o 2 se bloque la vip
+                                                if ($IDServicio == 44907 || $IDServicio == 53181 || $IDServicio == 52968) {
+
+                                                    switch ($IDServicio) {
+                                                        case "44907";
+                                                            $ElementoPrincipal = 17630;
+                                                            $ElementoSecundario1 = 19059;
+                                                            $ElementoSecundario2 = 17631;
+                                                            break;
+                                                        case "52968";
+                                                            $ElementoPrincipal = 20132;
+                                                            $ElementoSecundario1 = 20130;
+                                                            $ElementoSecundario2 = 20131;
+                                                            break;
+                                                        case "53181";
+                                                            $ElementoPrincipal = 20129;
+                                                            $ElementoSecundario1 = 20127;
+                                                            $ElementoSecundario2 = 20128;
+                                                            break;
+                                                    }
+
+
+                                                    $TodosElementos = $ElementoPrincipal . "," . $ElementoSecundario1 . "," . $ElementoSecundario2;
+
+                                                    if ($IDElemento == $ElementoPrincipal) {
+                                                        $sql_reserva_servicio = "SELECT IDReservaGeneral FROM ReservaGeneral  WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' AND Fecha = '" . $Fecha . "' and (IDEstadoReserva = 1 or IDEstadoReserva=3) and Hora = '" . $horaInicial . "' and IDServicioElemento in (" . $TodosElementos . ") " . $condicion_tipo;
+                                                        $result_reserva_servicio = $dbo->query($sql_reserva_servicio);
+                                                        if ((int) $dbo->rows($result_reserva_servicio) > 0 &&  $IDElemento == 17630) {
+                                                            $CuposporHora = 1;
+                                                        }
+                                                    } elseif ($IDElemento == $ElementoSecundario1 || $IDElemento == $ElementoSecundario2) {
+                                                        $sql_reserva_servicio = "SELECT IDReservaGeneral FROM ReservaGeneral  WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' AND Fecha = '" . $Fecha . "' and (IDEstadoReserva = 1 or IDEstadoReserva=3) and Hora = '" . $horaInicial . "' and IDServicioElemento in (" . $ElementoPrincipal . ") " . $condicion_tipo;
+                                                        $result_reserva_servicio = $dbo->query($sql_reserva_servicio);
+                                                        if ((int) $dbo->rows($result_reserva_servicio) > 0) {
+                                                            $CuposporHora = 1;
+                                                        }
+                                                    }
+                                                } else {
+                                                    //Consulto cuantas reservas hay en esta hora en este servicio
+                                                    $sql_reserva_servicio = "SELECT IDReservaGeneral FROM ReservaGeneral  WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' AND Fecha = '" . $Fecha . "' and (IDEstadoReserva = 1 or IDEstadoReserva=3) and Hora = '" . $Hora . "' and IDSocio <> '" . $IDSocio . "' " . $condicion_tipo;
+                                                    $result_reserva_servicio = $dbo->query($sql_reserva_servicio);
+                                                    $total_reservas_hora = (int) $dbo->rows($result_reserva_servicio) + $num_otras_reservas;
+                                                }
+                                                //Fin Nuevo
 
                                                 if ($CuposporHora > 0 && $total_reservas_hora >= $CuposporHora) {
                                                     $respuesta["message"] = "Lo sentimos, se llego al maximo de reservas por hora.";
@@ -12367,26 +12489,26 @@ class SIMWebService
                                             //FIN PAGO
 
                                             /*
-                                $datos_reserva["Action"] = $datos_club["URL_PAYU"];
-                                $datos_reserva["moneda"] = (string)$moneda;
-                                $datos_reserva["ref"] = $refVenta;
-                                $datos_reserva["llave"] = $llave_encripcion;
-                                $datos_reserva["userid"] = $usuarioId;
-                                $datos_reserva["usuarioId"] = $usuarioId;
-                                $datos_reserva["accountId"] = (string)$datos_club["AccountId"];
-                                $datos_reserva["descripcion"] = $descripcion;
-                                $datos_reserva["extra1"] = (string)$extra1;
-                                $datos_reserva["extra2"] = $IDClub;
-                                $datos_reserva["refVenta"] = $refVenta;
-                                $datos_reserva["valor"] =  $datos_reserva["ValorReserva"];
-                                $datos_reserva["iva"] = "0";
-                                $datos_reserva["baseDevolucionIva"] = "0";
-                                $datos_reserva["firma"] = $firma;
-                                $datos_reserva["emailComprador"] = $emailComprador;
-                                $datos_reserva["prueba"] = (string)$datos_club["IsTest"];
-                                $datos_reserva["url_respuesta"] = (string)$url_respuesta;
-                                $datos_reserva["url_confirmacion"] = (string)$url_confirmacion;
-                                 */
+                                            $datos_reserva["Action"] = $datos_club["URL_PAYU"];
+                                            $datos_reserva["moneda"] = (string)$moneda;
+                                            $datos_reserva["ref"] = $refVenta;
+                                            $datos_reserva["llave"] = $llave_encripcion;
+                                            $datos_reserva["userid"] = $usuarioId;
+                                            $datos_reserva["usuarioId"] = $usuarioId;
+                                            $datos_reserva["accountId"] = (string)$datos_club["AccountId"];
+                                            $datos_reserva["descripcion"] = $descripcion;
+                                            $datos_reserva["extra1"] = (string)$extra1;
+                                            $datos_reserva["extra2"] = $IDClub;
+                                            $datos_reserva["refVenta"] = $refVenta;
+                                            $datos_reserva["valor"] =  $datos_reserva["ValorReserva"];
+                                            $datos_reserva["iva"] = "0";
+                                            $datos_reserva["baseDevolucionIva"] = "0";
+                                            $datos_reserva["firma"] = $firma;
+                                            $datos_reserva["emailComprador"] = $emailComprador;
+                                            $datos_reserva["prueba"] = (string)$datos_club["IsTest"];
+                                            $datos_reserva["url_respuesta"] = (string)$url_respuesta;
+                                            $datos_reserva["url_confirmacion"] = (string)$url_confirmacion;
+                                            */
 
 
 
@@ -13101,4 +13223,5 @@ class SIMWebService
 
         return $respuesta;
     }
+   
 } //end class

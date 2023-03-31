@@ -1471,7 +1471,7 @@ switch ($action) {
 
         //inserta _log
         if ($IDSocio > 0) :
-        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setdomicilio','".json_encode($_POST)."','".json_encode($respuesta)."')");
+            $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','setdomicilio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
         elseif ($IDUsuario > 0) :
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDUsuario."','setdomicilio','".json_encode($_POST)."','".json_encode($respuesta)."')");
         endif;
@@ -3027,6 +3027,55 @@ switch ($action) {
         exit;
         break;
 
+    case "setimagenmapaservicioreserva":
+        require LIBDIR . "SIMWebServiceReservas.inc.php";
+        $IDServicio = SIMNet::req("IDServicio");
+        $File = $_FILES["Archivo"];
+        $respuesta = SIMWebServiceReservas::set_imagen_mapa_servicio_reserva($IDClub, $IDServicio, $File);
+        //inserta _log
+        ////$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (Servicio, Parametros, Respuesta) Values ('getelementos','".json_encode($_POST)."','".json_encode($respuesta)."')");
+        //SIMLog::insert_app( $action,$IDClub, $_POST, $respuesta );
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "getconfiguracionjuegosdegolf":
+        require LIBDIR . "SIMWebServiceReservas.inc.php";
+        $IDUsuario = SIMNet::req("IDUsuario");
+        $IDSocio = SIMNet::req("IDSocio");
+        $IDClub = SIMNet::req("IDClub");
+        $respuesta = SIMWebService::get_configuracion_juegos_de_golf($IDClub, $IDUsuario, $IDSocio);
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "setmapaservicioreserva":
+        require LIBDIR . "SIMWebServiceReservas.inc.php";
+        $IDServicio = SIMNet::req("IDServicio");
+        $Elementos = SIMNet::req("Elementos");
+        $ImagenMapa = SIMNet::req("ImagenMapa");
+        $ImagenAncho = SIMNet::req("ImagenAncho");
+        $ImagenAlto = SIMNet::req("ImagenAlto");
+        $respuesta = SIMWebServiceReservas::set_mapa_servicio_reserva($IDClub, $IDServicio, $ImagenMapa, $ImagenAncho, $ImagenAlto, $Elementos);
+        //inserta _log
+        ////$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (Servicio, Parametros, Respuesta) Values ('getelementos','".json_encode($_POST)."','".json_encode($respuesta)."')");
+        //SIMLog::insert_app( $action,$IDClub, $_POST, $respuesta );
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "getmapaservicioreserva":
+        require LIBDIR . "SIMWebServiceReservas.inc.php";
+        $IDServicio = SIMNet::req("IDServicio");
+        $respuesta = SIMWebServiceReservas::get_mapa_servicio_reserva($IDClub, $IDServicio);
+        //inserta _log
+        ////$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (Servicio, Parametros, Respuesta) Values ('getelementos','".json_encode($_POST)."','".json_encode($respuesta)."')");
+        //SIMLog::insert_app( $action,$IDClub, $_POST, $respuesta );
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+
         //Enviar Las horas de un servicio
     case "gethoras":
         require LIBDIR . "SIMWebServiceReservas.inc.php";
@@ -3164,7 +3213,6 @@ switch ($action) {
         $HoraFinal = $_POST["HoraFinal"];
         $Campos = $_POST["Campos"];
         $Invitados = $_POST["Invitados"];
-        $CodigoCortesia = $_POST["CodigoCortesia"];
         //Repeticion reserva
         $IDDisponibilidad = $_POST["IDDisponibilidad"];
         $Repetir = $_POST["Repetir"];
@@ -3193,7 +3241,7 @@ switch ($action) {
         $IDCaddieSocio = $_POST["IDCaddieSocio"];
         $IDClubAsociado = $_POST["IDClubAsociado"];
 
-        $respuesta = SIMWebService::set_reserva_generalV2($IDClub, $IDSocio, $IDElemento, $IDServicio, $Fecha, $Hora, $Campos, $Invitados, "", "", $Tee, $IDDisponibilidad, $Repetir, $Periodo, $RepetirFechaFinal, $IDTipoModalidadEsqui, $IDAuxiliar, $IDTipoReserva, $NumeroTurnos, "", $IDBeneficiario, $TipoBeneficiario, $IDUsuarioReserva, $CantidadInvitadoSalon, $ListaAuxiliar, $Altitud, $Longitud, $AdicionalesSocio, $IDCaddieSocio, $IDClubAsociado, $HoraFinal, $CodigoCortesia);
+        $respuesta = SIMWebService::set_reserva_generalV2($IDClub, $IDSocio, $IDElemento, $IDServicio, $Fecha, $Hora, $Campos, $Invitados, "", "", $Tee, $IDDisponibilidad, $Repetir, $Periodo, $RepetirFechaFinal, $IDTipoModalidadEsqui, $IDAuxiliar, $IDTipoReserva, $NumeroTurnos, "", $IDBeneficiario, $TipoBeneficiario, $IDUsuarioReserva, $CantidadInvitadoSalon, $ListaAuxiliar, $Altitud, $Longitud, $AdicionalesSocio, $IDCaddieSocio, $IDClubAsociado, $HoraFinal);
         //$respuesta = SIMWebServiceApp::set_reserva_generalV2_test($IDClub,$IDSocio,$IDElemento,$IDServicio,$Fecha,$Hora,$Campos,$Invitados,"","",$Tee,$IDDisponibilidad,$Repetir,$Periodo,$RepetirFechaFinal,$IDTipoModalidadEsqui,$IDAuxiliar,$IDTipoReserva,$NumeroTurnos,"",$IDBeneficiario,$TipoBeneficiario,$IDUsuarioReserva,$CantidadInvitadoSalon,$ListaAuxiliar);
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,IDServicio,IDServicioElemento, Servicio, Parametros, Respuesta) Values ('".$IDSocio."','".$IDServicio."','".$IDElemento."','set_reserva_generalV2','".json_encode($_POST)."','".json_encode($respuesta)."')");
@@ -3929,7 +3977,7 @@ switch ($action) {
             $respuesta = SIMWebServiceFacturas::get_factura_ftp_g($IDClub, $IDSocio, $FechaInicio, $FechaFin);
         elseif ($IDClub == 70) //San Andres
             $respuesta = SIMWebServiceFacturas::get_factura_ftp_s($IDClub, $IDSocio, $FechaInicio, $FechaFin);
-        elseif ($IDClub == 56 || $IDClub == 8) //bataca
+        elseif ($IDClub == 56 || $IDClub == 00) //bataca
             $respuesta = SIMWebServiceFacturas::get_factura_bacata($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo);
         elseif ($IDClub == 29) //Farallones
             $respuesta = SIMWebServiceFacturas::get_factura_ftp_f($IDClub, $IDSocio, $FechaInicio, $FechaFin);
@@ -4059,7 +4107,7 @@ switch ($action) {
             $respuesta = SIMWebServiceFacturas::get_factura_mi_club_pagos($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo);
         } elseif ($IDClub == 183) { //VALLE ARRIBA
             $respuesta = SIMWebServiceFacturas::get_factura_valle_arriba($IDClub, $IDSocio, $FechaInicio, $FechaFin);
-        } elseif ($IDClub == 56 || $IDClub == 8) { //bataca
+        } elseif ($IDClub == 56 || $IDClub == 00) { //bataca
             $respuesta = SIMWebServiceFacturas::get_factura_bacata($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo);
         } elseif ($IDClub == 15) { //CAMPESTRE PEREIRA 
             $respuesta = SIMWebServiceFacturas::get_factura_pereira($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo, $IDModulo);
@@ -8143,7 +8191,8 @@ switch ($action) {
         $DatosInvitado = $_POST["DatosInvitado"];
         $ValoresFormulario = $_POST["ValoresFormulario"];
         $DiasCheckbox = $_POST["DiasCheckbox"];
-        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaIngreso, $FechaSalida, $DatosInvitado, "", $ValoresFormulario, "", $DiasCheckbox);
+        $files = $_FILES;
+        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaIngreso, $FechaSalida, $DatosInvitado, "", $ValoresFormulario, "", $DiasCheckbox, $files);
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setautorizacioninvitado','".json_encode($_POST)."','".json_encode($respuesta)."')");
         SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
@@ -8169,7 +8218,8 @@ switch ($action) {
         $ObservacionSocio = $_POST["Observaciones"];
         $ValoresFormulario = $_POST["ValoresFormulario"];
         $DiasCheckbox = $_POST["DiasCheckbox"];
-        $respuesta = SIMWebServiceAccesos::set_autorizacion_contratista($IDClub, $IDSocio, $TipoAutorizacion, $FechaIngreso, $FechaSalida, $TipoDocumento, $NumeroDocumento, $Nombre, $Apellido, $Email, $Placa, "", $HoraInicio, $HoraSalida, $Observaciones, $IDUsuario, $Telefono, $FechaNacimiento, $TipoSangre, $Predio, $Arl, $Eps, $VencimientoArl, $VencimientoEps, $ObservacionSocio, $ArlFile, $DiasCheckbox, $ValoresFormulario, $AceptaTerminos);
+        $files = $_FILES;
+        $respuesta = SIMWebServiceAccesos::set_autorizacion_contratista($IDClub, $IDSocio, $TipoAutorizacion, $FechaIngreso, $FechaSalida, $TipoDocumento, $NumeroDocumento, $Nombre, $Apellido, $Email, $Placa, "", $HoraInicio, $HoraSalida, $Observaciones, $IDUsuario, $Telefono, $FechaNacimiento, $TipoSangre, $Predio, $Arl, $Eps, $VencimientoArl, $VencimientoEps, $ObservacionSocio, $ArlFile, $DiasCheckbox, $ValoresFormulario, $AceptaTerminos, $files);
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setautorizacioncontratista','".json_encode($_POST)."','".json_encode($respuesta)."')");
         SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
@@ -8709,7 +8759,7 @@ switch ($action) {
         $Hora = SIMNet::req("Hora");
         $IDClubAsociado = SIMNet::req("IDClubAsociado");
         $Codigo = SIMNet::req("Codigo");
-        $respuesta = SIMWebServiceReservas::verificarcodigocortesiareservas($IDClub,$IDSocio, $IDUsuario, $IDServicio, $IDElemento, $Fecha, $Hora, $IDClubAsociado, $Codigo);
+        $respuesta = SIMWebServiceReservas::verificarcodigocortesiareservas($IDClub, $IDSocio, $IDUsuario, $IDServicio, $IDElemento, $Fecha, $Hora, $IDClubAsociado, $Codigo);
         // $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','verificarcodigocortesiareservas','".json_encode($_GET)."','".json_encode($respuesta)."')");
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
@@ -9622,6 +9672,22 @@ switch ($action) {
         exit;
         break;
 
+    case "getresultadoformatojuegoparejasversus":
+        require LIBDIR . "SIMWebServiceGameGolf.inc.php";
+        require("../admin/configgamegolf.inc.php");
+        $IDSocio = SIMNet::req("IDSocio");
+        $IDUsuario = SIMNet::req("IDUsuario");
+        $IDJuegoGolf = SIMNet::req("IDJuegoGolf");
+        $IDFormatosJuegos = SIMNet::req("IDFormatosJuegos");
+        $Vista = SIMNet::req("Vista");
+        $SoloMatch = SIMNet::req("SoloMatch");
+
+        $respuesta = SIMWebServiceGameGolf::get_resultado_formato_juego_parejas_versus($IDClub, $IDSocio, $IDUsuario, $IDJuegoGolf, $IDFormatosJuegos, $Vista, $SoloMatch);
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
     case "getjuegogolfresultadogrupaldefecto":
         require LIBDIR . "SIMWebServiceGameGolf.inc.php";
         require("../admin/configgamegolf.inc.php");
@@ -9812,7 +9878,7 @@ switch ($action) {
         $FormatoJuego = $_POST["FormatoJuego"];
 
         $respuesta = SIMWebServiceGameGolf::editar_juego_golf_formato_configurado($IDClub, $IDSocio, $IDUsuario, $IDJuegoGolf, $FormatoJuego);
-        //SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
+        SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -9899,6 +9965,22 @@ switch ($action) {
         $Vista = SIMNet::req("Vista");
 
         $respuesta = SIMWebServiceGameGolf::get_detalle_juego_individual_vs($IDClub, $IDSocio, $IDUsuario, $IDFormatoJuego, $IDJugador, $IDJuegoGolf, $IDPartida, $Vista);
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "getdetallejuegoparejavs":
+        require LIBDIR . "SIMWebServiceGameGolf.inc.php";
+        require("../admin/configgamegolf.inc.php");
+        $IDSocio = SIMNet::req("IDSocio");
+        $IDUsuario = SIMNet::req("IDUsuario");
+        $IDFormatoJuego = SIMNet::req("IDFormatoJuego");
+        $IDJuegoGolf = SIMNet::req("IDJuegoGolf");
+        $IDPartida = SIMNet::req("IDPartida");
+        $Vista = SIMNet::req("Vista");
+
+        $respuesta = SIMWebServiceGameGolf::get_detalle_juego_pareja_vs($IDClub, $IDSocio, $IDUsuario, $IDFormatoJuego, $IDJugador, $IDJuegoGolf, $IDPartida, $Vista);
         // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
@@ -10142,7 +10224,7 @@ switch ($action) {
         $respuesta = SIMWebServiceEntregaKits::buscar_kit_deportivo_documento_qr($IDClub, $IDSocio, $IDUsuario, $QR);
 
         // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
-        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','buscarkitdeportivodocumento','" . json_encode($_GET) . "','" . json_encode($respuesta) . "')");
+        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','buscarkitdeportivodocumentoqr','" . json_encode($_GET) . "','" . json_encode($respuesta) . "')");
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -10373,6 +10455,74 @@ switch ($action) {
         break;
         //FIN NOTIFICACION POR GRUPOS NOTICIAS
 
+        //INICIO QR DINAMICO
+
+    case "getcodigoQRcarnetdinamico":
+        require LIBDIR . "SIMWebServiceQrDinamico.inc.php";
+        $IDSocioCarnet  = SIMNet::req("IDSocioCarnet");
+
+
+        $respuesta = SIMWebServiceQrDinamico::get_codigo_QR_carnet_dinamico($IDClub, $IDSocio, $IDUsuario, $IDSocioCarnet);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','getcodigoQRcarnetdinamico','" . json_encode($_GET) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "activarcarnetseguridadsocio":
+        require LIBDIR . "SIMWebServiceQrDinamico.inc.php";
+        $UID = $_POST["UID"];
+        $Modelo = $_POST["Modelo"];
+        $CorreoElectronico = $_POST["CorreoElectronico"];
+
+
+        $respuesta = SIMWebServiceQrDinamico::activar_carnet_seguridad_socio($IDClub, $IDSocio, $IDUsuario, $UID, $Modelo, $CorreoElectronico);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','activarcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "solicitarotpcarnetseguridadsocio":
+        require LIBDIR . "SIMWebServiceQrDinamico.inc.php";
+
+
+
+        $respuesta = SIMWebServiceQrDinamico::solicitar_otp_carnet_seguridad_socio($IDClub, $IDSocio, $IDUsuario);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "verificarotpcarnetseguridadsocio":
+        require LIBDIR . "SIMWebServiceQrDinamico.inc.php";
+        $Codigo = $_POST["Codigo"];
+
+
+        $respuesta = SIMWebServiceQrDinamico::verificar_otp_carnet_seguridad_socio($IDClub, $IDSocio, $IDUsuario, $Codigo);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+
+    case "activarcarnetseguridadmiembrofamilia":
+        require LIBDIR . "SIMWebServiceQrDinamico.inc.php";
+        $IDSocioFamiliar = $_POST["IDSocioFamiliar"];
+
+
+        $respuesta = SIMWebServiceQrDinamico::activar_carnet_seguridad_miembro_familia($IDClub, $IDSocio, $IDUsuario, $IDSocioFamiliar);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
 
     default:
         die(json_encode(array('success' => false, 'message' => 'no action.' . $action, 'response' => '', 'date' => $nowserver)));

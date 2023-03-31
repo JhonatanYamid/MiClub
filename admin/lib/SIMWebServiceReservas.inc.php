@@ -921,11 +921,14 @@ class SIMWebServiceReservas
                 $resp_publicidad = SIMWebServicePublicidad::get_publicidad($IDClub, "", "", "Socio", $r["IDServicio"]);
                 $servicio["PublicidadInfo"] = $resp_publicidad["response"][0];
 
+
                 $flag_mostrar = 0;
                 $servicio["PermiteCodigoCortesiaInvitadoExterno"] = $r["PermiteCodigoCortesiaInvitadoExterno"];
                 $servicio["LabelBotonCodigoCortesiaInvitadoExterno"] =  $r["LabelBotonCodigoCortesiaInvitadoExterno"];
-
-
+                $servicio["PermiteSeleccionarElementoMapa"] =  $r["PermiteSeleccionarElementoMapa"];
+                $servicio["ImagenElementoMapaDisponible"] =  $r["ImagenElementoMapaDisponible"];
+                $servicio["ImagenElementoMapaNoDisponible"] =  $r["ImagenElementoMapaNoDisponible"];
+                $servicio["TextoIntroduccionSeleccionElementoMapa"] =  $r["TextoIntroduccionSeleccionElementoMapa"];
                 // Verificar si es un modulo que se debe revisar permiso
                 if (array_key_exists($r["IDServicioMaestro"], $array_id_mod_esp)) {
                     if (in_array($IDSocio, $array_id_mod_esp[$r["IDServicioMaestro"]])) {
@@ -1925,21 +1928,10 @@ class SIMWebServiceReservas
         return $respuesta;
     }
 
-
+    
     public function set_imagen_mapa_servicio_reserva($IDClub, $IDServicio, $File)
     {
         $dbo = &SIMDB::get();
-        // $condicion_elemento = "";
-        // if (!empty($IDUsuario)) :
-        //     $sql_elemento_usuario = "Select * From UsuarioServicioElemento Where IDUsuario = '" . $IDUsuario . "'";
-        //     $result_elemento_usuario = $dbo->query($sql_elemento_usuario);
-        //     while ($row_elemento_usuario = $dbo->fetchArray($result_elemento_usuario)) :
-        //         $array_id_elemento[] = $row_elemento_usuario["IDServicioElemento"];
-        //     endwhile;
-        //     if (count($array_id_elemento) > 0) :
-        //         $condicion_elemento = " and IDServicioElemento in (" . implode(",", $array_id_elemento) . ") ";
-        //     endif;
-        // endif;
 
         $url = dirname(__FILE__) . "/" . "../../file/Mapas/";
         $files =  SIMFile::upload($File, $url, "ALL");
@@ -1953,16 +1945,61 @@ class SIMWebServiceReservas
             $dbo->query($sql_inserta_imagen);
             // $response = array();
             $elemento["path"] = $url . $NameImagen;
-            $elemento["url"] = "https://appdev.miclubapp.com/file/Mapas/" . $NameImagen;
+            $elemento["url"] = URLROOT . "file/Mapas/" . $NameImagen;
             // array_push($response, $elemento); ImagenMapa
             
             $respuesta["message"] = 'Prueba de carga de archivo';
             $respuesta["success"] = true;
             $respuesta["response"] = $elemento;
         }
-       
-        // $sql = "SELECT SE.* FROM ServicioElemento SE, Servicio S WHERE SE.IDServicio = S.IDServicio and SE.Publicar = 'S' and S.IDClub = '" . $IDClub . "' and SE.IDServicio = '" . $IDServicio . "' " . $condicion_elemento . " ORDER BY SE.Orden ";
-        // $qry = $dbo->query($sql);
+        return $respuesta;
+    }
+
+    public function set_mapa_servicio_reserva($IDClub, $IDServicio, $ImagenMapa, $ImagenAncho, $ImagenAlto, $Elementos)
+    {
+        $dbo = &SIMDB::get();
+
+        $url = dirname(__FILE__) . "/" . "../../file/Mapas/";
+        $files =  SIMFile::upload($File, $url, "ALL");
+        if (empty($ImagenMapa)) {
+            $respuesta["message"] = 'No se cargó la imagen';
+            $respuesta["success"] = false;
+            $respuesta["response"] = null;
+        }else{
+            $NameImagen = $files[0]["innername"];
+            $sql_inserta_imagen = "Update Servicio Set ImagenMapa = '$ImagenMapa', Elementos = '$Elementos', ImagenAncho = '$ImagenAncho', ImagenAlto = '$ImagenAlto' Where IDServicio = '$IDServicio' AND IDClub = '$IDClub'";
+            $dbo->query($sql_inserta_imagen);
+            
+            $respuesta["message"] =  "Configuracion guardada";
+            $respuesta["success"] = true;
+            $respuesta["response"] = null;
+        }
+        return $respuesta;
+    }
+
+    public function get_mapa_servicio_reserva($IDClub, $IDServicio)
+    {
+        $dbo = &SIMDB::get();
+
+        $sql = "SELECT ImagenMapa,ImagenAncho,ImagenAlto,Elementos FROM  Servicio WHERE IDServicio = '$IDServicio' and IDClub = '$IDClub'";
+        $qry = $dbo->query($sql);
+        $response= array();
+        if ($dbo->rows($qry) > 0) {
+            $row = $dbo->fetchArray($qry);
+            $servicio["ImagenMapa"] = $row['ImagenMapa'];
+            $servicio["ImagenAncho"] = $row['ImagenAncho'];
+            $servicio["ImagenAlto"] = $row['ImagenAlto'];
+            $servicio["Elementos"] = $row['Elementos'];
+
+            array_push($response, $servicio);
+            $respuesta["message"] =  "Mapa Encontrado";
+            $respuesta["success"] = true;
+            $respuesta["response"] = $response[0];
+        }else{
+            $respuesta["message"] = 'No se cargó la imagen';
+            $respuesta["success"] = false;
+            $respuesta["response"] = null;
+        }
         return $respuesta;
     }
 

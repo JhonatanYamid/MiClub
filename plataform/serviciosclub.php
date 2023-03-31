@@ -124,6 +124,12 @@
 												Configuración
 											</a>
 										</li>
+										<li>
+											<a data-toggle="tab" class="noTabLink" href="serviciosclub.php?action=mapas&ids=<?= $_GET["ids"] ?>">
+												<i class="green ace-icon fa fa-gear bigger-120"></i>
+												Mapas
+											</a>
+										</li>
 
 										<?php if($datos_servicio[$_GET["ids"]][TipoSorteo] == 1):?>
 										<li >

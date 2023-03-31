@@ -39,7 +39,7 @@
                                     <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> <?= SIMUtil::get_traduccion('', '', 'TiqueteraFuncionarios', LANGSESSION); ?>: </label>
                                     <div class="col-sm-8">
                                         <?php
-                                        echo SIMHTML::formPopup('TaloneraFunc', 'NombreTalonera', 'IDTaloneraFunc', 'IDTaloneraFunc', $frm["IDTaloneraFunc"], SIMUtil::get_traduccion('', '', 'seleccioneuno', LANGSESSION), '', 'onChange = "addCantidadEntradas()"', "AND IDClub = $IDClub"); ?>
+                                        echo SIMHTML::formPopup('TaloneraFunc', 'NombreTalonera', 'IDTaloneraFunc', 'IDTaloneraFunc', $frm["IDTaloneraFunc"], SIMUtil::get_traduccion('', '', 'seleccioneuno', LANGSESSION), '', 'onChange = "addCantidadEntradas()"', "AND IDClub = " . SIMUser::get("club") . ""); ?>
                                     </div>
 
                                 </div>

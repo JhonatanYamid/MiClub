@@ -25,7 +25,7 @@ class SIMWebServiceQR
 			if (isset($Codigo) && $Codigo) {
 
 				//hago la consulta para saber si ya se registro en el dia un desayuno
-				$config = "SELECT * FROM ConfiguracionConsumosTalonera WHERE Publicar = 'S' ORDER BY IDConfiguracionConsumosTalonera DESC LIMIT 1";
+				$config = "SELECT * FROM ConfiguracionConsumosTalonera WHERE Publicar = 'S' AND IDClub = '$IDClub' ORDER BY IDConfiguracionConsumosTalonera DESC LIMIT 1";
 				$queryconfig = $dbo->query($config);
 				$datosconfig = $dbo->fetchArray($queryconfig);
 				date_default_timezone_set('America/Bogota');

@@ -3018,7 +3018,7 @@
                             </a>
                             <b class="arrow"></b>
                         </li>
-                       
+
                     </ul>
                 </li>
             <?php
@@ -3893,6 +3893,7 @@
                             <b class="arrow"></b>
                         </li>
 
+
                         <li class="">
                             <a href="configuracionhotel.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
@@ -4635,7 +4636,14 @@
             } //end if
             ?>
 
+            <li class="<?php if ($script == "configuracionjuegosdegolf") echo "active"; ?>">
+                <a href="configuracionjuegosdegolf.php">
+                    <i class="menu-icon fa fa-bookmark"></i>
+                    Configuracion Juegos Golf
+                </a>
 
+                <b class="arrow"></b>
+            </li>
             <?php
             $permiso = SIMUtil::verificar_permiso_modulo("ClubCodigoPago", SIMUser::get("IDPerfil"));
             if (isset($club_selecc) && $permiso == 0) { ?>
@@ -4711,7 +4719,7 @@
 
 
 
-<?php
+            <?php
             $permiso = SIMUtil::verificar_permiso_modulo("Talonera", SIMUser::get("IDPerfil"));
             if (isset($club_selecc) && $permiso == 0) { ?>
 
@@ -5023,7 +5031,7 @@
             <?php
             $permiso = SIMUtil::verificar_permiso_modulo("PagoRedeban", SIMUser::get("IDPerfil"));
             if (isset($club_selecc) && $permiso == 0) { ?>
-                <li class="<?php if ($script == "pagosredeban" || $script == "pagosplacetopay") echo "active"; ?>">
+                <li class="<?php if ($script == "pagosredeban" || $script == "pagosplacetopay" || $script == "pagosplacetopay") echo "active"; ?>">
 
                     <a href="#" class="dropdown-toggle">
                         <i class="menu-icon fa fa-credit-card"></i>
@@ -5050,6 +5058,12 @@
                             <a href="pagosecollect.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
                                 <?= SIMUtil::get_traduccion('', '', 'PagosE-Collect', LANGSESSION); ?>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="pagoslukapay.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'PagosLukaPay', LANGSESSION); ?>
                             </a>
                         </li>
 
