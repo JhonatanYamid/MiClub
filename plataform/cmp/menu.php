@@ -1069,7 +1069,7 @@
 
             <?php
             $permiso = SIMUtil::verificar_permiso_modulo("Socios", SIMUser::get("IDPerfil"));
-            if (isset($club_selecc) && $permiso == 0 && $IDClub == 8) { ?>
+            if (isset($club_selecc) && $permiso == 0 && ($IDClub == 8 || $IDClub == 17 || $IDClub == 274 )) { ?>
                 <li class="<?php if ($script == "gamegolfcourse") echo "active"; ?>">
                     <a href="#" class="dropdown-toggle">
                         <i class="menu-icon fa fa-caret-right"></i>
@@ -1100,6 +1100,16 @@
                             </a>
                             <b class="arrow"></b>
                         </li>
+                        <?php if ($IDClub == 8 || $IDClub == 17 || $IDClub == 274 ): ?>
+                        <li>
+                            <a href="configuracionjuegosdegolf.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                Configuracion
+                            </a>
+
+                            <b class="arrow"></b>
+                        </li>
+                        <?php endif; ?>
                     </ul>
                 </li>
             <?php
@@ -4636,14 +4646,6 @@
             } //end if
             ?>
 
-            <li class="<?php if ($script == "configuracionjuegosdegolf") echo "active"; ?>">
-                <a href="configuracionjuegosdegolf.php">
-                    <i class="menu-icon fa fa-bookmark"></i>
-                    Configuracion Juegos Golf
-                </a>
-
-                <b class="arrow"></b>
-            </li>
             <?php
             $permiso = SIMUtil::verificar_permiso_modulo("ClubCodigoPago", SIMUser::get("IDPerfil"));
             if (isset($club_selecc) && $permiso == 0) { ?>

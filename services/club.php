@@ -1471,7 +1471,7 @@ switch ($action) {
 
         //inserta _log
         if ($IDSocio > 0) :
-            $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','setdomicilio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setdomicilio','".json_encode($_POST)."','".json_encode($respuesta)."')");
         elseif ($IDUsuario > 0) :
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDUsuario."','setdomicilio','".json_encode($_POST)."','".json_encode($respuesta)."')");
         endif;
@@ -3040,11 +3040,11 @@ switch ($action) {
         break;
 
     case "getconfiguracionjuegosdegolf":
-        require LIBDIR . "SIMWebServiceReservas.inc.php";
+        require LIBDIR . "SIMWebServiceGameGolf.inc.php";
         $IDUsuario = SIMNet::req("IDUsuario");
         $IDSocio = SIMNet::req("IDSocio");
         $IDClub = SIMNet::req("IDClub");
-        $respuesta = SIMWebService::get_configuracion_juegos_de_golf($IDClub, $IDUsuario, $IDSocio);
+        $respuesta = SIMWebServiceGameGolf::get_configuracion_juegos_de_golf($IDClub, $IDUsuario, $IDSocio);
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -4111,6 +4111,11 @@ switch ($action) {
             $respuesta = SIMWebServiceFacturas::get_factura_bacata($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo);
         } elseif ($IDClub == 15) { //CAMPESTRE PEREIRA 
             $respuesta = SIMWebServiceFacturas::get_factura_pereira($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo, $IDModulo);
+        } elseif ($IDClub == 20) { //Medellin
+            $respuesta = SIMWebServiceFacturas::get_factura_medellin($IDClub, $IDSocio, $FechaInicio, $FechaFin);
+        } elseif ($IDClub == 11) { //Arrayanes
+            // $respuesta = SIMWebServiceFacturas::get_factura_ftp_arrayanes($IDClub,$IDSocio,$FechaInicio,$FechaFin,$TipoApp);
+            $respuesta = SIMWebServiceFacturas::get_factura_arrayanes_Zeus($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo, $TipoApp);
         } elseif ($IDClub == 8) { //PRUEBA 
             $respuesta = SIMWebServiceFacturas::get_facturas_hebraica($IDClub, $IDSocio, $FechaInicio, $FechaFin);
         } elseif ($IDClub == 71 || $IDClub == 150 || $IDClub == 158) { //Invermetros
@@ -4135,7 +4140,6 @@ switch ($action) {
 
             $respuesta = SIMWebServiceFacturas::get_factura_country_medellin($IDClub, $IDSocio, $FechaInicio, $FechaFin, $Dispositivo, $FiltrarGastosFamiliares);
         }
-
 
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','getfacturav2','".json_encode($_GET)."','".json_encode($respuesta)."')");
@@ -8191,8 +8195,7 @@ switch ($action) {
         $DatosInvitado = $_POST["DatosInvitado"];
         $ValoresFormulario = $_POST["ValoresFormulario"];
         $DiasCheckbox = $_POST["DiasCheckbox"];
-        $files = $_FILES;
-        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaIngreso, $FechaSalida, $DatosInvitado, "", $ValoresFormulario, "", $DiasCheckbox, $files);
+        $respuesta = SIMWebServiceAccesos::set_autorizacion_invitado($IDClub, $IDSocio, $FechaIngreso, $FechaSalida, $DatosInvitado, "", $ValoresFormulario, "", $DiasCheckbox);
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setautorizacioninvitado','".json_encode($_POST)."','".json_encode($respuesta)."')");
         SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
@@ -8218,8 +8221,7 @@ switch ($action) {
         $ObservacionSocio = $_POST["Observaciones"];
         $ValoresFormulario = $_POST["ValoresFormulario"];
         $DiasCheckbox = $_POST["DiasCheckbox"];
-        $files = $_FILES;
-        $respuesta = SIMWebServiceAccesos::set_autorizacion_contratista($IDClub, $IDSocio, $TipoAutorizacion, $FechaIngreso, $FechaSalida, $TipoDocumento, $NumeroDocumento, $Nombre, $Apellido, $Email, $Placa, "", $HoraInicio, $HoraSalida, $Observaciones, $IDUsuario, $Telefono, $FechaNacimiento, $TipoSangre, $Predio, $Arl, $Eps, $VencimientoArl, $VencimientoEps, $ObservacionSocio, $ArlFile, $DiasCheckbox, $ValoresFormulario, $AceptaTerminos, $files);
+        $respuesta = SIMWebServiceAccesos::set_autorizacion_contratista($IDClub, $IDSocio, $TipoAutorizacion, $FechaIngreso, $FechaSalida, $TipoDocumento, $NumeroDocumento, $Nombre, $Apellido, $Email, $Placa, "", $HoraInicio, $HoraSalida, $Observaciones, $IDUsuario, $Telefono, $FechaNacimiento, $TipoSangre, $Predio, $Arl, $Eps, $VencimientoArl, $VencimientoEps, $ObservacionSocio, $ArlFile, $DiasCheckbox, $ValoresFormulario, $AceptaTerminos);
         //inserta _log
         //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('".$IDSocio."','setautorizacioncontratista','".json_encode($_POST)."','".json_encode($respuesta)."')");
         SIMLog::insert_app($action, $IDClub, $_POST, $respuesta);
@@ -10224,7 +10226,7 @@ switch ($action) {
         $respuesta = SIMWebServiceEntregaKits::buscar_kit_deportivo_documento_qr($IDClub, $IDSocio, $IDUsuario, $QR);
 
         // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
-        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','buscarkitdeportivodocumentoqr','" . json_encode($_GET) . "','" . json_encode($respuesta) . "')");
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','buscarkitdeportivodocumento','" . json_encode($_GET) . "','" . json_encode($respuesta) . "')");
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -10480,7 +10482,7 @@ switch ($action) {
         $respuesta = SIMWebServiceQrDinamico::activar_carnet_seguridad_socio($IDClub, $IDSocio, $IDUsuario, $UID, $Modelo, $CorreoElectronico);
 
         // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
-        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','activarcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','activarcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -10493,7 +10495,7 @@ switch ($action) {
         $respuesta = SIMWebServiceQrDinamico::solicitar_otp_carnet_seguridad_socio($IDClub, $IDSocio, $IDUsuario);
 
         // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
-        $sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -10523,6 +10525,9 @@ switch ($action) {
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
+
+        //FIN QR DINAMICO
+
 
     default:
         die(json_encode(array('success' => false, 'message' => 'no action.' . $action, 'response' => '', 'date' => $nowserver)));

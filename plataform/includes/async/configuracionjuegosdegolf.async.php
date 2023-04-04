@@ -64,10 +64,6 @@ switch ($oper) {
 
     case "searchurl":
         $qryString = SIMNet::req("qryString");
-        if (!empty($qryString)) {
-
-            $where .= " AND ( Nombres LIKE '%" . $qryString . "%'  )  ";
-        } //end if
         break;
 }
 
@@ -124,9 +120,9 @@ while ($row = $dbo->fetchArray($result)) {
             "Editar" => '<a class="green" href="' . $script . '.php?action=edit&id=' . $row[$key] . '' . '"><i class="ace-icon fa fa-pencil bigger-130"/></a>',
 
 
-            "Nombre" => $row["Nombre"],
-            "Descripcion" => $row["Descripcion"],
-            "Activo" => $row["Activo"],
+            "IconoJugar" => $row["IconoJugar"],
+            "TextoJugar" => $row["TextoJugar"],
+            "TextoJuegos" => $row["TextoJuegos"],
 
             "Eliminar" => '<a class="red eliminar_registro" rel=' . $table . ' id=' . $row[$key] . ' lang = ' . $script . ' href="#"><i class="ace-icon fa fa-trash-o bigger-130"/></a>'
 

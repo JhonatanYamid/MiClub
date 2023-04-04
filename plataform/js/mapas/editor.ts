@@ -223,32 +223,19 @@ const serviceSelector = document.getElementById("service-selector") as HTMLSelec
 if (serviceSelector !== null) {
     //try to load the services
     showLoading(true);
-    makeGETApiRequest<[ClubReservationService]>("getservicios", [])
-        .then((serverResp) => {
-            showLoading(false);
-            allServices = serverResp.response ?? [];
-            let isFirstElement = true;
-            serverResp.response?.map((value) => {
-                if( SERVICIO_ID === value.IDServicio){
-                    const newElement = document.createElement("option");
-                    newElement.setAttribute("value", value.IDServicio);
-                    const node = document.createTextNode(value.Nombre);
-                    newElement.appendChild(node);
-                    serviceSelector.appendChild(newElement);
-    
-                    //Load the first element because it is selected by default
-                    if (isFirstElement) {
-                        isFirstElement = false;
-                        requestAndPopulateElements(value, true);
-                    }
-                }
-                
-            });
-        })
-        .catch((error) => {
-            showLoading(false);
-            console.log(error.message);
-        });
+    let isFirstElement = true;
+    const newElement = document.createElement("option");
+    newElement.setAttribute("value", SERVICIO_ID);
+    const node = document.createTextNode('servicio');
+    newElement.appendChild(node);
+    serviceSelector.appendChild(newElement);
+
+    //Load the first element because it is selected by default
+    if (isFirstElement) {
+        isFirstElement = false;
+        const value = { IDServicio:SERVICIO_ID, Nombre:"", Icono:"" }
+        requestAndPopulateElements(value, true);
+    }
     serviceSelector.onchange = () => {
         if(!confirm("¿Está seguro de cambiar el servicio a configurar?\nTodos los cambios no guardados se perderán")) {
             serviceSelector.value = currentConfiguration.service?.IDServicio ?? "";
@@ -256,7 +243,8 @@ if (serviceSelector !== null) {
         }
         const serviceId = serviceSelector.value
         //Each time the services changes, populate again the canvas with the elements
-        const service = allServices.find(element => element.IDServicio == serviceId);
+        // const service = allServices.find(element => element.IDServicio == serviceId);
+        const service = { IDServicio:SERVICIO_ID, Nombre:"", Icono:"" }
         if (service) {
             requestAndPopulateElements(service, true);
         }
@@ -274,7 +262,7 @@ function requestAndPopulateElements(service: ClubReservationService, loadingMap:
             showLoading(false);
             const numResponses = response.response?.length ?? 0;
             if (!response.response?.length) {
-                alert(`No hay elementos configurados en el servicio de ${service.Nombre}, configure primero los elementos`);
+                alert(`No hay elementos configurados en el servicio, configure primero los elementos`);
             }
             else {
                 //Populate the elements

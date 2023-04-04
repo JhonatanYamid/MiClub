@@ -4950,11 +4950,13 @@ class SIMWebService
                 else :
 
                     $datos_reserva_eli = $dbo->fetchAll("ReservaGeneral", " IDReservaGeneral = '" . $IDReserva . "' ", "array");
+
                     if (($datos_reserva_eli["IDTipoPago"] == 1 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) ||
                         ($datos_reserva_eli["IDTipoPago"] == 12 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) ||
                         ($datos_reserva_eli["IDTipoPago"] == 19 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) ||
                         ($datos_reserva_eli["IDTipoPago"] == 26 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) ||
-                        ($datos_reserva_eli["IDTipoPago"] == 28 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) &&
+                        ($datos_reserva_eli["IDTipoPago"] == 28 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) ||
+                        ($datos_reserva_eli["IDTipoPago"] == 29 && $datos_reserva_eli["EstadoTransaccion"] != "A" && empty($Admin)) &&
                         $IDClub != 88
                     ) : //Para pagos con payu no dejo que se elimine cuando se devuelva solo hata confirmar el estado del pago
                         $respuesta["message"] = "Esperando respuesta de la transaccion";
@@ -13223,5 +13225,5 @@ class SIMWebService
 
         return $respuesta;
     }
-   
+    
 } //end class

@@ -12,11 +12,6 @@
                         <div class="form-group first ">
 
                             <div class="form-group first ">
-                                <div class="form-group col-md-6">
-                                    <label class="col-sm-4 control-label" for="IconoJugar">Icono Jugar</label>
-                                    <div class="col-sm-8"><input type="text" id="IconoJugar" name="IconoJugar" placeholder="IconoJugar" class="form-control" title="IconoJugar" value="<?php echo $frm["IconoJugar"] ?>" required></div>
-
-                                </div>
 
                                 <div class=" form-group col-md-6">
                                     <label class="col-sm-4 control-label" for="OcultaJugar">Ocultar Jugar</label>
@@ -32,132 +27,163 @@
 
                                 </div>
 
+                                <div class="form-group col-md-6">
 
-                                <label class="col-sm-4 control-label" for="OcultarHandicap">OcultarHandicap</label>
-                                <div class="col-sm-8">
-                                    <?php
-                                    echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarHandicap"], "OcultarHandicap", "", "");
-                                    ?>
+                                    <label class="col-sm-4 control-label" for="OcultarHandicap">Ocultar Handicap</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarHandicap"], "OcultarHandicap", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="TextoHandicap">Texto Handicap</label>
+                                    <div class="col-sm-8"><input type="text" id="TextoHandicap" name="TextoHandicap" placeholder="TextoHandicap" class="form-control" title="TextoHandicap" value="<?php echo $frm["TextoHandicap"] ?>" required></div>
+
+                                </div>
+
+
+
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="OcultarGrupos">Ocultar Grupos</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarGrupos"], "OcultarGrupos", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="TextoGrupos">Texto Grupos</label>
+                                    <div class="col-sm-8"><input type="text" id="TextoGrupos" name="TextoGrupos" placeholder="TextoGrupos" class="form-control" title="TextoGrupos" value="<?php echo $frm["TextoGrupos"] ?>" required></div>
+
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="OcultarJuegos">Ocultar Juegos</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarJuegos"], "OcultarJuegos", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="TextoJuegos">Texto Juegos</label>
+                                    <div class="col-sm-8"><input type="text" id="TextoJuegos" name="TextoJuegos" placeholder="TextoJuegos" class="form-control" title="TextoJuegos" value="<?php echo $frm["TextoJuegos"] ?>" required></div>
+
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Icono Jugar</label>
+                                    <div class="col-sm-8">
+                                        <?
+                                        if (!empty($frm["IconoJugar"])) {
+                                            echo "<img src='$frm[IconoJugar]' width=55 height=100 >";
+                                            echo "<a href='" . $script . ".php?action=delfoto&foto=$frm[IconoJugar]&campo=IconoJugar&id=" . $frm[$key] . "' class='ace-icon glyphicon glyphicon-trash'>&nbsp;</a>";
+                                        }
+                                        ?>
+                                        <input name="IconoJugar" id='file' class="" title="IconoJugar" type="file" size="25" style="font-size: 10px">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Icono Handicap</label>
+                                    <div class="col-sm-8">
+                                        <?
+                                        if (!empty($frm["IconoHandicap"])) {
+                                            echo "<img src='$frm[IconoHandicap]' width=55 height=100 >";
+                                            echo "<a href='" . $script . ".php?action=delfoto&foto=$frm[IconoHandicap]&campo=IconoHandicap&id=" . $frm[$key] . "' class='ace-icon glyphicon glyphicon-trash'>&nbsp;</a>";
+                                        }
+                                        ?>
+                                        <input name="IconoHandicap" id=file class="" title="IconoHandicap" type="file" size="25" style="font-size: 10px">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Icono Juegos</label>
+                                    <div class="col-sm-8">
+                                        <?
+                                        if (!empty($frm["IconoJuegos"])) {
+                                            echo "<img src='$frm[IconoJuegos]' width=55 height=100 >";
+                                            echo "<a href='" . $script . ".php?action=delfoto&foto=$frm[IconoJuegos]&campo=IconoJuegos&id=" . $frm[$key] . "' class='ace-icon glyphicon glyphicon-trash'>&nbsp;</a>";
+                                        }
+                                        ?>
+                                        <input name="IconoJuegos" id=file class="" title="IconoJuegos" type="file" size="25" style="font-size: 10px">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Icono Grupos</label>
+                                    <div class="col-sm-8">
+                                        <?
+                                        if (!empty($frm["IconoGrupos"])) {
+                                            echo "<img src='$frm[IconoGrupos]' width=55 height=100 >";
+                                            echo "<a href='" . $script . ".php?action=delfoto&foto=$frm[IconoGrupos]&campo=IconoGrupos&id=" . $frm[$key] . "' class='ace-icon glyphicon glyphicon-trash'>&nbsp;</a>";
+                                        }
+                                        ?>
+                                        <input name="IconoGrupos" id=file class="" title="IconoGrupos" type="file" size="25" style="font-size: 10px">
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="OcultarTelefono">Ocultar Telefono</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarTelefono"], "OcultarTelefono", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="OcultarEmail">Ocultar Email</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarEmail"], "OcultarEmail", "", "");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-sm-4 control-label" for="OcultarIdentificacion">Ocultar Identificacion</label>
+                                    <div class="col-sm-8">
+                                        <?php
+                                        echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarIdentificacion"], "OcultarIdentificacion", "", "");
+                                        ?>
+                                    </div>
+                                </div><br> <br> <br>
+
+
+
+
+
+
+
+                            </div>
+
+
+                            <div class="form-group first ">
+                                <div class="clearfix form-actions">
+                                    <div class="col-xs-12 text-center">
+                                        <input type="hidden" name="ID" id="ID" value="<?php echo $frm[$key] ?>" />
+                                        <input type="hidden" name="action" id="action" value="<?php echo $newmode ?>" />
+                                        <input type="hidden" name="IDUsuario" id="action" value="<?php if (empty($frm["IDUsuario"])) echo SIMUser::get("IDUsuario");
+                                                                                                    else echo $frm["IDUsuario"];  ?>" />
+                                        <input type="hidden" name="IDSocio" id="action" value="<?php if (empty($frm["IDSocio"])) echo SIMUser::get("IDSocio");
+                                                                                                else echo $frm["IDSocio"];  ?>" />
+                                        <input type="hidden" name="IDClub" id="IDClub" value="<?php if (empty($frm["IDClub"])) echo SIMUser::get("club");
+                                                                                                else echo $frm["IDClub"];  ?>" />
+                                        <button class="btn btn-info btnEnviar" type="button" rel="frm<?php echo $script; ?>">
+                                            <i class="ace-icon fa fa-check bigger-110"></i>
+                                            <?php echo $titulo_accion; ?> <?php echo SIMReg::get("title") ?>
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="form-group col-md-6">
-                                <label class="col-sm-4 control-label" for="IconoHandicap">IconoHandicap</label>
-                                <div class="col-sm-8"><input type="text" id="IconoHandicap" name="IconoHandicap" placeholder="IconoHandicap" class="form-control" title="IconoHandicap" value="<?php echo $frm["IconoHandicap"] ?>" required></div>
-
-                            </div>
-
-                            <div class="form-group col-md-6">
-                                <label class="col-sm-4 control-label" for="TextoHandicap">TextoHandicap</label>
-                                <div class="col-sm-8"><input type="text" id="TextoHandicap" name="TextoHandicap" placeholder="TextoHandicap" class="form-control" title="TextoHandicap" value="<?php echo $frm["TextoHandicap"] ?>" required></div>
-
-                            </div>
-
-
-                            <label class="col-sm-4 control-label" for="OcultarGrupos">OcultarGrupos</label>
-                            <div class="col-sm-8">
-                                <?php
-                                echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarGrupos"], "OcultarGrupos", "", "");
-                                ?>
-                            </div>
                         </div>
-
-                        <div class="form-group col-md-6">
-                            <label class="col-sm-4 control-label" for="IconoGrupos">IconoGrupos</label>
-                            <div class="col-sm-8"><input type="text" id="IconoGrupos" name="IconoGrupos" placeholder="IconoGrupos" class="form-control" title="IconoGrupos" value="<?php echo $frm["IconoGrupos"] ?>" required></div>
-
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label class="col-sm-4 control-label" for="TextoGrupos">TextoGrupos</label>
-                            <div class="col-sm-8"><input type="text" id="TextoGrupos" name="TextoGrupos" placeholder="TextoGrupos" class="form-control" title="TextoGrupos" value="<?php echo $frm["TextoGrupos"] ?>" required></div>
-
-                        </div>
-
-
-
-
-
-
-
-
-                        <label class="col-sm-4 control-label" for="OcultarJuegos">OcultarJuegos</label>
-                        <div class="col-sm-8">
-                            <?php
-                            echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarJuegos"], "OcultarJuegos", "", "");
-                            ?>
-                        </div>
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label class="col-sm-4 control-label" for="IconoJuegos">IconoJuegos</label>
-                    <div class="col-sm-8"><input type="text" id="IconoJuegos" name="IconoJuegos" placeholder="IconoJuegos" class="form-control" title="IconoJuegos" value="<?php echo $frm["IconoJuegos"] ?>" required></div>
-
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label class="col-sm-4 control-label" for="TextoJuegos">TextoJuegos</label>
-                    <div class="col-sm-8"><input type="text" id="TextoJuegos" name="TextoJuegos" placeholder="TextoJuegos" class="form-control" title="TextoJuegos" value="<?php echo $frm["TextoJuegos"] ?>" required></div>
-
-                </div>
-
-
-                <label class="col-sm-4 control-label" for="OcultarTelefono">OcultarTelefono</label>
-                <div class="col-sm-8">
-                    <?php
-                    echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarTelefono"], "OcultarTelefono", "", "");
-                    ?>
+                    </form>
                 </div>
             </div>
-            <label class="col-sm-4 control-label" for="OcultarEmail">OcultarEmail</label>
-            <div class="col-sm-8">
-                <?php
-                echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarEmail"], "OcultarEmail", "", "");
-                ?>
-            </div>
-        </div>
-        <label class="col-sm-4 control-label" for="OcultarIdentificacion">OcultarIdentificacion</label>
-        <div class="col-sm-8">
-            <?php
-            echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["OcultarIdentificacion"], "OcultarIdentificacion", "", "");
-            ?>
-        </div>
-    </div><br> <br> <br>
-
-
-
-
-
-
-
-</div>
-
-
-<div class="form-group first ">
-    <div class="clearfix form-actions">
-        <div class="col-xs-12 text-center">
-            <input type="hidden" name="ID" id="ID" value="<?php echo $frm[$key] ?>" />
-            <input type="hidden" name="action" id="action" value="<?php echo $newmode ?>" />
-            <input type="hidden" name="IDUsuario" id="action" value="<?php if (empty($frm["IDUsuario"])) echo SIMUser::get("IDUsuario");
-                                                                        else echo $frm["IDUsuario"];  ?>" />
-            <input type="hidden" name="IDSocio" id="action" value="<?php if (empty($frm["IDSocio"])) echo SIMUser::get("IDSocio");
-                                                                        else echo $frm["IDSocio"];  ?>" />
-            <input type="hidden" name="IDClub" id="IDClub" value="<?php if (empty($frm["IDClub"])) echo SIMUser::get("club");
-                                                                    else echo $frm["IDClub"];  ?>" />
-            <button class="btn btn-info btnEnviar" type="button" rel="frm<?php echo $script; ?>">
-                <i class="ace-icon fa fa-check bigger-110"></i>
-                <?php echo $titulo_accion; ?> <?php echo SIMReg::get("title") ?>
-            </button>
-
-        </div>
-    </div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div><!-- /.widget-main -->
-</div><!-- /.widget-body -->
+        </div><!-- /.widget-main -->
+    </div><!-- /.widget-body -->
 </div><!-- /.widget-box -->
 
 <?

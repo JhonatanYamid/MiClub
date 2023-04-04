@@ -98,7 +98,7 @@ include("cmp/footer_grid.php");
 
             url: 'includes/async/<?php echo $script; ?>.async.php<?= $url_search ?>',
             datatype: "json",
-            colNames: ['Editar', 'Nombre', 'Descripcion', 'Activo',
+            colNames: ['Editar', 'IconoJugar', 'TextoJugar', 'TextoJuegos',
                 'Eliminar'
             ],
             colModel: [{
@@ -107,18 +107,18 @@ include("cmp/footer_grid.php");
                     align: "center"
                 },
                 {
-                    name: 'Nombre',
-                    index: 'Nombre',
+                    name: 'IconoJugar',
+                    index: 'IconoJugar',
                     align: "left"
                 },
                 {
-                    name: 'Descripcion',
-                    index: 'Descripcion',
+                    name: 'TextoJugar',
+                    index: 'TextoJugar',
                     align: "left"
                 },
                 {
-                    name: 'Activo',
-                    index: 'Activo',
+                    name: 'TextoJuegos',
+                    index: 'TextoJuegos',
                     align: "left"
                 },
 

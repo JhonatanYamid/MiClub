@@ -154,30 +154,18 @@ var serviceSelector = document.getElementById("service-selector");
 if (serviceSelector !== null) {
     //try to load the services
     showLoading(true);
-    makeGETApiRequest("getservicios", [])
-        .then(function (serverResp) {
-        var _b, _c;
-        showLoading(false);
-        allServices = (_b = serverResp.response) !== null && _b !== void 0 ? _b : [];
-        var isFirstElement = true;
-        (_c = serverResp.response) === null || _c === void 0 ? void 0 : _c.map(function (value) {
-            if (SERVICIO_ID === value.IDServicio) {
-                var newElement = document.createElement("option");
-                newElement.setAttribute("value", value.IDServicio);
-                var node = document.createTextNode(value.Nombre);
-                newElement.appendChild(node);
-                serviceSelector.appendChild(newElement);
-                //Load the first element because it is selected by default
-                if (isFirstElement) {
-                    isFirstElement = false;
-                    requestAndPopulateElements(value, true);
-                }
-            }
-        });
-    })["catch"](function (error) {
-        showLoading(false);
-        console.log(error.message);
-    });
+    var isFirstElement = true;
+    var newElement = document.createElement("option");
+    newElement.setAttribute("value", SERVICIO_ID);
+    var node = document.createTextNode('servicio');
+    newElement.appendChild(node);
+    serviceSelector.appendChild(newElement);
+    //Load the first element because it is selected by default
+    if (isFirstElement) {
+        isFirstElement = false;
+        var value = { IDServicio: SERVICIO_ID, Nombre: "", Icono: "" };
+        requestAndPopulateElements(value, true);
+    }
     serviceSelector.onchange = function () {
         var _b, _c;
         if (!confirm("¿Está seguro de cambiar el servicio a configurar?\nTodos los cambios no guardados se perderán")) {
@@ -186,7 +174,8 @@ if (serviceSelector !== null) {
         }
         var serviceId = serviceSelector.value;
         //Each time the services changes, populate again the canvas with the elements
-        var service = allServices.find(function (element) { return element.IDServicio == serviceId; });
+        // const service = allServices.find(element => element.IDServicio == serviceId);
+        var service = { IDServicio: SERVICIO_ID, Nombre: "", Icono: "" };
         if (service) {
             requestAndPopulateElements(service, true);
         }
@@ -204,7 +193,7 @@ function requestAndPopulateElements(service, loadingMap) {
         showLoading(false);
         var numResponses = (_c = (_b = response.response) === null || _b === void 0 ? void 0 : _b.length) !== null && _c !== void 0 ? _c : 0;
         if (!((_d = response.response) === null || _d === void 0 ? void 0 : _d.length)) {
-            alert("No hay elementos configurados en el servicio de ".concat(service.Nombre, ", configure primero los elementos"));
+            alert("No hay elementos configurados en el servicio, configure primero los elementos");
         }
         else {
             //Populate the elements
