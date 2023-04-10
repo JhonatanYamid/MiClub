@@ -443,6 +443,7 @@ function makeGETApiRequest(action, params) {
     getParams.append("action", action);
     getParams.append("IDClub", CLUB_ID);
     getParams.append("AppVersion", APP_VERSION);
+    console.log(getParams.toString());
     return makeGETTokenRequest()
         .then(function (resp) {
         var _a;

@@ -77,12 +77,6 @@ switch (SIMNet::req("action")) {
 
                 $frm["IconoJugar"] = $files[0]["innername"];
                 $frm["IconoJugar"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-
-                $id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
-                $ids = SIMNet::reqInt("id");
             }
             if (!empty($_FILES["IconoHandicap"]["name"])) {
                 $files =  SIMFile::upload($_FILES["IconoHandicap"], SERVICIO_DIR, "IMAGE");
@@ -94,12 +88,6 @@ switch (SIMNet::req("action")) {
 
                 $frm["IconoHandicap"] = $files[0]["innername"];
                 $frm["IconoHandicap"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-
-                $id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
-                $ids = SIMNet::reqInt("id");
             }
 
             if (!empty($_FILES["IconoJuegos"]["name"])) {
@@ -112,12 +100,6 @@ switch (SIMNet::req("action")) {
 
                 $frm["IconoJuegos"] = $files[0]["innername"];
                 $frm["IconoJuegos"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-
-                $id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
-                $ids = SIMNet::reqInt("id");
             }
 
             if (!empty($_FILES["IconoGrupos"]["name"])) {
@@ -130,17 +112,13 @@ switch (SIMNet::req("action")) {
 
                 $frm["IconoGrupos"] = $files[0]["innername"];
                 $frm["IconoGrupos"] = URLROOT . "file/servicio/" . $files[0]["innername"];
-
-
-
-
-                $id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
-                $ids = SIMNet::reqInt("id");
             }
+            $id = $dbo->update($frm, $table, $key, SIMNet::reqInt("id"));
+            $ids = SIMNet::reqInt("id");
 
             $frm = $dbo->fetchById($table, $key, $id, "array");
 
-            SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'RegistroGuardadoCorrectamente', LANGSESSION));
+            SIMHTML::jsAlert(SIMUtil::get_traduccion('', '', 'RegistroGuardadoCorrectamente', LANGSESSION).".");
             SIMHTML::jsRedirect($script . ".php?action=edit&id=" . SIMNet::reqInt("id"));
         } else
             exit;

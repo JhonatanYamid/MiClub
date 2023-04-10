@@ -107,7 +107,7 @@ let allServices = Array<ClubReservationService>();
 
 let initialViewPortTransfor = canvas.viewportTransform;
 const zoomLabel = document.getElementById("zoom-level");
-updateZoomLabel();
+updateZoomLabel();geteke
 const mapImageSizeLabel = document.getElementById("map-image-size");
 updateImageSizeLabel();
 
