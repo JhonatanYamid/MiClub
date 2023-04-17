@@ -3015,12 +3015,29 @@
                         </li>
 
                         <li class="">
+                            <a href="consumoalimentoscasinosocio.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'CargaConsumosSocio', LANGSESSION); ?>
+                            </a>
+                            <b class="arrow"></b>
+                        </li>
+
+                        <li class="">
                             <a href="registraralimentoscasino.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
                                 <?= SIMUtil::get_traduccion('', '', 'RegistrarAlimentosCasino', LANGSESSION); ?>
                             </a>
                             <b class="arrow"></b>
                         </li>
+
+                        <li class="">
+                            <a href="registraralimentoscasinosocio.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'RegistrarAlimentosCasinoSocio', LANGSESSION); ?>
+                            </a>
+                            <b class="arrow"></b>
+                        </li>
+
                         <li class="">
                             <a href="registrarconsumoqr.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
@@ -4701,7 +4718,20 @@
                             </a>
                             <b class="arrow"></b>
                         </li>
-
+                        <li class="">
+                            <a href="configuraciontalonerasocio.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'ConfiguracionTalonera', LANGSESSION)." Socio"; ?>
+                            </a>
+                            <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                            <a href="reportetalonerasocio.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'Reporte', LANGSESSION)." Socio"; ?>
+                            </a>
+                            <b class="arrow"></b>
+                        </li>
                         <li class="">
                             <a href="reporterecargatalonera.php">
                                 <i class="menu-icon fa fa-caret-right"></i>

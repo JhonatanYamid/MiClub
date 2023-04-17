@@ -3040,11 +3040,11 @@ switch ($action) {
         break;
 
     case "getconfiguracionjuegosdegolf":
-        require LIBDIR . "SIMWebServiceGameGolf.inc.php";
+        require LIBDIR . "SIMWebServiceReservas.inc.php";
         $IDUsuario = SIMNet::req("IDUsuario");
         $IDSocio = SIMNet::req("IDSocio");
         $IDClub = SIMNet::req("IDClub");
-        $respuesta = SIMWebServiceGameGolf::get_configuracion_juegos_de_golf($IDClub, $IDUsuario, $IDSocio);
+        $respuesta = SIMWebService::get_configuracion_juegos_de_golf($IDClub, $IDUsuario, $IDSocio);
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -8863,7 +8863,7 @@ switch ($action) {
         require LIBDIR . "SIMWebServiceCanjes.inc.php";
         $IDPais = SIMNet::req("IDPais");
         $respuesta = SIMWebServiceCanjes::get_ciudades_canjes($IDClub, $IDPais);
-        SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
         die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
         exit;
         break;
@@ -10527,7 +10527,30 @@ switch ($action) {
         break;
 
         //FIN QR DINAMICO
+        case "buscarcontenidoenmodulos":
+            require LIBDIR . "SIMWebServiceBusqueda.inc.php";
+            $Tag = SIMNet::req("Tag");
+            $IDUsuario = SIMNet::req("IDUsuario");
+            $IDSocio = SIMNet::req("IDSocio");
+    
+            $respuesta = SIMWebServiceBusqueda::buscar_contenido_en_modulos($IDClub, $IDUsuario, $IDSocio, $Tag);
+            die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+            exit;
+            break;
+    
 
+        //inicio carnet primadera
+    case "getconfiguracioncarnetv2":
+        require LIBDIR . "SIMWebServiceCarnet.inc.php";
+
+        $respuesta = SIMWebServiceCarnet::get_configuracion_carnetv2($IDClub, $IDSocio, $IDUsuario);
+
+        // SIMLog::insert_app($action, $IDClub, $_GET, $respuesta);
+        //$sql_log_servicio = $dbo->query("Insert Into LogServicioDiario (IDSocio,Servicio, Parametros, Respuesta) Values ('" . $IDSocio . "','solicitarotpcarnetseguridadsocio','" . json_encode($_POST) . "','" . json_encode($respuesta) . "')");
+        die(json_encode(array('success' => $respuesta[success], 'message' => $respuesta[message], 'response' => $respuesta[response], 'date' => $nowserver)));
+        exit;
+        break;
+        //fin carnet primadera
 
     default:
         die(json_encode(array('success' => false, 'message' => 'no action.' . $action, 'response' => '', 'date' => $nowserver)));

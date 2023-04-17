@@ -994,6 +994,7 @@ $IDClub="8"; */
                 endif;
                 $datos_club["LabelAbrirNotificaciones"] =  $otra_config_club["LabelAbrirNotificaciones"];
                 $datos_club["SolicitaAbrirNotificaciones"] =  $otra_config_club["SolicitaAbrirNotificaciones"];
+                $datos_club["MostrarBotonBusquedaGeneral"] =  $otra_config_club["MostrarBotonBusquedaGeneral"];
                 array_push($response, $datos_club);
             } //ednw hile
 
@@ -1430,6 +1431,7 @@ $IDClub="8"; */
                 $datos_club["LabelDiagnostico"] = $r["LabelDiagnostico"];
                 $datos_club["LabelAbrirNotificaciones"] =  $otra_config_club["LabelAbrirNotificaciones"];
                 $datos_club["SolicitaAbrirNotificaciones"] =  $otra_config_club["SolicitaAbrirNotificaciones"];
+                $datos_club["MostrarBotonBusquedaGeneral"] =  $otra_config_club["MostrarBotonBusquedaGeneral"];
                 array_push($response, $datos_club);
             } //ednw hile
 
@@ -1909,6 +1911,7 @@ $IDClub="8"; */
                         $array_noticia3 = explode("|", $r["IDSeccionNoticia3"]);
                         $array_noticiaInfi = explode("|", $r["IDSeccionNoticiaInfi"]);
                         $response_id_not = array();
+                        $mostrar = 0;
 
                         if ($r_modulo["IDModulo"] == 3) :
                             foreach ($array_noticia as $id_noticia) :

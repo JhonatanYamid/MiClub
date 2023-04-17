@@ -818,7 +818,7 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
         <div class="col-xs-12 col-sm-6">
             <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Solo mostrar Icono en reserva de servicios? </label>
             <div class="col-sm-8">
-                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["SoloIcono"], 'SoloIcono', "class='input '") ?>
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["SoloIcono"], 'SoloIcono', "class='input '") ;?>
             </div>
         </div>
 
@@ -1789,6 +1789,51 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
             Publicidad
         </h3>
     </div>
+
+    <div class="form-group first ">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Habilitar Publicidad? </label>
+            <div class="col-sm-8">
+                <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["Publicidad"], 'Publicidad', "class='input '") ?>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Tiempo rotar Publicidad? </label>
+            <div class="col-sm-8">
+                <input id="TiempoPublicidad" type=text size=25 name="TiempoPublicidad" class="col-xs-12" title="Tiempo Publicidad" value="<?= $frm["TiempoPublicidad"] ?>">segundos
+            </div>
+        </div>
+    </div>
+    <div class="form-group first ">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Tipo de Header App? </label>
+            <div class="col-sm-8">
+                <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Publicidad" <?php if ($frm["TipoHeaderApp"] == "Publicidad") echo "checked"; ?>> Publicidad (rota im&aacute;genes) <br>
+                <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Clasico" <?php if ($frm["TipoHeaderApp"] == "Clasico") echo "checked"; ?>> Clasico (imagen fija logo club) <br>
+                <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="PublicidadFoto" <?php if ($frm["TipoHeaderApp"] == "PublicidadFoto") echo "checked"; ?>> PublicidadFoto (Publicidad mas foto) <br>
+                <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Noticias" <?php if ($frm["TipoHeaderApp"] == "Noticias") echo "checked"; ?>> Noticias <br>
+                <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Mixta" <?php if ($frm["TipoHeaderApp"] == "Mixta") echo "checked"; ?>> Mixta (Publicidad y noticias)
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Tiempo Rotar Publicidad Header? </label>
+            <div class="col-sm-8">
+                <input id="TiempoPublicidadHeader" type=text size=25 name="TiempoPublicidadHeader" class="col-xs-12" title="Tiempo Publicidad Header" value="<?= $frm["TiempoPublicidadHeader"] ?>">segundos
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group first ">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Tipo imagen publicidad noticias y para las noticias publicas: </label>
+            <div class="col-sm-8">
+                <input type="radio" name="TipoImagenPublicidadNoticias" id="TipoImagenPublicidadNoticias" value="Expandida" <?php if ($frm["TipoImagenPublicidadNoticias"] == "Expandida") echo "checked"; ?>> <b>Expandida</b> (La imagen ocupará todo el espacio de la pantalla (100% ancho - 100% alto), manteniendo el aspect_ratio de la imagen) <br>
+                <input type="radio" name="TipoImagenPublicidadNoticias" id="TipoImagenPublicidadNoticias" value="Ajustada" <?php if ($frm["TipoImagenPublicidadNoticias"] == "Ajustada") echo "checked"; ?>> <b>Ajustada</b> (La imagen ocupará el espacio posible sin salirse de la pantalla, esto puede resultar en ocupar el 100% del ancho o 100% del alto, pero no los dos) <br>
+                <input type="radio" name="TipoImagenPublicidadNoticias" id="TipoImagenPublicidadNoticias" value="Estirada" <?php if ($frm["TipoImagenPublicidadNoticias"] == "Estirada") echo "checked"; ?>> <b>Estirada</b> (La imagen ocupará todo el espacio de la pantalla (100% ancho - 100% alto), sin mantener el aspect_ratio de la imagen)
+            </div>
+        </div>
+    </div>
+
 
     <!--  <div class="form-group first ">
 
@@ -2859,21 +2904,22 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
 										<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Cumplimiento obligatorio de invitados: </label>
 
 										<div class="col-sm-8">
-										  <?php echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["CumplimientoInvitados"], "CumplimientoInvitados", "title=\"CumplimientoInvitados\"") ?>
+										  <?php //echo SIMHTML::formRadioGroup(array_flip(SIMResources::$sino), $frm["CumplimientoInvitados"], "CumplimientoInvitados", "title=\"CumplimientoInvitados\"") 
+                                            ?>
 										</div>
 								</div>
 
 							</div>
                             -->
 
-    <div class="widget-header widget-header-large">
+    <!--    <div class="widget-header widget-header-large">
         <h3 class="widget-title grey lighter">
             <i class="ace-icon fa fa-glass green"></i>
             Configuracion de Servicios
         </h3>
     </div>
-
-    <div class="form-group first ">
+ -->
+    <!--  <div class="form-group first ">
 
         <div class="col-xs-12 col-sm-12">
 
@@ -2882,12 +2928,12 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
 
             // Consulto los servicios disponibles al usuario
 
-            $sql_servicio_club = $dbo->query("select * from ServicioClub where IDClub = '" . $frm[IDClub] . "' and Activo = 'S'");
+            /*   $sql_servicio_club = $dbo->query("select * from ServicioClub where IDClub = '" . $frm[IDClub] . "' and Activo = 'S'");
             while ($r_servicio_club = $dbo->object($sql_servicio_club)) {
                 $servicio_club[] = $r_servicio_club->IDServicioMaestro;
             }
 
-            $arrayop = array();
+            $arrayop = array(); */
             // consulto las subsecciones
             //$query_servicios=$dbo->query("Select * from ServicioMaestro Where Publicar = 'S' Order by Nombre");
             //while($r=$dbo->object($query_servicios)){
@@ -2908,7 +2954,7 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
                 </tr>
                 <tbody id="listacontactosanunciante">
                     <?php
-                    $sql_servicio_club = "SELECT * FROM ServicioClub WHERE IDClub = '" . $frm[IDClub] . "'";
+                    /*   $sql_servicio_club = "SELECT * FROM ServicioClub WHERE IDClub = '" . $frm[IDClub] . "'";
                     $r_servicio_club = $dbo->query($sql_servicio_club);
                     while ($row_servicio_club = $dbo->fetchArray($r_servicio_club)) {
                         $array_servicio_club[$row_servicio_club["IDServicioMaestro"]] = $row_servicio_club;
@@ -2916,27 +2962,37 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
 
                     $r_servicioclub = &$dbo->all("ServicioMaestro", "Publicar = 'S' Order by Nombre");
 
-                    while ($r = $dbo->object($r_servicioclub)) {
+                    while ($r = $dbo->object($r_servicioclub)) { */
                     ?>
 
-                        <tr class="<?php echo SIMUtil::repetition() ? 'row0' : 'row1' ?>">
+                        <tr class="<?php //echo SIMUtil::repetition() ? 'row0' : 'row1' 
+                                    ?>">
                             <td aling="center">
-                                <input type="checkbox" name="IDServicioMaestro<?php echo $r->IDServicioMaestro; ?>" id="IDServicioMaestro<?php echo $r->IDServicioMaestro; ?>" <?php if (in_array($r->IDServicioMaestro, $servicio_club)) echo "checked"; ?>>
+                                <input type="checkbox" name="IDServicioMaestro<?php //echo $r->IDServicioMaestro; 
+                                                                                ?>" id="IDServicioMaestro<? php // echo $r->IDServicioMaestro; 
+                                                                                                            ?>" <?php // if (in_array($r->IDServicioMaestro, $servicio_club)) echo "checked"; 
+                                                                                                                ?>>
                             </td>
                             <td>
                                 <?php
-                                echo $r->Nombre;
+                                /*  echo $r->Nombre;
                                 if (!empty($r->Descripcion))
-                                    echo  " (" . $r->Descripcion . ")";
+                                    echo  " (" . $r->Descripcion . ")"; */
                                 ?>
                             </td>
-                            <td><input id=TituloServicio<?php echo $r->IDServicioMaestro; ?> type=text size=25 name=TituloServicio<?php echo $r->IDServicioMaestro; ?> class="col-xs-12" title="Titulo Servicio" value="<?php echo $array_servicio_club[$r->IDServicioMaestro]["TituloServicio"]; ?>"></td>
+                            <td><input id=TituloServicio<?php //echo $r->IDServicioMaestro; 
+                                                        ?> type=text size=25 name=TituloServicio<?php //echo $r->IDServicioMaestro; 
+                                                                                                ?> class="col-xs-12" title="Titulo Servicio" value="<?php //echo $array_servicio_club[$r->IDServicioMaestro]["TituloServicio"]; 
+                                                                                                                                                    ?>"></td>
                             <td>
-                                <input id=OrdenServicio<?php echo $r->IDServicioMaestro; ?> type=text size=25 name=OrdenServicio<?php echo $r->IDServicioMaestro; ?> class="col-xs-12" title="Orden" value="<?php echo $array_servicio_club[$r->IDServicioMaestro]["Orden"]; ?>">
+                                <input id=OrdenServicio<?php //echo $r->IDServicioMaestro; 
+                                                        ?> type=text size=25 name=OrdenServicio<?php //echo $r->IDServicioMaestro; 
+                                                                                                ?> class="col-xs-12" title="Orden" value="<?php //echo $array_servicio_club[$r->IDServicioMaestro]["Orden"]; 
+                                                                                                                                            ?>">
                             </td>
                         </tr>
                     <?php
-                    }
+                    // }
                     ?>
                 </tbody>
                 <tr>
@@ -2957,22 +3013,22 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
 
 
 
-    </div>
+    </div> -->
 
 
-
+    <!-- 
     <div class="widget-header widget-header-large">
         <h3 class="widget-title grey lighter">
             <i class="ace-icon fa fa-sitemap green"></i>
             Configuracion de Modulos
         </h3>
     </div>
-    <div class="form-group first ">
+    <div class="form-group first "> -->
 
-        <div class="col-xs-12 col-sm-12">
-            <?php
-            // Consulto los modulos disponibles del club
-            $sql_modulo_club = $dbo->query("select * from ClubModulo where IDClub = '" . $frm[IDClub] . "' and Activo = 'S'");
+    <!--   <div class="col-xs-12 col-sm-12"> -->
+    <?php
+    // Consulto los modulos disponibles del club
+    /*  $sql_modulo_club = $dbo->query("select * from ClubModulo where IDClub = '" . $frm[IDClub] . "' and Activo = 'S'");
             while ($r_modulo_club = $dbo->object($sql_modulo_club)) {
                 $modulo_club[] = $r_modulo_club->IDModulo;
             }
@@ -2980,90 +3036,123 @@ $clubHijos = SIMUtil::ObtenerHijosClubPadre($idClub);
             // Consulto los modulos disponibles del club
             $sql_modulo = $dbo->query("select * from Modulo where 1");
             while ($r_modulo = $dbo->object($sql_modulo)) {
-                $modulo_datos[$r_modulo->IDModulo] = $r_modulo->Nombre;
-            }
-            ?>
-            <table id="simple-table" class="table table-striped table-bordered table-hover">
-                <tr>
-                    <th>Activo</th>
-                    <th>Modulo</th>
-                    <th>Titulo Club</th>
-                    <th>Icono</th>
-                    <th>Orden</th>
-                    <th>Ubicacion</th>
-                </tr>
-                <tbody id="listacontactosanunciante">
-                    <?php
+                $modulo_datos[$r_modulo->IDModulo] = $r_modulo->Nombre; 
+    }*/
+    ?>
+    <!--     <table id="simple-table" class="table table-striped table-bordered table-hover">
+        <tr>
+            <th>Activo</th>
+            <th>Modulo</th>
+            <th>Titulo Club</th>
+            <th>Icono</th>
+            <th>Orden</th>
+            <th>Ubicacion</th>
+        </tr>
+        <tbody id="listacontactosanunciante"> -->
+    <?php
+    /* 
+            $r_modulo = &$dbo->all("ClubModulo", "IDClub = '" . $frm[IDClub] . "'");
 
-                    $r_modulo = &$dbo->all("ClubModulo", "IDClub = '" . $frm[IDClub] . "'");
+            while ($r = $dbo->object($r_modulo)) { */
+    ?>
+    <!-- 
+                <tr class="<?php //echo SIMUtil::repetition() ? 'row0' : 'row1' 
+                            ?>">
+                    <td aling="center">
+                        <input type="checkbox" name="IDModulo<?php //echo $r->IDModulo; 
+                                                                ?>" id="IDModulo<?php // echo $r->IDModulo; 
+                                                                                ?>" <?php //if (in_array($r->IDModulo, $modulo_club)) echo "checked"; 
+                                                                                    ?>>
+                    </td>
+                    <td><?php // echo $modulo_datos[$r->IDModulo]; 
+                        ?></td>
+                    <td>
+                        <input id=Titulo<?php //echo $r->IDModulo; 
+                                        ?> type=text size=25 name=Titulo<?php //echo $r->IDModulo; 
+                                                                        ?> class="col-xs-12" title="Titulo" value="<?php //$r->Titulo  
+                                                                                                                    ?>" placeholder="Titulo Menu Central">
+                        <input id=TituloLateral<?php //echo $r->IDModulo; 
+                                                ?> type=text size=25 name=TituloLateral<?php //echo $r->IDModulo; 
+                                                                                        ?> class="col-xs-12" title="Titulo Lateral" value="<?php //$r->TituloLateral 
+                                                                                                                                            ?>" placeholder="Titulo menu lateral">
+                    </td>
+                    <td>
+                        <? //if (!empty($r->Icono)) {
+                        //echo "<img src='" . MODULO_ROOT . "$r->Icono' width=55 >";
+                        ?>
+                            <a href="<? // echo $script . " .php?action=delfotomodulo&foto=$r->Icono&campo=Icono&idclubmodulo=" . $r->IDClubModulo; 
+                                        ?>&id=<?php //echo $frm[IDClub]; 
+                                                ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
+                        <?
+                        //} // END if
+                        ?>
+                        <input name="Icono<?php //echo $r->IDModulo; 
+                                            ?>" id=Icono<?php //echo $r->IDModulo; 
+                                                        ?> class="col-xs-12" title="Icono" type="file" size="25" style="font-size: 10px">
+                        <input type="hidden" name="ImagenOriginal<?php //echo $r->IDModulo; 
+                                                                    ?>" id="ImagenOriginal<?php //echo $r->IDModulo; 
+                                                                                            ?>" value="<?php //echo $r->Icono; 
+                                                                                                        ?>">
 
-                    while ($r = $dbo->object($r_modulo)) {
-                    ?>
-
-                        <tr class="<?php echo SIMUtil::repetition() ? 'row0' : 'row1' ?>">
-                            <td aling="center">
-                                <input type="checkbox" name="IDModulo<?php echo $r->IDModulo; ?>" id="IDModulo<?php echo $r->IDModulo; ?>" <?php if (in_array($r->IDModulo, $modulo_club)) echo "checked"; ?>>
-                            </td>
-                            <td><?php echo $modulo_datos[$r->IDModulo]; ?></td>
-                            <td>
-                                <input id=Titulo<?php echo $r->IDModulo; ?> type=text size=25 name=Titulo<?php echo $r->IDModulo; ?> class="col-xs-12" title="Titulo" value="<?= $r->Titulo ?>" placeholder="Titulo Menu Central">
-                                <input id=TituloLateral<?php echo $r->IDModulo; ?> type=text size=25 name=TituloLateral<?php echo $r->IDModulo; ?> class="col-xs-12" title="Titulo Lateral" value="<?= $r->TituloLateral ?>" placeholder="Titulo menu lateral">
-                            </td>
-                            <td>
-                                <? if (!empty($r->Icono)) {
-                                    echo "<img src='" . MODULO_ROOT . "$r->Icono' width=55 >";
-                                ?>
-                                    <a href="<? echo $script . " .php?action=delfotomodulo&foto=$r->Icono&campo=Icono&idclubmodulo=" . $r->IDClubModulo; ?>&id=<?php echo $frm[IDClub]; ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
-                                <?
-                                } // END if
-                                ?>
-                                <input name="Icono<?php echo $r->IDModulo; ?>" id=Icono<?php echo $r->IDModulo; ?> class="col-xs-12" title="Icono" type="file" size="25" style="font-size: 10px">
-                                <input type="hidden" name="ImagenOriginal<?php echo $r->IDModulo; ?>" id="ImagenOriginal<?php echo $r->IDModulo; ?>" value="<?php echo $r->Icono; ?>">
-
-                                <?php
-                                if ($frm[IDClub] == "51") {
-                                    if (!empty($r->IconoLateral)) {
-                                        echo "<img src='" . MODULO_ROOT . "$r->IconoLateral' width=55 >";
-                                ?>
-                                        <a href="<? echo $script . " .php?action=delfotomodulo&foto=$r->IconoLateral&campo=IconoLateral&idclubmodulo=" . $r->IDClubModulo; ?>&id=<?php echo $frm[IDClub]; ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
-                                    <?
-                                    } // END if
-                                    ?>
-                                    <br>Icono lateral<input name="IconoLateral<?php echo $r->IDModulo; ?>" id=IconoLateral<?php echo $r->IDModulo; ?> class="col-xs-12" title="Icono" type="file" size="25" style="font-size: 10px">
-                                    <input type="hidden" name="ImagenOriginalLateral<?php echo $r->IDModulo; ?>" id="ImagenOriginalLateral<?php echo $r->IDModulo; ?>" value="<?php echo $r->IconoLateral; ?>">
-                                <?php } ?>
-                            </td>
+                        <?php
+                        /*   if ($frm[IDClub] == "51") {
+                            if (!empty($r->IconoLateral)) {
+                                echo "<img src='" . MODULO_ROOT . "$r->IconoLateral' width=55 >"; */
+                        ?>
+                                <a href="<? //echo $script . " .php?action=delfotomodulo&foto=$r->IconoLateral&campo=IconoLateral&idclubmodulo=" . $r->IDClubModulo; 
+                                            ?>&id=<?php //echo $frm[IDClub]; 
+                                                    ?>" class="ace-icon glyphicon glyphicon-trash">&nbsp;</a>
+                            <?
+                            //} // END if
+                            ?>
+                            <br>Icono lateral<input name="IconoLateral<?php //echo $r->IDModulo; 
+                                                                        ?>" id=IconoLateral<?php //echo $r->IDModulo; 
+                                                                                            ?> class="col-xs-12" title="Icono" type="file" size="25" style="font-size: 10px">
+                            <input type="hidden" name="ImagenOriginalLateral<?php //echo $r->IDModulo; 
+                                                                            ?>" id="ImagenOriginalLateral<?php // echo $r->IDModulo; 
+                                                                                                            ?>" value="<?php //echo $r->IconoLateral; 
+                                                                                                                        ?>">
+                        <?php //} 
+                        ?>
+                    </td>
 
 
 
-                            <td><input id=Orden<?php echo $r->IDModulo; ?> type=text size=25 name=Orden<?php echo $r->IDModulo; ?> class="col-xs-12" title="Orden" value="<?= $r->Orden ?>"></td>
-                            <td>
-                                <?php
-                                unset($ubicacion_modulo);
-                                if (!empty($r->Ubicacion)) :
-                                    $ubicacion_modulo = explode("|", $r->Ubicacion);
-                                endif;
-                                ?>
+                    <td><input id=Orden<?php //echo $r->IDModulo; 
+                                        ?> type=text size=25 name=Orden<?php //echo $r->IDModulo; 
+                                                                        ?> class="col-xs-12" title="Orden" value="<?php //$r->Orden 
+                                                                                                                    ?>"></td>
+                    <td>
+                        <?php
+                        /*    unset($ubicacion_modulo);
+                        if (!empty($r->Ubicacion)) :
+                            $ubicacion_modulo = explode("|", $r->Ubicacion);
+                        endif; */
+                        ?>
 
-                                <input type="checkbox" name="UbicacionModulo<?php echo $r->IDModulo; ?>[]" <?php if (in_array("Lateral", $ubicacion_modulo)) echo "checked"; ?> value="Lateral"> Menu Lateral app
-                                <br><input type="checkbox" name="UbicacionModulo<?php echo $r->IDModulo; ?>[]" <?php if (in_array("Central", $ubicacion_modulo)) echo "checked"; ?> value="Central">Menu central app
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-                <tr>
-                    <th class="texto" colspan="16"></th>
-                </tr>
-            </table>
-
-
-        </div>
-
+                        <input type="checkbox" name="UbicacionModulo<?php //echo $r->IDModulo; 
+                                                                    ?>[]" <?php //if (in_array("Lateral", $ubicacion_modulo)) echo "checked"; 
+                                                                            ?> value="Lateral"> Menu Lateral app
+                        <br><input type="checkbox" name="UbicacionModulo<?php //echo $r->IDModulo; 
+                                                                        ?>[]" <?php //if (in_array("Central", $ubicacion_modulo)) echo "checked"; 
+                                                                                ?> value="Central">Menu central app
+                    </td>
+                </tr> -->
+    <?php
+    // }
+    ?>
+    <!--  </tbody>
+    <tr>
+        <th class="texto" colspan="16"></th>
+    </tr>
+    </table>
 
 
     </div>
+
+
+
+    </div> -->
 
 
 

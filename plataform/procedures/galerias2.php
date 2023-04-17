@@ -8,7 +8,7 @@ SIMReg::setFromStructure(array(
 ));
 
 
-$script = "galerias";
+$script = "galerias2";
 
 //extraemos las variables
 $table = SIMReg::get("table");
@@ -20,8 +20,6 @@ SIMUtil::verificar_permiso($mod, SIMUser::get("IDPerfil"));
 
 //creando las notificaciones que llegan en el parametro m de la URL
 SIMNotify::capture(SIMResources::$mensajes[SIMNet::req("m")]["msg"], SIMResources::$mensajes[SIMNet::req("m")]["type"]);
-
-
 
 
 switch (SIMNet::req("action")) {

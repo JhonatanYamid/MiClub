@@ -26,6 +26,19 @@
                                     <i class="ace-icon fa  fa-check-square green"></i> General
                                 </h3>
                             </div>
+
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Pais </label>
+                                    <div class="col-sm-8"> <?php echo SIMHTML::formPopUp("Pais", "Nombre", "Nombre", "IDPais", $frm["IDPais"], "[Seleccione Pais]", "form-control", "title = \"Pais\"") ?> </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Zona Horaria </label>
+                                    <div class="col-sm-8"> <?php echo SIMHTML::formPopUp("ZonaHoraria", "Nombre", "Nombre", "IDZonaHoraria", $frm["IDZonaHoraria"], "[Seleccione Zona Horaria]", "form-control", "title = \"Zona Horaria\"") ?> </div>
+                                </div>
+                            </div>
+
+
                             <div class="form-group first ">
                                 <div class="col-xs-12 col-sm-6">
                                     <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Email Cartera </label>
@@ -98,10 +111,7 @@
                                         <input type="hidden" name="UsuarioSeleccion" id="UsuarioSeleccion" value="">
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Pais Club</label>
-                                    <div class="col-sm-8"> <?php echo SIMHTML::formPopUp("Pais", "Nombre", "Nombre", "IDPais", $frm["IDPais"], "[Seleccione Pais]", "form-control", "title = \"Pais\"") ?> </div>
-                                </div>
+                                
                             </div>
 
                             <div class="form-group first ">
@@ -110,6 +120,13 @@
                                     <div class="col-sm-8">
                                         <input id=CorreoNotificacionComentarioNoticia type=text name=CorreoNotificacionComentarioNoticia class="col-xs-12" title="CorreoNotificacionComentarioNoticia" value="<?= $frm["CorreoNotificacionComentarioNoticia"] ?>">
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <label class="col-sm-4 control-label no-padding-right" for="form-field-1">Mostrar Botón Busqueda General </label>
+
+                                <div class="col-sm-8">
+                                    <? echo SIMHTML::formradiogroup(array_flip(SIMResources::$sino), $frm["MostrarBotonBusquedaGeneral"], 'MostrarBotonBusquedaGeneral', "class='input '") ?>
                                 </div>
                             </div>
 
@@ -509,7 +526,9 @@
                                     <div class="col-sm-8">
                                         <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Publicidad" <?php if ($frm["TipoHeaderApp"] == "Publicidad") echo "checked"; ?>> Publicidad (rota im&aacute;genes) <br>
                                         <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Clasico" <?php if ($frm["TipoHeaderApp"] == "Clasico") echo "checked"; ?>> Clasico (imagen fija logo club) <br>
-                                        <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="PublicidadFoto" <?php if ($frm["TipoHeaderApp"] == "PublicidadFoto") echo "checked"; ?>> PublicidadFoto (Publicidad mas foto)
+                                        <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="PublicidadFoto" <?php if ($frm["TipoHeaderApp"] == "PublicidadFoto") echo "checked"; ?>> PublicidadFoto (Publicidad mas foto)<br>
+                                        <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Noticias" <?php if ($frm["TipoHeaderApp"] == "Noticias") echo "checked"; ?>> Solo Noticias<br>
+                                        <input type="radio" name="TipoHeaderApp" id="TipoHeaderApp" value="Mixta" <?php if ($frm["TipoHeaderApp"] == "Mixta") echo "checked"; ?>> Foto y Noticias
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
@@ -640,6 +659,52 @@
                                 </div>
 
                             </div>
+
+                            <div class="widget-header widget-header-large">
+        <h3 class="widget-title grey lighter">
+            <i class="ace-icon fa fa-info-circle green"></i> Formatos de Fechas y Horas
+        </h3>
+    </div>
+    <div class="form-group first ">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Formato Fecha </label>
+            <div class="col-sm-8">
+                <select name="FormatoFecha" class="form-control">
+                    <option value="">[SELECCIONA UNA OPCION]</option> <?php
+                                                                        foreach (SIMResources::$formatos_fecha as $Formato => $FormatoDate) :
+                                                                        ?> <option value="<?= $Formato ?>" <?= $Formato == $frm[FormatoFecha] ? "selected" : "" ?>> <?= $Formato . " Ejemplo: (" . date($FormatoDate) . ")" ?></option> <?php
+                                                                                                                                                                                                                                    endforeach;
+                                                                                                                                                                                                                                        ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Formato Hora </label>
+            <div class="col-sm-8">
+                <select name="FormatoHora" class="form-control">
+                    <option value="">[SELECCIONA UNA OPCION]</option> <?php
+                                                                        foreach (SIMResources::$formatos_hora as $Formato => $FormatoDate) :
+                                                                        ?> <option value="<?= $Formato ?>" <?= $Formato == $frm[FormatoHora] ? "selected" : "" ?>> <?= $Formato . " Ejemplo: (" . date($FormatoDate) . ")" ?></option> <?php
+                                                                                                                                                                                                                                    endforeach;
+                                                                                                                                                                                                                                        ?>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group first ">
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1">Formato Fecha Hora</label>
+            <div class="col-sm-8">
+                <select name="FormatoFechaHora" class="form-control">
+                    <option value="">[SELECCIONA UNA OPCION]</option> <?php
+                                                                        foreach (SIMResources::$formatos_fecha_hora as $Formato => $FormatoDate) :
+                                                                        ?> <option value="<?= $Formato ?>" <?= $Formato == $frm[FormatoFechaHora] ? "selected" : "" ?>> <?= $Formato . " Ejemplo: (" . date($FormatoDate) . ")" ?></option> <?php
+                                                                                                                                                                                                                                        endforeach;
+                                                                                                                                                                                                                                            ?>
+                </select>
+            </div>
+        </div>
+    </div>
 
 
                             <!-- INICIO VENTANA OBJETOS -->
@@ -1128,7 +1193,40 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class="widget-header widget-header-large">
+                                <h3 class="widget-title grey lighter">
+                                    <i class="ace-icon"></i> Yappy
+                                </h3>
+                            </div>
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> URL Yappy </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" id="URLYappy" name="URLYappy" placeholder="URL Yappy" class="col-xs-12" title="URL Yappy" value="<?php echo $frm["URLYappy"]; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> ID_DEL_COMERCIO_YAPPY</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" id="ID_DEL_COMERCIO_YAPPY" name="ID_DEL_COMERCIO_YAPPY" placeholder="ID_DEL_COMERCIO_YAPPY" class="col-xs-12" title="ID_DEL_COMERCIO_YAPPY" value="<?php echo $frm["ID_DEL_COMERCIO_YAPPY"]; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group first ">
+                                <div class="col-xs-12 col-sm-6"><label class="col-sm-4 control-label no-padding-right" for="form-field-1"> CLAVE_SECRETA_YAPPY</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" id="CLAVE_SECRETA_YAPPY" name="CLAVE_SECRETA_YAPPY" placeholder="CLAVE_SECRETA" class="col-xs-12" title="CLAVE_SECRETA" value="<?php echo $frm["CLAVE_SECRETA_YAPPY"]; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Modo </label>
+                                    <div class="col-sm-8">
+                                        <select name="IsTestYappy" id="IsTestYappy" class="form-control">
+                                            <option value="1" <?php if ($frm["IsTestYappy"] == 1) echo "selected"; ?>>Pruebas</option>
+                                            <option value="0" <?php if ($frm["IsTestYappy"] == 0) echo "selected"; ?>>Producción</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Configuracion Notificaciones -->
 
                             <div class="widget-header widget-header-large">

@@ -11,25 +11,26 @@ $columns = array();
 $origen = SIMNet::req("origen");
 
 
-$table = "Galeria2";
-$key = "IDGaleria2";
+$table = "ConfiguracionConsumosTaloneraSocio";
+$key = "IDConfiguracionConsumosTaloneraSocio";
 $where = " WHERE " . $table . ".IDClub = '" . SIMUser::get("club") . "' ";
-$script = "galerias2";
+$script = "configuraciontalonerasocio";
 
 $oper = SIMNet::req("oper");
 if (SIMNet::req("_search") == "true")
 	$oper = "search";
+
 switch ($oper) {
 
 	case "del":
 
-		$sql_delete = "DELETE FROM Usuario WHERE IDUsuario = '" . $_POST["id"] . "' LIMIT 1";
+		$sql_delete = "DELETE FROM ConfiguracionConsumosTaloneraSocio WHERE IDConfiguracionConsumosTaloneraSocio = '" . $_POST["id"] . "' LIMIT 1";
 		//echo "<br>";
 		$qry_delete = $dbo->query($sql_delete);
 
 		$_GET["page"] = 1;
 		$_GET['rows'] = 100;
-		$_GET['sidx'] = "Nombre ASC";
+		$_GET['sidx'] = "IDConfiguracionConsumosTaloneraSocio ASC";
 		$_GET['sord'] = "ASC";
 
 
@@ -43,7 +44,7 @@ switch ($oper) {
 			switch ($search_object->field) {
 				case 'qryString':
 
-					$where .= " AND ( Nombre LIKE '%" . $search_object->data . "%' )";
+					$where .= " AND ( HoraInicioAlmuerzo LIKE '%" . $search_object->data . "%' )";
 					break;
 
 				default:
@@ -61,7 +62,7 @@ switch ($oper) {
 		$qryString = SIMNet::req("qryString");
 		if (!empty($qryString)) {
 
-			$where .= " AND ( Nombre LIKE '%" . $qryString . "%'  )  ";
+			$where .= " AND ( LabelDocumento LIKE '%" . $qryString . "%'  )  ";
 		} //end if
 		break;
 }
@@ -92,7 +93,7 @@ if (empty($limit))
 
 
 
-$sql = "SELECT " . $table . ".* FROM " . $table . $where . " ORDER BY $sidx $sord LIMIT " . $start . "," . $limit;
+$sql = "SELECT * FROM ConfiguracionConsumosTaloneraSocio" . $where . "  " . $str_limit;
 //exit;
 //var_dump($sql);
 $result = $dbo->query($sql);
@@ -111,8 +112,11 @@ while ($row = $dbo->fetchArray($result)) {
 		$responce->rows[$i]['cell'] = array(
 			$key => $row[$key],
 			"Editar" => '<a class="green" href="' . $script . '.php?action=edit&id=' . $row[$key] . '' . '"><i class="ace-icon fa fa-pencil bigger-130"/></a>',
-			"Seccion" => $dbo->getFields("SeccionGaleria2", "Nombre", "IDSeccionGaleria2 = '" . $row["IDSeccionGaleria2"] . "'"),
-			"Nombre" => $row["Nombre"],
+			"HoraInicioDesayuno" => $row["HoraInicioDesayuno"],
+
+			"HoraInicioAlmuerzo" => $row["HoraInicioAlmuerzo"],
+			"HoraInicioCena" => $row["HoraInicioCena"],
+
 			"Publicar" => $row["Publicar"],
 			"Eliminar" => '<a class="red eliminar_registro" rel=' . $table . ' id=' . $row[$key] . ' lang = ' . $script . ' href="#"><i class="ace-icon fa fa-trash-o bigger-130"/></a>'
 		);
@@ -120,8 +124,11 @@ while ($row = $dbo->fetchArray($result)) {
 		$responce->rows[$i]['cell'] = array(
 			$key => $row[$key],
 			"Editar" => '<a class="green" href="' . $script . '.php?action=edit&id=' . $row[$key] . '' . '"><i class="ace-icon fa fa-pencil bigger-130"/></a>',
-			"Seccion" => $dbo->getFields("SeccionGaleria2", "Nombre", "IDSeccionGaleria2 = '" . $row["IDSeccionGaleria2"] . "'"),
-			"Nombre" => $row["Nombre"],
+			"HoraInicioDesayuno" => $row["HoraInicioDesayuno"],
+
+			"HoraInicioAlmuerzo" => $row["HoraInicioAlmuerzo"],
+			"HoraInicioCena" => $row["HoraInicioCena"],
+
 			"Publicar" => $row["Publicar"],
 			"Eliminar" => '<a class="red eliminar_registro" rel=' . $table . ' id=' . $row[$key] . ' lang = ' . $script . ' href="#"><i class="ace-icon fa fa-trash-o bigger-130"/></a>'
 		);

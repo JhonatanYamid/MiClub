@@ -2,8 +2,8 @@
 
 SIMReg::setFromStructure(array(
     "title" => "configuracionGeneral",
-    "table" => "Club",
-    "key" => "IDClub",
+    "table" => "ConfiguracionClub",
+    "key" => "IDConfiguracionClub",
     "mod" => "Socio"
 ));
 
