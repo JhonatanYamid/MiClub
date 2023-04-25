@@ -108,6 +108,7 @@ class SIMWebServiceNoticias
 
         // PARA FEDEGOLF SE UTILIZA EL SERVICIO DE ELLOS PARA LA VERSION 2
         if ($IDClub == 17 && $Version == 2) :
+            require LIBDIR  . "SIMWebServiceFedegolf.inc.php";
             $respuesta = SIMWebServiceFedegolf::comunidad_al_aire($IDClub, $IDSeccion, $IDSocio, $Tag, $Version, $IDUsuario);
             return $respuesta;
         endif;

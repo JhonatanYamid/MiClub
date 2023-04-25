@@ -128,22 +128,35 @@ $logo_ruta = CLUB_DIR . $dbo->getFields("Club", "FotoDiseno1", "IDClub = '" . SI
                                                         <hr>
                                                         <!-- PAGE CONTENT BEGINS -->
                                                     </div>
-                                                    <div class="col-xs-6" style="font-size: 20px;">
-                                                    <br>
+                                                    <div class="col-xs-6" style="font-size: 20px;" align="center">
+                                                        <br>
                                                         <?php
                                                         $fechaActual = date('Y-m-d');
                                                         $sql_entra = "SELECT * FROM `LogRegistroAlimentoSocio` WHERE IDClub = '" . SIMUser::get("club") . "' ORDER BY IDLogRegistroAlimentoSocio DESC LIMIT 10";
                                                         $r_entra = $dbo->query($sql_entra);
                                                         $row_entra = $dbo->fetch($r_entra);
+
                                                         foreach ($row_entra as $j => $i) {
                                                             if ($i['FechaRegistro'] != date('Y-m-d')) {
                                                                 $borra = "DELETE FROM LogRegistroAlimentoSocio WHERE FechaRegistro <> '" . date('Y-m-d') . "'";
                                                                 $dbo->query($borra);
                                                             }
+                                                            $cedula = $i['Cedula'];
+                                                            if (strpos($i['Mensaje'], 'Alimento registrado correctamente para') !== false) {
+                                                                $Foto = $dbo->getFields("Socio", "Foto", "NumeroDocumento = '" . $cedula . "' AND IDClub = '" . SIMUser::get("club") . "'");
+                                                                // $sql_user = "SELECT Foto FROM `Socio` WHERE IDClub = '" . SIMUser::get("club") . "' AND NumeroDocumento = '$cedula' ORDER BY IDLogRegistroAlimentoSocio DESC LIMIT 1";
+                                                                // $r_user = $dbo->query($sql_user);
+                                                                // $row_user = $dbo->fetch($r_user);
+                                                                $foto = "<img src='" . SOCIO_ROOT . "$Foto' width=55 style='border-radius: 50%;margin-right:10px' >";
+                                                                $color = '#d4edda';
+                                                            } else {
+                                                                $foto = "<div style='color:white; font-size:20px; background:#c8afb2;font-weight:600; border-radius: 100%;width:55px;height:55px;text-align:center;line-height:55px;'>X</div>";
+                                                                $color = '#f8d7da';
+                                                            }
                                                             if ($j == 0) {
-                                                                echo "<div style='color:#0c5460; font-size:27px;background:#abd0d7; padding:5px;padding-left:10px;border-radius: 5px;font-weight:600'>".$i['Mensaje'] . "</div>";
-                                                            }else{
-                                                                echo "<div style='color:#0c5460; font-size:20px;background:#d1ecf1; padding:3px; padding-left:10px;margin-top:5px;border-radius: 5px;font-weight:600'>".$i['Mensaje'] . "</div>";
+                                                                echo "<div class='row' style='color:#0c5460; font-size:27px;background:$color; padding:5px;padding-left:10px;border-radius: 5px;font-weight:600'><div class='col-xs-2'>" .$foto."</div><div class='col-xs-10'>". $i['Mensaje'] . "</div></div>";
+                                                            } else {
+                                                                echo "<div class='row' style='color:#0c5460; font-size:20px;background:$color; padding:3px; padding-left:10px;margin-top:5px;border-radius: 5px;font-weight:600'><div class='col-xs-2'>" .$foto."</div><div class='col-xs-10'>". $i['Mensaje'] . "</div></div>";
                                                             }
                                                         }
                                                         ?>

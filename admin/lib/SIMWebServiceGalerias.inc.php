@@ -329,10 +329,19 @@ class SIMWebServiceGalerias
                     } //ednw hile
                 }
 
+                //VERIFICO SI SE PUEDE MOSTRAR LA DESCRIPCION
+               $PermiteDescripcion= $dbo->getFields("ConfiguracionGaleria", "PermiteDescripcion", "IDClub = '" . $IDClub . "'");
+               if($PermiteDescripcion == "S"){
+
+                $Descripcion= "  " . $r["Descripcion"];
+               }else{
+                $Descripcion="";
+               }
+
                 $datos_galeria["IDClub"] = $r["IDClub"];
                 $datos_galeria["IDSeccionGaleria"] = $r["IDSeccionGaleria" . $Version];
                 $datos_galeria["IDGaleria"] = $r["IDGaleria" . $Version];
-                $datos_galeria["Nombre"] = $r["Nombre"];
+                $datos_galeria["Nombre"] = $r["Nombre"] . $Descripcion;
                 $datos_galeria["Descripcion"] = $r["Descripcion"];
 
 

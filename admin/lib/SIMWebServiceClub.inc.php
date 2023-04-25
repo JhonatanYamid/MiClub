@@ -984,6 +984,9 @@ $IDClub="8"; */
                 $datos_club["Movilidad"] = $response_diagnostico;
                 $datos_club["LabelMovilidad"] = $r["LabelMovilidad"];
 
+                //CARNET CASTILLO DE AMAGUAÑA
+                $datos_club["TextoHeaderFormularioActivacionCarnetSeguridad"] = $dbo->getFields("ConfiguracionCarnet", "TextoHeaderFormularioActivacionCarnetSeguridad", "IDClub = '" . $IDClub . "'");;
+
                 //Tipo de header de app
                 if (empty($r["TipoHeaderApp"])) :
                     $datos_club["TipoHeaderApp"] = "Clasico";
@@ -1029,7 +1032,7 @@ $IDClub="8"; */
             $message = $dbo->rows($qry1) . " Encontrados";
 
             while ($r = $dbo->fetchArray($qry1)) {
-                if (!empty($IDUsuario)) {                    
+                if (!empty($IDUsuario)) {
                     $mostrar_popup = SIMWebServiceApp::verifica_ver_popup_empl($r, $IDUsuario);
                 }
 
@@ -1342,7 +1345,7 @@ $IDClub="8"; */
                 //Fin otros datos usuario
 
 
-                
+
 
                 //Encuestas al abrir app
                 $encuesta_activa = 0;

@@ -437,7 +437,7 @@ class SIMWebService
 
 
         //Consulto cuantos reservas se han tomado en esta hora para saber si ya llegó al limite de cupos
-        $sql_reserva_elemento_hora_fecha = "SELECT IDReservaGeneral FROM ReservaGeneral WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' and IDServicioElemento = '" . $IDElemento . "' and Fecha = '" . $Fecha . "' " . $condicion_estado . " and Hora = '" . $horaInicial . "' ";
+        $sql_reserva_elemento_hora_fecha = "SELECT IDReservaGeneral, IDClub, IDServicio FROM ReservaGeneral WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $IDServicio . "' and IDServicioElemento = '" . $IDElemento . "' and Fecha = '" . $Fecha . "' " . $condicion_estado . " and Hora = '" . $horaInicial . "' ";
         $result_reserva_elemento_hora_fecha = $dbo->query($sql_reserva_elemento_hora_fecha);
         $total_cupos_reservados = $dbo->rows($result_reserva_elemento_hora_fecha);
 
@@ -449,10 +449,28 @@ class SIMWebService
         $total_invitados = 0;
         if ($datos_servicio["ContarInvitadosCupo"] == "S" || $datos_servicio["ContarInvitadosCupo"] == "") {
             while ($row_invitados_reserva = $dbo->fetchArray($result_reserva_elemento_hora_fecha)) :
+                //Especial camino arrayanes en donde el residente pude decir que si lo cuente como un cupo o no
+                if($row_invitados_reserva["IDServicio"]==24126){
+                    $sql_resp="SELECT Valor FROM ReservaGeneralCampo  WHERE IDReservaGeneral = '". $row_invitados_reserva["IDReservaGeneral"] ."' LIMIT 1";
+                    $result_resp=$dbo->query($sql_resp);
+                    $datos_resp=$dbo->fetchArray($result_resp);                
+                    if($datos_resp["Valor"]=="Solo para mi(s) invitados"){
+                        $TotalDescuento=1;
+                    }
+                    else{
+                        $TotalDescuento=0;
+                    }
+                }
+                //Fin especial
+
                 $sql_invitado = "Select count(IDReservaGeneralInvitado) as TotalInvitados From ReservaGeneralInvitado Where IDReservaGeneral = '" . $row_invitados_reserva["IDReservaGeneral"] . "'";
                 $result_invitado = $dbo->query($sql_invitado);
                 $row_invitados = $dbo->fetchArray($result_invitado);
-                $total_invitados += $row_invitados["TotalInvitados"];
+                if((int)$row_invitados["TotalInvitados"]<=0){
+                    $TotalDescuento=0;
+                }
+
+                $total_invitados += ($row_invitados["TotalInvitados"]-$TotalDescuento);
             endwhile;
         }
 
@@ -4153,6 +4171,7 @@ class SIMWebService
                                                 $Foto = $dbo->getFields("Auxiliar", "Foto", "IDAuxiliar = '" . $IDAuxiliar . "'");
                                                 $auxiliar["Foto"] = (empty($Foto)) ? "" : ELEMENTOS_ROOT . $Foto;
                                                 $auxiliar["Disponible"] = empty($id_reserva) ? "S" : "N";
+                                                $auxiliar["ValorAuxiliar"] = $datos_auxiliar["ValorAuxiliar"];
                                                 $auxiliar["TextoDisponible"] = "";
 
                                                 if (!empty($id_reserva)) {
@@ -6393,6 +6412,7 @@ class SIMWebService
         $permiteHorario = $datos_servicio["horarioPermiso"];
         $documentoSocio = $datos_socio["NumeroDocumento"];
         $CuposporHora = $datos_servicio["CupoMaximoBloque"];
+        $CrearInvitacionExterno=$datos_servicio["CrearInvitacionExterno"];
 
 
 
@@ -7220,6 +7240,7 @@ class SIMWebService
             foreach ($response_dispo_aux["response"] as $datos_conf_aux) :
                 foreach ($datos_conf_aux["Auxiliares"] as $datos_aux) :
                     $array_aux_disponibles[] = $datos_aux["IDAuxiliar"];
+                    $array_aux_disponibles_valor[$datos_aux["IDAuxiliar"]] = $datos_aux["ValorAuxiliar"];
                     $HorasFinales[$datos_aux["IDAuxiliar"]] = $datos_aux["HoraFin"];
                 endforeach;
             endforeach;
@@ -7275,6 +7296,8 @@ class SIMWebService
                             $respuesta["success"] = false;
                             $respuesta["response"] = null;
                             return $respuesta;
+                        else:
+                            $ValorAuxiliaresReserva+=$array_aux_disponibles_valor[$IDAuxiliarValidar];
                         endif;
 
                     endif;
@@ -9889,6 +9912,8 @@ class SIMWebService
                     }
                 }
 
+
+                /*
                 //El siguiente día de reserva no puede ser seguido, es decir, las reservas son interdiarias.
                 $hoy_val = date("Y-m-d");
                 $condicion_reserva_verif = " and Tipo <> 'Automatica'";
@@ -9922,6 +9947,7 @@ class SIMWebService
                         }
                     }
                 }
+                */
             }
         }
         //FIN Especia Valle arriba athletic
@@ -10055,6 +10081,7 @@ class SIMWebService
                     $RepetirFechaFinal = date("Y-m-d", $RepetirFechaFinal);
                     $EspecialAnapoima = "Especial";
                 }
+
             endforeach;
 
             if ($Repetir == "S") {
@@ -11175,8 +11202,7 @@ class SIMWebService
 
 
                                         if (empty($id_reserva_disponible) || $cupo_total == "N") :
-
-
+                                              
                                             $datos_invitado = json_decode($Invitados, true);
 
                                             //Verifico que el socio no este como invitado en el mismo servicio en otra hora
@@ -11713,6 +11739,7 @@ class SIMWebService
                                             endif;
 
 
+                                              
 
                                             // SE ESTA INSERTANDO EL IDCaddieSocio DE SER EL CASO
                                             //Guardo la reserva maestra
@@ -11724,7 +11751,7 @@ class SIMWebService
 
                                             // Si esta hablitado el Crear invitación registramos en Invitados
                                             // Crear invitaciones en el modulo invitados
-                                            if ($CrearInvitacionExterno == 'S') {
+                                            if ($CrearInvitacionExterno == 'S' && $datos_servicio["PermiteInvitadoExternoCedula"] == "S" && empty($Admin) ) {
                                                 require_once LIBDIR . "SIMWebServiceAccesos.inc.php";
                                                 $datos_invitado = json_decode($Invitados, true);
                                                 if (count($datos_invitado) > 0) :
@@ -11844,7 +11871,7 @@ class SIMWebService
                                                     $ValoresFomulario = json_encode($detalle_datos["CamposDinamicos"]);
 
                                                     if (!in_array($datos_invitado_actual, $array_invitado_agregado)) :
-                                                        if (($IDSocioInvitado == 0 || $IDSocioInvitado == "") && $datos_servicio["PermiteInvitadoExternoCedula"] == "S" &&  $datos_servicio["CrearInvitacionExterno"] == "S") {
+                                                        if (($IDSocioInvitado == 0 || $IDSocioInvitado == "") && $datos_servicio["PermiteInvitadoExternoCedula"] == "S" &&  $datos_servicio["CrearInvitacionExterno"] == "S" && empty($Admin)) {
                                                             $invitacionExterna = SIMServicioReserva::CrearInvitacionExterno($IDClub, $IDSocio, $CedulaSocioInvitado, $NombreSocioInvitado, $CorreoSocioInvitado, $Fecha, $Fecha, $IDServicio, $ValoresFomulario);
                                                             if (!$invitacionExterna["success"]) {
                                                                 $respuesta["success"] = false;
@@ -12329,6 +12356,8 @@ class SIMWebService
                                                 $ValorReserva += ($cantidadExternos * $datos_servicio["InvitadoExternoValor"]);
                                             }
 
+                                            $ValorReserva += $ValorAuxiliaresReserva;
+
                                             $datos_reserva["ValorReserva"] = (float) $ValorReserva;
                                             $TextoValor = number_format((float) $ValorReserva, 1, ",", ".");
                                             if ($IDClub == 124) :
@@ -12337,6 +12366,13 @@ class SIMWebService
 
                                             $datos_reserva["ValorPagoTexto"] = $datos_club_otros["SignoPago"] . " " . $TextoValor . " " . $datos_club_otros["TextoPago"];
 
+                                            if ($IDClub == 86) {
+                                                $valor_iva_base = (float)$TextoValor / 1.12;
+                                                $valor_iva = (float)$TextoValor - $valor_iva_base;
+                                                $precioSinIva = " Precio sin iva:" .  number_format((float) $valor_iva_base, 2, ",", ".");
+                                                $Iva = " Iva:" . number_format((float) $valor_iva, 2, ",", ".");
+                                                $datos_reserva["ValorPagoTexto"] = $datos_club_otros["SignoPago"] . " " . $TextoValor . " " . $datos_club_otros["TextoPago"] . $precioSinIva . $Iva;
+                                            }
 
 
 
@@ -13178,6 +13214,7 @@ class SIMWebService
     public function set_reserva_golf($IDClub, $IDSocio, $IDElemento, $IDServicio, $Fecha, $Hora, $Campos, $Invitados, $Tee)
     {
         $dbo = &SIMDB::get();
+        $ValorAuxiliaresReserva=0;
         if (!empty($IDClub) && !empty($IDSocio) && !empty($IDElemento) && !empty($IDServicio) && !empty($Fecha) && !empty($Hora) && !empty($Tee)) {
 
             //verifico que el socio exista y pertenezca al club

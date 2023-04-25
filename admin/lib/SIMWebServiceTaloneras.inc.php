@@ -315,13 +315,16 @@ class SIMWebServiceTaloneras
         $response = array();
 
         if (!empty($IDClub) && (!empty($IDSocio) || !empty($IDUsuario))) :
-
+            $Servicios = array();
             if ($IDSocio > 0) {
                 $Campo = "IDSocio";
                 $Valor = $IDSocio;
                 $SQLServicios = "SELECT S.IDServicio, S.IDServicioMaestro, SC.TituloServicio FROM Servicio S, ServicioClub SC WHERE SC.Activo = 'S' AND S.IDServicioMaestro = SC.IDServicioMaestro AND S.IDClub = '$IDClub' AND SC.IDClub = '$IDClub'";
                 $QRYServicio = $dbo->query($SQLServicios);
-                $Servicios = $dbo->fetch($QRYServicio);
+                // $Servicios = $dbo->fetch($QRYServicio);
+                while ($row = $dbo->assoc($QRYServicio)) {
+                    array_push($Servicios, $row);
+                }
             } else {
                 $Campo = "IDUsuario";
                 $Valor = $IDUsuario;
@@ -655,17 +658,19 @@ class SIMWebServiceTaloneras
                 if ($PermitirRecargarMonedero == 1) :
                     // BUSCAMOS UNA TALONERA COMO LA QUE VA A COMPARA QUE SEA TIPO MONEDERO PARA ACTULIZARLA
 
-                    $SQLBuscarTalonera = "SELECT IDSocioTalonera WHERE IDClub = $IDClub AND $Campo = $Valor AND TipoMonedero = 1 AND (IDServicio = $IDServicio OR TodosLosServicios = 1) AND Activo = 1 ORDER BY FechaTrCr DESC LIMIT 1";
+                    $SQLBuscarTalonera = "SELECT * FROM SocioTalonera WHERE IDClub = $IDClub AND $Campo = $Valor AND TipoMonedero = 1 AND (IDServicio = $IDServicio OR TodosLosServicios = 1) AND Activo = 1 ORDER BY FechaTrCr DESC LIMIT 1";
                     $QRYBuscarTalonera = $dbo->query($SQLBuscarTalonera);
                     $DatosSocioTalonera = $dbo->fetchArray($QRYBuscarTalonera);
 
                     $IDSocioTalonera = $DatosSocioTalonera[IDSocioTalonera];
+                    $SaldoMonedero = $DatosSocioTalonera[SaldoMonedero];
+                    $NuevoSaldo= ($datos_talonera[SaldoTaloneraMonedero] + $SaldoMonedero); 
 
                     if (!empty($DatosSocioTalonera)) :
 
                         $Insertar = 0; //SI SE DEBE ACTULIZAR ENTONCES NO LA INSERTAMOS COMO NUEVA
 
-                        $SQLUpdate = "UPDATE SocioTalonera SET IDTalonera = '$IDTalonera', ValorPagado = '$ValorPagado', FechaRecarga = '$FechaRecarga', FechaVencimiento = '$FechaVencimiento', SaldoMonedero = '$datos_talonera[SaldoTaloneraMonedero]',FechaTrEd = NOW(), UsuarioTrEd = '$Campo-$Valor' WHERE IDSocioTalonera = $IDSocioTalonera";
+                        $SQLUpdate = "UPDATE SocioTalonera SET IDTalonera = '$IDTalonera', ValorPagado = '$ValorPagado', FechaRecarga = '$FechaRecarga', FechaVencimiento = '$FechaVencimiento', SaldoTotalPasarela = '$NuevoSaldo',FechaTrEd = NOW(), UsuarioTrEd = '$Campo-$Valor' WHERE IDSocioTalonera = $IDSocioTalonera";
                         $dbo->query($SQLUpdate);
                     endif;
 
@@ -675,8 +680,8 @@ class SIMWebServiceTaloneras
 
                 // INSERTAMOS LA COMPRA DE LA TALONERA
 
-                $SQLInsert = "INSERT INTO SocioTalonera (IDClub, IDTalonera, IDServicio,$Campo, CantidadTotal, CantidadPendiente, SociosPosibles,Dirigida,ValorPagado ,FechaCompra,FechaVencimiento,TipoMonedero,SaldoMonedero,TodosLosServicios,UsuarioTrCr, FechaTrCr,Activo)
-				                                                    VALUES  ('$IDClub','$IDTalonera','$IDServicio','$Valor','$CantidadTotal',$CantidadPendiente,'$SociosPosibles','$Dirigida','$ValorPagado','$FechaCompra','$FechaVencimiento','$datos_talonera[TaloneraMonedero]','$datos_talonera[SaldoTaloneraMonedero]',$datos_talonera[TodosLosServicios],'$Campo-$Valor',NOW(),'0')";
+                $SQLInsert = "INSERT INTO SocioTalonera (IDClub, IDTalonera, IDServicio,$Campo, CantidadTotal, CantidadPendiente, SociosPosibles,Dirigida,ValorPagado ,FechaCompra,FechaVencimiento,TipoMonedero,SaldoMonedero,SaldoTotalPasarela,TodosLosServicios,UsuarioTrCr, FechaTrCr,Activo)
+				                                                    VALUES  ('$IDClub','$IDTalonera','$IDServicio','$Valor','$CantidadTotal',$CantidadPendiente,'$SociosPosibles','$Dirigida','$ValorPagado','$FechaCompra','$FechaVencimiento','$datos_talonera[TaloneraMonedero]','$datos_talonera[SaldoTaloneraMonedero]','1',$datos_talonera[TodosLosServicios],'$Campo-$Valor',NOW(),'0')";
                 if ($Insertar == 1) :
                     $dbo->query($SQLInsert);
                     $IDSocioTalonera = $dbo->lastID();
@@ -1067,11 +1072,35 @@ class SIMWebServiceTaloneras
 
                     if (($datos_talonera["IDTipoPago"] == 1 && $datos_talonera["EstadoTransaccion"] != "A" && empty($Admin)) || ($datos_talonera["IDTipoPago"] == 12 && $datos_talonera["EstadoTransaccion"] != "A" && empty($Admin))) :
 
+
+
+                      //se deja la talonera activa 
+                        $update = "UPDATE SocioTalonera SET Activo = 1 WHERE IDSocioTalonera = $IDSocioTalonera";
+                        $dbo->query($update);
+                        
+                        
+                        // si el saldo es 0 entonces se inactiva
+                       if($datos_talonera["SaldoMonedero"] <= 0 ):
+
                         $update = "UPDATE SocioTalonera SET Activo = 0 WHERE IDSocioTalonera = $IDSocioTalonera";
                         $dbo->query($update);
+                        
+                        endif;
+                        
+                        //si fue creada por primera vez se elimina (1 es el identificador al crearla por primera vez)
+                       if($datos_talonera["SaldoTotalPasarela"] == 1 ):
 
-                        $respuesta["message"] = "Esperando respuesta de la transaccion";
-                        $respuesta["success"] = false;
+                        $update = "UPDATE SocioTalonera SET Activo = 0 WHERE IDSocioTalonera = $IDSocioTalonera";
+                        $dbo->query($update);
+                        
+                          //ELIMINAMOS LA TALONERA
+                        $SQLDelete = "DELETE FROM SocioTalonera WHERE IDSocioTalonera = $IDSocioTalonera";
+                        $dbo->query($SQLDelete);
+
+                        endif;
+
+                        $respuesta["message"] = "Talonera eliminada correctamente ";
+                        $respuesta["success"] = true;
                         $respuesta["response"] = null;
                         return $respuesta;
                     endif;
@@ -1094,6 +1123,16 @@ class SIMWebServiceTaloneras
                     //VALIDAMOS WOMPI
                     if ((int)$datos_talonera["IDTipoPago"] == 19) :
                         $PermiteEliminar = "N";
+                    endif;
+                    
+                    //SI EXISTE VALOR EN SALDOTOTALPASARELA NO SE PUEDE ELIMNAR POR QUE PUEDE QUE TENGA SALDO ANTERIOR
+                     if ((int)$datos_talonera["SaldoTotalPasarela"] > 0) :
+                        $PermiteEliminar = "N";
+                        
+                        $respuesta["message"] = "Talonera eliminada correctamente ";
+                        $respuesta["success"] = true;
+                        $respuesta["response"] = null;
+                        return $respuesta;
                     endif;
 
                     if ($PermiteEliminar == 'S') :
@@ -1298,21 +1337,44 @@ class SIMWebServiceTaloneras
 
     public function talonera_disponible($IDClub, $IDSocio, $IDServicio, $FechaReserva, $IDSocioBeneficiario)
     {
-        $dbo = SIMDB::get();
-
-        $Hoy = date("Y-m-d");
-
-        if (empty($IDSocioBeneficiario)) :
-            $Persona = $IDSocio;
-        else :
-            $Persona = $IDSocioBeneficiario;
-        endif;
-
-        $SQLTalonera = "SELECT * FROM SocioTalonera WHERE IDClub = $IDClub AND (CantidadPendiente > 0 OR (TipoMonedero = 1 AND SaldoMonedero > 0)) AND FechaVencimiento >= '$FechaReserva' AND (IDServicio = $IDServicio OR TodosLosServicios = 1) AND (SociosPosibles LIKE '%$Persona%') AND Activo = '1' ORDER BY  SaldoMonedero DESC, CantidadPendiente DESC, IDSocioTalonera DESC LIMIT 1";
-        $QRYTalonera = $dbo->query($SQLTalonera);
-        $Datos = $dbo->fetchArray($QRYTalonera);
-
-        $IDSocioTalonera = $Datos[IDSocioTalonera];
+         $dbo = SIMDB::get(); 
+ 
+        $Hoy = date("Y-m-d"); 
+ 
+        if (empty($IDSocioBeneficiario)) : 
+            $Persona = $IDSocio; 
+        else : 
+            $Persona = $IDSocioBeneficiario; 
+        endif; 
+ 
+        //averiguo las taloneras que tienen este servicio 
+        $sql_tal_serv="SELECT TS.IDTalonera FROM  TaloneraServicios TS, Talonera T  WHERE TS.IDTalonera = T.IDTalonera and TS.IDServicio = '".$IDServicio."' and T.TodosLosServicios = 0 "; 
+        $r_tal_serv=$dbo->query($sql_tal_serv); 
+        while($row_tal_serv=$dbo->fetchArray($r_tal_serv)){ 
+            $array_id_talonera[]=$row_tal_serv["IDTalonera"]; 
+        } 
+         
+        if(count($array_id_talonera)>0){ 
+            $id_consulta=implode(",",$array_id_talonera); 
+            $cond_consulta= " and IDTalonera in (".$id_consulta.")"; 
+        } 
+ 
+ 
+ 
+        // $SQLTalonera = "SELECT IDSocioTalonera FROM SocioTalonera ST, TaloneraServicios TS WHERE IDClub = $IDClub AND (CantidadPendiente > 0 OR (TipoMonedero = 1 AND SaldoMonedero > 0)) AND FechaVencimiento >= '$FechaReserva' AND ((ST.IDServicio = $IDServicio OR TodosLosServicios = 1) OR (TS.IDTalonera = ST.IDTalonera AND TS.IDServicio = '$IDServicio')) AND (SociosPosibles LIKE '%$Persona%') AND Activo = '1' ORDER BY  SaldoMonedero DESC, CantidadPendiente DESC, IDSocioTalonera DESC LIMIT 1"; 
+        $SQLTalonera = "SELECT * FROM SocioTalonera WHERE IDClub = $IDClub AND (CantidadPendiente > 0 OR (TipoMonedero = 1 AND SaldoMonedero > 0)) AND FechaVencimiento >= '$FechaReserva' AND (IDServicio = $IDServicio OR TodosLosServicios = 1) AND (SociosPosibles LIKE '%$Persona%') AND Activo = '1' ORDER BY  SaldoMonedero DESC, CantidadPendiente DESC, IDSocioTalonera DESC LIMIT 1"; 
+        $QRYTalonera = $dbo->query($SQLTalonera); 
+        $Datos = $dbo->fetchArray($QRYTalonera); 
+ 
+        $IDSocioTalonera = $Datos[IDSocioTalonera]; 
+ 
+        if((int)$IDSocioTalonera<=0){ 
+            $SQLTalonera = "SELECT * FROM SocioTalonera WHERE IDClub = $IDClub AND (CantidadPendiente > 0 OR (TipoMonedero = 1 AND SaldoMonedero > 0)) AND FechaVencimiento >= '$FechaReserva' AND (SociosPosibles LIKE '%$Persona%') AND Activo = '1' ".$cond_consulta." ORDER BY  SaldoMonedero DESC, CantidadPendiente DESC, IDSocioTalonera DESC LIMIT 1"; 
+            $QRYTalonera = $dbo->query($SQLTalonera); 
+            $Datos = $dbo->fetchArray($QRYTalonera); 
+            $IDSocioTalonera = $Datos[IDSocioTalonera]; 
+     
+        }  
 
         return $IDSocioTalonera;
     }

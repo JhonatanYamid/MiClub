@@ -891,6 +891,11 @@ class SIMWebServiceReservas
                                 case "3":
                                     $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
                                     $imagen = "https://www.miclubapp.com/file/noticia/icsi.png";
+
+                                    //para el campestre medellin
+                                    if ($IDClub == 20) {
+                                        $imagen = "https://www.miclubapp.com/img/CargarACtaCampestreMedellin.png";
+                                    }
                                     break;
                                 case "11":
                                     //$imagen = "https://www.miclubapp.com/file/noticia/260838_Sin_t__tulo.png";
@@ -901,6 +906,10 @@ class SIMWebServiceReservas
                                     break;
                                 case "12":
                                     $imagen = "https://www.miclubapp.com/file/noticia/iccredibancopago.png";
+                                    break;
+
+                                case "19":
+                                    $imagen = "https://www.miclubapp.com/img/WompiCampestreMedellin.png";
                                     break;
                                 default:
                                     $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
@@ -1370,6 +1379,11 @@ class SIMWebServiceReservas
                                         case "3":
                                             $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
                                             $imagen = "https://www.miclubapp.com/file/noticia/icsi.png";
+
+                                            //para el campestre medellin
+                                            if ($IDClub == 20) {
+                                                $imagen = "https://www.miclubapp.com/img/CargarACtaCampestreMedellin.png";
+                                            }
                                             break;
                                         case "11":
                                             //$imagen = "https://www.miclubapp.com/file/noticia/260838_Sin_t__tulo.png";
@@ -1380,6 +1394,10 @@ class SIMWebServiceReservas
                                             break;
                                         case "12":
                                             $imagen = "https://www.miclubapp.com/file/noticia/iccredibancopago.png";
+                                            break;
+
+                                        case "19":
+                                            $imagen = "https://www.miclubapp.com/img/WompiCampestreMedellin.png";
                                             break;
                                         default:
                                             $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
@@ -1764,6 +1782,11 @@ class SIMWebServiceReservas
                                 case "3":
                                     $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
                                     $imagen = "https://www.miclubapp.com/file/noticia/icsi.png";
+
+                                    //para el campestre medellin
+                                    if ($IDClub == 20) {
+                                        $imagen = "https://www.miclubapp.com/img/CargarACtaCampestreMedellin.png";
+                                    }
                                     break;
                                 case "11":
                                     //$imagen = "https://www.miclubapp.com/file/noticia/260838_Sin_t__tulo.png";
@@ -1774,6 +1797,10 @@ class SIMWebServiceReservas
                                     break;
                                 case "12":
                                     $imagen = "https://www.miclubapp.com/file/noticia/iccredibancopago.png";
+                                    break;
+
+                                case "19":
+                                    $imagen = "https://www.miclubapp.com/img/WompiCampestreMedellin.png";
                                     break;
                                 default:
                                     $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
@@ -1928,7 +1955,7 @@ class SIMWebServiceReservas
         return $respuesta;
     }
 
-    
+
     public function set_imagen_mapa_servicio_reserva($IDClub, $IDServicio, $File)
     {
         $dbo = &SIMDB::get();
@@ -1939,7 +1966,7 @@ class SIMWebServiceReservas
             $respuesta["message"] = 'No se cargó la imagen';
             $respuesta["success"] = false;
             $respuesta["response"] = null;
-        }else{
+        } else {
             $NameImagen = $files[0]["innername"];
             $sql_inserta_imagen = "Update Servicio Set ImagenMapa = '$NameImagen' Where IDServicio = '$IDServicio' AND IDClub = '$IDClub'";
             $dbo->query($sql_inserta_imagen);
@@ -1947,7 +1974,7 @@ class SIMWebServiceReservas
             $elemento["path"] = $url . $NameImagen;
             $elemento["url"] = URLROOT . "file/Mapas/" . $NameImagen;
             // array_push($response, $elemento); ImagenMapa
-            
+
             $respuesta["message"] = 'Prueba de carga de archivo';
             $respuesta["success"] = true;
             $respuesta["response"] = $elemento;
@@ -1965,11 +1992,11 @@ class SIMWebServiceReservas
             $respuesta["message"] = 'No se cargó la imagen';
             $respuesta["success"] = false;
             $respuesta["response"] = null;
-        }else{
+        } else {
             $NameImagen = $files[0]["innername"];
             $sql_inserta_imagen = "Update Servicio Set ImagenMapa = '$ImagenMapa', Elementos = '$Elementos', ImagenAncho = '$ImagenAncho', ImagenAlto = '$ImagenAlto' Where IDServicio = '$IDServicio' AND IDClub = '$IDClub'";
             $dbo->query($sql_inserta_imagen);
-            
+
             $respuesta["message"] =  "Configuracion guardada";
             $respuesta["success"] = true;
             $respuesta["response"] = null;
@@ -1983,7 +2010,7 @@ class SIMWebServiceReservas
 
         $sql = "SELECT ImagenMapa,ImagenAncho,ImagenAlto,Elementos FROM  Servicio WHERE IDServicio = '$IDServicio' and IDClub = '$IDClub'";
         $qry = $dbo->query($sql);
-        $response= array();
+        $response = array();
         if ($dbo->rows($qry) > 0) {
             $row = $dbo->fetchArray($qry);
             $servicio["ImagenMapa"] = $row['ImagenMapa'];
@@ -1995,7 +2022,7 @@ class SIMWebServiceReservas
             $respuesta["message"] =  "Mapa Encontrado";
             $respuesta["success"] = true;
             $respuesta["response"] = $response[0];
-        }else{
+        } else {
             $respuesta["message"] = 'No se cargó la imagen';
             $respuesta["success"] = false;
             $respuesta["response"] = null;
@@ -4253,6 +4280,10 @@ class SIMWebServiceReservas
                                     case "3":
                                         $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";
                                         $imagen = "https://www.miclubapp.com/file/noticia/icsi.png";
+                                        //para el campestre medellin
+                                        if ($IDClub == 20) {
+                                            $imagen = "https://www.miclubapp.com/img/CargarACtaCampestreMedellin.png";
+                                        }
                                         break;
                                     case "11":
                                         //$imagen = "https://www.miclubapp.com/file/noticia/260838_Sin_t__tulo.png";
@@ -4263,6 +4294,10 @@ class SIMWebServiceReservas
                                         break;
                                     case "12":
                                         $imagen = "https://www.miclubapp.com/file/noticia/iccredibancopago.png";
+                                        break;
+
+                                    case "19":
+                                        $imagen = "https://www.miclubapp.com/img/WompiCampestreMedellin.png";
                                         break;
                                     default:
                                         $imagen = "https://www.miclubapp.com/file/noticia/abonoc.png";

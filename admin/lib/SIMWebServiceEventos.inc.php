@@ -59,6 +59,7 @@ class SIMWebServiceEventos
         if (!empty($IDSocio) && $IDSeccion == "") :
 
             $sql_seccion_socio = $dbo->query("Select * From SocioSeccionEvento" . $Version . " Where IDSocio = '" . $IDSocio . "'");
+
             while ($row_seccion = $dbo->fetchArray($sql_seccion_socio)) :
                 $array_secciones_socio[] = $row_seccion["IDSeccionEvento"];
             endwhile;
@@ -135,6 +136,7 @@ class SIMWebServiceEventos
         if ($dbo->rows($qry) > 0) {
             $message = $dbo->rows($qry) . " " . SIMUtil::get_traduccion('', '', 'Encontrados', LANG);
             while ($r = $dbo->fetchArray($qry)) {
+
                 $evento["IDClub"] = $r["IDClub"];
                 $evento["IDSeccionEvento"] = $r["IDSeccionEvento" . $Version];
 
@@ -207,6 +209,7 @@ class SIMWebServiceEventos
                     //Verifico si quedan cupos
                     $sql_registrados = "SELECT count(*) as Total FROM  EventoRegistro" . $Version . " Where IDEvento" . $Version . " = '" . $r["IDEvento"] . "'";
 
+
                     $r_registrados = $dbo->query($sql_registrados);
                     $row_registrados = $dbo->FetchArray($r_registrados);
 
@@ -278,6 +281,7 @@ class SIMWebServiceEventos
 
                         $tipopago["Imagen"] = $imagen;
                         array_push($response_tipo_pago, $tipopago);
+
                     } //end while
                     $evento["TipoPago"] = $response_tipo_pago;
                 } else {
@@ -359,6 +363,7 @@ class SIMWebServiceEventos
         } //end else
 
         return $respuesta;
+
     } // fin function
 
     public function get_eventos_empleados($IDClub, $IDSeccion = "", $IDUsuario = "", $Tag = "", $Version = "", $Nombre = "", $Fecha = "")
@@ -445,6 +450,7 @@ class SIMWebServiceEventos
                     if ($FechaHoraLimite != "0000-00-00" && strtotime($fechahora_actual) > strtotime($FechaHoraLimite)) {
                         $evento["InscripcionApp"] = "N";
                         $evento["Cuerpo"] .= "<br><strong>" . SIMUtil::get_traduccion('', '', 'Inscripcionescerradas.', LANG) . "</strong>";
+
                     }
                 }
 
@@ -613,6 +619,7 @@ class SIMWebServiceEventos
         //busco el titulo de la configuracion del app
         $sql_modulo = "Select IDModulo,Titulo,TituloLateral From ClubModulo Where IDClub = '" . $IDClub . "' and IDModulo in (4,76)";
         $r_modulo = $dbo->query($sql_modulo);
+
         while ($row_modulo = $dbo->fetchArray($r_modulo)) {
             $array_modulo[$row_modulo["IDModulo"]] = $row_modulo["TituloLateral"];
         }
@@ -719,6 +726,66 @@ class SIMWebServiceEventos
         if (!empty($IDClub) && !empty($IDEvento) && (!empty($IDSocio) || $IDNoSocios > 0)) {
 
 
+
+         //VALIDACION PARA COTOPAXI  
+                if ($IDClub == 249) {
+                //datos del evento actual
+           $datos_evento = $dbo->fetchAll("Evento". $Version , " IDEvento$Version = '" . $IDEvento . "' ", "array");
+            //dias y rango de fecha del evento actual
+           $dias1= $datos_evento["Dias"];
+           $fecha_inicio= $datos_evento["FechaInicio"];
+           $fecha_fin= $datos_evento["FechaFin"];
+           $horainicio1 = $datos_evento["Hora"];
+           $horafin1 =$datos_evento["HoraFin"];
+            
+           //Buscamos los eventos a los que esta inscrito por ahora y que esten activos aun
+           	$sql_eventos_isncripcion = "SELECT GROUP_CONCAT(IDEvento$Version SEPARATOR ',') AS IDEventos FROM EventoRegistro$Version WHERE IDSocio = $IDSocio AND IDEvento$Version in (SELECT IDEvento$Version FROM Evento$Version WHERE FechaFin >= NOW())"; 
+            $qry_eventos_inscripcion = $dbo->query($sql_eventos_isncripcion); 
+            $id_eventos= $dbo->fetchArray($qry_eventos_inscripcion);
+            $id_eventos_inscriptos= $id_eventos["IDEventos"];
+           
+ 
+         $sql_selecion_eventos = $dbo->query("Select * From Evento$Version Where IDEvento$Version in ( $id_eventos_inscriptos )");
+             
+            while ($row_seleccion = $dbo->fetchArray($sql_selecion_eventos)) :
+            
+                 $dias2=$row_seleccion["Dias"];
+                  
+$horainicio2 = $row_seleccion["Hora"];
+$horafin2 =$row_seleccion["HoraFin"];
+                 
+// Convertir las cadenas de texto en arreglos de números enteros
+$dias1_array = array_map('intval', explode('|', trim($dias1, '|')));
+$dias2_array = array_map('intval', explode('|', trim($dias2, '|')));
+
+// Encontrar la intersección entre los dos arreglos
+$interseccion = array_intersect($dias1_array, $dias2_array);
+   
+// Verificar si el arreglo resultante tiene al menos un elemento
+if (!empty($interseccion)) {
+   
+                    
+// Convertir las horas a timestamp
+$inicio1 = strtotime($horainicio1);
+$fin1 = strtotime($horafin1);
+$inicio2 = strtotime($horainicio2);
+$fin2 = strtotime($horafin2);
+
+// Comprobar si hay cruce
+if (($inicio1 >= $inicio2 && $inicio1 <= $fin2) || ($fin1 >= $inicio2 && $fin1 <= $fin2) || ($inicio1 < $inicio2 && $fin1 > $fin2)) { 
+
+                    $respuesta["message"] = "Lo sentimos, ya tiene una inscripcion para el mismo Dia / Hora.";
+                    $respuesta["success"] = false;
+                    $respuesta["response"] = null;
+                    return $respuesta;
+                    }
+}  
+            endwhile;
+            
+             
+ 
+                }
+                
 
 
 

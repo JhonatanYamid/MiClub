@@ -765,6 +765,34 @@ class SIMWebServiceHotel
 
                             $mostrar = "S";
                             $habitaciones_disponibles = 1;
+                              
+                            if($IDClub==261):
+                            //ACA VALIDAMOS QUE SOLO SE MUESTRE PARA EL TIPO DE SOCIO
+                        
+$habitacion_tipo_socio = $dbo->getFields("TipoHabitacion", "IDTipoSocio", "IDTipoHabitacion =" . $r_habitacion["IDTipoHabitacion"] );
+                  if(!empty($habitacion_tipo_socio)):
+                   
+                            $mostrar = "N";
+                            $habitaciones_disponibles = 0;
+                            
+                   $TipoSocio = $dbo->getFields("Socio", "TipoSocio", "IDSocio = $IDSocio");
+                     
+                   $tipos_socios= str_replace("|||",",","$habitacion_tipo_socio");
+                   $tipos = substr($tipos_socios, 0, -1); 
+ 
+                   $r_detalle = $dbo->query("SELECT * FROM TipoSocio WHERE IDTipoSocio IN ('" . $tipos . "')  ");
+                        while ($row_detalle = $dbo->fetchArray($r_detalle)) {
+ 
+                if($row_detalle["Nombre"] == "$TipoSocio"): 
+                $mostrar = "S";
+                $habitaciones_disponibles = 1; 
+                endif;
+                                 
+                        } 
+                        endif;    
+                        endif;
+                        //FIN VALIDACION 
+                        
                             //Verifico que no tenga algun cierre este tipo de habitacion
                             $ArrayDiasEntreFechas = SIMWebServiceHotel::arrayperiodofechas($fechaBusqueda, $FechaFin);
                             foreach ($ArrayDiasEntreFechas as $i) {
@@ -1442,7 +1470,48 @@ class SIMWebServiceHotel
                 return $respuesta;
             }
         }
+        
+        
+        
+        //Validacion para verificar el cruce de fechas en las reservas en todos los clubes
+        
+        $sql_reserva_socio1 = "SELECT * FROM ReservaHotel WHERE IDHabitacion = '" . $IDHabitacion . "' and  IDClub = '" . $IDClub . "' and FechaFin >= now() ORDER BY IDReserva DESC ";
+                    $r_reserva_socio1 = $dbo->query($sql_reserva_socio1);
+
+  
+                    while ($DatosReserva1 = $dbo->fetchArray($r_reserva_socio1)) :
+                    
+                    //Fechas de las reservas ya realizadas
+$FechaInicio1 = $DatosReserva1["FechaInicio"];
+$FechaFin1 = $DatosReserva1["FechaFin"];
+ 
+
+$timestampInicio = strtotime($FechaInicio);
+$timestampFin = strtotime($FechaFin);
+$timestampInicio1 = strtotime($FechaInicio1);
+$timestampFin1 = strtotime($FechaFin1);
+
+if (($timestampInicio >= $timestampInicio1 && $timestampInicio <= $timestampFin1) || ($timestampFin >= $timestampInicio1 && $timestampFin <= $timestampFin1) || ($timestampInicio1 >= $timestampInicio && $timestampInicio1 <= $timestampFin) || ($timestampFin1 >= $timestampInicio && $timestampFin1 <= $timestampFin)) {
+                            $respuesta["message"] = "Lo sentimos, ya se encuentra una reserva en dentro del rango de fecha elegido!";
+                            $respuesta["success"] = false;
+                            $respuesta["response"] = null;
+                            return $respuesta;
+}  
+
+/* seteamos
+
+$FechaInicio = "";
+$FechaFin = "";
+$FechaInicio1 ="";
+$FechaFin1 = ""; */
+                    endwhile; 
+ 
+        
+        
+        
         //Validacion especial anapoima semana receso solo se puede toda la semana el dia  x
+
+
 
         if ($IDClub == 46) {
             //Verifico que no tenga mas reservas
