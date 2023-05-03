@@ -17,6 +17,7 @@ class SIMWebServiceBusqueda
             $conditionNoticia = " AND (Titular LIKE UCASE('%" . $Tag . "%') OR Cuerpo LIKE UCASE('%" . $Tag . "%'))";
             $conditionEvento = " AND (Titular LIKE UCASE('%" . $Tag . "%') OR Cuerpo LIKE UCASE('%" . $Tag . "%'))";
             $conditionGaleria = " AND (Nombre LIKE UCASE('%" . $Tag . "%') OR Descripcion LIKE UCASE('%" . $Tag . "%'))";
+            $conditionServicios = " AND TituloServicio LIKE UCASE('%" . $Tag . "%')";
         }
 
         if (isset($IDSocio) && $IDSocio) {
@@ -111,6 +112,59 @@ class SIMWebServiceBusqueda
                 }
             }
 
+
+            if (isset($IDSocio) && $IDSocio) {
+                $sql = "SELECT IDServicioMaestro , TituloServicio FROM `ServicioClub` WHERE Activo = 'S' AND `IDClub` = '$IDClub' $conditionServicios;";
+
+                $qry = $dbo->query($sql);
+                if ($dbo->rows($qry) > 0) {
+                    while ($r = $dbo->fetchArray($qry)) {
+
+
+
+                        $modulo["IDModulo"] = 2;
+                        $modulo["IDSubModulo"] = "";
+                        $modulo["IDSeccion"] = "";
+                        $modulo["IDDetalle"] = "";
+
+                        $sql_modulo = "SELECT IDServicio, Icono FROM Servicio WHERE IDClub = '" . $IDClub . "' and IDServicioMaestro = '" .$r["IDServicioMaestro"] . "' Limit 1";
+                        $qry_modulo = $dbo->query($sql_modulo);
+                        if ($dbo->rows($qry_modulo) > 0) {
+                            $r_modulo = $dbo->fetchArray($qry_modulo);
+
+
+
+
+
+
+                            $sql_modulop = "SELECT IDSubModulo,IDModulo FROM SubModulo WHERE IDClub = '" . $IDClub . "' and IDServicio = '" . $r_modulo["IDServicio"] . "' Limit 1";
+                            $qry_modulop = $dbo->query($sql_modulop);
+                            $r_modulop = $dbo->fetchArray($qry_modulop);
+                            if ($dbo->rows($qry_modulop) > 0 && $r_modulop['IDModulo']) {
+                                $modulo["IDModulo"] = strval($r_modulop["IDModulo"]);
+                                $modulo["IDSubModulo"] = "";
+                            } else {
+                                $modulo["IDModulo"] = strval(2);
+                                $modulo["IDSubModulo"] = "";
+                            }
+
+
+
+
+
+
+
+                            $modulo["Icono"] = "";
+                            if ($r_modulo["Icono"] != '') {
+                                $modulo["Icono"] = SERVICIO_ROOT . $r_modulo["Icono"];
+                            }
+                            $modulo["ModuloData"] = array("accion" => 'iniciarreserva', "idservicio" => $r_modulo["IDServicio"]);
+                            $modulo["NombreBusqueda"] = $r["TituloServicio"];
+                            array_push($response, $modulo);
+                        }
+                    }
+                }
+            }
 
             $sql = "SELECT `IDNoticia`,`IDSeccion`, `Titular`,`Cuerpo` FROM `Noticia` WHERE FechaInicio <= CURDATE() AND FechaFin >= CURDATE() and Publicar = 'S' AND `IDClub` = '$IDClub' $conditionNoticia;";
             $qry = $dbo->query($sql);

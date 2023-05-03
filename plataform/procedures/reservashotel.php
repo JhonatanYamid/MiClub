@@ -15,7 +15,7 @@
 	$key = SIMReg::get( "key" );
 	$mod = SIMReg::get( "mod" );
 
-
+	require_once LIBDIR . "SIMWebServiceHotel.inc.php";
 	//Verificar permisos
 	SIMUtil::verificar_permiso( $mod , SIMUser::get("IDPerfil") );
 

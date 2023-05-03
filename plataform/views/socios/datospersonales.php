@@ -292,15 +292,15 @@ $sqlCampo = "SELECT cfs.*
 
 					<?php if (SIMUser::get("club") == 121) : ?>
 						<div class="form-group first ">
-			
+
 							<div class="col-xs-12 col-sm-6">
 								<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> Ver horario </label>
-			
+
 								<div class="col-sm-8">
 									<a id="horario" href="<?php echo URLROOT . 'catolica_horario.php?IDSocio=' . $frm["IDSocio"]; ?>" target="_blank">Ver Horario</a>
 								</div>
 							</div>
-			
+
 						</div>
 					<?php endif; ?>
 			<? }
@@ -514,7 +514,15 @@ $sqlCampo = "SELECT cfs.*
 	<? } catch (Exception $e) {
 		echo 'Excepción capturada: ',  $e->getMessage(), "\n";
 	} ?>
-
+	<div class="form-group first">
+		
+		<div class="col-xs-12 col-sm-6">
+			<label class="col-sm-4 control-label no-padding-right" for="form-field-1">Semana Asociada</label>
+			<div class="col-sm-8">
+				<input id=SemanaAsociada type=text size=25 name=SemanaAsociada class="input" title="Semana Asociada" value="<?= $frm["SemanaAsociada"] ?>">
+			</div>
+		</div>
+	</div>
 	<div class="clearfix form-actions">
 		<div class="col-xs-12 text-center">
 			<input type="hidden" name="ID" id="ID" value="<? echo $frm[$key] ?>" />

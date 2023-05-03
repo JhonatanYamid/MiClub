@@ -1069,7 +1069,7 @@
 
             <?php
             $permiso = SIMUtil::verificar_permiso_modulo("Socios", SIMUser::get("IDPerfil"));
-            if (isset($club_selecc) && $permiso == 0 && ($IDClub == 8 || $IDClub == 17 || $IDClub == 274 )) { ?>
+            if (isset($club_selecc) && $permiso == 0 && ($IDClub == 8 || $IDClub == 17 || $IDClub == 274)) { ?>
                 <li class="<?php if ($script == "gamegolfcourse") echo "active"; ?>">
                     <a href="#" class="dropdown-toggle">
                         <i class="menu-icon fa fa-caret-right"></i>
@@ -1100,15 +1100,15 @@
                             </a>
                             <b class="arrow"></b>
                         </li>
-                        <?php if ($IDClub == 8 || $IDClub == 17 || $IDClub == 274 ): ?>
-                        <li>
-                            <a href="configuracionjuegosdegolf.php">
-                                <i class="menu-icon fa fa-caret-right"></i>
-                                Configuracion
-                            </a>
+                        <?php if ($IDClub == 8 || $IDClub == 17 || $IDClub == 274) : ?>
+                            <li>
+                                <a href="configuracionjuegosdegolf.php">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Configuracion
+                                </a>
 
-                            <b class="arrow"></b>
-                        </li>
+                                <b class="arrow"></b>
+                            </li>
                         <?php endif; ?>
                     </ul>
                 </li>
@@ -3935,8 +3935,57 @@
 
             <?php
             }
-            ?>
 
+
+            $permiso = SIMUtil::verificar_permiso_modulo("Hotel", SIMUser::get("IDPerfil"));
+            if (isset($club_selecc) && $permiso == 0) { ?>
+
+                <li class="<?php if ($script == "reservashotel" || $script == "cierrehotel" || $script == "tarifas" || $script == "temporadaalta" || $script == "temporadacortoplazo" || $script == "habitaciones" || $script == "torres" || $script == "tipohabitaciones" || $script == "tiporeservahotel" || $script == "configuracionhotel") echo "active"; ?>">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="menu-icon fa  fa-key"></i>
+                        <span class="menu-text">Casa Hotel</span>
+
+                        <b class="arrow fa fa-angle-down"></b>
+                    </a>
+
+                    <b class="arrow"></b>
+
+                    <ul class="submenu">
+
+                        <li class="">
+                            <a href="reservascasahotel.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'Reservas', LANGSESSION); ?>
+                            </a>
+
+                            <b class="arrow"></b>
+                        </li>
+
+                        <li class="">
+                            <a href="upgradescasahotel.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                Upgrades Casa Hotel
+                            </a>
+
+                            <b class="arrow"></b>
+                        </li>
+
+
+                        <li class="">
+                            <a href="configuracioncasahotel.php">
+                                <i class="menu-icon fa fa-caret-right"></i>
+                                <?= SIMUtil::get_traduccion('', '', 'OtraConfiguracion', LANGSESSION); ?>
+                            </a>
+
+                            <b class="arrow"></b>
+                        </li>
+
+                    </ul>
+                </li>
+
+            <?php
+            }
+            ?>
 
 
             <?php
@@ -4721,14 +4770,14 @@
                         <li class="">
                             <a href="configuraciontalonerasocio.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
-                                <?= SIMUtil::get_traduccion('', '', 'ConfiguracionTalonera', LANGSESSION)." Socio"; ?>
+                                <?= SIMUtil::get_traduccion('', '', 'ConfiguracionTalonera', LANGSESSION) . " Socio"; ?>
                             </a>
                             <b class="arrow"></b>
                         </li>
                         <li class="">
                             <a href="reportetalonerasocio.php">
                                 <i class="menu-icon fa fa-caret-right"></i>
-                                <?= SIMUtil::get_traduccion('', '', 'Reporte', LANGSESSION)." Socio"; ?>
+                                <?= SIMUtil::get_traduccion('', '', 'Reporte', LANGSESSION) . " Socio"; ?>
                             </a>
                             <b class="arrow"></b>
                         </li>

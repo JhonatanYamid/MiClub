@@ -318,6 +318,12 @@
                 <? echo SIMHTML::formradiogroup(SIMResources::$sino, $frm["PermiteReservaTurnosNoSeguidos"], 'PermiteReservaTurnosNoSeguidos', "class='input'") ?>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-6">
+            <label class="col-sm-4 control-label no-padding-right" for="form-field-1">AlmacenId</label>
+            <div class="col-sm-8">
+                <input id=AlmacenId type=text size=25 name=AlmacenId class="input" title="AlmacenId" value="<?= $frm["AlmacenId"] ?>">
+            </div>
+        </div>
     </div>
 
     <div class="widget-header widget-header-large">
